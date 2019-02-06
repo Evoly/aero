@@ -1,0 +1,8 @@
+# Ignore everything
+*
+# But descend into directories
+!*/
+# Recursively allow files under subtree
+!/dist/**
+!/src/**
+!.gitignore
