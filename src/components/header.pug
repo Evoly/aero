@@ -1,0 +1,45 @@
+mixin header()
+  header.header&attributes(attributes)
+    .container
+      .row.header__row.no-gutters
+        .col-xl-auto.col-lg-6.col-sm-12
+            a.header__logo
+              span.header__logo_red aero
+              span.header__logo_blue control
+              p.header__logo-text климатическое&nbsp;&nbsp;оборудование
+        .col-xl-auto.col-lg-6.d-none.d-lg-block
+          .header__text_bg
+            img(src='images/full.png')
+          p.header__text Продажа и монтаж <br>климатического оборудования <br>с доставкой по РФ
+
+        .col-xl-auto.col-lg-6.col-sm-12
+          form(action="/search/" method="get")
+            .form-group.header__search
+              input(value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... ").form-control.search.input
+              .search_result_wrap#header_search_result
+              span.icon.lens
+          .flex
+            .modal__container
+              a(href="#" data-toggle="modal" data-target="#choiceCityFirst").header__link.header__link_dotted.js-modal
+                span.city Санкт-Петербург
+                span.icon.geo
+              +choiceCityFirst
+              +choiceCity
+            a(href="#").header__link
+              span info@aero-control.ru
+              span.icon.mail_dark
+
+        .col-xl-auto.col-lg-6.col-sm-12
+          a(href="tel:8 812 649 0519").phone 8 (812) 649-05-19
+          a(href="#" data-toggle="modal" data-target="#callMe").header__link.header__link_dotted
+            span Заказать звонок
+            span.icon.arrow_right
+      //.modal__container
+        +choiceCityFirst
+        +choiceCity
+      .header__nav
+        +navbar
+
+
+
+//a(href="#" data-toggle="modal" data-target="#choiceCity").header__link.header__link_dotted

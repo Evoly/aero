@@ -1,0 +1,7 @@
+@mixin gradient-main {
+  background: linear-gradient(0deg, $color-main, $color-border);
+}
+
+@mixin gradient-brown {
+  background-image: linear-gradient(to top, $color-brown-light 0%, $color-brown 100%);
+}

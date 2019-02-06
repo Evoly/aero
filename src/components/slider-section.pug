@@ -1,0 +1,9 @@
+mixin slider-section(title, jsName)
+  - var js=jsName
+  section&attributes(attributes)
+    .container
+      .row
+        .col
+          h2.section__header=title
+          div(class=`owl-carousel ${js}`)
+            block

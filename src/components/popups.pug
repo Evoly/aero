@@ -1,0 +1,36 @@
+mixin popup-call-me()
+  div(tabindex="-1" role="dialog" aria-labelledby="callMe").modal.fade.modal-callMe#callMe
+    .modal-dialog
+      .modal-content
+        .modal__header
+          h5 Заказать звонок
+        .modal-body
+          form(action="#" method="post").form
+            .form-group
+              input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+            .form-group
+              input(type="text" name="tel" class="form-control" placeholder="Телефон")
+        .modal-footer
+          button(type="submit" class="btn btn-primary") заказать звонок
+
+mixin choiceCityFirst()
+  .modal.fade.modal-choiceCityFirst#choiceCityFirst(tabindex="-1" role="dialog")
+    .modal-dialog
+      .modal-content
+        p.text-lg Вы в Санкт-Петербурге?
+        .modal-choiceCityFirst__btn
+          button(id="confirmCurrentCity" class="btn btn-primary") Да
+          button(id="choiceCityBtn" class="btn btn-grey js-choiceCityBtn" ) Выбрать другой город
+        p.text-sm От местоположения зависит стоимость, наличие и доставка
+
+mixin choiceCity()
+  .modal.fade.modal-choiceCity#choiceCity(tabindex="-1" role="dialog")
+    .modal-dialog
+      ul.modal-content.list-unstyled
+        -var data = ['Санкт-Петербург', 'Астрахань', 'Барнаул', 'Белгород', 'Великий Новгород', 'Брянск', 'Владивосток', 'Волгоград'];
+          each val in data
+            li.modal-choiceCity__link: a(href='#')=val
+      .modal-footer
+        .modal-choiceCity__search
+          input(value="" type="text" name="" autocomplete="off" placeholder="Поиск городов")
+          span.icon.lens

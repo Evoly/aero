@@ -1,0 +1,127 @@
+extends ../components/layouts/layout
+
+block head
+  - var pageTitle = 'Главная'
+
+block content
+  +header
+
+  +main-slider
+
+  section.section_gray-1.section__advantages
+    .container
+      .row
+        .col-lg-3.col-md-6.advantage.flex
+          .advantage__icon.flex: span.icon.diller
+          .advantage__item Мы являемся 100% официальными дилерами
+        .col-lg-3.col-md-6.advantage.flex
+          .advantage__icon.flex: span.icon.workers
+          .advantage__item Профессиональная монтажная бригада
+        .col-lg-3.col-md-6.advantage.flex
+          .advantage__icon.flex: span.icon.camion
+          .advantage__item Доставка оборудования на следующий день
+        .col-lg-3.col-md-6.advantage.flex
+          .advantage__icon.flex: span.icon.thumbup
+          .advantage__item Гарантия качества оборудования
+
+
+  section.container.section
+    .row
+      .col-md-7.col-sm-12
+        .section__header-wrapper
+          h1.section__header_red продажа, установка и обслуживание
+          span.section__subheader климатических систем в России
+        p Проектирование систем вентиляции и кондиционирования. Выполнение полного цикла работ: консультации с предложением оптимального технического решения, необходимые согласования, выпуск готового инженерного проекта, в том числе в 3D формате. Сотрудничаем с монтажными организациями по выпуску для них готовых проектов и выполнению пусконаладочных работ на объекте.
+        p Поставка и последующий монтаж оборудования,  гарантийное и сервисное обслуживание. Работает собственный цех по изготовлению воздуховодов и элементов систем вентиляции. Выполняем заказы строительных организаций по изготовлению воздуховодов.
+        p Официальный представитель по продаже климатического оборудования: кондиционеры (сплит-системы), увлажнители и очистители воздуха, тепловые пушки и тепловые завесы, фильтры для воды. Подбор техники, установка (монтаж), сервисное и гарантийное обслуживание.
+      .col-5.d-none.d-md-block
+        img(src='images/main_1.png')
+
+  section.section.section__service
+    img(src='images/bg-3.jpg').section__bg
+    .container
+      h2.section__header.section__header_white наши услуги
+      .row
+        .col-lg-4.col-md-6.service.flex
+          .service__icon.flex: span.icon.truck
+          .service__item
+            p.service__header доставка
+            p.service__text Доставка занимает 2 — 4 рабочих дня, в зависимости от города назначения и выбранного способа доставки
+
+
+
+
+
+
+
+  +slider-section('наши сертификаты','js-slider-cert').section
+    .slider__item
+      //a(data-fancybox="certificate" href='images/cert_1.png')
+      img(src='images/cert_1.png')
+    .slider__item
+      img(src='images/cert_2.png')
+    .slider__item
+      img(src='images/cert_2.png')
+    .slider__item
+      img(src='images/cert_1.png')
+    .slider__item
+      img(src='images/cert_1.png')
+    .slider__item
+      img(src='images/cert_2.png')
+    .slider__item
+      img(src='images/cert_2.png')
+    .slider__item
+      img(src='images/cert_1.png')
+    .slider__item
+      img(src='images/cert_1.png')
+
+  +slider-section('наши проекты','js-slider-project').section_project
+        .slider__item-2
+          img(src='images/main_3.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+        .slider__item-2
+          img(src='images/main_4.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+        .slider__item-2
+          img(src='images/main_5.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+        .slider__item-2
+          img(src='images/main_5.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+        .slider__item-2
+          img(src='images/main_5.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+        .slider__item-2
+          img(src='images/main_5.png')
+          p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+
+  +slider-section('отзывы','js-slider-feedback').section
+    .slider__item
+      //a(data-fancybox="certificate" href='images/feedback_1.png')
+      img(src='images/feedback_1.png')
+    .slider__item
+      img(src='images/feedback_2.png')
+    .slider__item
+      img(src='images/feedback_2.png')
+    .slider__item
+      img(src='images/feedback_1.png')
+    .slider__item
+      img(src='images/feedback_1.png')
+    .slider__item
+      img(src='images/feedback_2.png')
+    .slider__item
+      img(src='images/feedback_2.png')
+    .slider__item
+      img(src='images/feedback_1.png')
+    .slider__item
+      img(src='images/feedback_1.png')
+
+  #map.map
+
+  div.container
+    .section__consult
+      +consult
+
+
+  +footer
+  +popup-call-me

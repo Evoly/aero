@@ -1,0 +1,39 @@
+mixin product-card(oldprice)
+  .product-card&attributes(attributes)
+    a(href='#').product-card__img
+      img(src='images/catalog.png')
+    a(href='#').product-card__header Сплит-система General Climate GC/GU-S09HRIN1
+    .product-card__stars
+      .rating__stars
+        .rating__box: span.icon.star-o
+        .rating__box: span.icon.star-o
+        .rating__box: span.icon.star
+        .rating__box: span.icon.star
+        .rating__box: span.icon.star
+    .product-card__content
+      .product-card__country
+        img(src='images/china.png')
+        span Китай
+      .product-card__item.flex
+        span Производитель
+        span General Climate
+      .product-card__item.flex
+        span Мощность охлаждения, кВт:
+        span 2.6
+      .product-card__item.flex
+        span Инвертор:
+        span нет
+      .product-card__price.flex
+        if oldprice
+          span.product-card__price_old 12 400 &#8381
+          span.product-card__price_new 10 570 &#8381
+        else
+          span.product-card__price_new 10 570 &#8381
+    a(href='#').btn.btn-primary Купить
+    block
+
+
+mixin label(color)
+  -var _class = color
+    div(class="label label_" + _class)
+      block

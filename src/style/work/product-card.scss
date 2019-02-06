@@ -1,0 +1,159 @@
+.product-card {
+  position: relative;
+  padding: 20px 20px 30px;
+  margin-bottom: 25px;
+  border: 1px solid $color-grey-light;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.26);
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__header {
+    display: block;
+    margin-bottom: 15px;
+    color: $color-darkgrey;
+
+    &:hover {
+      color: $color-red-vermilion-1;
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    @include text-sm;
+    color: $color-grey-thin;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__country {
+    text-align: left;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    justify-content: space-between;
+
+    span {
+      position: relative;
+      padding-bottom: 2px;
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      border-bottom: 1px dotted $color-grey-thin;
+      z-index: 1;
+      bottom: 1px;
+      left: 0;
+    }
+  }
+
+  &__price {
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    &_old {
+      @include heading-5-thin;
+      text-decoration: line-through;
+      margin-right: 15px;
+      color: $color-grey-thin;
+    }
+
+    &_new {
+      color: $color-darkgrey;
+      @include heading-5;
+    }
+  }
+
+  &__stars {
+    margin-bottom: 10px;
+  }
+}
+
+.label {
+  &__container {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    display: block;
+    max-width: 200px;
+    text-align: right;
+  }
+
+  position: relative;
+  height: 26px;
+  padding: 6px 20px 7px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  @include text-xs-bold;
+  overflow: visible;
+  margin-left: 13px;
+  margin-bottom: 10px;
+  background-color: $color-perano;
+  display: inline-block;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    top: 0;
+    left: -5px;
+    height: 100%;
+    background-color: $color-perano;
+  }
+
+  &:before {
+    transform: skew(-24deg, 0deg);
+  }
+
+  &:after {
+    transform: skew(24deg, 0deg);
+  }
+
+  &_orange {
+    background-color: $color-orange-dust;
+
+    &:after,
+    &:before {
+      background-color: $color-orange-dust;
+    }
+  }
+
+  &_green {
+    background-color: $color-green;
+
+    &:after,
+    &:before {
+      background-color: $color-green;
+    }
+  }
+
+  &_blue {
+    background-color: $color-curious-blue;
+
+    &:after,
+    &:before {
+      background-color: $color-curious-blue;
+    }
+  }
+}

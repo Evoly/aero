@@ -1,0 +1,316 @@
+<!--a(href="#" data-toggle="modal" data-target="#choiceCity").header__link.header__link_dotted-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Главная</title>
+    <link href="style/main.css" rel="stylesheet">
+    <link href="style/icons.min.css" rel="stylesheet">
+    <!--link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")-->
+    <link href="scripts/libs/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="scripts/libs/owl-carousel/owl.theme.default.css" rel="stylesheet">
+    <!--link(href='scripts/libs/nouislider/nouislider.min.css' rel='stylesheet')-->
+    <!--link(href="style/font-awesome.min.css" rel="stylesheet")-->
+    <!--link(href="/open-iconic/font/css/open-iconic.css" rel="stylesheet")-->
+    <!-- yandex map -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row header__row no-gutters">
+                <div class="col-xl-auto col-lg-6 col-sm-12"><a class="header__logo"><span class="header__logo_red">aero</span><span class="header__logo_blue">control</span>
+                        <p class="header__logo-text">климатическое&nbsp;&nbsp;оборудование</p>
+                    </a></div>
+                <div class="col-xl-auto col-lg-6 d-none d-lg-block">
+                    <div class="header__text_bg"><img src="images/full.png" /></div>
+                    <p class="header__text">Продажа и монтаж <br>климатического оборудования <br>с доставкой по РФ</p>
+                </div>
+                <div class="col-xl-auto col-lg-6 col-sm-12">
+                    <form action="/search/" method="get">
+                        <div class="form-group header__search"><input class="form-control search input" value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... " />
+                            <div class="search_result_wrap" id="header_search_result"></div><span class="icon lens"></span>
+                        </div>
+                    </form>
+                    <div class="flex">
+                        <div class="modal__container"><a class="header__link header__link_dotted js-modal" href="#" data-toggle="modal" data-target="#choiceCityFirst"><span class="city">Санкт-Петербург</span><span class="icon geo"></span></a>
+                            <div class="modal fade modal-choiceCityFirst" id="choiceCityFirst" tabindex="-1" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <p class="text-lg">Вы в Санкт-Петербурге?</p>
+                                        <div class="modal-choiceCityFirst__btn"><button class="btn btn-primary" id="confirmCurrentCity">Да</button><button class="btn btn-grey js-choiceCityBtn" id="choiceCityBtn">Выбрать другой город</button></div>
+                                        <p class="text-sm">От местоположения зависит стоимость, наличие и доставка</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade modal-choiceCity" id="choiceCity" tabindex="-1" role="dialog">
+                                <div class="modal-dialog">
+                                    <ul class="modal-content list-unstyled">
+                                        <li class="modal-choiceCity__link"><a href="#">Санкт-Петербург</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Астрахань</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Барнаул</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Белгород</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Великий Новгород</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Брянск</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Владивосток</a></li>
+                                        <li class="modal-choiceCity__link"><a href="#">Волгоград</a></li>
+                                    </ul>
+                                    <div class="modal-footer">
+                                        <div class="modal-choiceCity__search"><input value="" type="text" name="" autocomplete="off" placeholder="Поиск городов" /><span class="icon lens"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><a class="header__link" href="#"><span>info@aero-control.ru</span><span class="icon mail_dark"></span></a>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-lg-6 col-sm-12"><a class="phone" href="tel:8 812 649 0519">8 (812) 649-05-19</a><a class="header__link header__link_dotted" href="#" data-toggle="modal" data-target="#callMe"><span>Заказать звонок</span><span class="icon arrow_right"></span></a></div>
+            </div>
+            <!--.modal__container+choiceCityFirst
++choiceCity-->
+            <div class="header__nav">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav">
+                        <li class="navbar__item dropdown"><a class="navbar__link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown"><span class="icon menu_1"></span><span>кондиционирование</span></a></li>
+                        <li class="navbar__item dropdown"><a class="navbar__link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdown"><span class="icon menu_2"></span><span>вентиляция</span></a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon wheel"></span><span>услуги</span></a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_wallet"></span><span>оплата</span></a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_car"></span><span>доставка</span></a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon handphone"></span><span>контакты</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="owlcarousel main-slider">
+            <div class="main-slider__slide"><img class="main-slider__bg" src="images/bg-1.jpg" />
+                <div class="container">
+                    <div class="main-slider__content flex">
+                        <div class="main_slider__item">
+                            <h3 class="main-slider__header">Hisense</h3>
+                            <h4 class="main-slider__subheader">Инверторный кондиционер <br>Premium SLIM Design Super DC Inverter</h4>
+                            <p class="main-slider__text">Сплит-системы серии Premium SLIM Design Super DC Inverter <br>отличаются уникальным дизайном внутреннего блока.</p>
+                        </div>
+                        <div class="main-slider__item"><img src="images/main_slider-1.png" /></div>
+                        <div class="main-slider__item">
+                            <p class="main-slider__text_lg">20%</p>
+                            <p class="main-slider__text_discount"><span class="icon wrench"></span> скидка <br>на монтаж</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_gray-1 section__advantages">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 advantage flex">
+                    <div class="advantage__icon flex"><span class="icon diller"></span></div>
+                    <div class="advantage__item">Мы являемся 100% официальными дилерами</div>
+                </div>
+                <div class="col-lg-3 col-md-6 advantage flex">
+                    <div class="advantage__icon flex"><span class="icon workers"></span></div>
+                    <div class="advantage__item">Профессиональная монтажная бригада</div>
+                </div>
+                <div class="col-lg-3 col-md-6 advantage flex">
+                    <div class="advantage__icon flex"><span class="icon camion"></span></div>
+                    <div class="advantage__item">Доставка оборудования на следующий день</div>
+                </div>
+                <div class="col-lg-3 col-md-6 advantage flex">
+                    <div class="advantage__icon flex"><span class="icon thumbup"></span></div>
+                    <div class="advantage__item">Гарантия качества оборудования</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container section">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <div class="section__header-wrapper">
+                    <h1 class="section__header_red">продажа, установка и обслуживание</h1><span class="section__subheader">климатических систем в России</span>
+                </div>
+                <p>Проектирование систем вентиляции и кондиционирования. Выполнение полного цикла работ: консультации с предложением оптимального технического решения, необходимые согласования, выпуск готового инженерного проекта, в том числе в 3D формате. Сотрудничаем с монтажными организациями по выпуску для них готовых проектов и выполнению пусконаладочных работ на объекте.</p>
+                <p>Поставка и последующий монтаж оборудования, гарантийное и сервисное обслуживание. Работает собственный цех по изготовлению воздуховодов и элементов систем вентиляции. Выполняем заказы строительных организаций по изготовлению воздуховодов.</p>
+                <p>Официальный представитель по продаже климатического оборудования: кондиционеры (сплит-системы), увлажнители и очистители воздуха, тепловые пушки и тепловые завесы, фильтры для воды. Подбор техники, установка (монтаж), сервисное и гарантийное обслуживание.</p>
+            </div>
+            <div class="col-5 d-none d-md-block"><img src="images/main_1.png"></div>
+        </div>
+    </section>
+    <section class="section section__service"><img class="section__bg" src="images/bg-3.jpg">
+        <div class="container">
+            <h2 class="section__header section__header_white">наши услуги</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 service flex">
+                    <div class="service__icon flex"><span class="icon truck"></span></div>
+                    <div class="service__item">
+                        <p class="service__header">доставка</p>
+                        <p class="service__text">Доставка занимает 2 — 4 рабочих дня, в зависимости от города назначения и выбранного способа доставки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="section__header">наши сертификаты</h2>
+                    <div class="owl-carousel js-slider-cert">
+                        <div class="slider__item">
+                            <!--a(data-fancybox="certificate" href='images/cert_1.png')--><img src="images/cert_1.png"></div>
+                        <div class="slider__item"><img src="images/cert_2.png"></div>
+                        <div class="slider__item"><img src="images/cert_2.png"></div>
+                        <div class="slider__item"><img src="images/cert_1.png"></div>
+                        <div class="slider__item"><img src="images/cert_1.png"></div>
+                        <div class="slider__item"><img src="images/cert_2.png"></div>
+                        <div class="slider__item"><img src="images/cert_2.png"></div>
+                        <div class="slider__item"><img src="images/cert_1.png"></div>
+                        <div class="slider__item"><img src="images/cert_1.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_project">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="section__header">наши проекты</h2>
+                    <div class="owl-carousel js-slider-project">
+                        <div class="slider__item-2"><img src="images/main_3.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                        <div class="slider__item-2"><img src="images/main_4.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                        <div class="slider__item-2"><img src="images/main_5.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                        <div class="slider__item-2"><img src="images/main_5.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                        <div class="slider__item-2"><img src="images/main_5.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                        <div class="slider__item-2"><img src="images/main_5.png">
+                            <p class="slider__title">Компания Emerson Network Power. подразделение корпорации Emerson</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="section__header">отзывы</h2>
+                    <div class="owl-carousel js-slider-feedback">
+                        <div class="slider__item">
+                            <!--a(data-fancybox="certificate" href='images/feedback_1.png')--><img src="images/feedback_1.png"></div>
+                        <div class="slider__item"><img src="images/feedback_2.png"></div>
+                        <div class="slider__item"><img src="images/feedback_2.png"></div>
+                        <div class="slider__item"><img src="images/feedback_1.png"></div>
+                        <div class="slider__item"><img src="images/feedback_1.png"></div>
+                        <div class="slider__item"><img src="images/feedback_2.png"></div>
+                        <div class="slider__item"><img src="images/feedback_2.png"></div>
+                        <div class="slider__item"><img src="images/feedback_1.png"></div>
+                        <div class="slider__item"><img src="images/feedback_1.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="map" id="map"></div>
+    <div class="container">
+        <div class="section__consult">
+            <div class="consult flex">
+                <div class="consult__col-sm">
+                    <p class="consult__header">нужна консультация?</p>
+                </div>
+                <div class="consult__col-lg">
+                    <p>Подробно расскажем о наших услугах и оборудовании, рассчитаем стоимость и подготовим индивидуальное предложение. Оставьте заявку прямо сейчас!</p>
+                </div>
+                <div class="consult__col-md">
+                    <div class="btn btn-primary">оставить заявку</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <!--img(src='images/footer_bg-3.png').footer_bg-->
+        <div class="container">
+            <div class="row">
+                <div class="footer__col footer__payment">
+                    <p>Способы оплаты:</p>
+                    <div class="footer__icons flex"><span class="icon visa"></span><span class="icon mastercard"></span><span class="icon webmoney"></span></div>
+                    <p>© 2017 "Aero-control" <br>Продажа и монтаж климатического <br>оборудование с доставкой по РФ</p>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Каталог оборудования</a></li>
+                        <li class="footer__item"><a href="#">Кондиционирование</a></li>
+                        <li class="footer__item"><a href="#">Вентиляция</a></li>
+                        <li class="footer__item"><a href="#">О нас</a></li>
+                        <li class="footer__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Оплата</a></li>
+                        <li class="footer__item"><a href="#">Доставка</a></li>
+                        <li class="footer__item"><a href="#">Гарантия</a></li>
+                        <li class="footer__item"><a href="#">Акции</a></li>
+                        <li class="footer__item"><a href="#">Сертификаты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Монтаж</a></li>
+                        <li class="footer__item"><a href="#">Установка кондиционера</a></li>
+                        <li class="footer__item"><a href="#">Установка тепловой <br>завесы</a></li>
+                        <li class="footer__item"><a href="#">Установка котла отопления</a></li>
+                        <li class="footer__item"><a href="#">Установка приточно <br>вытяжной системы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__address"><a class="phone" href="tel:8 812 649 0519">8 (812) 649-05-19</a>
+                    <p>198035, Санкт-Петербург, Реки <br>Екатерингофки наб, 29/31, лит.Т, офис 307</p>
+                    <p>Пн.— Пт. с 10.00 до 19.00</p><a class="footer__email" href="#">info@aero-control.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade modal-callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" id="callMe">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__header">
+                    <h5>Заказать звонок</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="form" action="#" method="post">
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
+                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="submit">заказать звонок</button></div>
+            </div>
+        </div>
+    </div>
+    <!--script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")-->
+    <!--script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="scripts/libs/jquery.min.js"></script>
+    <script src="scripts/libs/bootstrap.min.js"></script>
+    <script src="scripts/libs/bootstrap-select.min.js"></script>
+    <script src="scripts/libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="scripts/libs/nouislider/nouislider.min.js"></script>
+    <script src="scripts/libs/jquery.scrollbar.min.js"></script>
+    <!--script(src='scripts/libs/enscroll-0.6.2.min.js')-->
+    <script src="scripts/custom.js"></script>
+</body>
+
+</html>

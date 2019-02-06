@@ -1,0 +1,38 @@
+mixin footer()
+  footer.footer&attributes(attributes)
+    //img(src='images/footer_bg-3.png').footer_bg
+    .container
+      .row
+        .footer__col.footer__payment
+            p Способы оплаты:
+            .footer__icons.flex
+              span.icon.visa
+              span.icon.mastercard
+              span.icon.webmoney
+            p © 2017  "Aero-control" <br>Продажа и монтаж климатического <br>оборудование с доставкой по РФ
+        .footer__col
+          ul.footer__list
+            li.footer__item: a(href='#') Каталог оборудования
+            li.footer__item: a(href='#') Кондиционирование
+            li.footer__item: a(href='#') Вентиляция
+            li.footer__item: a(href='#') О нас
+            li.footer__item: a(href='#') Контакты
+        .footer__col
+          ul.footer__list
+            li.footer__item: a(href='#') Оплата
+            li.footer__item: a(href='#') Доставка
+            li.footer__item: a(href='#') Гарантия
+            li.footer__item: a(href='#') Акции
+            li.footer__item: a(href='#') Сертификаты
+        .footer__col
+          ul.footer__list
+            li.footer__item: a(href='#') Монтаж
+            li.footer__item: a(href='#') Установка кондиционера
+            li.footer__item: a(href='#') Установка тепловой <br>завесы
+            li.footer__item: a(href='#') Установка котла отопления
+            li.footer__item: a(href='#') Установка приточно <br>вытяжной системы
+        .footer__col.footer__address
+          a(href="tel:8 812 649 0519").phone 8 (812) 649-05-19
+          p 198035, Санкт-Петербург, Реки <br>Екатерингофки наб, 29/31, лит.Т, офис 307
+          p Пн.— Пт. с 10.00 до 19.00
+          a(href="#").footer__email info@aero-control.ru

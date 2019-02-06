@@ -1,0 +1,30 @@
+mixin navbar()
+  nav.navbar.navbar-expand-lg&attributes(attributes)
+    ul.navbar-nav
+      +navbar-item-dropdown('#', 'кондиционирование', 'menu_1')
+      +navbar-item-dropdown('#', 'вентиляция', 'menu_2').dropdown
+      +navbar-item('#', 'услуги','wheel')
+      +navbar-item('#', 'оплата', 'menu_wallet')
+      +navbar-item('#', 'доставка', 'menu_car')
+      +navbar-item('#', 'контакты','handphone')
+
+mixin navbar-item(href,content,iconName)
+  li.navbar__item
+    if iconName
+      a(href=`${href}`).navbar__link
+        span(class=`icon ${iconName}`)
+        span=content
+        block
+    else
+      a(href=`${href}`).dropdown-item=content
+    block
+
+mixin navbar-item-dropdown(href,content,iconName)
+  li.navbar__item.dropdown
+    if iconName
+      a(href=`${href}` role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").navbar__link.dropdown-toggle#navbarDropdown
+        span(class=`icon ${iconName}`)
+        span=content
+    else
+      a(href=`${href}` role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").navbar__link=content
+    block

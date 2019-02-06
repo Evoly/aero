@@ -1,0 +1,231 @@
+.catalog-form {
+  position: relative;
+  background-color: $color-athens-gray2;
+
+  &__header {
+    width: 100%;
+    padding: 24px 20px;
+    background-color: $color-bluewood;
+    color: #fff;
+    @include heading-6;
+  }
+
+  &__subheader {
+    @include heading-6;
+    color: $color-darkgrey;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    padding: 23px 25px;
+
+    &:not(:nth-last-child(2)) {
+      border-bottom: 1px solid $color-grey-light;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+  }
+
+  &__group {
+    position: relative;
+    overflow: hidden;
+    max-height: 210px;
+  }
+
+  .checkbox {
+    margin-bottom: 10px;
+  }
+
+  .scroll-element.scroll-x.scroll-scrollx_visible {
+    display: none;
+  }
+
+  &__price-slider {
+    margin-top: 27px;
+    // margin-left: 13px;
+    // margin-right: 13px;
+    .noUi-base {
+      position: absolute;
+      height: 7px;
+      border-radius: 3px;
+      background-color: $color-heather1;
+      margin: 8px 0;
+      // &:before {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   width: calc(100% - 2px);
+      //   height: 6px;
+      //   top: -9px;
+      //   left: 0;
+      //   right: 0;
+      //   margin: auto;
+      //   background: $color-heather1 linear-gradient(90deg,rgba(240, 241, 246, 0) 50%, rgba(240, 241, 246, .9) 50%) center center / 3px;
+      // }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 25px;
+  }
+}
+
+.checkbox {
+  display: block;
+  cursor: pointer;
+  position: relative;
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .checkmark {
+    position: absolute;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 22px;
+    border: 1px solid $color-grey-light;
+    background-color: #fff;
+
+    &_box {
+      border-radius: 1px;
+    }
+
+    &_round {
+      border-radius: 50%;
+    }
+  }
+
+  & input:checked ~ .checkmark_box:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 8px;
+    bottom: 6px;
+    width: 6px;
+    height: 11px;
+    border: solid $color-darkgrey;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  & input:checked ~ .checkmark_round:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 2px;
+    width: 9px;
+    height: 9px;
+    background-color: $color-darkgrey;
+    border-radius: 50%;
+  }
+
+  &__content {
+    color: $color-text;
+    padding-left: 30px;
+    line-height: 1.6;
+    @include text-sm;
+  }
+}
+
+.inputbox {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    background-color: #fff;
+    border: 1px solid $color-grey-light;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 13px;
+    -moz-appearance: textfield;
+    text-align: center;
+    @include media-breakpoint-down(md) {
+      width: 80px;
+    }
+  }
+
+  &__range {
+    position: relative;
+    display: block;
+    width: 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 13px;
+      height: 1px;
+      background-color: $color-grey-light;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+.mypopover {
+  display: none;
+  position: absolute;
+  width: 180px;
+  left: calc(100% + 7px);
+  top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: $color-fiord1;
+  border-radius: 2px;
+  box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 10;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 5px);
+    left: -9px;
+    border: 5px solid transparent;
+    border-right: 5px solid $color-fiord1;
+  }
+
+  &__item {
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 24px;
+    color: #fff;
+    @include text-sm;
+  }
+
+  &.show {
+    display: block;
+  }
+}

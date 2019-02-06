@@ -1,0 +1,180 @@
+// Текстовые стили, используемые на сайте
+@mixin logo-text {
+  font-family: $font-family-base;
+  font-size: 43px;
+  letter-spacing: -1px;
+  font-weight: 900;
+
+  @include screen('phone', max) {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+}
+
+@mixin heading-1 {
+  font-family: $font-family-base;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+@mixin heading-2 {
+  font-family: $font-family-base;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@mixin heading-3-bold {
+  font-family: $font-family-base;
+  font-size: 24px;
+  font-weight: 700;
+}
+@mixin heading-3 {
+  font-family: $font-family-base;
+  font-size: 24px;
+  font-weight: 400;
+}
+@mixin heading-4 {
+  font-family: $font-family-base;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin heading-5 {
+  font-family: $font-family-base;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@mixin heading-5-thin {
+  font-family: $font-family-base;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@mixin heading-6 {
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+// TODO: start
+
+
+
+@mixin heading-7 {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+// TODO: end;
+
+@mixin text {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 400;
+  //
+  // @include screen('tablet', max) {
+  //   font-size: 16px;
+  //   line-height: 1.5;
+  // }
+}
+@mixin text-huge {
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@mixin text-lg {
+  font-family: $font-family-base;
+  font-size: 18px;
+  font-weight: 400;
+}
+@mixin text-lg-bold {
+  font-family: $font-family-base;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin text-md {
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin text-md-bold {
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: 700;
+}
+@mixin text-15-bold {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@mixin text-15 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@mixin text-medium {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@mixin text-sm {
+  font-family: $font-family-base;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@mixin text-xs {
+  font-family: $font-family-base;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+@mixin text-xs-bold {
+  font-family: $font-family-base;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+@mixin text-small-semibold {
+  font-family: $font-family-base;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+
+
+
+
+
+@mixin text-small-bold {
+  font-family: $font-family-base;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+
+@mixin text-xs-normal {
+  font-family: $font-family-base;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@mixin text-xxs {
+  font-family: $font-family-base;
+  font-size: 10px;
+  font-weight: 600;
+}

@@ -1,0 +1,34 @@
+.btn {
+
+  &__sort {
+    position: relative;
+    padding: 10px 40px 10px 15px;
+    background-color: transparent;
+    border: 1px solid $color-heather;
+
+    &:hover {
+      opacity: .7;
+      transition: $ease-main;
+  }
+  }
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  padding: 11px 25px 10px 25px;
+  &:hover {
+    background-color: $color-red-vermilion-1;
+    border-color: $color-red-vermilion-1;
+  }
+}
+.btn-grey {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 11px 25px 10px 25px;
+  background-color: $color-heather1;
+  &:hover {
+    background-color: $color-red-vermilion-1;
+    border-color: $color-red-vermilion-1;
+    color: #fff;
+  }
+}
