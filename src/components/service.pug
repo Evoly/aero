@@ -1,0 +1,7 @@
+mixin service(iconName, title)
+  .service&attributes(attributes)
+    .service__icon.flex: span.icon(class=iconName)
+    .service__content
+      p.service__header=title
+      p.service__text
+        block

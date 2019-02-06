@@ -3,7 +3,7 @@ mixin header()
     .container
       .row.header__row.no-gutters
         .col-xl-auto.col-lg-6.col-sm-12
-            a.header__logo
+            a(href='index.html').header__logo
               span.header__logo_red aero
               span.header__logo_blue control
               p.header__logo-text климатическое&nbsp;&nbsp;оборудование
@@ -34,11 +34,9 @@ mixin header()
           a(href="#" data-toggle="modal" data-target="#callMe").header__link.header__link_dotted
             span Заказать звонок
             span.icon.arrow_right
-      //.modal__container
-        +choiceCityFirst
-        +choiceCity
       .header__nav
         +navbar
+    .header__bg
 
 
 

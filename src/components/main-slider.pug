@@ -1,17 +1,18 @@
 mixin main-slider()
-  - var js=jsName
   section&attributes(attributes)
-    .owlcarousel.main-slider
-      .main-slider__slide
-        img(src='images/bg-1.jpg').main-slider__bg
-        .container
-          .main-slider__content.flex
-            .main_slider__item
-              h3.main-slider__header Hisense
-              h4.main-slider__subheader Инверторный кондиционер <br>Premium SLIM Design Super DC Inverter
-              p.main-slider__text Сплит-системы серии Premium SLIM Design Super DC Inverter <br>отличаются уникальным дизайном внутреннего блока.
-            .main-slider__item
-              img(src='images/main_slider-1.png')
-            .main-slider__item
-              p.main-slider__text_lg 20%
-              p.main-slider__text_discount #[span(class="icon wrench")] скидка <br>на монтаж
+    .owl-carousel.main-slider.js-main-slider
+      - for (var x = 1; x < 6; x++)
+        .main-slider__slide
+          img(src='images/bg-1.jpg').main-slider__bg
+          .container
+            .main-slider__content.flex
+              .main_slider__item
+                h3.main-slider__header Hisense
+                h4.main-slider__subheader Инверторный кондиционер <br>Premium SLIM Design Super DC Inverter
+                p.main-slider__text Сплит-системы серии Premium SLIM Design Super DC Inverter <br>отличаются уникальным дизайном внутреннего блока.
+                a(href='#').btn.btn-primary подробнее
+              .main-slider__item
+                img(src='images/main_slider-1.png')
+              .main-slider__item
+                p.main-slider__text_lg 20%
+                p.main-slider__text_discount #[span(class="icon wrench")] скидка <br>на монтаж

@@ -54,11 +54,33 @@ $(document).ready(function() {
       }
     }
   };
+  const owlOptions_1 = {
+    loop:true,
+    margin:10,
+    nav:false,
+    dot:true,
+    items:1
+  };
 
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
+  // $('.js-main-slider').owlCarousel(owlOptions_1);
 
+// main slider
+  let windowWidth = $(window).width();
+  const startCarousel = () => $('.js-main-slider').owlCarousel(owlOptions_1);
+  const stopCarousel = () => $('.js-main-slider').trigger('destroy.owl.carousel');
+  if (windowWidth > 970) {
+    startCarousel();
+  }
+  $(window).resize(function() {
+      if ( $(window).width() < 970 ) {
+        stopCarousel();
+      } else {
+        startCarousel();
+      }
+  });
 
   //catalog
 
