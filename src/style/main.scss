@@ -134,6 +134,7 @@ input[placeholder] {
 .header {
   min-height: 155px;
   padding-top: 40px;
+
   @include media-breakpoint-up(xl) {
     padding-bottom: 35px;
   }
@@ -306,9 +307,39 @@ input[placeholder] {
     }
   }
 
+  &__nav-container {
+position: relative;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    &_bg {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: $color-athens-gray1;
+        z-index: -1;
+      }
+    }
+  }
+
   &__nav {
     position: relative;
-    width: 100%;
     z-index: 2;
 
     .navbar {
@@ -319,21 +350,12 @@ input[placeholder] {
         position: static;
       }
     }
+
+
   }
 
   &__bg {
-    display: none;
-    @include media-breakpoint-down(lg) {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      height: 50%;
-      width: 100%;
-      left: 0;
-      right: 0;
-      background-color: $color-athens-gray1;
-      z-index: -1;
-    }
+
   }
 }
   .icon {
@@ -432,6 +454,9 @@ input[placeholder] {
     height: 380px;
   }
 
+  .dropdown-menu {
+    width: 100%;
+  }
   .navbar {
     width: 100%;
     padding: 0;
@@ -440,20 +465,27 @@ input[placeholder] {
     .navbar-nav {
       width: 100%;
       max-width: 100%;
+
       @include media-breakpoint-down(lg) {
         flex-wrap: wrap;
       }
     }
 
     &__item {
-      padding: 10px 25px;
+      flex-grow: 1;
+
       @include media-breakpoint-up(lg) {
         &:not(:last-child) {
-          border-right: 1px solid $color-fiord;
+          // border-right: 1px solid $color-fiord;
         }
       }
       @include media-breakpoint-down(lg) {
-        flex-basis: 33.3333%;
+        &.dropdown {
+          flex-basis: 50%;
+          order: 1;
+        }
+        flex-basis:25%;
+        border-bottom: 1px solid $color-fiord;
       }
       @include media-breakpoint-down(sm) {
         flex-basis: 100%;
@@ -481,25 +513,61 @@ input[placeholder] {
       display: inline-flex;
       margin-right: 12px;
       opacity: 0.5;
+      flex-shrink: 0;
     }
 
     &__link {
+      padding: 10px;
       display: inline-flex;
       width: 100%;
-      height: 100%;
+      // height: 100%;
       align-items: center;
       flex-shrink: 0;
       text-transform: uppercase;
       color: #fff;
       background-color: transparent;
+
       @include text-medium;
+
+      @include media-breakpoint-up(lg) {
+        justify-content: center;
+      }
     }
 
     .dropdown-toggle:after {
       content: none;
     }
   }
+.navbar-dropdown {
 
+  background-color: $color-fiord1;
+  border: none;
+
+  &__item {
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    color: #fff;
+    background-color: $color-fiord;
+    border-bottom: 1px solid $color-blue-bayoux-light;
+    transition: $ease-main;
+
+    &:hover {
+      background-color: $color-blue-bayoux;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+}
   .modal {
     &__container {
       position: relative;
@@ -928,6 +996,10 @@ input[placeholder] {
       @include media-breakpoint-up(xl) {
         padding-top: 25px;
       }
+
+      @include media-breakpoint-up(md) {
+        padding-top: 45px;
+      }
       padding-left: 0;
       color: $color-grey-thin;
       @include text-sm;
@@ -987,3 +1059,6 @@ input[placeholder] {
       @include heading-6;
     }
   }
+.search-result {
+
+}

@@ -13,6 +13,10 @@ $modal-content-border-color: #c3cbd7;
 $brand-primary: #2e7fb8;
 
 $modal-content-border-radius: 0;
+$dropdown-border-radius: 0;
+$dropdown-spacer: 0;
+$dropdown-padding-y: 0;
+
 $breadcrumb-padding-y: 35px;
 
 $container-max-widths: () !default;
@@ -26,6 +30,7 @@ $container-max-widths: map-merge(
   ),
   $container-max-widths
 );
+
 
 
 //custom
@@ -51,7 +56,8 @@ $color-bluewood: #37475d;
 $color-another-blue: #2f7fb9;
 $color-grey-blue: #8394ab;
 $color-curious-blue: #3594d7;
-
+$color-blue-bayoux: #53677d;
+$color-blue-bayoux-light: #596d83;
 $color-green: #65b82e;
 
 $color-perano: #abcef0;

@@ -2,7 +2,17 @@ mixin navbar()
   nav.navbar.navbar-expand-lg&attributes(attributes)
     ul.navbar-nav
       +navbar-item-dropdown('#', 'кондиционирование', 'menu_1')
-      +navbar-item-dropdown('#', 'вентиляция', 'menu_2').dropdown
+        ul.dropdown-menu.navbar-dropdown
+          +navbar-lvl-1('#') Настенные
+          +navbar-lvl-1('#') Мобильные
+          +navbar-lvl-1('#') Кассетные
+          +navbar-lvl-1('#') Канальные
+          +navbar-lvl-1('#') Мульти сплит
+          +navbar-lvl-1('#') VRF
+          +navbar-lvl-1('#') VRV
+      +navbar-item-dropdown('#', 'вентиляция', 'menu_2')
+        ul.dropdown-menu.navbar-dropdown
+          +navbar-lvl-1('#') Пункт-1
       +navbar-item('#', 'услуги','wheel')
       +navbar-item('#', 'оплата', 'menu_wallet')
       +navbar-item('#', 'доставка', 'menu_car')
@@ -10,21 +20,19 @@ mixin navbar()
 
 mixin navbar-item(href,content,iconName)
   li.navbar__item
-    if iconName
-      a(href=`${href}`).navbar__link
-        span(class=`icon ${iconName}`)
-        span=content
-        block
-    else
-      a(href=`${href}`).dropdown-item=content
-    block
+    a(href=`${href}`).navbar__link
+      span(class=`icon ${iconName}`)
+      span=content
+      block
 
 mixin navbar-item-dropdown(href,content,iconName)
   li.navbar__item.dropdown
-    if iconName
-      a(href=`${href}` role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").navbar__link.dropdown-toggle#navbarDropdown
-        span(class=`icon ${iconName}`)
-        span=content
-    else
-      a(href=`${href}` role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").navbar__link=content
+    a(href=`${href}` role="button" data-toggle="dropdown").dropdown-toggle.navbar__link
+      span(class=`icon ${iconName}`)
+      span=content
     block
+
+mixin navbar-lvl-1(href)
+  li.navbar-dropdown__item
+    a(href=`${href}`).navbar-dropdown__link
+      block
