@@ -1,0 +1,44 @@
+mixin sub-catalog()
+  .sub-catalog&attributes(attributes)
+    .sub-catalog__section-top
+      .row
+        .col-4
+          +sub-catalog-col_1('Площадь помещения', 'sub-11')
+          .flex
+            +sub-catalog-col2(data_4)
+            +sub-catalog-col2(data_4)
+        .col-4
+          +sub-catalog-col_1('Дополнительный функции', 'sub-2')
+            +sub-catalog-col2(data_5)
+        .col-4
+          +sub-catalog-col_1('Мощность охлаждения', 'sub-3')
+          .flex
+            +sub-catalog-col2(data_6)
+            +sub-catalog-col2(data_6)
+    .sub-catalog__section-bottom
+      .row
+        .col-4
+          +sub-catalog-col2(data_1)
+        .col-4
+          +sub-catalog-col2(data_2)
+        .col-4
+          +sub-catalog-col2(data_3)
+
+
+-var data_1 = ['Aero', 'Ballu', 'Daikin', 'Lessar', 'Mitsubishi Electric', 'Mitsubishi Heavy', 'MDV', 'Fujitsu'];
+-var data_2 = ['Carrier', 'Hisense',  'Tosot', 'Royal Clima', 'Quattro Clima', 'Chigo', 'Electrolux', 'Kentatsu']
+-var data_3 = ['Hitachi', 'Hier',  'Panasonic', 'LG', 'Samsung'];
+-var data_4 = ['15 — 20 м2', '20 — 25 м2',  '30 — 35 м2'];
+-var data_5 = ['Инверторные', 'Неинверторный',  'Только на охлаждение'];
+-var data_6 = ['2 кВт', '2,5 — 3 кВт',  '3,5 — 4 кВт'];
+
+
+mixin sub-catalog-col_1(title, iconName)
+  h6.sub-catalog__header=title
+    span(class=`icon ${iconName}`)
+  block
+
+mixin sub-catalog-col2(data)
+  ul.list-unstyled.sub-catalog__list
+    each val in data
+      li: a(href='#')=val

@@ -94,66 +94,62 @@
     top: 14px;
     right: 0;
     display: block;
-    max-width: 200px;
+    max-width: 150px;
     text-align: right;
   }
-
+  display: inline-block;
   position: relative;
   height: 26px;
+  margin-left: 13px;
   padding: 6px 20px 7px 10px;
   text-transform: uppercase;
   color: #fff;
-  @include text-xs-bold;
   overflow: visible;
   margin-left: 13px;
   margin-bottom: 10px;
   background-color: $color-perano;
-  display: inline-block;
+  z-index: 2;
+  @include text-xs-bold;
 
-  &:after,
-  &:before {
+  &:after {
     content: "";
     position: absolute;
     display: block;
-    width: 15px;
+    width: 0;
+    height: 0;
     top: 0;
-    left: -5px;
-    height: 100%;
-    background-color: $color-perano;
-  }
-
-  &:before {
-    transform: skew(-24deg, 0deg);
-  }
-
-  &:after {
-    transform: skew(24deg, 0deg);
+    left: -13px;
+    border-top: 13px solid $color-perano;
+    border-bottom: 13px solid $color-perano;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    z-index: 1;
   }
 
   &_orange {
     background-color: $color-orange-dust;
 
-    &:after,
-    &:before {
-      background-color: $color-orange-dust;
+    &:after {
+      border-top: 13px solid $color-orange-dust;
+      border-bottom: 13px solid $color-orange-dust;
     }
   }
 
   &_green {
     background-color: $color-green;
 
-    &:after,
-    &:before {
-      background-color: $color-green;
+    &:after {
+      border-top: 13px solid $color-green;
+      border-bottom: 13px solid $color-green;
     }
   }
 
   &_blue {
     background-color: $color-curious-blue;
 
-    &:after,
-    &:before {
-      background-color: $color-curious-blue;
+    &:after {
+      border-top: 13px solid $color-curious-blue;
+      border-bottom: 13px solid $color-curious-blue;
     }
   }
 }

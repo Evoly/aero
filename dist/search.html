@@ -1,4 +1,3 @@
-<!--a(href="#" data-toggle="modal" data-target="#choiceCity").header__link.header__link_dotted-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +32,77 @@
                 </div>
                 <div class="col-xl-auto col-lg-6 col-sm-12">
                     <form action="/search/" method="get">
-                        <div class="form-group header__search"><input class="form-control search input" value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... " />
-                            <div class="search_result_wrap" id="header_search_result"></div><span class="icon lens"></span>
+                        <div class="form-group header__search"><input class="form-control js-search" value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... " />
+                            <div class="header__search-wrapper" id="header_search_result">
+                                <div class="search-result">
+                                    <div class="search-result__row flex">
+                                        <div class="search-result__category">Бренд</div>
+                                        <div class="search-result__wrapper">
+                                            <div class="search-result__content flex">
+                                                <div class="search-result__img"><a href="#"><img src="images/search-1.png" /></a></div>
+                                                <div class="search-result__description">
+                                                    <div class="search-result__name"><a class="search-result__link" href="#">Инверторный кондиционер Premium SLIM Design Super DC Inverter</a></div>
+                                                    <div class="search-result__text"></div>
+                                                    <div class="search-result__text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-result__row flex">
+                                        <div class="search-result__category">Коллекции</div>
+                                        <div class="search-result__wrapper">
+                                            <div class="search-result__content flex">
+                                                <div class="search-result__img"><a href="#"><img src="images/search-1.png" /></a></div>
+                                                <div class="search-result__description">
+                                                    <div class="search-result__name"><a class="search-result__link" href="#">Инверторный кондиционер Premium SLIM Design Super DC Inverter</a><span>Артикул: 89002</span></div>
+                                                    <div class="search-result__text"><span><span>59</span> товаров</span></div>
+                                                    <div class="search-result__text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-result__row flex">
+                                        <div class="search-result__category">Категории</div>
+                                        <div class="search-result__wrapper">
+                                            <div class="search-result__content flex">
+                                                <div class="search-result__img"><a href="#"><img src="images/search-1.png" /></a></div>
+                                                <div class="search-result__description">
+                                                    <div class="search-result__name"><a class="search-result__link" href="#">Инверторный кондиционер Premium SLIM Design Super DC Inverter</a><span>Артикул: 89002</span></div>
+                                                    <div class="search-result__text"><span><span>59</span> товаров</span></div>
+                                                    <div class="search-result__text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-result__row flex">
+                                        <div class="search-result__category">Товары</div>
+                                        <div class="search-result__wrapper">
+                                            <div class="search-result__content flex">
+                                                <div class="search-result__img"><a href="#"><img src="images/search-1.png" /></a></div>
+                                                <div class="search-result__description">
+                                                    <div class="search-result__name"><a class="search-result__link" href="#">Инверторный кондиционер Premium SLIM Design Super DC Inverter</a><span>Артикул: 89002</span></div>
+                                                    <div class="search-result__text"><span><span>59</span> товаров</span></div>
+                                                    <div class="search-result__text"><span><span>57 000</span> руб.</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="search-result__content flex">
+                                                <div class="search-result__img"><a href="#"><img src="images/search-1.png" /></a></div>
+                                                <div class="search-result__description">
+                                                    <div class="search-result__name"><a class="search-result__link" href="#">Инверторный кондиционер Premium SLIM Design Super DC Inverter</a><span>Артикул: 89002</span></div>
+                                                    <div class="search-result__text"><span><span>59</span> товаров</span></div>
+                                                    <div class="search-result__text"><span><span>57 000</span> руб.</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-result__row flex">
+                                        <div class="search-result__category"></div>
+                                        <div class="search-result__wrapper">
+                                            <div class="search-result__content flex"><a class="search-result__link" href="#">Все результаты поиска (<span>1590</span>)</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><span class="icon lens"></span>
                         </div>
                     </form>
                     <div class="flex">
@@ -77,14 +145,14 @@
                     <nav class="navbar navbar-expand-lg">
                         <ul class="navbar-nav">
                             <li class="navbar__item dropdown"><a class="dropdown-toggle navbar__link" href="#" role="button" data-toggle="dropdown"><span class="icon menu_1"></span><span>кондиционирование</span></a>
-                                <ul class="dropdown-menu navbar-dropdown">
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Настенные</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Мобильные</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Кассетные</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Канальные</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Мульти сплит</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">VRF</a></li>
-                                    <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">VRV</a></li>
+                                <ul class="dropdown-menu navbar-dropdown js-dropdown">
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="1"><a class="navbar-dropdown__link" href="#">Настенные</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="2"><a class="navbar-dropdown__link" href="#">Мобильные</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="3"><a class="navbar-dropdown__link" href="#">Кассетные</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="4"><a class="navbar-dropdown__link" href="#">Канальные</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="5"><a class="navbar-dropdown__link" href="#">Мульти сплит</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="6"><a class="navbar-dropdown__link" href="#">VRF</a></li>
+                                    <li class="navbar-dropdown__item js-sub-catalog" data-id="7"><a class="navbar-dropdown__link" href="#">VRV</a></li>
                                 </ul>
                             </li>
                             <li class="navbar__item dropdown"><a class="dropdown-toggle navbar__link" href="#" role="button" data-toggle="dropdown"><span class="icon menu_2"></span><span>вентиляция</span></a>
@@ -92,11 +160,588 @@
                                     <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Пункт-1</a></li>
                                 </ul>
                             </li>
-                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon wheel"></span><span>услуги</span></a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_wallet"></span><span>оплата</span></a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_car"></span><span>доставка</span></a></li>
-                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon handphone"></span><span>контакты</span></a></li>
+                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon wheel"></span><span>услуги</span>
+                                    <blockd></blockd>
+                                </a></li>
+                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_wallet"></span><span>оплата</span>
+                                    <blockd></blockd>
+                                </a></li>
+                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon menu_car"></span><span>доставка</span>
+                                    <blockd></blockd>
+                                </a></li>
+                            <li class="navbar__item"><a class="navbar__link" href="#"><span class="icon handphone"></span><span>контакты</span>
+                                    <blockd></blockd>
+                                </a></li>
                         </ul>
+                        <div class="navbar__subcatalog">
+                            <div class="sub-catalog" id="sub_1">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_2">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_3">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_4">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_5">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_6">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-catalog" id="sub_7">
+                                <div class="sub-catalog__section-top">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Площадь помещения<span class="icon sub-11"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">15 — 20 м2</a></li>
+                                                    <li><a href="#">20 — 25 м2</a></li>
+                                                    <li><a href="#">30 — 35 м2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Дополнительный функции<span class="icon sub-2"></span></h6>
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Инверторные</a></li>
+                                                <li><a href="#">Неинверторный</a></li>
+                                                <li><a href="#">Только на охлаждение</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="sub-catalog__header">Мощность охлаждения<span class="icon sub-3"></span></h6>
+                                            <div class="flex">
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                                <ul class="list-unstyled sub-catalog__list">
+                                                    <li><a href="#">2 кВт</a></li>
+                                                    <li><a href="#">2,5 — 3 кВт</a></li>
+                                                    <li><a href="#">3,5 — 4 кВт</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-catalog__section-bottom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Aero</a></li>
+                                                <li><a href="#">Ballu</a></li>
+                                                <li><a href="#">Daikin</a></li>
+                                                <li><a href="#">Lessar</a></li>
+                                                <li><a href="#">Mitsubishi Electric</a></li>
+                                                <li><a href="#">Mitsubishi Heavy</a></li>
+                                                <li><a href="#">MDV</a></li>
+                                                <li><a href="#">Fujitsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Carrier</a></li>
+                                                <li><a href="#">Hisense</a></li>
+                                                <li><a href="#">Tosot</a></li>
+                                                <li><a href="#">Royal Clima</a></li>
+                                                <li><a href="#">Quattro Clima</a></li>
+                                                <li><a href="#">Chigo</a></li>
+                                                <li><a href="#">Electrolux</a></li>
+                                                <li><a href="#">Kentatsu</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled sub-catalog__list">
+                                                <li><a href="#">Hitachi</a></li>
+                                                <li><a href="#">Hier</a></li>
+                                                <li><a href="#">Panasonic</a></li>
+                                                <li><a href="#">LG</a></li>
+                                                <li><a href="#">Samsung</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </div>

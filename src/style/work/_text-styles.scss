@@ -125,6 +125,11 @@
   font-family: $font-family-base;
   font-size: 13px;
   font-weight: 400;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
 
 @mixin text-xs {

@@ -1,4 +1,4 @@
-mixin header()
+mixin header-search()
   header.header&attributes(attributes)
     .container
       .row.header__row.no-gutters
@@ -15,8 +15,9 @@ mixin header()
         .col-xl-auto.col-lg-6.col-sm-12
           form(action="/search/" method="get")
             .form-group.header__search
-              input(value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... ").form-control.search.input
-              .search-result__wrap#header_search_result
+              input(value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... ").form-control.js-search
+              .header__search-wrapper#header_search_result
+                +search-result
               span.icon.lens
           .flex
             .modal__container
@@ -34,11 +35,17 @@ mixin header()
           a(href="#" data-toggle="modal" data-target="#callMe").header__link.header__link_dotted
             span Заказать звонок
             span.icon.arrow_right
-      .header__nav
-        +navbar
-    //.header__bg
 
-mixin search()
-  .search-result
-
-//a(href="#" data-toggle="modal" data-target="#choiceCity").header__link.header__link_dotted
+    .header__nav-container
+      .container
+        .header__nav
+          +navbar
+            .navbar__subcatalog
+              +sub-catalog#sub_1
+              +sub-catalog#sub_2
+              +sub-catalog#sub_3
+              +sub-catalog#sub_4
+              +sub-catalog#sub_5
+              +sub-catalog#sub_6
+              +sub-catalog#sub_7
+      .header__nav-container_bg

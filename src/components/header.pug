@@ -15,8 +15,8 @@ mixin header()
         .col-xl-auto.col-lg-6.col-sm-12
           form(action="/search/" method="get")
             .form-group.header__search
-              input(value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... ").form-control.search.input
-              .search_result_wrap#header_search_result
+              input(value="" type="text" name="q" autocomplete="off" placeholder="Поиск товаров... ").form-control.js-search
+              .header__search-wrapper#header_search_result
               span.icon.lens
           .flex
             .modal__container
@@ -39,8 +39,12 @@ mixin header()
       .container
         .header__nav
           +navbar
+            .navbar__subcatalog
+              +sub-catalog#sub_1
+              +sub-catalog#sub_2
+              +sub-catalog#sub_3
+              +sub-catalog#sub_4
+              +sub-catalog#sub_5
+              +sub-catalog#sub_6
+              +sub-catalog#sub_7
       .header__nav-container_bg
-
-
-
-//a(href="#" data-toggle="modal" data-target="#choiceCity").header__link.header__link_dotted

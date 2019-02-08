@@ -19,7 +19,6 @@ block content
       .row.catalog__row
         .col-xl-3.col-lg-4.col-md-5.col-sm-12
           .catalog-form__header ВЫБОР ПО ПАРАМЕТРАМ:
-
           +catalog-form
 
         .col-xl-9.col-lg-8.col-md-7.col-sm-12
@@ -65,18 +64,20 @@ block content
                   option(value="6") 6
           .row
             .col-md-6.col-lg-4.col-sm-12
-              +product-card('smth')
-
+              +product-card('oldprice')
+                .label__container
+                  +label('green') акция
+                  +label('blue') скидка
+                  +label('orange') акция + скидка
             .col-md-6.col-lg-4.col-sm-12
               +product-card('oldprice')
-                //.label__container
+                .label__container
                   +label('blue') скидка
             .col-md-6.col-lg-4.col-sm-12
               +product-card()
             - for (var x = 1; x < 10; x++)
               .col-md-6.col-lg-4.col-sm-12
                 +product-card()
-
 
           .col-sm-12.catalog__view-more
             a(href='#').btn.btn-grey ПОКАЗАТЬ ЕЩЕ
