@@ -9,7 +9,9 @@
   box-shadow: 0 0 5px 0 rgba(0,0,0,.18);
   color: $color-grey-thin;
   z-index: 15;
+  
   @include text-sm;
+
   @include media-breakpoint-down(lg) {
     left: 0;
     right: auto;

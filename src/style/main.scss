@@ -1,4 +1,3 @@
-// @import 'work/general';
 @import 'work/variables'; // Переменные
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap-select-v4/sass/bootstrap-select";
@@ -8,10 +7,12 @@
 @import 'work/section';
 @import 'work/button';
 @import 'work/scrollbar';
-@import 'work/nouislider'; // @import 'work/link-styles'; // Стили ссылок
-@import '../blocks/**/*';
-@import '../components/**/*';
-//@import '../pages/**/*';
+@import 'work/nouislider';
+//@import '../blocks/form-elements/form-elements';
+
+@import "../blocks/**/*";
+@import "../components/**/*";
+@import '../pages/**/*';
 
 .flex {
   display: flex;
