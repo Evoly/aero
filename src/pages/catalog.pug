@@ -46,8 +46,6 @@ block content
             button.btn.btn__sort
               span По цене
               span.sort__icon
-                //span: i(aria-hidden="true").fa.fa-caret-up
-                //span: i(aria-hidden="true").fa.fa-caret-bottom
                 span.sort__icon_up
                 span.sort__icon_down.active
             button.btn.btn__sort
@@ -59,19 +57,19 @@ block content
               span.sort__title Показывать по:
               .sort__select
                 select(name="onPageView" class="selectpicker form-control")
-                  option(value="12") 12
-                  option(value="26") 26
                   option(value="6") 6
+                  option(value="12") 12
+                  option(value="18") 18
           .row
             .col-md-6.col-lg-4.col-sm-12
               +product-card('oldprice')
-                .label__container
+                .label__container.flex
                   +label('green') акция
                   +label('blue') скидка
                   +label('orange') акция + скидка
             .col-md-6.col-lg-4.col-sm-12
               +product-card('oldprice')
-                .label__container
+                .label__container.flex
                   +label('blue') скидка
             .col-md-6.col-lg-4.col-sm-12
               +product-card()

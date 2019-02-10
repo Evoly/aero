@@ -87,8 +87,6 @@ $(document).ready(function() {
     $('.catalog-form__group').scrollbar();
   }
 
-  //  $('.catalog-form__group').scrollbar();
-
   //map
 
   if ($('.map').length > 0) {
@@ -118,14 +116,14 @@ $(document).ready(function() {
     const inputs0 = [rangeSlider0Min, rangeSlider0Max];
     const inputs1 = [rangeSlider1Min, rangeSlider1Max];
 
-    const min0 = parseInt(rangeSlider0Min.getAttribute('min'), 10);
+    const min0 =parseInt(rangeSlider0Min.getAttribute('min'), 10);
     const max0 = parseInt(rangeSlider0Max.getAttribute('max'), 10);
 
     const min1 = parseInt(rangeSlider1Min.getAttribute('min'), 10);
     const max1 = parseInt(rangeSlider1Max.getAttribute('max'), 10);
 
     noUiSlider.create(rangeSlider0, {
-      start: [min0, max0],
+      start: [min0,  max0],
       connect: true,
       tooltips: false,
       range: {
@@ -157,11 +155,12 @@ $(document).ready(function() {
     }
 
     rangeSlider0.noUiSlider.on('update', function(values, handle) {
-      inputs0[handle].value = values[handle];
+      inputs0[handle].value = Math.round(values[handle]);
+      console.log(values[handle]);
     });
 
     rangeSlider1.noUiSlider.on('update', function(values, handle) {
-      inputs1[handle].value = values[handle];
+      inputs1[handle].value = Math.round(values[handle]);;
     });
   }
 

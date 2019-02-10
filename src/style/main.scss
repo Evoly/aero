@@ -738,14 +738,8 @@ input[placeholder] {
       right: 3px;
       width: 10px;
       height: 10px;
-      //background-color: transparent;
       border-right: 1px solid $color-logo-red;
       border-top: 1px solid $color-logo-red;
-      // background: linear-gradient(to bottom, $color-logo-red 1px, transparent 1px) 0 0;
-      // background-repeat: no-repeat;
-      // background-size: 9px 9px;
-      //box-shadow: inset -1px 0   0 red;
-      //box-shadow: 0 0 0 4px hsl(0, 0%, 100%), 0 0 0 15px hsl(0, 0%, 100%);
     }
 
     &:after {
@@ -758,11 +752,6 @@ input[placeholder] {
       height: 10px;
       border-left: 1px solid $color-logo-red;
       border-bottom: 1px solid $color-logo-red;
-      // background: linear-gradient(to bottom, $color-logo-red 1px, transparent 1px) 0 0;
-      // background-repeat: no-repeat;
-      // background-size: 9px 9px;
-      //box-shadow: inset -1px 0   0 red;
-      //box-shadow: 0 0 0 4px hsl(0, 0%, 100%), 0 0 0 15px hsl(0, 0%, 100%);
     }
 
     &.active,
@@ -782,6 +771,10 @@ input[placeholder] {
   @include media-breakpoint-down(lg) {
     flex-flow: row wrap;
     padding: 15px;
+  }
+
+  .dropdown-menu {
+    background-color: $color-athens-gray1;
   }
 
   &__title {
@@ -1023,7 +1016,6 @@ input[placeholder] {
   &__content {
     flex-flow: row nowrap;
     flex-grow: 1;
-    //align-items: center;
     padding: 15px 15px 18px 20px;
 
     &:not(:last-child) {
@@ -1038,6 +1030,7 @@ input[placeholder] {
     width: 62px;
     height: 62px;
     flex-shrink: 0;
+    align-items: center;
 
     img {
       border: 1px solid $color-logo-dot;

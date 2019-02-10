@@ -150,7 +150,7 @@
   &__item {
     background-color: #fff;
     border: 1px solid $color-grey-light;
-    width: 100px;
+    max-width: 100px;
     height: 35px;
     display: flex;
     justify-content: center;
@@ -159,7 +159,7 @@
     -moz-appearance: textfield;
     text-align: center;
     @include media-breakpoint-down(md) {
-      width: 80px;
+      max-width: 80px;
     }
   }
 
