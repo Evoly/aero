@@ -1,0 +1,59 @@
+.sub-catalog {
+  display: none;
+  border-bottom: 1px solid $color-logo-dot;
+  border-right: 1px solid $color-logo-dot;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.18);
+
+  @include media-breakpoint-up(xl) {
+    &.activate {
+      display: block;
+    }
+  }
+
+  &__section-top {
+    padding-top: 35px;
+    padding-left: 35px;
+    line-height: 24px;
+    background-color: $color-mystic;
+    border-bottom: 1px solid $color-logo-dot;
+  }
+
+  &__section-bottom {
+    padding-top: 20px;
+    padding-left: 35px;
+    line-height: 24px;
+    padding-bottom: 15px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+      color: $color-logo-red;
+    }
+  }
+
+  &__list {
+    padding-left: 30px;
+    padding-right: 5px;
+  }
+
+  &__header {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include heading-6;
+
+    .icon {
+      position: absolute;
+      left: 0;
+    }
+
+    .sub-3 {
+      top: 2px;
+      left: 2px;
+    }
+  }
+}
