@@ -1,0 +1,19 @@
+.service {
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+  &__header {
+    text-transform: uppercase;
+    color: #fff;
+    @include text-15-bold;
+  }
+
+  &__content {
+    padding-left: 10px;
+  }
+
+  &__text {
+    color: $color-perano;
+    @include text-15;
+  }
+}

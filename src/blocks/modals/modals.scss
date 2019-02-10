@@ -1,0 +1,204 @@
+.modal {
+  &__container {
+    position: relative;
+    overflow: visible;
+    margin-right: 35px;
+
+    .modal {
+      position: absolute;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    @include heading-4;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 70px;
+      height: 1px;
+      background-color: $color-logo-dot;
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  input[placeholder] {
+    color: $color-grey-thin;
+  }
+
+  input {
+    border: 1px solid $color-logo-dot;
+    border-radius: 0;
+  }
+
+  .modal-footer {
+    justify-content: center;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.modal-content {
+  padding: 25px 27px 27px;
+}
+
+.modal-choiceCityFirst {
+  .modal-content {
+    &:before {
+      position: absolute;
+      content: "";
+      top: -14px;
+      right: 50%;
+      margin: auto;
+      border: 7px solid transparent;
+      border-bottom: 7px solid $modal-content-border-color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      right: 50%;
+      border: 7px solid transparent;
+      border-bottom: 7px solid #fff;
+    }
+  }
+
+  .modal-dialog {
+    width: 295px;
+    left: -50%;
+  }
+  text-align: center;
+
+  .text-sm {
+    color: $color-text;
+    @include text-sm;
+  }
+
+  .text-lg {
+    color: $color-darkgrey;
+    padding-bottom: 19px;
+    margin: 0;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .btn-grey,
+  .btn-primary {
+    padding: 11px 20px 10px;
+  }
+}
+
+.modal-choiceCity {
+  width: 277px;
+
+  &.modal.show {
+    position: absolute;
+    left: -30%;
+  }
+
+  .modal-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    margin: 0;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: -14px;
+      right: 50%;
+      margin: auto;
+      border: 7px solid transparent;
+      border-bottom: 7px solid $modal-content-border-color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      right: 50%;
+      border: 7px solid transparent;
+      border-bottom: 7px solid #fff;
+    }
+  }
+
+  &__link {
+    color: $link-color;
+    line-height: 36px;
+
+    &.active {
+      color: $color-logo-red;
+    }
+  }
+
+  &__link:not(:last-child) {
+    border-bottom: 1px dotted $color-logo-dot;
+  }
+
+  .modal-footer {
+    display: block;
+    padding: 23px 26px;
+    background-color: $color-mystic;
+  }
+
+  &__search {
+    position: relative;
+
+    input {
+      padding: 8px 15px;
+      width: 100%;
+      pointer-events: auto;
+
+      &[placeholder] {
+        font-style: normal;
+      }
+      @include text-sm;
+    }
+  }
+
+  .lens {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.modal-callMe {
+  .modal-dialog {
+    max-width: 325px;
+  }
+
+  .modal-body {
+    padding-top: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+}

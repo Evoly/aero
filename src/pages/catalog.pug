@@ -1,4 +1,4 @@
-extends ../components/layouts/layout
+extends ../layouts/layout
 
 block head
   - var pageTitle = 'Каталог'
@@ -41,25 +41,7 @@ block content
                 span 60 — 70 м2
               .sort-square__item
                 span От 70 м2  и более
-          .sort.flex
-            span.sort__title Сортировать:
-            button.btn.btn__sort
-              span По цене
-              span.sort__icon
-                span.sort__icon_up
-                span.sort__icon_down.active
-            button.btn.btn__sort
-              span По популярности
-              span.sort__icon
-                span.sort__icon_up
-                span.sort__icon_down
-            .sort__amount
-              span.sort__title Показывать по:
-              .sort__select
-                select(name="onPageView" class="selectpicker form-control")
-                  option(value="6") 6
-                  option(value="12") 12
-                  option(value="18") 18
+          +sort
           .row
             .col-md-6.col-lg-4.col-sm-12
               +product-card('oldprice')

@@ -1,0 +1,20 @@
+mixin sort()
+  .sort.flex
+    span.sort__title Сортировать:
+    button.btn.btn__sort
+      span По цене
+      span.sort__icon
+        span.sort__icon_up
+        span.sort__icon_down.active
+    button.btn.btn__sort
+      span По популярности
+      span.sort__icon
+        span.sort__icon_up
+        span.sort__icon_down
+    .sort__amount
+      span.sort__title Показывать по:
+      .sort__select
+        select(name="onPageView" class="selectpicker form-control")
+          option(value="6") 6
+          option(value="12") 12
+          option(value="18") 18

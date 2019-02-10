@@ -1,0 +1,8 @@
+mixin checkbox(name, value, checked, required, className)
+  label(data-toggle="popover").checkbox&attributes(attributes)
+    - var check = checked || '';
+    - var name1 = name || '';
+    input.input(name=name1, value=value, checked=!!check, type= "checkbox", required=required, class=className)
+    span.checkmark.checkmark_box
+    span.checkbox__content
+      block

@@ -1,0 +1,41 @@
+.consult {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #fff;
+  padding: 30px 40px 20px;
+  z-index: 3;
+  @include media-breakpoint-down(md) {
+    position: static;
+    flex-direction: column;
+  }
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &_grey {
+    background-color: $color-athens-gray2;
+  }
+
+  &__col-sm {
+    flex: 1 1 auto;
+  }
+
+  &__col-md {
+    flex: 1 0 auto;
+  }
+
+  &__col-lg {
+    flex: 2 5 auto;
+  }
+
+  &__header {
+    @include text-lg-bold;
+    color: $color-red-vermilion;
+    text-transform: uppercase;
+  }
+}

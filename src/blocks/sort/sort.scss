@@ -1,0 +1,108 @@
+.sort {
+  padding: 20px 20px 19px 25px;
+  background-color: $color-athens-gray1;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 25px;
+  @include media-breakpoint-down(lg) {
+    flex-flow: row wrap;
+    padding: 15px;
+  }
+
+  .dropdown-menu {
+    background-color: $color-athens-gray1;
+  }
+
+  &__title {
+    @include text-sm;
+    margin-right: 10px;
+  }
+
+  .btn {
+    margin-right: 10px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    margin: auto;
+
+    &_down,
+    &_up {
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+
+    &_up {
+      top: calc(50% - 7px);
+      border-bottom: 5px solid #000;
+
+      &.active {
+        border-bottom: 5px solid $color-red-vermilion-1;
+      }
+    }
+
+    &_down {
+      top: calc(50% + 2px);
+      border-top: 5px solid #000;
+
+      &.active {
+        border-top: 5px solid $color-red-vermilion-1;
+      }
+    }
+  }
+
+  &__amount {
+    @include media-breakpoint-up(lg) {
+      margin-left: auto;
+    }
+
+    .bootstrap-select.btn-group .dropdown-menu {
+      max-width: 100%;
+    }
+
+    .btn {
+      background-color: transparent;
+    }
+  }
+
+  &__select {
+    display: inline-block;
+    width: 60px;
+
+    .dropdown-toggle {
+      line-height: 2.2;
+
+      &:after {
+        display: block;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+        position: absolute;
+        right: 15px;
+        top: 49%;
+        bottom: 0;
+      }
+    }
+  }
+
+  .form-control {
+    background-color: transparent;
+  }
+}

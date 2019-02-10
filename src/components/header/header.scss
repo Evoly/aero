@@ -1,0 +1,220 @@
+.header {
+  min-height: 155px;
+  padding-top: 40px;
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 35px;
+  }
+  @include media-breakpoint-only(lg) {
+    padding-bottom: 70px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 20px;
+  }
+
+  &__logo {
+    position: relative;
+    line-height: 0.7;
+    @include logo-text;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+        transition:$ease-main;
+
+ &:hover {
+      text-decoration: none;
+    }
+
+    &_red {
+      position: relative;
+      padding-right: 10px;
+      margin-right: 10px;
+      color: $color-logo-red;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        display: block;
+        border-radius: 100%;
+        top: 0;
+        right: -4px;
+        bottom: 0;
+        margin: auto;
+        background-color: $color-logo-dot;
+      }
+    }
+
+    &_blue {
+      color: $color-jelly-bean;
+    }
+  }
+
+  &__logo-text {
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    line-height: 2.8;
+    @include text-xs;
+    @include media-breakpoint-down(sm) {
+      line-height: 1.5;
+      letter-spacing: 0.15em;
+    }
+  }
+
+  .phone {
+    display: block;
+    margin-bottom: 13px;
+    color: $color-darkgrey;
+    transition: $ease-main;
+    @include text-huge;
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 10px;
+
+    &_bg {
+      position: absolute;
+      top: -30px;
+      left: -25px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 350px;
+
+    input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      padding-left: 0;
+      padding-bottom: 15px;
+      height: 20px;
+    }
+
+    .lens {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__search-wrapper {
+    position: relative;
+  }
+
+  &__modal {
+    position: relative;
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 15px;
+
+    &_dotted span:first-child {
+      border-bottom: 1px dotted $link-color;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+  }
+
+  &__row {
+    position: relative;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 30px;
+    }
+
+    .col-md-auto:last-child {
+      text-align: right;
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+      }
+    }
+
+    .col-lg-6:nth-child(even) {
+      @include media-breakpoint-only(lg) {
+        padding-left: 20px;
+      }
+    }
+
+    .col-md-auto {
+      position: relative;
+    }
+  }
+
+  .city {
+    position: relative;
+
+    &:after {
+      @include triangle($link-color, down, 5px);
+      right: -15px;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+  }
+
+  &__nav-container {
+    position: relative;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      max-width: 1200px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    &_bg {
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: $color-athens-gray1;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+    z-index: 2;
+
+    .navbar {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      @include media-breakpoint-down(md) {
+        position: static;
+      }
+    }
+  }
+}
