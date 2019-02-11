@@ -70,6 +70,7 @@ $(document).ready(function() {
 
   const startCarousel = () => $('.js-main-slider').owlCarousel(owlOptions_1);
   const stopCarousel = () => $('.js-main-slider').trigger('destroy.owl.carousel');
+
   if ($(window).width() > 970) {
     startCarousel();
   }
@@ -200,11 +201,6 @@ $(document).ready(function() {
   });
 
   //navbar
-  $('ul.navbar-dropdown').on('click', function(event) {
-    // The event won't be propagated up to the document NODE and
-    // therefore delegated events won't be fired
-    event.stopPropagation();
-  })
   $('.js-sub-catalog[data-id]').on('mouseover', function(e) {
     e.stopPropagation();
     const $this = $(this);
@@ -213,7 +209,6 @@ $(document).ready(function() {
     const parentWidth = $this.parents('.navbar-nav').outerWidth();
     const catalogWidth = parentWidth - elWidth;
     $('.navbar__subcatalog').css('width', catalogWidth);
-    //console.log('elWidth', parentWidth);
     if (id !== undefined && id > 0) {
       const $sub = $('#sub_' + id);
       if ($sub.length > 0) {
@@ -223,7 +218,7 @@ $(document).ready(function() {
     }
   });
 
-  // close windows
+  // close
   $('body').on('click', function(e) {
     if ($(e.target).closest('.sub-catalog').length === 0) {
       $('.sub-catalog').removeClass('activate');
@@ -245,7 +240,6 @@ $(document).ready(function() {
     const width = $(window).width();
     const left = $('.js-search').offset().left;
     const elWidth = width - left - 15;
-    // console.log(left);
     $('.search-result').css('width', elWidth);
   };
 
