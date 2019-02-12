@@ -70,6 +70,7 @@ $(document).ready(function() {
 
   const startCarousel = () => $('.js-main-slider').owlCarousel(owlOptions_1);
   const stopCarousel = () => $('.js-main-slider').trigger('destroy.owl.carousel');
+
   if ($(window).width() > 970) {
     startCarousel();
   }
@@ -116,19 +117,19 @@ $(document).ready(function() {
     const inputs0 = [rangeSlider0Min, rangeSlider0Max];
     const inputs1 = [rangeSlider1Min, rangeSlider1Max];
 
-    const min0 =parseInt(rangeSlider0Min.getAttribute('min'), 10);
+    const min0 = parseInt(rangeSlider0Min.getAttribute('min'), 10);
     const max0 = parseInt(rangeSlider0Max.getAttribute('max'), 10);
 
     const min1 = parseInt(rangeSlider1Min.getAttribute('min'), 10);
     const max1 = parseInt(rangeSlider1Max.getAttribute('max'), 10);
 
     noUiSlider.create(rangeSlider0, {
-      start: [min0,  max0],
+      start: [0, 100],
       connect: true,
       tooltips: false,
       range: {
-        'min': min0,
-        'max': max0
+        'min': 0,
+        'max': 100
       }
     });
 
@@ -156,7 +157,6 @@ $(document).ready(function() {
 
     rangeSlider0.noUiSlider.on('update', function(values, handle) {
       inputs0[handle].value = Math.round(values[handle]);
-      console.log(values[handle]);
     });
 
     rangeSlider1.noUiSlider.on('update', function(values, handle) {
@@ -200,11 +200,6 @@ $(document).ready(function() {
   });
 
   //navbar
-  $('ul.navbar-dropdown').on('click', function(event) {
-    // The event won't be propagated up to the document NODE and
-    // therefore delegated events won't be fired
-    event.stopPropagation();
-  })
   $('.js-sub-catalog[data-id]').on('mouseover', function(e) {
     e.stopPropagation();
     const $this = $(this);
@@ -213,7 +208,6 @@ $(document).ready(function() {
     const parentWidth = $this.parents('.navbar-nav').outerWidth();
     const catalogWidth = parentWidth - elWidth;
     $('.navbar__subcatalog').css('width', catalogWidth);
-    //console.log('elWidth', parentWidth);
     if (id !== undefined && id > 0) {
       const $sub = $('#sub_' + id);
       if ($sub.length > 0) {
@@ -223,7 +217,7 @@ $(document).ready(function() {
     }
   });
 
-  // close windows
+  // close
   $('body').on('click', function(e) {
     if ($(e.target).closest('.sub-catalog').length === 0) {
       $('.sub-catalog').removeClass('activate');
@@ -232,6 +226,12 @@ $(document).ready(function() {
       e.stopPropagation();
     }
   });
+  $('.dropdown').on('show.bs.dropdown', function() {
+    $('.dropdown-toggle').on('click', function(e) {
+      $('.sub-catalog').removeClass('activate');
+    });
+  });
+
   $(document).keyup(function(e) {
     if (e.key === "Escape") {
       $('.sub-catalog').removeClass('activate');
@@ -245,7 +245,6 @@ $(document).ready(function() {
     const width = $(window).width();
     const left = $('.js-search').offset().left;
     const elWidth = width - left - 15;
-    // console.log(left);
     $('.search-result').css('width', elWidth);
   };
 
@@ -267,6 +266,38 @@ $(document).ready(function() {
     }
   });
 
+
+  //form
+  function serializeFormJSON() {
+    const o = {};
+    const a = this.serializeArray();
+    $.each(a, function() {
+      if (o[this.name]) {
+        if (!o[this.name].push) {
+          o[this.name] = [o[this.name]];
+        }
+        o[this.name].push(this.value || '');
+      } else {
+        o[this.name] = this.value || '';
+      }
+    });
+    return o;
+  };
+
+  $.fn.serializeFormJSON = serializeFormJSON;
+  $(document).on('click', '.js-submit', function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    const form = $this.parents('form');
+    const url = form.attr('action');
+
+    $.ajax({
+      type: 'POST',
+      url: `${url}?_format=json`,
+      data: JSON.stringify(form.serializeFormJSON()),
+      contentType: 'application/json'
+    });
+  });
 
 
 });

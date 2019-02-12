@@ -696,11 +696,11 @@
             <div class="row catalog__row">
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12">
                     <div class="catalog-form__header">ВЫБОР ПО ПАРАМЕТРАМ:</div>
-                    <div class="catalog-form">
+                    <form class="catalog-form" action="/smth?_format=json">
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">цена</div>
                             <div class="catalog-form__range">
-                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="0" max="100000" value="100" id="input-with-keypress-0" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="0" max="100000" id="input-with-keypress-1" /></div>
+                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="100" name="range_1-1" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="0" max="100" name="range_1-2" /></div>
                                 <div class="catalog-form__price-slider js-range" id="keypress"></div>
                             </div>
                         </div>
@@ -724,7 +724,7 @@
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">МОЩНОСТЬ ОХЛАЖДЕНИЯ, КВТ</div>
                             <div class="catalog-form__range">
-                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="100" step="1" id="input-with-keypress-2" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="1" max="100" step="1" id="input-with-keypress-3" /></div>
+                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="100" name="range_2-1" id="input-2" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="1" max="100" name="range_2-2" id="input-3" /></div>
                                 <div class="catalog-form__price-slider js-range"></div>
                             </div>
                         </div>
@@ -733,14 +733,14 @@
                             <div class="catalog-form__group"><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">8<span> (<span>1</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">20<span> (<span>37</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">21<span> (<span>14</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">23<span> (<span>19</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">24 <span> (<span>15 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">25<span> (<span>4</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">7<span> (<span>73</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">9<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">8<span> (<span>0 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">4<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">6<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">6<span> (<span>0</span>)</span></span></label></div>
                         </div>
                         <div class="catalog-form__item">
-                            <div class="catalog-form__subheader">ИНВЕРТОР</div><label class="checkbox" data-toggle="popover"><input class="input" name="name" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Есть<span> (<span>57</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="name" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Нет<span> (<span>17</span>)</span></span></label>
+                            <div class="catalog-form__subheader">ИНВЕРТОР</div><label class="checkbox" data-toggle="popover"><input class="input" name="name" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Есть<span> (<span>57</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="name0" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Нет<span> (<span>17</span>)</span></span></label>
                         </div>
                         <div class="catalog-form__item">
-                            <div class="catalog-form__subheader">ОСНОВНЫЕ РЕЖИМЫ</div><label class="checkbox" data-toggle="popover"><input class="input" name="name" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Охлаждение<span> (<span>2</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="name" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Охлаждение / обогрев<span> (<span>72</span>)</span></span></label>
+                            <div class="catalog-form__subheader">ОСНОВНЫЕ РЕЖИМЫ</div><label class="checkbox" data-toggle="popover"><input class="input" name="name1" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Охлаждение<span> (<span>2</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="name2" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Охлаждение / обогрев<span> (<span>72</span>)</span></span></label>
                         </div>
-                        <div class="catalog-form__button"><a class="btn btn-primary" href="#">показать</a><a class="btn btn-grey" href="#">сбросить</a></div>
+                        <div class="catalog-form__button"><a class="btn btn-primary js-submit" href="#">показать</a><a class="btn btn-grey" href="#">сбросить</a></div>
                         <div class="mypopover"><span class="mypopover__item">Выбрано: <span class="num">74</span></span><a class="mypopover__item" href="#">Показать</a></div>
-                    </div>
+                    </form>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
                     <div class="catalog__header">
