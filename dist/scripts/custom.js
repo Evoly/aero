@@ -124,7 +124,7 @@ $(document).ready(function() {
     const max1 = parseInt(rangeSlider1Max.getAttribute('max'), 10);
 
     noUiSlider.create(rangeSlider0, {
-      start: [0, 100],
+      start: [min0, max0],
       connect: true,
       tooltips: false,
       range: {
@@ -193,11 +193,28 @@ $(document).ready(function() {
       const el = $(this);
       const parentTop = $('.catalog-form').offset().top;
       const top = el.offset().top - parentTop - 5;
-      console.log(top);
+      //console.log(top);
       $('.mypopover').css('top', top);
       $('.mypopover').addClass('show');
     }
   });
+
+  $('.noUi-handle').mouseup(function() {
+    $('.mypopover').removeClass('show');
+      const el = $(this);
+      const parentTop = $('.catalog-form').offset().top;
+      const top = el.offset().top - parentTop - 5;
+      //console.log(top);
+      $('.mypopover').css('top', top);
+      $('.mypopover').addClass('show');
+  });
+
+  $('.js-reset').on('click', function(e) {
+    const $this = $(this);
+    const form = $this.parents('form');
+    form.trigger("reset");
+    $('.mypopover').removeClass('show');
+  })
 
   //navbar
   $('.js-sub-catalog[data-id]').on('mouseover', function(e) {
