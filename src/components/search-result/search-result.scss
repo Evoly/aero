@@ -9,7 +9,7 @@
   box-shadow: 0 0 5px 0 rgba(0,0,0,.18);
   color: $color-grey-thin;
   z-index: 15;
-  
+
   @include text-sm;
 
   @include media-breakpoint-down(lg) {
@@ -103,8 +103,10 @@
   &__description {
     display: flex;
     flex-grow: 1;
-    align-items: center;
+    //align-items: center;
     padding-left: 17px;
+    justify-content: space-between;
+
     @include media-breakpoint-down(sm) {
       flex-direction: column;
       padding-left: 10px;
@@ -125,19 +127,12 @@
   &__text {
     flex-shrink: 0;
     padding-right: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     text-align: right;
 
-    &:not(:last-child) {
-      margin-left: auto;
-    }
-    @include media-breakpoint-up(sm) {
-      min-width: 97px;
-    }
     @include media-breakpoint-down(sm) {
       padding-top: 5px;
       padding-left: 0;
-      margin: auto;
     }
   }
 
