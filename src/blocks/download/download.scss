@@ -1,0 +1,47 @@
+.download {
+  max-width: 582px;
+  margin-bottom: 33px;
+
+  &__header {
+    color: $color-darkgrey;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+
+    @include text-medium;
+  }
+
+  &__content {
+
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 15px;
+    overflow: hidden;
+
+  }
+
+  .icon {
+    margin-right: 14px;
+    flex-shrink: 0;
+  }
+
+  &__item {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    @include media-breakpoint-down(sm) {
+      flex-flow: row wrap;
+    }
+  }
+
+  &__value {
+    flex-shrink: 0;
+    
+    @include media-breakpoint-down(sm) {
+      margin-left: auto;
+    }
+  }
+}

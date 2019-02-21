@@ -1,0 +1,44 @@
+.card-description {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #ccc;
+
+  &__col {
+    flex-grow: 1;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 50%;
+    }
+  }
+
+  &__brand {
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  &__text {
+    color: $color-grey-thin;
+    margin-right: 5px;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    margin-left: 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-left: 0;
+    }
+  }
+
+  &__rating {
+    display: inline-flex;
+    flex-flow: wrap;
+  }
+
+  .rating__text {
+    margin-bottom: 10px;
+  }
+
+
+}

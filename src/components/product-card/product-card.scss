@@ -107,7 +107,7 @@
   background-color: $color-perano;
   z-index: 2;
 
-  @include text-xs-bold;
+  @include text-xxs-bold;
 
   &:after {
     content: "";

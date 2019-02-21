@@ -93,11 +93,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   top: -17px;
 }
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle.range-left {
-  right: -13px;
+  right: -1px;
   left: auto;
 }
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle.range-right {
-  right: 1px;
+  right: -13px;
   left: auto;
 }
 /* Styling;
@@ -114,7 +114,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle.range-right {
 }
 .noUi-connect {
   background: #ff4b10;
-  width: calc(100% - 26px);
+  width: 100%;
   left: 0;
   right: 0;
   margin: auto;

@@ -1,0 +1,24 @@
+mixin card-buy()
+  .card-buy&attributes(attributes).flex
+    .card-buy__top
+      p.card-buy__price 25 400 руб.
+      a(href="#" data-toggle="modal" data-target="#buy").btn.btn-primary купить
+      a(href='#').btn.btn-dark купить в кредит
+
+    .card-buy__bottom
+      +list-dots('Доставка', 'shipping')
+        li.list-dots__item По #[a(href='#').list-dots__link_dashed Санкт-Петербургу] – 300 руб.
+        li.list-dots__item #[a(href='#') Подъем на этаж] – 600 руб.
+        li.list-dots__item Доставка за город – 35 руб/км.
+
+      +list-dots('Оплата', 'wallet-grey')
+        li.list-dots__item Наличными
+        li.list-dots__item Безнал для юр. лиц
+        li.list-dots__item Счет для оплаты в банке для физ. лиц
+
+      +list-dots('Установка', 'settings')
+        li.list-dots__item #[a(href='#') Установка] – Уточните у менеджера
+
+      .div
+        span.icon-inline.slider-next-disabled
+        a(href="#" data-toggle="modal" data-target="#size").card__link.list-dots__link_dashed Бесплатный замер

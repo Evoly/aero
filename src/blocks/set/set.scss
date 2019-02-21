@@ -1,0 +1,100 @@
+.set {
+  background-color: $color-athens-gray2;
+  color: $color-darkgrey;
+  padding: 30px;
+  margin-bottom: 25px;
+
+  &__header {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    @include text-medium;
+  }
+
+  &__content {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    flex-direction: colum;
+    max-width: 155px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__img {
+    width: 125px;
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-grey-light;
+    background-color: #fff;
+    margin-bottom: 17px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 10px;
+
+    &_lg {
+      @include heading-5;
+    }
+
+    &_red {
+      color: $color-logo-red;
+    }
+
+    &_grey {
+      color: $color-grey-thin;
+    }
+  }
+
+  &__footer {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px dashed #ccc;
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__saving,
+  &__total {
+    @include media-breakpoint-up(lg) {
+      border-right: 1px dashed #ccc;
+    }
+  }
+
+  &__total {
+    padding-right: 20px;
+    margin-right: 20px;
+    @include media-breakpoint-up(xl) {
+      padding-right: 52px;
+      margin-right: 45px;
+    }
+  }
+
+  &__saving {
+    padding-right: 20px;
+    margin-right: 20px;
+    @include media-breakpoint-up(xl) {
+      padding-right: 54px;
+      margin-right: 55px;
+    }
+  }
+
+  &__price {
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+      align-self: center;
+    }
+  }
+}

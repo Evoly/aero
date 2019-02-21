@@ -1,0 +1,158 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Карточка товара'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li.breadcrumb-item: a(href="#") Кондиционирование
+            li.breadcrumb-item: a(href="#") Кондиционеры Daikin
+            li(aria-current="page").breadcrumb-item.active Настенная сплит-система Lessar LS/LU-H07KKA2
+
+    section.container.section__card
+      h1 Настенная сплит-система Lessar LS/LU-H07KKA2
+      +banner('orange').card__banner
+      .row
+        .col-lg-9.col-md-8.col-sm-12
+          .row
+            .card__col-right.visible-md
+              +nav-slider.js-vertical-slider
+                .nav-slider__viewport
+                  .nav-slider__items
+                    .nav-slider__item
+                      img(src='images/temp/slider-lg.png')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-2.png')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-3.png')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-1.png')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-1.png')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-1.png')
+
+                .nav-slider__nav.nav-slider__next.disabled.js-next
+                  span.icon.arrow-up.show
+                  span.icon-disabled.arrow-up-grey
+                .nav-slider__nav.nav-slider__prev.js-prev
+                  span.icon.arrow-down.show
+                  span.icon-disabled.arrow-down-grey
+
+            .card__col-center
+              .card__slider.owl-carousel.js-card-slider
+                .card__slider-item.flex
+                  img(src='images/temp/slider-lg.png')
+                .card__slider-item.flex
+                  img(src='images/temp/slider-sm-2.png')
+                .card__slider-item.flex
+                  img(src='images/temp/slider-sm-3.png')
+                .card__slider-item.flex
+                  img(src='images/temp/slider-sm-1.png')
+                .card__slider-item.flex
+                  img(src='images/temp/slider-sm-1.png')
+                .card__slider-item.flex
+                  img(src='images/temp/slider-sm-1.png')
+
+            .card__col-left
+              +card-description
+              ul(role="tablist").nav.nav-tabs.nav-tabs.nav-tabs-sm
+                li.nav-item: a(class="nav-link nav-link-sm active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true") Описание
+                li.nav-item: a(class="nav-link nav-link-sm" id="cert-tab" data-toggle="tab" href="#cert" role="tab" aria-controls="cert" aria-selected="false") Сертификаты
+                li.nav-item.nav-item_lg: a(class="nav-link nav-link-sm" id="set-tab" data-toggle="tab" href="#set" role="tab" aria-controls="set" aria-selected="false")  Комплект поставки
+
+              .tab-content.tabs-sm
+                .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="about-tab")#about
+                  p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
+                  a(href="#description").card__link.js-toTabs Подробнее
+                .tab-pane.fade(role="tabpanel" aria-labelledby="cert-tab")#cert
+                  p.tabs-sm__header Мы являемся официальным дилером!
+                  .tab-pane__cert.flex
+                    img(src='images/temp/cert.png')
+                    img(src='images/temp/cert.png')
+                    img(src='images/temp/cert.png')
+                .tab-pane.fade(role="tabpanel" aria-labelledby="set-tab")#set
+                  some content
+              .row
+                .col-sm-12
+                  +list-triangle.list-triangle
+                    li: a(href='#').list-triangle__link Все настенные Lessar на 20м2
+                    li: a(href='#').list-triangle__link Инверторные Lessar на 20м2
+                    li: a(href='#').list-triangle__link Другие сплит-системы на 20м2
+
+          .row
+            .col-sm-12
+              +danger-block
+            .col-sm-12
+              ul(role="tablist").nav.nav-tabs.nav-tabs.nav-tabs-lg
+                li.nav-item: a(class="nav-link nav-link_lg active" id="spec-tab" data-toggle="tab" href="#spec" role="tab" aria-controls="spec" aria-selected="true") Характеристики
+                li.nav-item: a(class="nav-link nav-link_lg" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false") Описание
+                li.nav-item: a(class="nav-link nav-link_lg" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false") Видео
+                li.nav-item: a(class="nav-link nav-link_lg" id="set-tab" data-toggle="tab" href="#set" role="tab" aria-controls="product" aria-selected="false") Комплекты
+                li.nav-item: a(class="nav-link nav-link_lg" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab" aria-controls="feedback" aria-selected="false") Отзывы( #[span 2])
+                li.nav-item: a(class="nav-link nav-link_lg" id="download-tab" data-toggle="tab" href="#download" role="tab" aria-controls="download" aria-selected="false") Файлы для скачивания
+              .tab-content.tabs-lg
+                .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="spec-tab")#spec
+                  +spec
+                .tab-pane.fade(role="tabpanel" aria-labelledby="description-tab")#description
+                  p Сплит-система Rational — это кондиционер класса «Комфорт», сочетающий в себе современные технологии с рядом дополнительных функций и опций. Лаконичный дизайн внутреннего блока в стиле Actual позволяет вписать кондиционер в гостиную или спальную комнату, делая его естественным продолжением любого интерьера.
+                  p Сплит-система Rational — это кондиционер класса «Комфорт», сочетающий в себе современные технологии с рядом дополнительных функций и опций. Лаконичный дизайн внутреннего блока в стиле Actual позволяет вписать кондиционер в гостиную или спальную комнату, делая его естественным продолжением любого интерьера.
+                  p Сплит-система Rational — это кондиционер класса «Комфорт», сочетающий в себе современные технологии с рядом дополнительных функций и опций. Лаконичный дизайн внутреннего блока в стиле Actual позволяет вписать кондиционер в гостиную или спальную комнату, делая его естественным продолжением любого интерьера.
+                  p Сплит-система Rational — это кондиционер класса «Комфорт», сочетающий в себе современные технологии с рядом дополнительных функций и опций. Лаконичный дизайн внутреннего блока в стиле Actual позволяет вписать кондиционер в гостиную или спальную комнату, делая его естественным продолжением любого интерьера.
+                .tab-pane.fade(role="tabpanel" aria-labelledby="video-tab")#video
+                  .tab-pane__video
+                    .embed-responsive.embed-responsive-16by9
+                      <iframe class='embed-responsive-item' src="https://www.youtube.com/embed/txBfhpm1jI0?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                    .embed-responsive.embed-responsive-16by9
+                      <iframe class='embed-responsive-item' src="https://www.youtube-nocookie.com/embed/6Dakd7EIgBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                .tab-pane.fade(role="tabpanel" aria-labelledby="set-tab")#set
+                  +card-set
+                .tab-pane.fade(role="tabpanel" aria-labelledby="feedback-tab")#feedback
+                  +sort-feedback
+                  +feedback
+                    .feedback__content
+                      +feedback__item('like', 'dislike')
+                      +feedback__item('dislike', 'dislike')
+                      +feedback__item('dislike', 'like')
+                    +feedback__rating-block
+                .tab-pane.fade(role="tabpanel" aria-labelledby="download-tab")#download
+                  +download('ИНФОРМАЦИОННАЯ БРОШЮРА')
+                    .download__item.flex
+                      a(href='').download__link #[span.icon.pdf] Информационная брошюра Rational
+                      span.download__value 532 Kb
+                  +download('ИНСТРУКЦИЯ ПО МОНТАЖУ')
+                    .download__item.flex
+                      a(href='').download__link #[span.icon.pdf] Информационная брошюра Rational
+                      span.download__value 3298 Kb
+                    .download__item.flex
+                      a(href='').download__link #[span.icon.pdf] Информационная брошюра Rational
+                      span.download__value 3298 Kb
+                  +download('СЕРТИФИКАТ СООТВЕТСТВИЯ')
+                    .download__item.flex
+                      a(href='').download__link #[span.icon.pdf] Сертификат соответствия Lessar TC_RU.C-CN.AB72.B.01165
+                      span.download__value 6605 Kb
+
+
+
+        .col-lg-3.col-md-4.col-sm-12
+          +card-buy()
+          +card-faq
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+    +footer
+
+    +modal-callMe
+    +modal-buy
+    +modal-size
+    +modal-addfeedback

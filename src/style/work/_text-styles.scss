@@ -23,6 +23,12 @@
   font-weight: 400;
 }
 
+@mixin heading-2-bold {
+  font-family: $font-family-base;
+  font-size: 30px;
+  font-weight: 700;
+}
+
 @mixin heading-3-bold {
   font-family: $font-family-base;
   font-size: 24px;
@@ -72,11 +78,6 @@
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: 400;
-  //
-  // @include screen('tablet', max) {
-  //   font-size: 16px;
-  //   line-height: 1.5;
-  // }
 }
 @mixin text-huge {
   font-family: $font-family-base;
@@ -132,17 +133,25 @@
   }
 }
 
-@mixin text-xs {
+@mixin text-xs-bold {
+  font-family: $font-family-base;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@mixin text-xxs {
   font-family: $font-family-base;
   font-size: 11px;
   font-weight: 400;
 }
 
-@mixin text-xs-bold {
+@mixin text-xxs-bold {
   font-family: $font-family-base;
   font-size: 11px;
   font-weight: 700;
 }
+
+
 
 
 
@@ -171,7 +180,7 @@
 }
 
 
-@mixin text-xs-normal {
+@mixin text-xxs-normal {
   font-family: $font-family-base;
   font-size: 14px;
   line-height: 1.5;

@@ -1,15 +1,14 @@
-@import 'work/variables'; // Переменные
+@import 'work/variables';
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap-select-v4/sass/bootstrap-select";
-@import 'work/mixins'; // Миксины
-@import 'work/fonts'; // Шрифты
-@import 'work/text-styles'; // Стили текстов
+@import 'work/mixins';
+@import 'work/fonts';
+@import 'work/text-styles';
 @import 'work/section';
 @import 'work/button';
 @import 'work/scrollbar';
 @import 'work/nouislider';
-//@import '../blocks/form-elements/form-elements';
-
+@import 'work/jquery.countdown';
 @import "../blocks/**/*";
 @import "../components/**/*";
 @import '../pages/**/*';
@@ -28,12 +27,18 @@ img {
   max-width: 100%;
 }
 
-input[placeholder] {
+input[placeholder],
+textarea[placeholder] {
   font-style: italic;
 }
 
+
 .icon {
   display: block;
+}
+
+.icon-inline {
+  display: inline-block;
 }
 
 .advantage {
@@ -60,6 +65,7 @@ input[placeholder] {
     }
   }
 }
+
 
 .map {
   width: 100%;
@@ -112,7 +118,7 @@ input[placeholder] {
   }
 }
 
-.sort-square {
+.link-group {
   &__header {
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -124,44 +130,20 @@ input[placeholder] {
     flex-flow: row wrap;
     margin-bottom: 6px;
   }
-  //// TODO: уголки
+
   &__item {
     position: relative;
-    padding: 24px 23px;
+    padding: 10px 15px;
     background-color: $color-athens-gray1;
-    border: 1px solid $color-heather;
+    border-left: 3px solid $color-jelly-bean;
     border-radius: 2px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     color: $color-darkgrey;
     @include text-sm;
 
     &:not(:last-child) {
-      margin-right: 8px;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 3px;
-      right: 3px;
-      width: 10px;
-      height: 10px;
-      border-right: 1px solid $color-logo-red;
-      border-top: 1px solid $color-logo-red;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 3px;
-      left: 3px;
-      width: 10px;
-      height: 10px;
-      border-left: 1px solid $color-logo-red;
-      border-bottom: 1px solid $color-logo-red;
+      margin-right: 4px;
     }
 
     &.active,
@@ -169,19 +151,30 @@ input[placeholder] {
       background-color: $color-jelly-bean;
       color: #fff;
     }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
   }
 }
 
 .breadcrumb {
   &__wrapper {
-    @include media-breakpoint-up(xl) {
-      padding-top: 25px;
-    }
     @include media-breakpoint-up(md) {
       padding-top: 45px;
     }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 25px;
+    }
     padding-left: 0;
     color: $color-grey-thin;
+
     @include text-sm;
 
     .breadcrumb-item.active {
@@ -191,12 +184,6 @@ input[placeholder] {
     a {
       color: inherit;
     }
-  }
-}
-
-.rating {
-  &__stars {
-    display: inline-flex;
   }
 }
 
@@ -237,5 +224,210 @@ input[placeholder] {
     text-transform: uppercase;
     line-height: 24px;
     @include heading-6;
+  }
+}
+
+.nav-link {
+  text-transform: uppercase;
+
+  &.active {
+    border-bottom-color: transparent;
+  }
+
+  &_lg {
+    padding: 15px;
+    color: $color-darkgrey;
+
+    @include text-medium;
+  }
+
+  &_sm {
+    color: #000;
+    @include text-xs-bold;
+
+    &.active {
+      color: $color-logo-red;
+    }
+  }
+}
+
+.nav-tabs {
+  .nav-link {
+    &.active {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .nav-item {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .nav-link {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+
+    @include media-breakpoint-only(lg) {
+      flex: 0 50%;
+    }
+    @include media-breakpoint-down(md) {
+      flex: 1 0 33.33%;
+    }
+    @include media-breakpoint-down(xs) {
+      flex: 0 50%;
+    }
+
+    &_lg {
+      @include media-breakpoint-only(lg) {
+        flex-grow: 2;
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-grow: 2;
+      }
+    }
+  }
+}
+
+
+.nav-tabs-sm {
+  .nav-link-sm {
+    color: #000;
+    padding: 17px 10px;
+
+    @include text-xs-bold;
+
+    &.active {
+      color: $color-logo-red;
+    }
+  }
+}
+
+.tabs-lg {
+  padding-top: 28px;
+  padding-bottom: 25px;
+}
+
+.tabs-sm {
+  padding-top: 25px;
+  margin-bottom: 30px;
+
+  .tab-pane {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &__header {
+    color: $color-logo-red;
+    text-align: center;
+    @include heading-5-thin;
+  }
+}
+
+.tab-pane {
+  &__video {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .embed-responsive {
+    margin-bottom: 20px;
+  }
+
+  &__cert {
+    margin-right: -5px;
+    margin-left: -5px;
+    flex-flow: row wrap;
+
+    img {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 33.33%;
+    }
+  }
+}
+
+.visible-md {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.visible-sm {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.card {
+  &__col-right {
+    width: 11.44%;
+    padding-left: 15px;
+    padding-top: 10px;
+    min-width: 103px;
+  }
+
+  &__col-center {
+    width: 44.11%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-only(md) {
+      width: calc(100% - 103px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+
+  &__col-left {
+    width: 41.55%;
+    padding-left: 15px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding-right: 15px;
+    }
+
+// TODO:
+    .list-triangle {
+      li {
+        margin-bottom: 9px;
+      }
+      margin-bottom: 35px;
+    }
+  }
+
+  &__slider {
+    margin-bottom: 20px;
+
+    .owl-item {
+      padding-right: 1px;
+    }
+  }
+
+  &__slider-item {
+    height: 365px;
+    align-items: center;
+    border: 1px solid $color-heather;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__banner {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    @include text-sm;
   }
 }

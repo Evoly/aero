@@ -1,5 +1,5 @@
-mixin popup-call-me()
-  div(tabindex="-1" role="dialog" aria-labelledby="callMe").modal.fade.modal-callMe#callMe
+mixin modal-callMe()
+  div(tabindex="-1" role="dialog" aria-labelledby="callMe").modal.fade.modal-sm#callMe
     .modal-dialog
       .modal-content
         .modal__header
@@ -12,6 +12,69 @@ mixin popup-call-me()
               input(type="text" name="tel" class="form-control" placeholder="Телефон")
         .modal-footer
           button(type="submit" class="btn btn-primary") заказать звонок
+
+  mixin modal-buy()
+    div(tabindex="-1" role="dialog" aria-labelledby="buy").modal.fade.modal-sm#buy
+      .modal-dialog
+        .modal-content
+          .modal__header
+            h5 купить
+          .modal-body
+            form(action="#" method="post").form
+              .form-group
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+              .form-group
+                input(type="text" name="tel" class="form-control" placeholder="Телефон")
+              .form-group
+                input(type="text" name="tel" class="form-control" placeholder="Название товара")
+          .modal-footer
+            button(type="submit" class="btn btn-primary") отправить
+
+  mixin modal-size()
+    div(tabindex="-1" role="dialog" aria-labelledby="size").modal.fade.modal-sm#size
+      .modal-dialog
+        .modal-content
+          .modal__header
+            h5 бесплатный замер
+          .modal-body
+            form(action="#" method="post").form
+              .form-group
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+              .form-group
+                input(type="text" name="tel" class="form-control" placeholder="Телефон")
+            span.modal__text-sm услуга бесплатна в черте города
+          .modal-footer
+            button(type="submit" class="btn btn-primary") отправить
+
+  mixin modal-addfeedback()
+    div(tabindex="-1" role="dialog" aria-labelledby="addfeedback").modal.fade.modal-sm#addfeedback
+      .modal-dialog
+        .modal-content
+          .modal__header
+            h5 Написать отзыв
+          .modal-body
+            form(action="#" method="post").form
+              .form-group
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+              .form-group
+                input(type="text" name="city" class="form-control" placeholder="Город")
+              .form__group.modal__rating.flex
+                span.rating__label Оценка:
+                +rating(0, 5).js-stars
+                  input(type="hidden" name="averageGrade" value="")
+              .form-group
+                textarea(name='plus' rows="1" placeholder="Достоинства").form-control
+              .form-group
+                textarea(name='plus' rows="1" placeholder="Недостатки").form-control
+              .form-group
+                textarea(name='plus' rows="9" placeholder="Общие впечатления").form-control
+              .form-group
+                p.captcha__label Введите текст на картинке:
+                .captcha
+                  .captcha__item: img(src='images/temp/captcha.png')
+                  input(type="text"  name="captcha").captcha__item.form-control
+          .modal-footer
+            button(type="submit" class="btn btn-primary") оставить отзыв
 
 mixin choiceCityFirst()
   .modal.fade.modal-choiceCityFirst#choiceCityFirst(tabindex="-1" role="dialog")

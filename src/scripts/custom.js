@@ -65,6 +65,99 @@ $(document).ready(function() {
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
+  $('.js-card-slider').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    dot: true,
+    items: 1,
+    onChange: syncSliders
+  });
+
+
+  $(".js-vertical-slider .nav-slider__item").on('click', function () {
+  const $this = $(this);
+  const index = $this.index();
+  const items = $(".js-vertical-slider .nav-slider__item");
+  items.removeClass('active');
+  $this.addClass('active');
+  $(".js-card-slider").trigger('to.owl', index);
+  return false;
+});
+const slides = 3;
+const step = 100;
+const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;
+const slide = $(".js-vertical-slider .nav-slider__item");
+
+for (let i = 0; i < slides; i++) {
+  $(slide[i]).addClass('visible');
+};
+
+if (slideTotall <= slides) {
+  $('.js-next .icon, .js-prev .icon').removeClass('show');
+  $('.js-next .icon-disabled, .js-prev .icon-disabled').addClass('show');
+} else {
+  $('.js-next .icon, .js-prev .icon-disabled').addClass('show');
+  $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
+}
+
+$('.js-next').on('click', function () {
+  const slideVisible = $('.js-vertical-slider .visible').toArray();
+  const indexFirst = $(slideVisible[0]).index();
+  const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+
+  if (indexLast < (slideTotall - 1)) {
+    $('.js-prev .icon').addClass('show');
+    $('.js-prev .icon-disabled').removeClass('show');
+
+    $(slideVisible[0]).removeClass('visible');
+    $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
+    $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst + 1)}px)`);
+  } else {
+    $('.js-next .icon').removeClass('show');
+    $('.js-next .icon-disabled').addClass('show');
+  }
+  return;
+});
+
+$('.js-prev').on('click', function () {
+  const slideVisible = $('.js-vertical-slider .visible').toArray();
+  const indexFirst = $(slideVisible[0]).index();
+  const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+
+  if (indexFirst > 0) {
+    $('.js-next .icon').addClass('show');
+    $('.js-next .icon-disabled').removeClass('show');
+
+    $(slideVisible[0]).prev().addClass('visible');
+    $(slideVisible[slideVisible.length - 1]).removeClass('visible');
+    $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst - 1)}px)`);
+  } else {
+    $('.js-prev .icon').removeClass('show');
+    $('.js-prev .icon-disabled').addClass('show');
+  }
+  return;
+});
+
+function syncSliders(event) {
+  event_name = event.property.name;
+  if(event_name=='position') {
+    const currentIndex = event.item.index;
+    console.log(currentIndex);
+    const nextIndex = event.property.value;
+    console.log( 'destination_id', nextIndex );
+
+    const items = $(".js-vertical-slider .nav-slider__item");
+    items.removeClass('active');
+    items.eq(nextIndex).addClass('active');
+
+    if (currentIndex < nextIndex) {
+      $('.js-next').trigger('click');
+    } else {
+      $('.js-prev').trigger('click');
+    }
+  }
+}
 
   // main slider
 
@@ -105,64 +198,67 @@ $(document).ready(function() {
 
   //noUi
   if ($('.js-range').length > 0) {
-    const rangeSlider0 = document.getElementsByClassName('js-range')[0];
-    const rangeSlider1 = document.getElementsByClassName('js-range')[1];
+    const self = this,
+      sliders = $('.js-range');
 
-    const rangeSlider0Min = $(rangeSlider0).siblings('.inputbox').find('input[data-handler="0"]')[0];
-    const rangeSlider0Max = $(rangeSlider0).siblings('.inputbox').find('input[data-handler="1"]')[0];
+    $('.js-range').each(function() {
+      var slider = $(this);
 
-    const rangeSlider1Min = $(rangeSlider1).siblings('.inputbox').find('input[data-handler="0"]')[0];
-    const rangeSlider1Max = $(rangeSlider1).siblings('.inputbox').find('input[data-handler="1"]')[0];
+      const input_min = slider.siblings('.inputbox').find('input[data-handler="0"]')[0];
+      //console.log('input_min', input_min);
+      const input_max = slider.siblings('.inputbox').find('input[data-handler="1"]')[0];
 
-    const inputs0 = [rangeSlider0Min, rangeSlider0Max];
-    const inputs1 = [rangeSlider1Min, rangeSlider1Max];
+      const inputs = [input_min, input_max];
 
-    const min0 = parseInt(rangeSlider0Min.getAttribute('min'), 10);
-    const max0 = parseInt(rangeSlider0Max.getAttribute('max'), 10);
+      const min = parseInt(input_min.getAttribute('min'), 10);
+      const max = parseInt(input_max.getAttribute('max'), 10);
 
-    const min1 = parseInt(rangeSlider1Min.getAttribute('min'), 10);
-    const max1 = parseInt(rangeSlider1Max.getAttribute('max'), 10);
+      noUiSlider.create(slider.get(0), {
+        start: [min, max],
+        connect: true,
+        tooltips: false,
+        range: {
+          'min': min,
+          'max': max
+        }
+      });
 
-    noUiSlider.create(rangeSlider0, {
-      start: [0, 100],
-      connect: true,
-      tooltips: false,
-      range: {
-        'min': 0,
-        'max': 100
-      }
+      slider.get(0).noUiSlider.on('update', function(values, handle) {
+        inputs[handle].value = Math.round(values[handle]);
+      });
+
+      const iconsLeft = slider.find('.noUi-handle[data-handle="0"]')[0];
+      iconsLeft.classList += 'icon range-left';
+      const iconsRight = slider.find('.noUi-handle[data-handle="1"]')[0];
+      iconsRight.classList += 'icon range-right';
+
+      $('.js-reset').on('click', function() {
+        slider.get(0).noUiSlider.reset();
+      });
+
+      $(input_min).on('change', function() {
+        const inputValue = $(this).val();
+        slider.get(0).noUiSlider.set([inputValue, null]);
+      });
+
+      $(input_max).on('change', function() {
+        const inputValue = $(this).val();
+        slider.get(0).noUiSlider.set([null, inputValue]);
+      })
+
     });
+  };
+// go to
+  $(".js-toTabs").on("click", function(event) {
+   event.preventDefault();
+   const href = $(this).attr('href');
+   const tab = $('.nav-tabs-lg a[href="'+href+'"]');
+   var id = $(href);
+   tab.tab('show');
 
-    noUiSlider.create(rangeSlider1, {
-      start: [min1, max1],
-      connect: true,
-      tooltips: false,
-      range: {
-        'min': min1,
-        'max': max1
-      }
-    });
-
-    const iconsLeft = document.querySelectorAll('.noUi-handle[data-handle="0"]');
-    const iconsRight = document.querySelectorAll('.noUi-handle[data-handle="1"]');
-
-
-    for (i = 0; i < iconsLeft.length; i++) {
-      iconsLeft[i].classList += 'icon range-left';
-    }
-
-    for (i = 0; i < iconsRight.length; i++) {
-      iconsRight[i].classList += 'icon range-right';
-    }
-
-    rangeSlider0.noUiSlider.on('update', function(values, handle) {
-      inputs0[handle].value = Math.round(values[handle]);
-    });
-
-    rangeSlider1.noUiSlider.on('update', function(values, handle) {
-      inputs1[handle].value = Math.round(values[handle]);;
-    });
-  }
+    var top = $(tab).offset().top-50;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
 
   //modal
   //close modal
@@ -193,10 +289,27 @@ $(document).ready(function() {
       const el = $(this);
       const parentTop = $('.catalog-form').offset().top;
       const top = el.offset().top - parentTop - 5;
-      console.log(top);
+      //console.log(top);
       $('.mypopover').css('top', top);
       $('.mypopover').addClass('show');
     }
+  });
+
+  $('.noUi-handle').mouseup(function() {
+    $('.mypopover').removeClass('show');
+    const el = $(this);
+    const parentTop = $('.catalog-form').offset().top;
+    const top = el.offset().top - parentTop - 5;
+    //console.log(top);
+    $('.mypopover').css('top', top);
+    $('.mypopover').addClass('show');
+  });
+
+  $('.js-reset').on('click', function(e) {
+    const $this = $(this);
+    const form = $this.parents('form');
+    form.trigger("reset");
+    $('.mypopover').removeClass('show');
   });
 
   //navbar
@@ -260,9 +373,43 @@ $(document).ready(function() {
   });
 
   $(document).mouseup(function(e) {
-    var container = $(".search-result").closest('form');
+    const container = $(".search-result").closest('form');
     if (e.target != container[0] && container.has(e.target).length === 0) {
       $('#header_search_result').text('');
+    }
+  });
+
+  //rating
+  $('.js-stars .icon').on('mouseover', function(e) {
+    var grade = $(this).parent().index()
+
+    $(this).parents('.js-stars ').find('.icon').each(function(e) {
+      if (e <= grade) {
+        $(this).addClass('star-o');
+        $(this).removeClass('star');
+      } else {
+        $(this).removeClass('star-o');
+        $(this).addClass('star');
+      }
+    });
+    $(this).click(function() {
+      $(this).addClass('star-o').removeClass('star');
+      $(this).prevAll().addClass('star-o').removeClass('star');
+      $(this).parents('.js-stars ').children('input').val(grade);
+    });
+  }).on('mouseout', function() {
+    $(this).parents('.js-stars ').find('.icon').each(function() {
+      $(this).addClass('star');
+      $(this).removeClass('star-o');
+    });
+  });
+  $('.js-stars').on('mouseout', function() {
+    const inputValue = parseInt($(this).children('input').val(), 10);
+    const rating = $(this).children().eq(inputValue);
+
+    if (inputValue > 0) {
+      rating.children('.icon').addClass('star-o').removeClass('star');
+      rating.prevAll().children('.icon').addClass('star-o').removeClass('star');
     }
   });
 
@@ -298,6 +445,25 @@ $(document).ready(function() {
       contentType: 'application/json'
     });
   });
+
+  $(function () {
+      var $this = $("[data-timer]");
+      if ($this.length < 1) return;
+      var timerDescription = $this.prop('title');
+      var dateArr = $this.data("timer").split(",");
+      dateArr = $.map(dateArr, function (elem) {
+          return parseInt(elem);
+      });
+
+      dateArr[1]--;
+      var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
+
+      $this.countdown({
+          until: date,
+          padZeroes: true
+      });
+  });
+
 
 
 });

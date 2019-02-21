@@ -1,0 +1,9 @@
+mixin rating(icon_red, icon_silver, size)
+  .rating__stars&attributes(attributes)
+    if(icon_red > 0)
+    - for (var x = 0; x < icon_red; x++)
+      .rating__box: span(class=i === size ? 'icon star-o' : 'icon star-sm-o')
+    if(icon_silver > 0)
+    - for (var x = 0; x < icon_silver; x++)
+      .rating__box: span(class=i === size ? 'icon star' : 'icon star-sm')
+    block

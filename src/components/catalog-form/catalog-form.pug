@@ -1,12 +1,12 @@
 mixin catalog-form()
-  .catalog-form&attributes(attributes)
+  form.catalog-form(action='/smth?_format=json')&attributes(attributes)
     .catalog-form__item
       .catalog-form__subheader цена
       .catalog-form__range
         .inputbox
-          input(data-handler="0" type="number" min="0" max="100000" value='100').inputbox__item#input-with-keypress-0
+          input(data-handler="0" type="number" min="1" max="100" value='' name='range_1-1').inputbox__item
           span.inputbox__range
-          input(data-handler="1" type="number" min="0" max="100000").inputbox__item#input-with-keypress-1
+          input(data-handler="1" type="number" min="0" max="100" name='range_1-2').inputbox__item
         .catalog-form__price-slider#keypress.js-range
     .catalog-form__item
       .catalog-form__subheader акция
@@ -40,9 +40,9 @@ mixin catalog-form()
       .catalog-form__subheader МОЩНОСТЬ ОХЛАЖДЕНИЯ, КВТ
       .catalog-form__range
         .inputbox
-          input(data-handler="0" type="number" min="1" max="100" value='100' step="1").inputbox__item#input-with-keypress-2
+          input(data-handler="0" type="number" min="1" max="100" value='' name='range_2-1').inputbox__item#input-2
           span.inputbox__range
-          input(data-handler="1" type="number" min="1" max="100" step="1").inputbox__item#input-with-keypress-3
+          input(data-handler="1" type="number" min="1" max="100" name='range_2-2').inputbox__item#input-3
         .catalog-form__price-slider.js-range
     .catalog-form__item
       .catalog-form__subheader ПЛОЩАДЬ ПОМЕЩЕНИЯ, КВ.М.
@@ -56,17 +56,17 @@ mixin catalog-form()
       .catalog-form__subheader ИНВЕРТОР
       +checkbox('name') Есть
         +num(57)
-      +checkbox('name') Нет
+      +checkbox('name0') Нет
         +num(17)
     .catalog-form__item
       .catalog-form__subheader ОСНОВНЫЕ РЕЖИМЫ
-      +checkbox('name') Охлаждение
+      +checkbox('name1') Охлаждение
         +num(2)
-      +checkbox('name') Охлаждение / обогрев
+      +checkbox('name2') Охлаждение / обогрев
         +num(72)
     .catalog-form__button
-      a(href='#').btn.btn-primary показать
-      a(href='#').btn.btn-grey сбросить
+      a(href='#').btn.btn-primary.js-submit показать
+      a(href='#').btn.btn-grey.js-reset сбросить
     .mypopover
       span.mypopover__item Выбрано: #[span.num 74]
       a(href="#").mypopover__item Показать

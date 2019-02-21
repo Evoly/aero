@@ -104,14 +104,10 @@ div {
 }
 */
 $breakpoints: (
-  'xs': 320px,
+  'xs': 360px,
   'phone': 576px,
-  // 'phablet': 560px,
-  // 'tablet-small': 680px,
   'tablet': 768px,
-  // 'tablet-wide': 1024px,
   'desktop': 1248px
-  // 'desktop-wide': 1440px
 );
 
 @mixin screen($width, $type: min) {

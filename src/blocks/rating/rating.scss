@@ -1,0 +1,23 @@
+.rating {
+  &__stars {
+    display: flex;
+  }
+
+  &__text {
+      color: $color-grey-thin;
+      margin-left: 10px;
+      line-height: 26px;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+  }
+
+  &__label {
+    margin-right: 10px;
+  }
+
+  &__link {
+    margin-left: 5px;
+  }
+}

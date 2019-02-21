@@ -1,6 +1,7 @@
 .catalog-form {
   position: relative;
   background-color: $color-athens-gray2;
+  margin-bottom: 25px;
 
   &__header {
     width: 100%;
@@ -42,21 +43,33 @@
     display: none;
   }
 
+  &__range {
+    input{
+      overflow: hidden;
+    }
+  }
+
   &__price-slider {
-    margin-top: 27px;
+    margin-top: 38px;
+    background-color: $color-heather1;
+    border-radius: 3px;
+    height: 7px;
 
     .noUi-base {
       position: absolute;
+      width: calc(100% - 26px);
       height: 7px;
       border-radius: 3px;
       background-color: $color-heather1;
-      margin: 8px 0;
+      left: 0;
+      right: 0;
+      margin: auto;
 
       &:before {
         content: '';
         display: block;
         position: absolute;
-        width: calc(100% - 26px);
+        width: 100%;
         height: 6px;
         top: -9px;
         left: 0;
@@ -71,6 +84,17 @@
     display: flex;
     justify-content: space-between;
     padding: 23px 25px;
+
+    @include screen('xs', max) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+
+    .btn-primary {
+      margin-bottom: 15px;
+    }
+    }
+
   }
 }
 
@@ -100,10 +124,19 @@
     padding-right: 5px;
     line-height: 24px;
     color: #fff;
+
     @include text-sm;
   }
 
   &.show {
-    display: block;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  a:hover {
+    color: #fff;
+    opacity: .8;
+    transition: $ease-main;
   }
 }

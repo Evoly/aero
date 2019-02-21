@@ -11,6 +11,8 @@ $input-color: #999;
 $breadcrumb-bg: transparent;
 $modal-content-border-color: #c3cbd7;
 $brand-primary: #2e7fb8;
+$nav-tabs-link-active-border-color: #b8c3d0;
+$nav-tabs-border-color: #b8c3d0;
 
 $modal-content-border-radius: 0;
 $dropdown-border-radius: 0;
@@ -18,6 +20,7 @@ $dropdown-spacer: 0;
 $dropdown-padding-y: 0;
 
 $breadcrumb-padding-y: 35px;
+$modal-sm: 100%;
 
 $container-max-widths: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -46,6 +49,8 @@ $color-red-vermilion-1: #FF4D08;
 $color-logo-red: #ff4b10;
 
 $color-orange-dust: #ff9f08;
+$color-danger: #ef504a;
+$color-pink: #ffe8e8;
 
 $color-jelly-bean: #2d7eb7;
 $color-dark-blue: #37485e;

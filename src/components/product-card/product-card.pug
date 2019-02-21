@@ -4,12 +4,8 @@ mixin product-card(oldprice)
       img(src='images/catalog.png')
     a(href='#').product-card__header Сплит-система General Climate GC/GU-S09HRIN1
     .product-card__stars
-      .rating__stars
-        .rating__box: span.icon.star-o
-        .rating__box: span.icon.star-o
-        .rating__box: span.icon.star
-        .rating__box: span.icon.star
-        .rating__box: span.icon.star
+      +rating(2, 3)
+      
     .product-card__content
       .product-card__country
         img(src='images/china.png')

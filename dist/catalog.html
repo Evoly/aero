@@ -12,10 +12,10 @@
     <!--link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")-->
     <link href="scripts/libs/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="scripts/libs/owl-carousel/owl.theme.default.css" rel="stylesheet">
-    <!--link(href='scripts/libs/nouislider/nouislider.min.css' rel='stylesheet')-->
-    <!--link(href="style/font-awesome.min.css" rel="stylesheet")-->
-    <!--link(href="/open-iconic/font/css/open-iconic.css" rel="stylesheet")-->
-    <!-- yandex map -->
+    <script src="scripts/libs/jquery.min.js"></script>
+    <script src="scripts/libs/jquery.plugin.js"></script>
+    <script src="scripts/libs/jquery.countdown.js"></script>
+    <script src="scripts/libs/jquery.countdown-ru.js"></script><!-- yandex map -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
@@ -727,7 +727,7 @@
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">цена</div>
                             <div class="catalog-form__range">
-                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="100" name="range_1-1" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="0" max="100" name="range_1-2" /></div>
+                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="" name="range_1-1" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="0" max="100" name="range_1-2" /></div>
                                 <div class="catalog-form__price-slider js-range" id="keypress"></div>
                             </div>
                         </div>
@@ -751,7 +751,7 @@
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">МОЩНОСТЬ ОХЛАЖДЕНИЯ, КВТ</div>
                             <div class="catalog-form__range">
-                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="100" name="range_2-1" id="input-2" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="1" max="100" name="range_2-2" id="input-3" /></div>
+                                <div class="inputbox"><input class="inputbox__item" data-handler="0" type="number" min="1" max="100" value="" name="range_2-1" id="input-2" /><span class="inputbox__range"></span><input class="inputbox__item" data-handler="1" type="number" min="1" max="100" name="range_2-2" id="input-3" /></div>
                                 <div class="catalog-form__price-slider js-range"></div>
                             </div>
                         </div>
@@ -1099,68 +1099,68 @@
                 </div>
             </div>
         </section>
-    </div>
-    <div class="section__consult">
-        <div class="section__consult_bg"></div>
-        <div class="container">
-            <div class="consult__wrapper">
-                <div class="consult flex consult_grey">
-                    <div class="consult__col-sm">
-                        <p class="consult__header">нужна консультация?</p>
-                    </div>
-                    <div class="consult__col-lg">
-                        <p>Подробно расскажем о наших услугах и оборудовании, рассчитаем стоимость и подготовим индивидуальное предложение. Оставьте заявку прямо сейчас!</p>
-                    </div>
-                    <div class="consult__col-md">
-                        <div class="btn btn-primary">оставить заявку</div>
+        <div class="section__consult">
+            <div class="section__consult_bg"></div>
+            <div class="container">
+                <div class="consult__wrapper">
+                    <div class="consult flex consult_grey">
+                        <div class="consult__col-sm">
+                            <p class="consult__header">нужна консультация?</p>
+                        </div>
+                        <div class="consult__col-lg">
+                            <p>Подробно расскажем о наших услугах и оборудовании, рассчитаем стоимость и подготовим индивидуальное предложение. Оставьте заявку прямо сейчас!</p>
+                        </div>
+                        <div class="consult__col-md">
+                            <div class="btn btn-primary">оставить заявку</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer"><img class="footer_bg" src="images/footer_bg.png" />
-        <div class="container footer__content">
-            <div class="row">
-                <div class="footer__col footer__payment">
-                    <p>Способы оплаты:</p>
-                    <div class="footer__icons flex"><span class="icon visa"></span><span class="icon mastercard"></span><span class="icon webmoney"></span></div>
-                    <p>© 2017 "Aero-control" <br>Продажа и монтаж климатического <br>оборудование с доставкой по РФ</p>
-                </div>
-                <div class="footer__col">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#">Каталог оборудования</a></li>
-                        <li class="footer__item"><a href="#">Кондиционирование</a></li>
-                        <li class="footer__item"><a href="#">Вентиляция</a></li>
-                        <li class="footer__item"><a href="#">О нас</a></li>
-                        <li class="footer__item"><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#">Оплата</a></li>
-                        <li class="footer__item"><a href="#">Доставка</a></li>
-                        <li class="footer__item"><a href="#">Гарантия</a></li>
-                        <li class="footer__item"><a href="#">Акции</a></li>
-                        <li class="footer__item"><a href="#">Сертификаты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#">Монтаж</a></li>
-                        <li class="footer__item"><a href="#">Установка кондиционера</a></li>
-                        <li class="footer__item"><a href="#">Установка тепловой <br>завесы</a></li>
-                        <li class="footer__item"><a href="#">Установка котла отопления</a></li>
-                        <li class="footer__item"><a href="#">Установка приточно <br>вытяжной системы</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col footer__address"><a class="phone" href="tel:8 812 649 0519">8 (812) 649-05-19</a>
-                    <p>198035, Санкт-Петербург, Реки <br>Екатерингофки наб, 29/31, лит.Т, офис 307</p>
-                    <p>Пн.— Пт. с 10.00 до 19.00</p><a class="footer__email" href="#">info@aero-control.ru</a>
+        <footer class="footer"><img class="footer_bg" src="images/footer_bg.png" />
+            <div class="container footer__content">
+                <div class="row">
+                    <div class="footer__col footer__payment">
+                        <p>Способы оплаты:</p>
+                        <div class="footer__icons flex"><span class="icon visa"></span><span class="icon mastercard"></span><span class="icon webmoney"></span></div>
+                        <p>© 2017 "Aero-control" <br>Продажа и монтаж климатического <br>оборудование с доставкой по РФ</p>
+                    </div>
+                    <div class="footer__col">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#">Каталог оборудования</a></li>
+                            <li class="footer__item"><a href="#">Кондиционирование</a></li>
+                            <li class="footer__item"><a href="#">Вентиляция</a></li>
+                            <li class="footer__item"><a href="#">О нас</a></li>
+                            <li class="footer__item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#">Оплата</a></li>
+                            <li class="footer__item"><a href="#">Доставка</a></li>
+                            <li class="footer__item"><a href="#">Гарантия</a></li>
+                            <li class="footer__item"><a href="#">Акции</a></li>
+                            <li class="footer__item"><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#">Монтаж</a></li>
+                            <li class="footer__item"><a href="#">Установка кондиционера</a></li>
+                            <li class="footer__item"><a href="#">Установка тепловой <br>завесы</a></li>
+                            <li class="footer__item"><a href="#">Установка котла отопления</a></li>
+                            <li class="footer__item"><a href="#">Установка приточно <br>вытяжной системы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__address"><a class="phone" href="tel:8 812 649 0519">8 (812) 649-05-19</a>
+                        <p>198035, Санкт-Петербург, Реки <br>Екатерингофки наб, 29/31, лит.Т, офис 307</p>
+                        <p>Пн.— Пт. с 10.00 до 19.00</p><a class="footer__email" href="#">info@aero-control.ru</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <div class="modal fade modal-callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" id="callMe">
+        </footer>
+    </div>
+    <div class="modal fade modal-sm" tabindex="-1" role="dialog" aria-labelledby="callMe" id="callMe">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal__header">
@@ -1179,13 +1179,11 @@
     <!--script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")-->
     <!--script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="scripts/libs/jquery.min.js"></script>
     <script src="scripts/libs/bootstrap.min.js"></script>
     <script src="scripts/libs/bootstrap-select.min.js"></script>
     <script src="scripts/libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="scripts/libs/nouislider/nouislider.min.js"></script>
     <script src="scripts/libs/jquery.scrollbar.min.js"></script>
-    <!--script(src='scripts/libs/enscroll-0.6.2.min.js')-->
     <script src="scripts/custom.js"></script>
 </body>
 

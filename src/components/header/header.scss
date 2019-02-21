@@ -54,7 +54,7 @@
     letter-spacing: 0.45em;
     line-height: 2.8;
 
-    @include text-xs;
+    @include text-xxs;
 
     @include media-breakpoint-down(sm) {
       line-height: 1.5;
@@ -120,6 +120,14 @@
     position: relative;
   }
 
+  &__contact {
+
+    @include screen('xs', max) {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+  }
+
   &__modal {
     position: relative;
   }
@@ -142,6 +150,10 @@
       bottom: 0;
       top: 0;
       margin: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+      line-height: 2;
     }
   }
 

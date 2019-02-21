@@ -17,46 +17,48 @@ block content
 
     section.container.section__catalog
       .row.catalog__row
+        .col-sm-12.visible-sm
+          .catalog__header
+            h1 Настенные сплит-системы
+          .link-group
+            p.link-group__header Популярные категории:
+            .link-group__items.flex
+              -var data = ['Настенные', 'Кассетные', 'Канальные', 'Мобильные', 'Инверторные', 'В квартиру', 'В офис', 'Для дома', 'Бытовые', 'Полупромышленные', 'Только на охлаждение', 'Daikin', 'Gree Lessar', 'Hisense', 'Mitsubishi', 'Electric', 'На 15 м2']
+              each val in data
+                .link-group__item
+                  a(href='#')=val
         .col-xl-3.col-lg-4.col-md-5.col-sm-12
           .catalog-form__header ВЫБОР ПО ПАРАМЕТРАМ:
           +catalog-form
 
         .col-xl-9.col-lg-8.col-md-7.col-sm-12
-          .catalog__header
-            h1 Настенные сплит-системы
-          .sort-square
-            p.sort-square__header Подобрать на площадь:
-            .sort-square__items.flex
-              .sort-square__item
-                span До 20 м2
-              .sort-square__item
-                span 0 — 30 м2
-              .sort-square__item
-                span 30 — 40 м2
-              .sort-square__item
-                span 40 — 50 м2
-              .sort-square__item
-                span 50 — 60 м2
-              .sort-square__item.active
-                span 60 — 70 м2
-              .sort-square__item
-                span От 70 м2  и более
+          .visible-md
+            .catalog__header
+              h1 Настенные сплит-системы
+            .link-group
+              p.link-group__header Популярные категории:
+              .link-group__items.flex
+                -var data = ['Настенные', 'Кассетные', 'Канальные', 'Мобильные', 'Инверторные', 'В квартиру', 'В офис', 'Для дома', 'Бытовые', 'Полупромышленные', 'Только на охлаждение', 'Daikin', 'Gree Lessar', 'Hisense', 'Mitsubishi', 'Electric', 'На 15 м2']
+                each val in data
+                  .link-group__item
+                    a(href='#')=val
+
           +sort
           .row
-            .col-md-6.col-lg-4.col-sm-12
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
               +product-card('oldprice')
                 .label__container.flex
                   +label('green') акция
                   +label('blue') скидка
                   +label('orange') акция + скидка
-            .col-md-6.col-lg-4.col-sm-12
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
               +product-card('oldprice')
                 .label__container.flex
                   +label('blue') скидка
-            .col-md-6.col-lg-4.col-sm-12
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
               +product-card()
             - for (var x = 1; x < 10; x++)
-              .col-md-6.col-lg-4.col-sm-12
+              .col-xl-4.col-lg-6.col-md-6.col-sm-12
                 +product-card()
 
           .col-sm-12.catalog__view-more
@@ -95,12 +97,12 @@ block content
 
                 p.catalog-article__footer Мы всегда рады помочь Вам купить кондиционеры по низким ценам в Санкт-Петербурге или Москве, а так же доставить их в любой регион России.
 
-  .section__consult
-    .section__consult_bg
-    .container
-      .consult__wrapper
-        +consult.consult_grey
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
 
-  +footer
+    +footer
 
-  +popup-call-me
+  +modal-callMe#callMe

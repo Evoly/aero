@@ -1,0 +1,13 @@
+mixin card-faq()
+  .card-faq&attributes(attributes)
+    .card-faq__header.flex
+      span.icon.question
+      div часто задаваемые вопросы
+
+    +list-triangle
+      li.card-faq__item: a(href='#').list-triangle__link Как выбрать правильный кондиционер?
+      li.card-faq__item: a(href='#').list-triangle__link Как выбрать кондиционер по функциональности?
+      li.card-faq__item: a(href='#').list-triangle__link Как выбрать правильный кондиционер?
+      li.card-faq__item: a(href='#').list-triangle__link Как выбрать кондиционер по функциональности?
+
+    a(href='#').btn.btn-grey Все вопросы

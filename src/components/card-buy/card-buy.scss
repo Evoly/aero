@@ -1,0 +1,27 @@
+.card-buy {
+  flex-direction: column;
+  padding: 28px 30px 28px 24px;
+  background-color: $color-athens-gray2;
+  margin-bottom: 30px;
+
+  &__top {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 18px;
+  }
+
+  &__price {
+    color: $color-darkgrey;
+    margin-bottom: 20px;
+    @include heading-2-bold;
+  }
+
+  .btn {
+    margin-bottom: 14px;
+    margin-right: 20px;
+  }
+
+  .icon-inline {
+    margin-right: 10px;
+  }
+}

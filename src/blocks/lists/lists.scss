@@ -1,0 +1,66 @@
+.list-dots {
+  padding-top: 10px;
+  margin-bottom: 15px;
+
+  &__header {
+    display: inline-flex;
+    align-items: center;
+    color: $color-darkgrey;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include heading-6;
+  }
+
+  &__item {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 15px;
+
+    @include text-sm;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-heather1;
+      left: 0;
+      top: 6px;
+    }
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  &__link {
+
+    &_dashed {
+      border-bottom: 1px dashed $link-color;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
+
+.list-triangle {
+
+  &__link {
+    display: block;
+    padding-left: 16px;
+    position: relative;
+
+    &:after {
+      @include triangle($link-color, right, 4px);
+
+      left: 0;
+      top: 5px;
+      margin: auto;
+    }
+  }
+}

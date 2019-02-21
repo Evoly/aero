@@ -1,0 +1,12 @@
+mixin banner(color)
+  .banner&attributes(attributes).flex(class=`banner_${color}`)
+    .banner__left
+      .banner__image
+        span.icon.icon-banner
+      .banner__content
+        .banner__header
+        .banner__text
+    .banner__right
+      .banner__label
+      .banner__timer
+        .countdown(id='countdown1' class="date" data-timer="2019, 2, 17,0,0,0")

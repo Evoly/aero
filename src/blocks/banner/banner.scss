@@ -1,0 +1,28 @@
+.banner {
+  padding: 20px 30px;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+
+  &_green {
+    background: url(../images/banner-green.png);
+  }
+  &_blue {
+    background: url(../images/banner-blue.png);
+  }
+  &_orange {
+    background: url(../images/banner-orange.png);
+  }
+
+  &__header {
+    text-transform: uppercase;
+
+    @include heading-5;
+  }
+
+  &__label {
+    text-transform: uppercase;
+
+    @include heading-6;
+  }
+}

@@ -1,0 +1,51 @@
+mixin feedback()
+  .feedback&attributes(attributes).flex
+    block
+
+
+mixin feedback__rating-block()
+  .feedback__rating-block
+    p Ваша оценка:
+    +rating(0, 5).feedback__rating
+    a(href="#" data-toggle="modal" data-target="#addfeedback").btn.btn-primary  добавить отзыв
+    p Оценка покупателей:
+    +rating(4, 1)
+    .feedback__count 4 оценки
+    .feedback__rating-sm.flex
+      +rating(3, 2, 'sm')
+      span.feedback__text (1 оцен.)
+    .feedback__rating-sm.flex
+      +rating(4, 1, 'sm')
+      span.feedback__text (1 оцен.)
+    .feedback__rating-sm.flex
+      +rating(5, 0, 'sm')
+      span.feedback__text (1 оцен.)
+
+mixin feedback__item(iconName_1, iconName_2)
+  .feedback__item
+    .feedback__header
+      span.feedback__name Евгения Силина
+      span.feedback__time 24.05.2017
+      span.feedback__time 12:45
+
+    +rating(2, 3).feedback__rating
+
+    a(href='').feedback__product-name Душевая кабина Niagara NG-2507
+
+    .feedback__inner
+      .feedback__description
+        span.feedback__text Достоинства:
+        span Цена/качество
+      .feedback__description
+        span.feedback__text Недостатки:
+        span не выявлены
+      .feedback__description
+        span.feedback__text Общие впечатления:
+        span Отличная кабина за свои деньги, стоит уже 3й год и ничего с ней не происходит, и все что пишут про фурнитуру, на своем опыте вобще не увидела проблем с ней!!!<br> Покупайте не пожалеете!
+
+    .feedback__grade
+      span.feedback__text Оцените отзыв:
+      a(href="").feedback__link #[span(class=`icon ${iconName_1}`)]
+      span.like-counter 0
+      a(href="").feedback__link #[span(class=`icon ${iconName_2}`)]
+      span.dislike-counter 0

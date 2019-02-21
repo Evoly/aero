@@ -1,0 +1,27 @@
+.card-faq {
+  margin-bottom: 20px;
+
+  &__header {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-grey-light;
+
+    @include heading-5;
+
+    .icon {
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__item {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+
+}
