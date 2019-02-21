@@ -21,7 +21,7 @@ mixin feedback__rating-block()
       +rating(5, 0, 'sm')
       span.feedback__text (1 оцен.)
 
-mixin feedback__item(iconName_1, iconName_2)
+mixin feedback__item()
   .feedback__item
     .feedback__header
       span.feedback__name Евгения Силина
@@ -45,7 +45,11 @@ mixin feedback__item(iconName_1, iconName_2)
 
     .feedback__grade
       span.feedback__text Оцените отзыв:
-      a(href="").feedback__link #[span(class=`icon ${iconName_1}`)]
-      span.like-counter 0
-      a(href="").feedback__link #[span(class=`icon ${iconName_2}`)]
-      span.dislike-counter 0
+      a(href="").feedback__like
+        span.icon.like-grey
+        span.icon.like
+        span.like-counter
+      a(href="").feedback__dislike
+        span.icon.dislike-grey
+        span.icon.dislike
+        span.dislike-counter

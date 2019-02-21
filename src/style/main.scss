@@ -13,6 +13,7 @@
 @import "../components/**/*";
 @import '../pages/**/*';
 
+
 .flex {
   display: flex;
 }
@@ -32,7 +33,6 @@ textarea[placeholder] {
   font-style: italic;
 }
 
-
 .icon {
   display: block;
 }
@@ -45,6 +45,7 @@ textarea[placeholder] {
   flex-flow: row nowrap;
   align-items: center;
   padding-left: 35px;
+
   @include media-breakpoint-down(md) {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -65,7 +66,6 @@ textarea[placeholder] {
     }
   }
 }
-
 
 .map {
   width: 100%;

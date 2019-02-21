@@ -18,6 +18,8 @@ block content
     section.container.section__card
       h1 Настенная сплит-система Lessar LS/LU-H07KKA2
       +banner('orange').card__banner
+        .banner__header Акция!
+        .banner__text На всю продукцию Lessar скидка на монтаж 20%. Акция распространяется на бытовую серию и полупромышленное оборудование.  Не упустите выгоду!
       .row
         .col-lg-9.col-md-8.col-sm-12
           .row
@@ -26,19 +28,19 @@ block content
                 .nav-slider__viewport
                   .nav-slider__items
                     .nav-slider__item
-                      img(src='images/temp/slider-lg.png')
+                      img(src='images/temp/slider-lg.png' alt='')
                     .nav-slider__item
-                      img(src='images/temp/slider-sm-2.png')
+                      img(src='images/temp/slider-sm-2.png' alt='')
                     .nav-slider__item
-                      img(src='images/temp/slider-sm-3.png')
+                      img(src='images/temp/slider-sm-3.png' alt='')
                     .nav-slider__item
-                      img(src='images/temp/slider-sm-1.png')
+                      img(src='images/temp/slider-sm-1.png' alt='')
                     .nav-slider__item
-                      img(src='images/temp/slider-sm-1.png')
+                      img(src='images/temp/slider-sm-1.png' alt='')
                     .nav-slider__item
-                      img(src='images/temp/slider-sm-1.png')
+                      img(src='images/temp/slider-sm-1.png' alt='')
 
-                .nav-slider__nav.nav-slider__next.disabled.js-next
+                .nav-slider__nav.nav-slider__next.js-next
                   span.icon.arrow-up.show
                   span.icon-disabled.arrow-up-grey
                 .nav-slider__nav.nav-slider__prev.js-prev
@@ -48,17 +50,17 @@ block content
             .card__col-center
               .card__slider.owl-carousel.js-card-slider
                 .card__slider-item.flex
-                  img(src='images/temp/slider-lg.png')
+                  img(src='images/temp/slider-lg.png' alt='')
                 .card__slider-item.flex
-                  img(src='images/temp/slider-sm-2.png')
+                  img(src='images/temp/slider-sm-2.png' alt='')
                 .card__slider-item.flex
-                  img(src='images/temp/slider-sm-3.png')
+                  img(src='images/temp/slider-sm-3.png' alt='')
                 .card__slider-item.flex
-                  img(src='images/temp/slider-sm-1.png')
+                  img(src='images/temp/slider-sm-1.png' alt='')
                 .card__slider-item.flex
-                  img(src='images/temp/slider-sm-1.png')
+                  img(src='images/temp/slider-sm-1.png' alt='')
                 .card__slider-item.flex
-                  img(src='images/temp/slider-sm-1.png')
+                  img(src='images/temp/slider-sm-1.png' alt='')
 
             .card__col-left
               +card-description
@@ -74,9 +76,9 @@ block content
                 .tab-pane.fade(role="tabpanel" aria-labelledby="cert-tab")#cert
                   p.tabs-sm__header Мы являемся официальным дилером!
                   .tab-pane__cert.flex
-                    img(src='images/temp/cert.png')
-                    img(src='images/temp/cert.png')
-                    img(src='images/temp/cert.png')
+                    img(src='images/temp/cert.png' alt='')
+                    img(src='images/temp/cert.png' alt='')
+                    img(src='images/temp/cert.png' alt='')
                 .tab-pane.fade(role="tabpanel" aria-labelledby="set-tab")#set
                   some content
               .row
@@ -94,7 +96,7 @@ block content
                 li.nav-item: a(class="nav-link nav-link_lg active" id="spec-tab" data-toggle="tab" href="#spec" role="tab" aria-controls="spec" aria-selected="true") Характеристики
                 li.nav-item: a(class="nav-link nav-link_lg" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false") Описание
                 li.nav-item: a(class="nav-link nav-link_lg" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false") Видео
-                li.nav-item: a(class="nav-link nav-link_lg" id="set-tab" data-toggle="tab" href="#set" role="tab" aria-controls="product" aria-selected="false") Комплекты
+                li.nav-item: a(class="nav-link nav-link_lg" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product" aria-selected="false") Комплекты
                 li.nav-item: a(class="nav-link nav-link_lg" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab" aria-controls="feedback" aria-selected="false") Отзывы( #[span 2])
                 li.nav-item: a(class="nav-link nav-link_lg" id="download-tab" data-toggle="tab" href="#download" role="tab" aria-controls="download" aria-selected="false") Файлы для скачивания
               .tab-content.tabs-lg
@@ -111,15 +113,15 @@ block content
                       <iframe class='embed-responsive-item' src="https://www.youtube.com/embed/txBfhpm1jI0?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     .embed-responsive.embed-responsive-16by9
                       <iframe class='embed-responsive-item' src="https://www.youtube-nocookie.com/embed/6Dakd7EIgBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                .tab-pane.fade(role="tabpanel" aria-labelledby="set-tab")#set
+                .tab-pane.fade(role="tabpanel" aria-labelledby="product-tab")#product
                   +card-set
                 .tab-pane.fade(role="tabpanel" aria-labelledby="feedback-tab")#feedback
                   +sort-feedback
                   +feedback
                     .feedback__content
-                      +feedback__item('like', 'dislike')
-                      +feedback__item('dislike', 'dislike')
-                      +feedback__item('dislike', 'like')
+                      +feedback__item
+                      +feedback__item
+                      +feedback__item
                     +feedback__rating-block
                 .tab-pane.fade(role="tabpanel" aria-labelledby="download-tab")#download
                   +download('ИНФОРМАЦИОННАЯ БРОШЮРА')

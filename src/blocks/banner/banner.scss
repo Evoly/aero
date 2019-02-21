@@ -1,28 +1,92 @@
 .banner {
-  padding: 20px 30px;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 22px 20px;
   color: #fff;
+  @include media-breakpoint-down(md) {
+    flex-flow: row wrap;
+    padding: 22px 15px;
+  }
 
   &_green {
-    background: url(../images/banner-green.png);
+    background: url("../images/banner-green.png") no-repeat;
+    background-size: cover;
   }
+
   &_blue {
-    background: url(../images/banner-blue.png);
+    background: url("../images/banner-blue.png") no-repeat;
+        background-size: cover;
   }
+
   &_orange {
-    background: url(../images/banner-orange.png);
+    background: url("../images/banner-orange.png") no-repeat;
+        background-size: cover;
+  }
+
+  &__left {
+    flex-flow: row nowrap;
+    padding-left: 10px;
+    padding-right: 30px;
+    flex-shrink: 2;
+
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__image {
+    padding-right: 20px;
+  }
+
+  &__content {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__right {
+    padding-left: 30px;
+    border-left: 1px dashed #ccc;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      flex-grow: 1;
+      padding-left: 0;
+      border-left: none;
+      padding-top: 15px;
+      border-top: 1px dashed #ccc;
+    }
+  }
+
+  &__timer {
+    flex-shrink: 0;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   &__header {
     text-transform: uppercase;
-
     @include heading-5;
   }
 
   &__label {
+    max-width: 80px;
     text-transform: uppercase;
-
+    margin-right: 15px;
     @include heading-6;
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 }

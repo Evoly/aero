@@ -101,51 +101,46 @@ if (slideTotall <= slides) {
   $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
 }
 
-$('.js-next').on('click', function () {
+$('.js-next, .js-prev').on('click', function () {
   const slideVisible = $('.js-vertical-slider .visible').toArray();
   const indexFirst = $(slideVisible[0]).index();
   const indexLast = $(slideVisible[slideVisible.length - 1]).index();
 
-  if (indexLast < (slideTotall - 1)) {
-    $('.js-prev .icon').addClass('show');
-    $('.js-prev .icon-disabled').removeClass('show');
+  if ($(this).hasClass('js-next')) {
+    if (indexLast < (slideTotall - 1)) {
+      $('.js-prev .icon').addClass('show');
+      $('.js-prev .icon-disabled').removeClass('show');
 
-    $(slideVisible[0]).removeClass('visible');
-    $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
-    $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst + 1)}px)`);
-  } else {
-    $('.js-next .icon').removeClass('show');
-    $('.js-next .icon-disabled').addClass('show');
+      $(slideVisible[0]).removeClass('visible');
+      $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
+      $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst + 1)}px)`);
+    } else {
+      $('.js-next .icon').removeClass('show');
+      $('.js-next .icon-disabled').addClass('show');
+    }
+  }
+
+  if ($(this).hasClass('js-prev')) {
+    if (indexFirst > 0) {
+      $('.js-next .icon').addClass('show');
+      $('.js-next .icon-disabled').removeClass('show');
+
+      $(slideVisible[0]).prev().addClass('visible');
+      $(slideVisible[slideVisible.length - 1]).removeClass('visible');
+      $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst - 1)}px)`);
+    } else {
+      $('.js-prev .icon').removeClass('show');
+      $('.js-prev .icon-disabled').addClass('show');
+    }
   }
   return;
-});
-
-$('.js-prev').on('click', function () {
-  const slideVisible = $('.js-vertical-slider .visible').toArray();
-  const indexFirst = $(slideVisible[0]).index();
-  const indexLast = $(slideVisible[slideVisible.length - 1]).index();
-
-  if (indexFirst > 0) {
-    $('.js-next .icon').addClass('show');
-    $('.js-next .icon-disabled').removeClass('show');
-
-    $(slideVisible[0]).prev().addClass('visible');
-    $(slideVisible[slideVisible.length - 1]).removeClass('visible');
-    $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst - 1)}px)`);
-  } else {
-    $('.js-prev .icon').removeClass('show');
-    $('.js-prev .icon-disabled').addClass('show');
-  }
-  return;
-});
+})
 
 function syncSliders(event) {
   event_name = event.property.name;
   if(event_name=='position') {
     const currentIndex = event.item.index;
-    console.log(currentIndex);
     const nextIndex = event.property.value;
-    console.log( 'destination_id', nextIndex );
 
     const items = $(".js-vertical-slider .nav-slider__item");
     items.removeClass('active');

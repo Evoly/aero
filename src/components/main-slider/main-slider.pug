@@ -3,7 +3,7 @@ mixin main-slider()
     .owl-carousel.main-slider.js-main-slider
       - for (var x = 1; x < 6; x++)
         .main-slider__slide
-          img(src='images/bg-1.jpg').main-slider__bg
+          img(src='images/bg-1.jpg' alt='').main-slider__bg
           .container
             .main-slider__content.flex
               .main_slider__item
@@ -12,7 +12,7 @@ mixin main-slider()
                 p.main-slider__text Сплит-системы серии Premium SLIM Design Super DC Inverter <br>отличаются уникальным дизайном внутреннего блока.
                 a(href='#').btn.btn-primary подробнее
               .main-slider__item
-                img(src='images/main_slider-1.png')
+                img(src='images/main_slider-1.png' alt='')
               .main-slider__item
                 p.main-slider__text_lg 20%
                 p.main-slider__text_discount #[span(class="icon wrench")] скидка <br>на монтаж

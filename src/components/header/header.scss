@@ -70,7 +70,7 @@
 
     @include text-huge;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       margin-top: 20px;
     }
 
