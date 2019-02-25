@@ -1,11 +1,21 @@
-mixin banner(color)
+mixin banner-timer(color, iconName)
   .banner&attributes(attributes).flex(class=`banner_${color}`)
     .banner__left.flex
       .banner__image
-        span.icon.icon-banner
+        span.icon(class=`${iconName}`)
       .banner__content
         block
     .banner__right.flex
       .banner__label До конца акции осталось:
       .banner__timer
         .countdown(id='countdown1' class="date" data-timer="2019, 03, 17,0,0,0")
+
+
+mixin banner(color, iconName)
+  .banner&attributes(attributes).flex(class=`banner_${color}`)
+    .banner__left.flex
+      .banner__image.banner__image_border
+        img(src=`images/${iconName}.png`)
+        //span.icon(class=`${iconName}`)
+      .banner__content.banner__content_lg
+        block

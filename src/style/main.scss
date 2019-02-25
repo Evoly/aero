@@ -77,7 +77,7 @@ textarea[placeholder] {
 }
 
 .page {
-  min-height: 100vh;
+  //min-height: 100vh;
   width: 100%;
 }
 
@@ -219,6 +219,7 @@ textarea[placeholder] {
     }
   }
 
+
   &__footer {
     color: $color-logo-red;
     text-transform: uppercase;
@@ -238,7 +239,7 @@ textarea[placeholder] {
     padding: 15px;
     color: $color-darkgrey;
 
-    @include text-medium;
+    @include text-medium-bold;
   }
 
   &_sm {
@@ -278,6 +279,7 @@ textarea[placeholder] {
     @include media-breakpoint-down(xs) {
       flex: 0 50%;
     }
+
 
     &_lg {
       @include media-breakpoint-only(lg) {
@@ -349,6 +351,7 @@ textarea[placeholder] {
     }
   }
 }
+
 
 .visible-md {
   display: none;
@@ -429,5 +432,46 @@ textarea[placeholder] {
 
   &__link {
     @include text-sm;
+  }
+}
+.installation {
+
+  &__table {
+    margin-bottom: 40px;
+
+    .right-col {
+      width: 4.95%;
+    }
+    .left-col {
+      width: 19.4872%;
+    }
+  }
+
+  &__measure {
+    margin-bottom: 55px;
+  }
+}
+
+.measure {
+  &__text {
+    margin-bottom: 18px;
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    padding: 30px 40px 40px;
+    background-color: $color-athens-gray2;
+  }
+
+  ol {
+    padding-left: 15px;
+    margin-bottom: 5px;
+
+    li {
+      margin-bottom: 18px;
+    }
   }
 }

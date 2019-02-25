@@ -83,6 +83,12 @@
 }
 
 .modal-choiceCityFirst {
+  width: auto;
+
+  @include media-breakpoint-down(xs) {
+    top: calc(100% + 5px);
+  }
+
   .modal-content {
     &:before {
       position: absolute;
@@ -92,6 +98,11 @@
       margin: auto;
       border: 7px solid transparent;
       border-bottom: 7px solid $modal-content-border-color;
+
+      @include media-breakpoint-down(xs) {
+        right: auto;
+        left: 30px;
+      }
     }
 
     &:after {
@@ -101,12 +112,21 @@
       right: 50%;
       border: 7px solid transparent;
       border-bottom: 7px solid #fff;
+
+      @include media-breakpoint-down(xs) {
+        right: auto;
+        left: 30px;
+      }
     }
   }
 
   .modal-dialog {
     width: 295px;
-    left: -50%;
+    left: -25%;
+
+    @include media-breakpoint-down(xs) {
+      left: 0;
+    }
   }
   text-align: center;
 
@@ -134,11 +154,24 @@
 }
 
 .modal-choiceCity {
-  width: 277px;
+  width: auto;
+
+  @include media-breakpoint-down(xs) {
+    top: calc(100% + 5px);
+  }
 
   &.modal.show {
-    position: absolute;
+    // position: absolute;
+    // left: -30%;
+  }
+
+  .modal-dialog {
+    width: 277px;
     left: -30%;
+
+    @include media-breakpoint-down(xs) {
+      left: 0;
+    }
   }
 
   .modal-content {
@@ -155,6 +188,11 @@
       margin: auto;
       border: 7px solid transparent;
       border-bottom: 7px solid $modal-content-border-color;
+
+      @include media-breakpoint-down(xs) {
+        right: auto;
+        left: 30px;
+      }
     }
 
     &:after {
@@ -164,6 +202,11 @@
       right: 50%;
       border: 7px solid transparent;
       border-bottom: 7px solid #fff;
+
+      @include media-breakpoint-down(xs) {
+        right: auto;
+        left: 30px;
+      }
     }
   }
 

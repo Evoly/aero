@@ -63,7 +63,7 @@
     text-transform: uppercase;
     color: #fff;
     background-color: transparent;
-    @include text-medium;
+    @include text-medium-bold;
     @include media-breakpoint-up(lg) {
       justify-content: center;
     }

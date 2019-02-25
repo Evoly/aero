@@ -67,10 +67,6 @@
   font-weight: 700;
 }
 
-// TODO: start
-
-
-
 @mixin heading-7 {
   font-size: 16px;
   line-height: 1.6;
@@ -122,6 +118,11 @@
 }
 
 @mixin text-medium {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin text-medium-bold {
   font-size: 14px;
   font-weight: 700;
 }

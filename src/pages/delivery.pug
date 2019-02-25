@@ -1,0 +1,28 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Каталог'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li(aria-current="page").breadcrumb-item.active Доставка
+
+    section.container
+      .row
+        .col
+          p content
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+    +footer
+
+  +modal-callMe#callMe

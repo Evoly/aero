@@ -1,0 +1,25 @@
+mixin payment-methods-block()
+  .row&attributes(attributes)
+    .col
+      +payment-methods('payment1')
+        .payment-methods__header ОПЛАТА КУРЬЕРУ НАЛИЧНЫМИ ИЛИ ПО КАРТЕ
+        .payment-methods__text Курьер доставит вам на дом оформленный товар, вы убедитесь в его работоспособности и сможете оплатить его.
+    .col
+      +payment-methods('payment2')
+        .payment-methods__header ОПЛАТА ПО ВЫСТАВЛЕННОМУ СЧЕТУ
+        .payment-methods__text Оформив заказ, запросите у менеджера счет на оплату, по указанным реквизитам вы сможете оплатить счет через интернет-банк или же в любом отделении своего банка.
+    .col
+      +payment-methods('payment3')
+        .payment-methods__header ОПЛАТА ПО ВЫСТАВЛЕННОМУ СЧЕТУ
+        .payment-methods__text Мы работаем с НДС доставка на следующий день после поступления денежных средств на наш р/счет.
+
+
+
+
+
+
+mixin payment-methods(iconName)
+  .payment-methods
+    .payment-methods__image
+      span.icon(class=`${iconName}`)
+    block

@@ -1,0 +1,45 @@
+.tab-set {
+    position: relative;
+    overflow-y: auto;
+    max-height: 220px;
+    padding-right: 10px;
+    width: 100%;
+
+    &__content {
+      margin-right: 10px;
+    }
+
+    &__item {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-athens-gray1;
+        color: $color-text;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 17px;
+        padding-right: 5px;
+        line-height: 1.5;
+
+        @include text-medium;
+        p {
+            max-width: 75%;
+            padding-right: 5px;
+            margin-bottom: 0px;
+        }
+    }
+    &__price {
+      @include text-medium-bold;
+      white-space: nowrap;
+    }
+    ul {
+        max-width: 260px;
+        list-style-type: none;
+        padding-left: 35px;
+        background-color: #fff;;
+        padding-top: 5px;
+        line-height: 1.5;
+
+        @include text-sm;
+    }
+}

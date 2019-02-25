@@ -756,7 +756,7 @@
                                     <p class="card-description__text">Артикул: 13239</p>
                                 </div>
                                 <div class="card-description__col flex">
-                                    <div class="card-description__brand"><img src="images/temp/brand.png" alt="" /></div>
+                                    <div class="card-description__brand"><a href=""><img src="images/temp/brand.png" alt="" /></a></div>
                                 </div>
                             </div>
                             <ul class="nav nav-tabs nav-tabs nav-tabs-sm" role="tablist">
@@ -773,7 +773,40 @@
                                     <div class="tab-pane__cert flex"><img src="images/temp/cert.png" alt=""><img src="images/temp/cert.png" alt=""><img src="images/temp/cert.png" alt=""></div>
                                 </div>
                                 <div class="tab-pane fade" role="tabpanel" aria-labelledby="set-tab" id="set">
-                                    <some>content</some>
+                                    <div class="tab-set">
+                                        <div class="tab-set__content">
+                                            <div class="tab-set__item flex">
+                                                <p>1.Акриловая ванна Roca Easy ZRU9302899an</p>
+                                                <p class="tab-set__price">12 240 р.</p>
+                                            </div>
+                                            <ul class="list-unstyled">
+                                                <li>Ванна - 1 шт.</li>
+                                                <li>Инструкция - 1 шт.</li>
+                                            </ul>
+                                            <div class="tab-set__item flex">
+                                                <p>2. Монтажный набор дляRoca Easy ZRU9302900</p>
+                                                <p class="tab-set__price">4 430 р.</p>
+                                            </div>
+                                            <ul class="list-unstyled">
+                                                <li>Каркас - 1 шт.</li>
+                                                <li>Слив-перелив полуавтомат - 1 шт</li>
+                                                <li>Комплект креплений к стене - 1 шт.</li>
+                                                <li>Комплект креплений к фронтальной панели - 1 шт.</li>
+                                                <li>Инструкция - 1 шт.</li>
+                                            </ul>
+                                            <div class="tab-set__item flex">
+                                                <p>2. Монтажный набор дляRoca Easy ZRU9302900</p>
+                                                <p class="tab-set__price">4 430 р.</p>
+                                            </div>
+                                            <ul class="list-unstyled">
+                                                <li>Каркас - 1 шт.</li>
+                                                <li>Слив-перелив полуавтомат - 1 шт</li>
+                                                <li>Комплект креплений к стене - 1 шт.</li>
+                                                <li>Комплект креплений к фронтальной панели - 1 шт.</li>
+                                                <li>Инструкция - 1 шт.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -1306,13 +1339,13 @@
                     <div class="modal__header">
                         <h5>Заказать звонок</h5>
                     </div>
-                    <div class="modal-body">
-                        <form class="form" action="#" method="post">
+                    <form class="form" action="#" method="post">
+                        <div class="modal-body">
                             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
                             <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
-                        </form>
-                    </div>
-                    <div class="modal-footer"><button class="btn btn-primary" type="submit">заказать звонок</button></div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">заказать звонок</button></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1322,14 +1355,14 @@
                     <div class="modal__header">
                         <h5>купить</h5>
                     </div>
-                    <div class="modal-body">
-                        <form class="form" action="#" method="post">
+                    <form class="form" action="#" method="post">
+                        <div class="modal-body">
                             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
                             <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
-                            <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Название товара" /></div>
-                        </form>
-                    </div>
-                    <div class="modal-footer"><button class="btn btn-primary" type="submit">отправить</button></div>
+                            <div class="form-group"><input class="form-control" type="text" name="product" placeholder="Название товара" /></div>
+                        </div>
+                    </form>
+                    <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">отправить</button></div>
                 </div>
             </div>
         </div>
@@ -1339,13 +1372,13 @@
                     <div class="modal__header">
                         <h5>бесплатный замер</h5>
                     </div>
-                    <div class="modal-body">
-                        <form class="form" action="#" method="post">
+                    <form class="form" action="#" method="post">
+                        <div class="modal-body">
                             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
-                            <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
-                        </form><span class="modal__text-sm">услуга бесплатна в черте города</span>
-                    </div>
-                    <div class="modal-footer"><button class="btn btn-primary" type="submit">отправить</button></div>
+                            <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div><span class="modal__text-sm">услуга бесплатна в черте города</span>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">отправить</button></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1355,8 +1388,8 @@
                     <div class="modal__header">
                         <h5>Написать отзыв</h5>
                     </div>
-                    <div class="modal-body">
-                        <form class="form" action="#" method="post">
+                    <form class="form" action="#" method="post">
+                        <div class="modal-body">
                             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
                             <div class="form-group"><input class="form-control" type="text" name="city" placeholder="Город" /></div>
                             <div class="form__group modal__rating flex"><span class="rating__label">Оценка:</span>
@@ -1369,17 +1402,17 @@
                                 </div>
                             </div>
                             <div class="form-group"><textarea class="form-control" name="plus" rows="1" placeholder="Достоинства"></textarea></div>
-                            <div class="form-group"><textarea class="form-control" name="plus" rows="1" placeholder="Недостатки"></textarea></div>
-                            <div class="form-group"><textarea class="form-control" name="plus" rows="9" placeholder="Общие впечатления"></textarea></div>
+                            <div class="form-group"><textarea class="form-control" name="minus" rows="1" placeholder="Недостатки"></textarea></div>
+                            <div class="form-group"><textarea class="form-control" name="review" rows="9" placeholder="Общие впечатления"></textarea></div>
                             <div class="form-group">
                                 <p class="captcha__label">Введите текст на картинке:</p>
                                 <div class="captcha">
                                     <div class="captcha__item"><img src="images/temp/captcha.png" /></div><input class="captcha__item form-control" type="text" name="captcha" />
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer"><button class="btn btn-primary" type="submit">оставить отзыв</button></div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">оставить отзыв</button></div>
+                    </form>
                 </div>
             </div>
         </div>

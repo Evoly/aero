@@ -176,6 +176,10 @@ function syncSliders(event) {
     $('.catalog-form__group').scrollbar();
   }
 
+  if ($('.tab-set').length > 0) {
+    $('.tab-set').scrollbar();
+  }
+
   //map
 
   if ($('.map').length > 0) {
@@ -290,7 +294,7 @@ function syncSliders(event) {
     }
   });
 
-  $('.noUi-handle').mouseup(function() {
+  $('.noUi-handle').on('mouseup', function() {
     $('.mypopover').removeClass('show');
     const el = $(this);
     const parentTop = $('.catalog-form').offset().top;
@@ -458,7 +462,4 @@ function syncSliders(event) {
           padZeroes: true
       });
   });
-
-
-
 });

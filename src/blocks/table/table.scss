@@ -1,0 +1,26 @@
+.table {
+
+  &__header {
+    margin-bottom: 25px;
+
+    @include text-lg;
+  }
+  td, th {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  tr:nth-child(even) {
+    background-color: $color-athens-gray1;
+  }
+
+  td:not(:first-child),
+  th:not(:first-child) {
+    padding-left: 38px;
+  }
+}
+
+.thead-dark {
+  th:not(:last-child) {
+    border-right: $table-border-color;
+  }
+}

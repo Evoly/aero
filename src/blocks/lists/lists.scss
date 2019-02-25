@@ -8,7 +8,6 @@
     color: $color-darkgrey;
     text-transform: uppercase;
     margin-bottom: 10px;
-
     @include heading-6;
   }
 
@@ -16,7 +15,6 @@
     padding-left: 16px;
     position: relative;
     margin-bottom: 15px;
-
     @include text-sm;
 
     &:before {
@@ -30,6 +28,14 @@
       left: 0;
       top: 6px;
     }
+
+    &_red {
+      font-size: inherit;
+
+      &:before {
+        background-color: $color-logo-red;
+      }
+    }
   }
 
   .icon {
@@ -37,7 +43,6 @@
   }
 
   &__link {
-
     &_dashed {
       border-bottom: 1px dashed $link-color;
 
@@ -48,8 +53,40 @@
   }
 }
 
-.list-triangle {
+.list-dots-lg {
+  padding-left: 45px;
 
+  @include media-breakpoint-down(md) {
+    padding-left: 15px;
+  }
+
+  &__item {
+    padding-left: 25px;
+    position: relative;
+    line-height: 24px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-logo-red;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      @include media-breakpoint-down(sm) {
+        top: 9px;
+        bottom: auto;
+      }
+    }
+  }
+}
+
+.list-triangle {
   &__link {
     display: block;
     padding-left: 16px;
@@ -57,7 +94,6 @@
 
     &:after {
       @include triangle($link-color, right, 4px);
-
       left: 0;
       top: 5px;
       margin: auto;

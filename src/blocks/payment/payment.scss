@@ -1,0 +1,48 @@
+.payment {
+  padding-top: 35px;
+  padding-bottom: 25px;
+  border-top: 1px dashed #ccc;
+
+  .section__subheader {
+    margin-bottom: 30px;
+  }
+  &__text {
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+
+  &__footer {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    border-top: 1px solid $color-logo-dot;
+  }
+
+  &__image {
+    flex-flow: row nowrap;
+    padding-left: 15px;
+    padding-right: 45px;
+
+    @include media-breakpoint-down(xs) {
+      padding-right: 15px;
+    }
+
+    p {
+      padding-left: 18px;
+      font-style: italic;
+    }
+
+    .icon {
+      flex-shrink: 0;
+    }
+  }
+
+  &__subheader {
+    @include text-lg;
+  }
+  .list-dots-lg {
+    margin-bottom: 3px;
+  }
+}
