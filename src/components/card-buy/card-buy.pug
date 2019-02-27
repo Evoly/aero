@@ -3,7 +3,7 @@ mixin card-buy()
     .card-buy__top
       p.card-buy__price 25 400 руб.
       a(href="#" data-toggle="modal" data-target="#buy").btn.btn-primary купить
-      a(href='#').btn.btn-dark купить в кредит
+      a(href='#' data-toggle="modal" data-target="#buy").btn.btn-dark купить в кредит
 
     .card-buy__bottom
       +list-dots('Доставка', 'shipping')

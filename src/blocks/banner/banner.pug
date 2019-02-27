@@ -1,14 +1,15 @@
-mixin banner-timer(color, iconName)
+mixin banner-timer(color, iconName, timer)
   .banner&attributes(attributes).flex(class=`banner_${color}`)
     .banner__left.flex
       .banner__image
         span.icon(class=`${iconName}`)
       .banner__content
         block
-    .banner__right.flex
-      .banner__label До конца акции осталось:
-      .banner__timer
-        .countdown(id='countdown1' class="date" data-timer="2019, 03, 17,0,0,0")
+    if timer
+      .banner__right.flex
+        .banner__label До конца акции осталось:
+        .banner__timer
+          .countdown(id='countdown1' class="date" data-timer="2019, 03, 17,0,0,0")
 
 
 mixin banner(color, iconName)

@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;amp;subset=cyrillic-ext" type="text/css" rel="stylesheet">
     <link href="style/main.css" rel="stylesheet">
     <link href="style/icons.min.css" rel="stylesheet">
-    <!--link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")-->
     <link href="scripts/libs/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="scripts/libs/owl-carousel/owl.theme.default.css" rel="stylesheet">
     <script src="scripts/libs/jquery.min.js"></script>
@@ -49,16 +48,18 @@
                             </div>
                             <div class="modal fade modal-choiceCity" id="choiceCity" tabindex="-1" role="dialog">
                                 <div class="modal-dialog">
-                                    <ul class="modal-content list-unstyled">
-                                        <li class="modal-choiceCity__link"><a href="#">Санкт-Петербург</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Астрахань</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Барнаул</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Белгород</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Великий Новгород</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Брянск</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Владивосток</a></li>
-                                        <li class="modal-choiceCity__link"><a href="#">Волгоград</a></li>
-                                    </ul>
+                                    <div class="modal-content">
+                                        <ul class="list-unstyled">
+                                            <li class="modal-choiceCity__link"><a href="#">Санкт-Петербург</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Астрахань</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Барнаул</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Белгород</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Великий Новгород</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Брянск</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Владивосток</a></li>
+                                            <li class="modal-choiceCity__link"><a href="#">Волгоград</a></li>
+                                        </ul>
+                                    </div>
                                     <div class="modal-footer">
                                         <div class="modal-choiceCity__search"><input value="" type="text" name="" autocomplete="off" placeholder="Поиск городов" /><span class="icon lens"></span></div>
                                     </div>
@@ -1034,8 +1035,6 @@
                                 </div>
                                 <div class="tab-pane fade" role="tabpanel" aria-labelledby="video-tab" id="video">
                                     <div class="tab-pane__video">
-                                        <!--.embed-responsive.embed-responsive-16by9<iframe class='embed-responsive-item' src="https://www.youtube.com/embed/txBfhpm1jI0?enablejsapi=1" frameborder="0" allowfullscreen></iframe>-->
-                                        <!--.embed-responsive.embed-responsive-16by9<iframe class='embed-responsive-item' src="https://www.youtube-nocookie.com/embed/6Dakd7EIgBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                                         <div class="embed-responsive embed-responsive-16by9"><iframe class='embed-responsive-item' src="https://www.youtube.com/embed/-qEtZr9619U" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                                     </div>
                                 </div>
@@ -1231,7 +1230,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card-buy flex">
                         <div class="card-buy__top">
-                            <p class="card-buy__price">25 400 руб.</p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#buy">купить</a><a class="btn btn-dark" href="#">купить в кредит</a>
+                            <p class="card-buy__price">25 400 руб.</p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#buy">купить</a><a class="btn btn-dark" href="#" data-toggle="modal" data-target="#buy">купить в кредит</a>
                         </div>
                         <div class="card-buy__bottom">
                             <div class="list-dots">
@@ -1425,6 +1424,8 @@
     <script src="scripts/libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="scripts/libs/nouislider/nouislider.min.js"></script>
     <script src="scripts/libs/jquery.scrollbar.min.js"></script>
+    <script src="scripts/libs/inputmask.js"></script>
+    <script src="scripts/libs/jquery.inputmask.js"></script>
     <script src="scripts/custom.js"></script>
 </body>
 

@@ -176,6 +176,10 @@ function syncSliders(event) {
     $('.catalog-form__group').scrollbar();
   }
 
+  if ($('#choiceCity').length > 0) {
+    $('#choiceCity ul').scrollbar();
+  }
+
   if ($('.tab-set').length > 0) {
     $('.tab-set').scrollbar();
   }
@@ -201,12 +205,10 @@ function syncSliders(event) {
       sliders = $('.js-range');
 
     $('.js-range').each(function() {
-      var slider = $(this);
+      const slider = $(this);
 
       const input_min = slider.siblings('.inputbox').find('input[data-handler="0"]')[0];
-      //console.log('input_min', input_min);
       const input_max = slider.siblings('.inputbox').find('input[data-handler="1"]')[0];
-
       const inputs = [input_min, input_max];
 
       const min = parseInt(input_min.getAttribute('min'), 10);
@@ -294,14 +296,22 @@ function syncSliders(event) {
     }
   });
 
-  $('.noUi-handle').on('mouseup', function() {
+  const showPopover = (el) => {
     $('.mypopover').removeClass('show');
-    const el = $(this);
+    //const el = $(this);
     const parentTop = $('.catalog-form').offset().top;
     const top = el.offset().top - parentTop - 5;
-    //console.log(top);
+
     $('.mypopover').css('top', top);
     $('.mypopover').addClass('show');
+  };
+
+  $('.noUi-handle').on('mouseup', function() {
+      showPopover($(this));
+  });
+
+  $('.noUi-connects').on('click', function() {
+      showPopover($(this));
   });
 
   $('.js-reset').on('click', function(e) {
@@ -443,6 +453,8 @@ function syncSliders(event) {
       data: JSON.stringify(form.serializeFormJSON()),
       contentType: 'application/json'
     });
+
+    $('.modal').modal('hide');
   });
 
   $(function () {
@@ -462,4 +474,6 @@ function syncSliders(event) {
           padZeroes: true
       });
   });
+
+  $('input[name="tel"]').inputmask({"mask": "+7 (999) 999-9999"})
 });

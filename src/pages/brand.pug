@@ -1,0 +1,49 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Брэнд'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li.breadcrumb-item: a(href="#") Кондиционирование
+            li(aria-current="page").breadcrumb-item.active Кондиционеры Daikin
+
+    section.section__brand.container
+      .row
+        .col-sm-12
+          h1 Кондиционеры Daikin
+
+          ul(role="tablist").nav.nav-pills
+            li.nav-item: a(class="nav-link active" data-toggle="tab" href="#brand_1" role="tab" aria-controls="brand_1" aria-selected="true") Настенные
+            li.nav-item: a(class="nav-link" data-toggle="tab" href="#brand_2" role="tab" aria-controls="brand_2" aria-selected="false") Мульти
+            li.nav-item: a(class="nav-link" data-toggle="tab" href="#brand_3" role="tab" aria-controls="brand_3" aria-selected="false") Кассетные
+            li.nav-item: a(class="nav-link" data-toggle="tab" href="#brand_4" role="tab" aria-controls="brand_4" aria-selected="false") Канальные
+            li.nav-item: a(class="nav-link" data-toggle="tab" href="#brand_5" role="tab" aria-controls="brand_5" aria-selected="false") Напольно-потолочные
+
+          .tab-content.tab-brand
+            .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="brand_1")#brand_1
+              +tab-brand
+            .tab-pane.fade(role="tabpanel" aria-labelledby="brand_2")#brand_2
+              +tab-brand
+            .tab-pane.fade(role="tabpanel" aria-labelledby="brand_3")#brand_3
+              +tab-brand
+            .tab-pane.fade(role="tabpanel" aria-labelledby="brand_4")#brand_4
+              +tab-brand
+            .tab-pane.fade(role="tabpanel" aria-labelledby="brand_5")#brand_5
+              +tab-brand
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+
+  +footer
+  +modal-callMe#callMe

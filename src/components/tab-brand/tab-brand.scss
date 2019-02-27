@@ -1,0 +1,132 @@
+.tab-brand {
+  padding-top: 29px;
+  padding-bottom: 25px;
+  &__top {
+    border-bottom: 1px solid $color-heather;
+    padding-bottom: 18px;
+    @include media-breakpoint-down(sm) {
+      a {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__header {
+    padding-top: 35px;
+    @include heading-3;
+    &.tab-brand__text {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subheader {
+    margin-bottom: 25px;
+    @include heading-5-thin;
+  }
+
+  &__image {
+    width: 268px;
+    max-width: 100%;
+    margin-bottom: 15px;
+
+    &_lg {
+      height: 270px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $color-heather;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__cert {
+    border-left: 1px dashed $color-heather;
+    text-align: center;
+
+    img {
+      margin-bottom: 25px;
+    }
+    @include media-breakpoint-down(xs) {
+      text-align: left;
+      border-left: none;
+    }
+  }
+
+  &__cert-text {
+    color: $color-logo-red;
+    @include heading-5-thin;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 18px;
+  }
+
+  .banner {
+    padding-bottom: 25px;
+    margin-bottom: 28px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__table {
+    th {
+      border-top: none;
+      @include heading-6;
+    }
+
+    thead th {
+      border-bottom: 1px;
+      padding-top: 10px;
+      padding-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      vertical-align: middle;
+    }
+
+    td:first-child,
+    th:first-child {
+      padding-left: 0;
+    }
+
+    td:last-child,
+    th:last-child {
+      padding-right: 0;
+    }
+
+    td {
+      border-top: none;
+    }
+
+    tr:not(:first-child) {
+      border-top: 1px dashed $table-border-color;
+    }
+
+    tr:last-child {
+      border-bottom: 1px solid $table-border-color;
+    }
+
+    tr:hover .tab-brand__link {
+      color: $color-logo-red;
+    }
+  }
+
+  &__link {
+    &:hover {
+      color: $color-logo-red;
+      text-decoration: none;
+    }
+  }
+}

@@ -89,10 +89,11 @@ mixin choiceCityFirst()
 mixin choiceCity()
   .modal.fade.modal-choiceCity#choiceCity(tabindex="-1" role="dialog")
     .modal-dialog
-      ul.modal-content.list-unstyled
-        -var data = ['Санкт-Петербург', 'Астрахань', 'Барнаул', 'Белгород', 'Великий Новгород', 'Брянск', 'Владивосток', 'Волгоград'];
-          each val in data
-            li.modal-choiceCity__link: a(href='#')=val
+      .modal-content
+        ul.list-unstyled
+          -var data = ['Санкт-Петербург', 'Астрахань', 'Барнаул', 'Белгород', 'Великий Новгород', 'Брянск', 'Владивосток', 'Волгоград'];
+            each val in data
+              li.modal-choiceCity__link: a(href='#')=val
       .modal-footer
         .modal-choiceCity__search
           input(value="" type="text" name="" autocomplete="off" placeholder="Поиск городов")

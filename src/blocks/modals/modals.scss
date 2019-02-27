@@ -99,7 +99,7 @@
       border: 7px solid transparent;
       border-bottom: 7px solid $modal-content-border-color;
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(md) {
         right: auto;
         left: 30px;
       }
@@ -113,7 +113,7 @@
       border: 7px solid transparent;
       border-bottom: 7px solid #fff;
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(md) {
         right: auto;
         left: 30px;
       }
@@ -124,7 +124,7 @@
     width: 295px;
     left: -25%;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(md) {
       left: 0;
     }
   }
@@ -160,16 +160,11 @@
     top: calc(100% + 5px);
   }
 
-  &.modal.show {
-    // position: absolute;
-    // left: -30%;
-  }
-
   .modal-dialog {
     width: 277px;
     left: -30%;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(md) {
       left: 0;
     }
   }
@@ -177,8 +172,13 @@
   .modal-content {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 20px;
+    padding-right: 10px;
     margin: 0;
+
+    ul {
+      padding-right: 10px;
+      max-height: 277px;
+    }
 
     &:before {
       position: absolute;
@@ -189,7 +189,7 @@
       border: 7px solid transparent;
       border-bottom: 7px solid $modal-content-border-color;
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(md) {
         right: auto;
         left: 30px;
       }
@@ -203,7 +203,7 @@
       border: 7px solid transparent;
       border-bottom: 7px solid #fff;
 
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(md) {
         right: auto;
         left: 30px;
       }
