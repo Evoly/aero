@@ -13,16 +13,31 @@ block content
             li.breadcrumb-item: a(href="#") Главная
             li(aria-current="page").breadcrumb-item.active Доставка
 
-    section.container
+    section.section__delivery.container
       .row
-        .col
-          p content
+        .col-sm-12
+          h1 Доставка
+
+          ul(role="tablist").nav.nav-pills.nav-pills_lg
+            li.nav-item.nav-item_lg: a(class="nav-link nav-link-lg  active" data-toggle="tab" href="#st-petersburg" role="tab" aria-controls="st-petersburg" aria-selected="true") Санкт-Петербург и Ленинградская область
+            li.nav-item.nav-item_lg: a(class="nav-link nav-link-lg " data-toggle="tab" href="#moscow" role="tab" aria-controls="moscow" aria-selected="false") Москва и Московская область
+            li.nav-item.nav-item_lg: a(class="nav-link nav-link-lg " data-toggle="tab" href="#region" role="tab" aria-controls="region" aria-selected="false") Другие регионы
+
+          .tab-content.tab-delivery
+            .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="st-petersburg")#st-petersburg
+              +tab-delivery
+            .tab-pane.fade(role="tabpanel" aria-labelledby="moscow")#moscow
+              content
+            .tab-pane.fade(role="tabpanel" aria-labelledby="region")#region
+              content
+
+
     .section__consult
       .section__consult_bg
       .container
         .consult__wrapper
           +consult.consult_grey
 
-    +footer
+  +footer
 
   +modal-callMe#callMe

@@ -1,4 +1,4 @@
-// Базовые стили (не трогать)
+// Базовые стили
 
 .scroll-wrapper {
   overflow: hidden !important;
@@ -112,10 +112,6 @@
   overflow: hidden;
 }
 
-// .scroll-element .scroll-element_outer, .scroll-element .scroll-element_track, .scroll-element .scroll-bar {
-//   border-radius: 2px;
-// }
-
 .scroll-element .scroll-element_track {
   background-color: $color-heather1;
 }
@@ -132,14 +128,4 @@
 
 .scroll-element.scroll-draggable .scroll-bar {
   background-color: #919191;
-}
-
-// Стили для случая, когда видны оба скроллбара
-
-.scroll-element.scroll-x.scroll-scrolly_visible {
-  right: 10px;
-}
-
-.scroll-element.scroll-y.scroll-scrollx_visible {
-  bottom: 10px;
 }

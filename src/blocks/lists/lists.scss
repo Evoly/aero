@@ -98,5 +98,9 @@
       top: 5px;
       margin: auto;
     }
+
+  &:hover:after {
+    border-left-color: inherit;
+  }
   }
 }

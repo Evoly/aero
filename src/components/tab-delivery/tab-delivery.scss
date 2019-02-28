@@ -1,0 +1,84 @@
+.tab-delivery {
+  padding-top: 25px;
+
+  &__header {
+    padding-top: 30px;
+    color: $color-darkgrey;
+    border-top: 1px dashed #ccc;
+    margin-bottom: 20px;
+    @include heading-3;
+  }
+
+  &__subheader {
+    @include text-lg;
+    margin-bottom: 25px;
+  }
+
+  &__subheader_2 {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+
+  &__list-item {
+    counter-increment: list-counter;
+    margin-bottom: 17px;
+  }
+
+  &__list-item {
+    &:before {
+      content: counter(list-counter);
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: $color-athens-gray1;
+      text-align: center;
+      line-height: 32px;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__text {
+    &_sm {
+      font-style: italic;
+      color: $color-grey-thin;
+      @include text-sm;
+    }
+  }
+
+  &__table {
+    margin-bottom: 35px;
+
+    tr:nth-child(odd) {
+      background-color: $color-athens-gray1;
+    }
+
+    td,
+    th {
+      padding-left: 50px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .map {
+    height: 535px;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+}

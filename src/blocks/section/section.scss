@@ -15,7 +15,6 @@
   &__advantages {
     padding-top: 30px;
     padding-bottom: 30px;
-
     @include media-breakpoint-down(md) {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -62,8 +61,8 @@
     text-transform: uppercase;
     color: $color-darkgrey;
     margin-bottom: 30px;
-
     @include heading-3-bold;
+
     &_red {
       text-transform: uppercase;
       color: $color-red;
@@ -89,11 +88,12 @@
 
   &__row {
     @include media-breakpoint-up(md) {
-       .col-md-7 {
-        width: 61.54%
+      .col-md-7 {
+        width: 61.54%;
       }
-       .col-md-5 {
-        width: 38.46%
+
+      .col-md-5 {
+        width: 38.46%;
       }
     }
   }
@@ -125,9 +125,17 @@
     padding-top: 25px;
     padding-bottom: 70px;
 
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
 
-        h1 {
-          margin-bottom: 20px;
-        }
+  &__delivery {
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    h1 {
+      margin-bottom: 25px;
+    }
   }
 }
