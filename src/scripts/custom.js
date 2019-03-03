@@ -75,84 +75,84 @@ $(document).ready(function() {
   });
 
 
-  $(".js-vertical-slider .nav-slider__item").on('click', function () {
-  const $this = $(this);
-  const index = $this.index();
-  const items = $(".js-vertical-slider .nav-slider__item");
-  items.removeClass('active');
-  $this.addClass('active');
-  $(".js-card-slider").trigger('to.owl', index);
-  return false;
-});
-const slides = 3;
-const step = 100;
-const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;
-const slide = $(".js-vertical-slider .nav-slider__item");
-
-for (let i = 0; i < slides; i++) {
-  $(slide[i]).addClass('visible');
-};
-
-if (slideTotall <= slides) {
-  $('.js-next .icon, .js-prev .icon').removeClass('show');
-  $('.js-next .icon-disabled, .js-prev .icon-disabled').addClass('show');
-} else {
-  $('.js-next .icon, .js-prev .icon-disabled').addClass('show');
-  $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
-}
-
-$('.js-next, .js-prev').on('click', function () {
-  const slideVisible = $('.js-vertical-slider .visible').toArray();
-  const indexFirst = $(slideVisible[0]).index();
-  const indexLast = $(slideVisible[slideVisible.length - 1]).index();
-
-  if ($(this).hasClass('js-next')) {
-    if (indexLast < (slideTotall - 1)) {
-      $('.js-prev .icon').addClass('show');
-      $('.js-prev .icon-disabled').removeClass('show');
-
-      $(slideVisible[0]).removeClass('visible');
-      $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
-      $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst + 1)}px)`);
-    } else {
-      $('.js-next .icon').removeClass('show');
-      $('.js-next .icon-disabled').addClass('show');
-    }
-  }
-
-  if ($(this).hasClass('js-prev')) {
-    if (indexFirst > 0) {
-      $('.js-next .icon').addClass('show');
-      $('.js-next .icon-disabled').removeClass('show');
-
-      $(slideVisible[0]).prev().addClass('visible');
-      $(slideVisible[slideVisible.length - 1]).removeClass('visible');
-      $('.js-vertical-slider .nav-slider__items').css('transform' , `translateY(-${step * (indexFirst - 1)}px)`);
-    } else {
-      $('.js-prev .icon').removeClass('show');
-      $('.js-prev .icon-disabled').addClass('show');
-    }
-  }
-  return;
-})
-
-function syncSliders(event) {
-  event_name = event.property.name;
-  if(event_name=='position') {
-    const currentIndex = event.item.index;
-    const nextIndex = event.property.value;
-
+  $(".js-vertical-slider .nav-slider__item").on('click', function() {
+    const $this = $(this);
+    const index = $this.index();
     const items = $(".js-vertical-slider .nav-slider__item");
     items.removeClass('active');
-    items.eq(nextIndex).addClass('active');
+    $this.addClass('active');
+    $(".js-card-slider").trigger('to.owl', index);
+    return false;
+  });
+  const slides = 3;
+  const step = 100;
+  const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;
+  const slide = $(".js-vertical-slider .nav-slider__item");
 
-    if (currentIndex < nextIndex) {
-      $('.js-next').trigger('click');
-    } else {
-      $('.js-prev').trigger('click');
+  for (let i = 0; i < slides; i++) {
+    $(slide[i]).addClass('visible');
+  };
+
+  if (slideTotall <= slides) {
+    $('.js-next .icon, .js-prev .icon').removeClass('show');
+    $('.js-next .icon-disabled, .js-prev .icon-disabled').addClass('show');
+  } else {
+    $('.js-next .icon, .js-prev .icon-disabled').addClass('show');
+    $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
+  }
+
+  $('.js-next, .js-prev').on('click', function() {
+    const slideVisible = $('.js-vertical-slider .visible').toArray();
+    const indexFirst = $(slideVisible[0]).index();
+    const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+
+    if ($(this).hasClass('js-next')) {
+      if (indexLast < (slideTotall - 1)) {
+        $('.js-prev .icon').addClass('show');
+        $('.js-prev .icon-disabled').removeClass('show');
+
+        $(slideVisible[0]).removeClass('visible');
+        $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
+        $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst + 1)}px)`);
+      } else {
+        $('.js-next .icon').removeClass('show');
+        $('.js-next .icon-disabled').addClass('show');
+      }
+    }
+
+    if ($(this).hasClass('js-prev')) {
+      if (indexFirst > 0) {
+        $('.js-next .icon').addClass('show');
+        $('.js-next .icon-disabled').removeClass('show');
+
+        $(slideVisible[0]).prev().addClass('visible');
+        $(slideVisible[slideVisible.length - 1]).removeClass('visible');
+        $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst - 1)}px)`);
+      } else {
+        $('.js-prev .icon').removeClass('show');
+        $('.js-prev .icon-disabled').addClass('show');
+      }
+    }
+    return;
+  })
+
+  function syncSliders(event) {
+    event_name = event.property.name;
+    if (event_name == 'position') {
+      const currentIndex = event.item.index;
+      const nextIndex = event.property.value;
+
+      const items = $(".js-vertical-slider .nav-slider__item");
+      items.removeClass('active');
+      items.eq(nextIndex).addClass('active');
+
+      if (currentIndex < nextIndex) {
+        $('.js-next').trigger('click');
+      } else {
+        $('.js-prev').trigger('click');
+      }
     }
   }
-}
 
   // main slider
 
@@ -249,16 +249,18 @@ function syncSliders(event) {
 
     });
   };
-// go to
+  // go to
   $(".js-toTabs").on("click", function(event) {
-   event.preventDefault();
-   const href = $(this).attr('href');
-   const tab = $('.nav-tabs-lg a[href="'+href+'"]');
-   var id = $(href);
-   tab.tab('show');
+    event.preventDefault();
+    const href = $(this).attr('href');
+    const tab = $('.nav-tabs-lg a[href="' + href + '"]');
+    var id = $(href);
+    tab.tab('show');
 
-    var top = $(tab).offset().top-50;
-    $('body,html').animate({scrollTop: top}, 1500);
+    var top = $(tab).offset().top - 50;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
   });
 
   //modal
@@ -307,11 +309,11 @@ function syncSliders(event) {
   };
 
   $('.noUi-handle').on('mouseup', function() {
-      showPopover($(this));
+    showPopover($(this));
   });
 
   $('.noUi-connects').on('click', function() {
-      showPopover($(this));
+    showPopover($(this));
   });
 
   $('.js-reset').on('click', function(e) {
@@ -422,6 +424,43 @@ function syncSliders(event) {
     }
   });
 
+  // валидация форм
+  function checkInput(el) {
+    const $this = el;
+    const value = $this.val();
+    const inputType = $this.attr('data-type');
+
+    console.log(el);
+    console.log('val', value);
+
+
+    if (inputType === 'text') {
+      if (!value.match(/^[\u0400-\u04FF]*$/)) {
+        $this.parent().addClass('has-error');
+      } else {
+        $this.parent().removeClass('has-error');
+      }
+    }
+
+    // phone
+if (inputType === 'tel') {
+  const tel = value.replace(/[^0-9]/g, '');
+  if (tel.length !== 11) {
+    $this.parent().addClass('has-error');
+  } else {
+    $this.parent().removeClass('has-error');
+  }
+}
+  //проверка на пустое значение
+    if( el.prop( 'required' ) && value === ''){
+      $this.parent().addClass('has-error');
+    }
+  }
+
+  $(document).on('input', '.modal-body input', function () {
+    $(this).parent().removeClass('has-error');
+    checkInput($(this));
+});
 
   //form
   function serializeFormJSON() {
@@ -446,34 +485,47 @@ function syncSliders(event) {
     const $this = $(this);
     const form = $this.parents('form');
     const url = form.attr('action');
+    const input = form.find('input');
+    const textarea = form.find('textarea');
 
-    $.ajax({
-      type: 'POST',
-      url: `${url}?_format=json`,
-      data: JSON.stringify(form.serializeFormJSON()),
-      contentType: 'application/json'
+    input.each(function() {
+      checkInput($(this));
+    });
+    textarea.each(function() {
+      checkInput($(this));
     });
 
-    $('.modal').modal('hide');
+    if (!form.find('.has-error').length) {
+      $.ajax({
+        type: 'POST',
+        url: `${url}?_format=json`,
+        data: JSON.stringify(form.serializeFormJSON()),
+        contentType: 'application/json'
+      });
+      $('.modal').modal('hide');
+    }
+
   });
 
-  $(function () {
-      var $this = $("[data-timer]");
-      if ($this.length < 1) return;
-      var timerDescription = $this.prop('title');
-      var dateArr = $this.data("timer").split(",");
-      dateArr = $.map(dateArr, function (elem) {
-          return parseInt(elem);
-      });
+  $(function() {
+    var $this = $("[data-timer]");
+    if ($this.length < 1) return;
+    var timerDescription = $this.prop('title');
+    var dateArr = $this.data("timer").split(",");
+    dateArr = $.map(dateArr, function(elem) {
+      return parseInt(elem);
+    });
 
-      dateArr[1]--;
-      var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
+    dateArr[1]--;
+    var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
 
-      $this.countdown({
-          until: date,
-          padZeroes: true
-      });
+    $this.countdown({
+      until: date,
+      padZeroes: true
+    });
   });
 
-  $('input[name="tel"]').inputmask({"mask": "+7 (999) 999-9999"})
+  $('input[name="tel"]').inputmask({
+    "mask": "+7 (999) 999-9999"
+  })
 });

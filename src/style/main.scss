@@ -587,3 +587,6 @@ img {
    }
  }
 }
+.has-error {
+  border: 1px solid $color-danger;
+}

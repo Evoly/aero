@@ -1341,8 +1341,8 @@
                 </div>
                 <form class="form" action="#" method="post">
                     <div class="modal-body">
-                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
-                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" data-type="text" required="required" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" data-type="tel" required="required" /></div>
                     </div>
                     <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">заказать звонок</button></div>
                 </form>
@@ -1357,12 +1357,12 @@
                 </div>
                 <form class="form" action="#" method="post">
                     <div class="modal-body">
-                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
-                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div>
-                        <div class="form-group"><input class="form-control" type="text" name="product" placeholder="Название товара" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" data-type="text" required="required" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" data-type="tel" required="required" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="product" placeholder="Название товара" data-type="text" required="required" /></div>
                     </div>
+                    <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">отправить</button></div>
                 </form>
-                <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">отправить</button></div>
             </div>
         </div>
     </div>
@@ -1374,8 +1374,8 @@
                 </div>
                 <form class="form" action="#" method="post">
                     <div class="modal-body">
-                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
-                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" /></div><span class="modal__text-sm">услуга бесплатна в черте города</span>
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" data-type="text" required="required" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="tel" placeholder="Телефон" data-type="tel" required="required" /></div><span class="modal__text-sm">услуга бесплатна в черте города</span>
                     </div>
                     <div class="modal-footer"><button class="btn btn-primary js-submit" type="submit">отправить</button></div>
                 </form>
@@ -1390,8 +1390,8 @@
                 </div>
                 <form class="form" action="#" method="post">
                     <div class="modal-body">
-                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" /></div>
-                        <div class="form-group"><input class="form-control" type="text" name="city" placeholder="Город" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Ваше имя" data-type="text" required="required" /></div>
+                        <div class="form-group"><input class="form-control" type="text" name="city" placeholder="Город" data-type="text" required="required" /></div>
                         <div class="form__group modal__rating flex"><span class="rating__label">Оценка:</span>
                             <div class="rating__stars js-stars">
                                 <div class="rating__box"><span class="icon star"></span></div>
@@ -1401,9 +1401,9 @@
                                 <div class="rating__box"><span class="icon star"></span></div><input type="hidden" name="averageGrade" value="" />
                             </div>
                         </div>
-                        <div class="form-group"><textarea class="form-control" name="plus" rows="1" placeholder="Достоинства"></textarea></div>
-                        <div class="form-group"><textarea class="form-control" name="minus" rows="1" placeholder="Недостатки"></textarea></div>
-                        <div class="form-group"><textarea class="form-control" name="review" rows="9" placeholder="Общие впечатления"></textarea></div>
+                        <div class="form-group"><textarea class="form-control" name="plus" rows="1" placeholder="Достоинства" data-type="text"></textarea></div>
+                        <div class="form-group"><textarea class="form-control" name="minus" rows="1" placeholder="Недостатки" data-type="text"></textarea></div>
+                        <div class="form-group"><textarea class="form-control" name="review" rows="9" placeholder="Общие впечатления" data-type="text"></textarea></div>
                         <div class="form-group">
                             <p class="captcha__label">Введите текст на картинке:</p>
                             <div class="captcha">

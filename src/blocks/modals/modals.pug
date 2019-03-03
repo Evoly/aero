@@ -7,9 +7,9 @@ mixin modal-callMe()
         form(action="#" method="post").form
           .modal-body
             .form-group
-              input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+              input(type="text" name="name" class="form-control" placeholder="Ваше имя" data-type="text" required)
             .form-group
-              input(type="text" name="tel" class="form-control" placeholder="Телефон")
+              input(type="text" name="tel" class="form-control" placeholder="Телефон" data-type="tel" required)
           .modal-footer
             button(type="submit" class="btn btn-primary").js-submit заказать звонок
 
@@ -22,13 +22,13 @@ mixin modal-callMe()
           form(action="#" method="post").form
             .modal-body
               .form-group
-                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя" data-type="text" required)
               .form-group
-                input(type="text" name="tel" class="form-control" placeholder="Телефон")
+                input(type="text" name="tel" class="form-control" placeholder="Телефон" data-type="tel" required)
               .form-group
-                input(type="text" name="product" class="form-control" placeholder="Название товара")
-          .modal-footer
-            button(type="submit" class="btn btn-primary").js-submit отправить
+                input(type="text" name="product" class="form-control" placeholder="Название товара" data-type="text" required)
+            .modal-footer
+              button(type="submit" class="btn btn-primary").js-submit отправить
 
   mixin modal-size()
     div(tabindex="-1" role="dialog" aria-labelledby="size").modal.fade.modal-sm#size
@@ -39,9 +39,9 @@ mixin modal-callMe()
           form(action="#" method="post").form
             .modal-body
               .form-group
-                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя" data-type="text" required)
               .form-group
-                input(type="text" name="tel" class="form-control" placeholder="Телефон")
+                input(type="text" name="tel" class="form-control" placeholder="Телефон" data-type="tel" required)
               span.modal__text-sm услуга бесплатна в черте города
             .modal-footer
               button(type="submit" class="btn btn-primary").js-submit отправить
@@ -55,19 +55,19 @@ mixin modal-callMe()
           form(action="#" method="post").form
             .modal-body
               .form-group
-                input(type="text" name="name" class="form-control" placeholder="Ваше имя")
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя" data-type="text" required)
               .form-group
-                input(type="text" name="city" class="form-control" placeholder="Город")
+                input(type="text" name="city" class="form-control" placeholder="Город" data-type="text" required)
               .form__group.modal__rating.flex
                 span.rating__label Оценка:
                 +rating(0, 5).js-stars
                   input(type="hidden" name="averageGrade" value="")
               .form-group
-                textarea(name='plus' rows="1" placeholder="Достоинства").form-control
+                textarea(name='plus' rows="1" placeholder="Достоинства" data-type="text").form-control
               .form-group
-                textarea(name='minus' rows="1" placeholder="Недостатки").form-control
+                textarea(name='minus' rows="1" placeholder="Недостатки" data-type="text").form-control
               .form-group
-                textarea(name='review' rows="9" placeholder="Общие впечатления").form-control
+                textarea(name='review' rows="9" placeholder="Общие впечатления" data-type="text").form-control
               .form-group
                 p.captcha__label Введите текст на картинке:
                 .captcha
