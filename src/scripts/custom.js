@@ -254,10 +254,10 @@ $(document).ready(function() {
     event.preventDefault();
     const href = $(this).attr('href');
     const tab = $('.nav-tabs-lg a[href="' + href + '"]');
-    var id = $(href);
+    const id = $(href);
     tab.tab('show');
 
-    var top = $(tab).offset().top - 50;
+    const top = $(tab).offset().top - 50;
     $('body,html').animate({
       scrollTop: top
     }, 1500);
@@ -267,7 +267,7 @@ $(document).ready(function() {
   //close modal
   $('.js-modal').on('click', function() {
     $(document).mouseup(function(e) {
-      var container = $(".modal");
+      const container = $(".modal");
       if (e.target != container[0] && container.has(e.target).length === 0) {
         $('.modal').modal('hide')
       }
@@ -392,7 +392,7 @@ $(document).ready(function() {
 
   //rating
   $('.js-stars .icon').on('mouseover', function(e) {
-    var grade = $(this).parent().index()
+    const grade = $(this).parent().index()
 
     $(this).parents('.js-stars ').find('.icon').each(function(e) {
       if (e <= grade) {
@@ -443,24 +443,24 @@ $(document).ready(function() {
     }
 
     // phone
-if (inputType === 'tel') {
-  const tel = value.replace(/[^0-9]/g, '');
-  if (tel.length !== 11) {
-    $this.parent().addClass('has-error');
-  } else {
-    $this.parent().removeClass('has-error');
-  }
-}
-  //проверка на пустое значение
-    if( el.prop( 'required' ) && value === ''){
+    if (inputType === 'tel') {
+      const tel = value.replace(/[^0-9]/g, '');
+      if (tel.length !== 11) {
+        $this.parent().addClass('has-error');
+      } else {
+        $this.parent().removeClass('has-error');
+      }
+    }
+    //проверка на пустое значение
+    if (el.prop('required') && value === '') {
       $this.parent().addClass('has-error');
     }
   }
 
-  $(document).on('input', '.modal-body input', function () {
+  $(document).on('input', '.modal-body input', function() {
     $(this).parent().removeClass('has-error');
     checkInput($(this));
-});
+  });
 
   //form
   function serializeFormJSON() {
@@ -508,16 +508,16 @@ if (inputType === 'tel') {
   });
 
   $(function() {
-    var $this = $("[data-timer]");
+    const $this = $("[data-timer]");
     if ($this.length < 1) return;
-    var timerDescription = $this.prop('title');
-    var dateArr = $this.data("timer").split(",");
+    const timerDescription = $this.prop('title');
+    const dateArr = $this.data("timer").split(",");
     dateArr = $.map(dateArr, function(elem) {
       return parseInt(elem);
     });
 
     dateArr[1]--;
-    var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
+    const date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
 
     $this.countdown({
       until: date,
@@ -527,5 +527,51 @@ if (inputType === 'tel') {
 
   $('input[name="tel"]').inputmask({
     "mask": "+7 (999) 999-9999"
-  })
+  });
+
+
+  if ($('.article__content').length > 0) {
+
+    // nav width
+    const navWidth = $('.article .nav').parent().innerWidth();
+    $('.article .nav').css('width', navWidth);
+    $(window).on('resize', () => {
+      const navWidth = $('.article .nav').parent().innerWidth();
+      $('.article .nav').css('width', navWidth);
+    });
+    // формируем меню статьи
+    const articleTitle = $('.article__content h2');
+    let counter = 1;
+    articleTitle.each(function() {
+      let id = 'item_' + counter + '';
+      $(this).attr('id', id);
+      const navText = $(this).html();
+      const navItem = '<li><a class="product-list__item list-triangle__link" href="' + id + '" title="' + navText + '">' + navText + '</a></li>';
+      $('.article__nav .product-list').append(navItem);
+      counter += 1;
+    });
+  }
+  $(document).on("click", '.article__nav a', function(event) {
+    event.preventDefault();
+    $('.article__nav li').removeClass('active')
+    const id = $(this).attr('href'),
+      top = $('#' + id + '').offset().top;
+    $(this).parent().addClass('active');
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+  if ($('.article__nav').length > 0) {
+    $('.article__nav .product-list').scrollbar();
+  };
+  $(window).scroll(function() {
+    const scroll = $(window).scrollTop();
+    if (scroll >= 370) {
+        $(".js-fixed").addClass("fixed");
+    } else {
+        $(".js-fixed").removeClass("fixed");
+    }
+})
+
+
 });

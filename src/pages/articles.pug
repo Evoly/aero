@@ -1,0 +1,37 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Статьи'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li(aria-current="page").breadcrumb-item.active Статьи
+
+    section.container.section__article
+      h1 Статьи
+      .article-grid.flex
+        .col1
+          +product-list
+        section.col2
+          +article-sort
+          +article-preview
+          +article-preview
+          +article-preview
+          +article-preview
+
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+
+  +footer
+  +modal-callMe#callMe

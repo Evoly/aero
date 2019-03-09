@@ -1,0 +1,21 @@
+.article-preview {
+  padding-top: 28px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid $color-heather;
+
+  &__header {
+    margin-bottom: 25px;
+    @include heading-3-bold;
+  }
+
+  p {
+    margin-bottom: 25px;
+    text-align: justify;
+  }
+
+  &__img {
+    display: block;
+    padding-right: 15px;
+    margin-bottom: 15px;
+  }
+}

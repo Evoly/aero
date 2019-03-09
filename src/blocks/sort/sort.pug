@@ -25,3 +25,12 @@ mixin sort-feedback()
     span.sort-feedback__title Сортировать по:
     a(href='').sort-feedback__item.active дате
     a(href='').sort-feedback__item кол-ву звезд
+
+mixin article-sort()
+  .sort.flex
+    span.sort__title Сортировать:
+    button.btn.btn__sort
+      span По популярности
+      span.sort__icon
+        span.sort__icon_up
+        span.sort__icon_down.active

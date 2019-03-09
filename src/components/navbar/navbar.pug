@@ -25,7 +25,7 @@ mixin navbar-item(href,content,iconName)
     a(href=`${href}`).navbar__link
       span(class=`icon ${iconName}`)
       span=content
-      blockd
+      block
 
 mixin navbar-item-dropdown(href,content,iconName)
   li.navbar__item.dropdown&attributes(attributes)
