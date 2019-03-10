@@ -176,8 +176,9 @@
     margin: 0;
 
     ul {
+      position: relative;
       padding-right: 10px;
-      max-height: 277px;
+      max-height: calc(7*37px);;
     }
 
     &:before {

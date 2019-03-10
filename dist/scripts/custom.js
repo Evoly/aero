@@ -173,15 +173,20 @@ $(document).ready(function() {
   //catalog
 
   if ($('.catalog-form__group').length > 0) {
-    $('.catalog-form__group').scrollbar();
+    $('.catalog-form__group').each(function() {
+      const container = $(this)[0];
+      const ps = new PerfectScrollbar(container);
+    });
   }
 
   if ($('#choiceCity').length > 0) {
-    $('#choiceCity ul').scrollbar();
+    const container = $('#choiceCity ul')[0];
+    const ps = new PerfectScrollbar(container);
   }
 
   if ($('.tab-set').length > 0) {
-    $('.tab-set').scrollbar();
+    const container = $('.tab-set')[0];
+    const ps = new PerfectScrollbar(container);
   }
 
   //map
@@ -300,7 +305,6 @@ $(document).ready(function() {
 
   const showPopover = (el) => {
     $('.mypopover').removeClass('show');
-    //const el = $(this);
     const parentTop = $('.catalog-form').offset().top;
     const top = el.offset().top - parentTop - 5;
 
@@ -430,10 +434,6 @@ $(document).ready(function() {
     const value = $this.val();
     const inputType = $this.attr('data-type');
 
-    console.log(el);
-    console.log('val', value);
-
-
     if (inputType === 'text') {
       if (!value.match(/^[\u0400-\u04FF]*$/)) {
         $this.parent().addClass('has-error');
@@ -511,7 +511,7 @@ $(document).ready(function() {
     const $this = $("[data-timer]");
     if ($this.length < 1) return;
     const timerDescription = $this.prop('title');
-    const dateArr = $this.data("timer").split(",");
+    let dateArr = $this.data("timer").split(",");
     dateArr = $.map(dateArr, function(elem) {
       return parseInt(elem);
     });
@@ -562,7 +562,8 @@ $(document).ready(function() {
     }, 1500);
   });
   if ($('.article__nav').length > 0) {
-    $('.article__nav .product-list').scrollbar();
+    const container = $('.article__nav .product-list')[0];
+    const ps = new PerfectScrollbar(container);
   };
   $(window).scroll(function() {
     const scroll = $(window).scrollTop();

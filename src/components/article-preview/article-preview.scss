@@ -1,7 +1,10 @@
 .article-preview {
   padding-top: 28px;
   padding-bottom: 27px;
-  border-bottom: 1px solid $color-heather;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-heather;
+  }
 
   &__header {
     margin-bottom: 25px;
