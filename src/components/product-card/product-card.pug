@@ -1,7 +1,7 @@
-mixin product-card(oldprice)
+mixin product-card(oldprice, imageName)
   .product-card&attributes(attributes)
     a(href='#').product-card__img
-      img(src='images/catalog.png' alt='')
+      img(src=`images/temp/${imageName}.png` alt='')
     a(href='#').product-card__header Сплит-система General Climate GC/GU-S09HRIN1
     .product-card__stars
       +rating(2, 3)
