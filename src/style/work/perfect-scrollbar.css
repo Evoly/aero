@@ -23,7 +23,7 @@
 }
 
 .ps__rail-y {
-  display: block;
+  display: none;
   opacity: 1;
   background-color: $color-heather1;
   width: 4px;
@@ -31,7 +31,6 @@
   right: 0;
   /* please don't change 'position' */
   position: absolute;
-  height: 100% !important;
 }
 
 .ps--active-x > .ps__rail-x,
@@ -74,7 +73,6 @@
 .ps__thumb-y {
   background-color: $color-logo-red;
   width: 4px;
-  min-height: 50px;
   /* there must be 'right' for ps__thumb-y */
   right: 0;
   /* please don't change 'position' */

@@ -32,6 +32,7 @@
       &.disabled {
         background-color: transparent;
         border-color: $color-grey;
+        cursor: default;
 
         .slider-next-disabled,
         .slider-prev-disabled {
@@ -45,8 +46,8 @@
       }
 
       &.disabled:hover {
-        background-color: #fff;
-        border: 1px solid $color-another-blue;
+        // background-color: #fff;
+        // border: 1px solid $color-another-blue;
       }
     }
 
@@ -68,9 +69,20 @@
 
 .slider {
   &__item {
+    position: relative;
     max-width: 170px;
     padding: 5px;
     border: 1px solid $color-grey-light;
+    margin-right: 1px;
+
+    &:hover {
+      opacity: .7;
+      transition: $ease-main;
+    }
+
+    // &:hover .zoom {
+    //   opacity: 1;
+    // }
   }
 
   &__item-2 {
@@ -78,6 +90,4 @@
       margin-bottom: 15px;
     }
   }
-
-  &__title {}
 }

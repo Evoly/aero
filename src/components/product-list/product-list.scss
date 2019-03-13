@@ -21,7 +21,7 @@
       background-color: $color-athens-gray1;
     }
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       border-bottom: 1px solid $color-heather;
     }
 

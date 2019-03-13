@@ -72,21 +72,19 @@
 
     .product-list {
       position: relative;
-      height: calc(7*50px);
+      max-height: calc(7*50px);
       width: calc(100% + 1px);
       border-right: none;
       margin-bottom: 0;
+
+      li {
+        width: calc(100% - 1px);
+      }
     }
     .ps__rail-y,
     .ps__rail-x {
       background-color: transparent;
     }
 
-    // .scroll-element.scroll-y {
-    //   right: 0;
-    //   top: 0;
-    //   bottom: 0;
-    //   width: 3px;
-    // }
   }
 }

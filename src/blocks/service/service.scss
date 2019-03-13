@@ -8,6 +8,11 @@
     @include text-15-bold;
   }
 
+  &__icon {
+    width: 45px;
+    min-width: 45px;
+  }
+
   &__content {
     padding-left: 10px;
   }

@@ -19,11 +19,13 @@ $(document).ready(function() {
       },
       400: {
         items: 2,
-        nav: false
+        nav: false,
+        margin: 10,
       },
       0: {
-        items: 1,
-        nav: false
+        items: 2,
+        nav: false,
+        margin: 10,
       }
     }
   };
@@ -170,24 +172,23 @@ $(document).ready(function() {
     }
   });
 
-  //catalog
+//scroll
+  $('#choiceCity').on('shown.bs.modal', function() {
+    const container = $('#choiceCity ul')[0];
+    const ps = new PerfectScrollbar(container);
+  });
+
+  $('#set-tab').on('shown.bs.tab', function(e) {
+    const container = $('.tab-set')[0];
+    const ps = new PerfectScrollbar(container);
+  })
 
   if ($('.catalog-form__group').length > 0) {
     $('.catalog-form__group').each(function() {
       const container = $(this)[0];
       const ps = new PerfectScrollbar(container);
     });
-  }
-
-  if ($('#choiceCity').length > 0) {
-    const container = $('#choiceCity ul')[0];
-    const ps = new PerfectScrollbar(container);
-  }
-
-  if ($('.tab-set').length > 0) {
-    const container = $('.tab-set')[0];
-    const ps = new PerfectScrollbar(container);
-  }
+  };
 
   //map
 
@@ -568,11 +569,35 @@ $(document).ready(function() {
   $(window).scroll(function() {
     const scroll = $(window).scrollTop();
     if (scroll >= 370) {
-        $(".js-fixed").addClass("fixed");
+      $(".js-fixed").addClass("fixed");
     } else {
-        $(".js-fixed").removeClass("fixed");
+      $(".js-fixed").removeClass("fixed");
     }
-})
+  });
+  const fancyOpts = {
+    animationEffect: 'fade',
+    transitionEffect: false,
+    infobar: true,
+    arrows: false,
+    toolbar: false,
+    loop: false,
+    afterLoad: function(instance, current) {
+      if (instance.group.length > 1 && current.$content) {
+        const arrowLeft = '<a data-fancybox-next = "" class="btn-fancybox button-next " href="javascript:;"><i class="icon s-right"></i></a>';
+        const arrowRight = '<a data-fancybox-prev = "" class=" btn-fancybox button-prev" href="javascript:;"><i class="icon s-left"></i></a>';
+        current.$content.append(arrowLeft + arrowRight);
 
+        if (current.index === 0) {
+          $('.button-prev').addClass('disabled');
+        }
+        if (current.index === instance.group.length - 1) {
+          $('.button-next').addClass('disabled');
+        }
+      }
+    }
+};
 
+  $('[data-fancybox="certificate"]').fancybox(fancyOpts);
+  $('[data-fancybox="feedback"]').fancybox(fancyOpts);
+  $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
 });

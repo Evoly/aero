@@ -46,9 +46,15 @@
     border-left: 1px dashed $color-heather;
     text-align: center;
 
+    a[data-fancybox] {
+      display: block;
+      padding-left: 15px;
+    }
+
     img {
       margin-bottom: 25px;
     }
+
     @include media-breakpoint-down(xs) {
       text-align: left;
       border-left: none;

@@ -6,6 +6,7 @@
 @import 'work/text-styles';
 @import 'work/button';
 @import 'work/perfect-scrollbar';
+@import 'work/jquery.fancybox';
 @import 'work/nouislider';
 @import 'work/jquery.countdown';
 @import "../blocks/**/*";
@@ -305,12 +306,17 @@ img {
   &__cert {
     margin-right: -5px;
     margin-left: -5px;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
 
-    img {
+    a[data-fancybox] {
+      display: block;
       padding-left: 5px;
       padding-right: 5px;
       width: 33.33%;
+    }
+
+    img {
+      object-fit: contain;
     }
   }
 }
@@ -383,6 +389,7 @@ img {
   &__slider-item {
     height: 365px;
     align-items: center;
+    justify-content: center;
     border: 1px solid $color-heather;
 
     img {
@@ -568,3 +575,54 @@ img {
   max-width: 250px;
   transform: translate3d(0px, -370px, 0px);
 }
+.fancybox-is-open .fancybox-bg {
+    opacity: .2;
+}
+.btn-fancybox {
+    position: absolute;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 0;
+    margin: 0;
+    padding: 13px 14px 13px 14px;
+    background-color: $color-another-blue;;
+    z-index: 1000;
+    &:hover {
+        background-color: $color-logo-red;
+    }
+    &.button-next {
+        right:0;
+    }
+    &.button-prev {
+        right: 37px;
+    }
+
+    &.disabled {
+        background-color: $color-heather1;
+        cursor: default;
+    }
+}
+// .zoom {
+//     position: absolute;
+//     width: 90px;
+//     height: 90px;
+//     border-radius: 50%;
+//     background-color: rgba(0, 0, 0, .3);
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     margin: auto;
+//     opacity: 0;
+//     transition: all .5s;
+//
+//     .icon-zoom {
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//     }
+// }
