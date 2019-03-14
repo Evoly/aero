@@ -1,5 +1,5 @@
 .sort {
-  padding: 20px 20px 19px 25px;
+  padding: 8px 20px 8px 25px;
   background-color: $color-athens-gray1;
   flex-flow: row nowrap;
   align-items: center;
@@ -90,6 +90,14 @@
   &__select {
     display: inline-block;
     width: 60px;
+
+    .form-control {
+      border: 1px solid $color-heather;
+    }
+
+    .bootstrap-select .dropdown-toggle:focus {
+      outline: none !important;
+    }
 
     .dropdown-toggle {
       line-height: 2.2;

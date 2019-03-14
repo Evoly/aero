@@ -63,19 +63,22 @@ $(document).ready(function() {
     dot: true,
     items: 1
   };
-
-  $('.js-slider-cert').owlCarousel(owlOptions_6);
-  $('.js-slider-project').owlCarousel(owlOptions_4);
-  $('.js-slider-feedback').owlCarousel(owlOptions_6);
-  $('.js-card-slider').owlCarousel({
+  const owlOptions_product = {
     loop: false,
     margin: 10,
     nav: false,
     dot: true,
     items: 1,
     onChange: syncSliders
-  });
+  };
 
+  $('.js-slider-cert').owlCarousel(owlOptions_6);
+  $('.js-slider-project').owlCarousel(owlOptions_4);
+  $('.js-slider-feedback').owlCarousel(owlOptions_6);
+  $('.js-card-slider').owlCarousel( owlOptions_product);
+
+  const startCarousel = (el,options) => el.owlCarousel(options);
+  const stopCarousel = (el) => el.trigger('destroy.owl.carousel');
 
   $(".js-vertical-slider .nav-slider__item").on('click', function() {
     const $this = $(this);
@@ -158,17 +161,14 @@ $(document).ready(function() {
 
   // main slider
 
-  const startCarousel = () => $('.js-main-slider').owlCarousel(owlOptions_1);
-  const stopCarousel = () => $('.js-main-slider').trigger('destroy.owl.carousel');
-
   if ($(window).width() > 970) {
-    startCarousel();
+    startCarousel($('.js-main-slider'), owlOptions_1);
   }
   $(window).resize(function() {
     if ($(window).width() < 970) {
-      stopCarousel();
+      stopCarousel($('.js-main-slider'));
     } else {
-      startCarousel();
+      startCarousel($('.js-main-slider'), owlOptions_1);
     }
   });
 
@@ -574,30 +574,56 @@ $(document).ready(function() {
       $(".js-fixed").removeClass("fixed");
     }
   });
+
+  const thumbSlider = () => {
+    const viewportHeight = $('.fancybox-container').height();
+    const imgHeight = $('.fancybox-thumbs-y li').height();
+    const listHeight = $('.fancybox-thumbs-y ul').height();
+
+//300 - отступы снизу и сверху , 10 -margin bottom
+    const slides = Math.round((viewportHeight - 300)/(imgHeight + 10));
+    const thumbHeight = slides*imgHeight + (slides - 1)*10
+
+    $('.fancybox-thumbs-y').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight)/2);
+
+    if (thumbHeight > listHeight) return;
+
+
+  };
+
   const fancyOpts = {
     animationEffect: 'fade',
     transitionEffect: false,
-    infobar: true,
-    arrows: false,
-    toolbar: false,
-    loop: false,
-    afterLoad: function(instance, current) {
-      if (instance.group.length > 1 && current.$content) {
-        const arrowLeft = '<a data-fancybox-next = "" class="btn-fancybox button-next " href="javascript:;"><i class="icon s-right"></i></a>';
-        const arrowRight = '<a data-fancybox-prev = "" class=" btn-fancybox button-prev" href="javascript:;"><i class="icon s-left"></i></a>';
-        current.$content.append(arrowLeft + arrowRight);
-
-        if (current.index === 0) {
-          $('.button-prev').addClass('disabled');
-        }
-        if (current.index === instance.group.length - 1) {
-          $('.button-next').addClass('disabled');
-        }
-      }
-    }
+    buttons: [
+      "close"
+    ],
+    thumbs : {
+      autoStart : true,
+      axis      : 'y'
+    },
+    idleTime: false,
+    btnTpl: {
+      close:
+      '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"/></svg>' +
+      "</button>",
+      arrowLeft:
+      '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+      "</button>",
+      arrowRight:
+      '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+      "</button>",
+    },
+    afterLoad: thumbSlider
 };
 
   $('[data-fancybox="certificate"]').fancybox(fancyOpts);
   $('[data-fancybox="feedback"]').fancybox(fancyOpts);
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
+
+
+
+
 });

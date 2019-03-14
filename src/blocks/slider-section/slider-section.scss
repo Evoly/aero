@@ -70,10 +70,14 @@
 .slider {
   &__item {
     position: relative;
+    height: 235px;
     max-width: 170px;
     padding: 5px;
     border: 1px solid $color-grey-light;
     margin-right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       opacity: .7;
