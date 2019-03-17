@@ -605,26 +605,82 @@ img {
         cursor: default;
     }
 }
-.zoom {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .3);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    opacity: 0;
-    transition: all .5s;
 
-    .zoom-in {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
+.trancate-block {
+
+  &__content {
+    max-height: calc(2.5*1.2 * .94rem);
+    padding-bottom: 30px;
+    overflow: hidden;
+    transition:max-height 0.6s ease-out;
+
+    &.show {
+      height: auto;
+      max-height: 100px;
+      transition:max-height 0.6s ease-out;
+
+      & + .trancate-block__btn {
+        &:after {
+          display: none;
+        }
+
+        a:before {
+          content: 'Свернуть';
+        }
+      }
     }
+  }
+
+  &__item {
+    display: inline-block;
+    padding-right: 18px;
+  }
+
+  &__btn {
+    display: none;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    color: inherit;
+    text-align: right;
+    padding-top: 2px;
+    pointer-events: none;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(2*1.2 * .94rem);
+      background-color: #fff;
+      pointer-events: none;
+      background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
+      z-index: 1;
+    }
+
+    a {
+      position: relative;
+      z-index: 2;
+      pointer-events: all;
+      color: inherit;
+      @include text-sm;
+
+      &:before {
+        content: 'Развернуть'
+      }
+
+      &:hover {
+        color: $link-hover-color;
+      }
+
+      &:focus,
+      &:hover {
+        outline: none;
+      }
+    }
+  }
 }

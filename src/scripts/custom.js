@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   const owlOptions_6 = {
     pagination: false,
     nav: true,
@@ -75,9 +74,9 @@ $(document).ready(function() {
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
-  $('.js-card-slider').owlCarousel( owlOptions_product);
+  $('.js-card-slider').owlCarousel(owlOptions_product);
 
-  const startCarousel = (el,options) => el.owlCarousel(options);
+  const startCarousel = (el, options) => el.owlCarousel(options);
   const stopCarousel = (el) => el.trigger('destroy.owl.carousel');
 
   $(".js-vertical-slider .nav-slider__item").on('click', function() {
@@ -139,7 +138,7 @@ $(document).ready(function() {
       }
     }
     return;
-  })
+  });
 
   function syncSliders(event) {
     event_name = event.property.name;
@@ -172,7 +171,7 @@ $(document).ready(function() {
     }
   });
 
-//scroll
+  //scroll
   $('#choiceCity').on('shown.bs.modal', function() {
     const container = $('#choiceCity ul')[0];
     const ps = new PerfectScrollbar(container);
@@ -575,55 +574,188 @@ $(document).ready(function() {
     }
   });
 
-  const thumbSlider = () => {
+  //fancybox + thumb slider
+
+  const createThumbSlider = () => {
+
     const viewportHeight = $('.fancybox-container').height();
     const imgHeight = $('.fancybox-thumbs-y li').height();
     const listHeight = $('.fancybox-thumbs-y ul').height();
 
-//300 - отступы снизу и сверху , 10 -margin bottom
-    const slides = Math.round((viewportHeight - 300)/(imgHeight + 10));
-    const thumbHeight = slides*imgHeight + (slides - 1)*10
+    //300 - отступы снизу и сверху , 10 -margin bottom
+    const slide = Math.round((viewportHeight - 300) / (imgHeight + 10));
+    let thumbHeight = slide * imgHeight + (slide - 1) * 10 + 100;
+    //console.log('thumbHeight', thumbHeight);
 
-    $('.fancybox-thumbs-y').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight)/2);
+    if (thumbHeight > listHeight) {
+      thumbHeight = listHeight;
+    } else {
+      if (!($(".button-thumb").length)) {
+        $('.fancybox-thumbs-y').addClass('button-show');
+        $('.fancybox-thumbs-outer').prepend('<div class="button-thumb button-thumb_up"><button class="fancybox-button fancybox-button--arrow_up">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+          "</button></div>");
+        $('.fancybox-thumbs-outer').append('<div class="button-thumb button-thumb_down"><button class="fancybox-button fancybox-button--arrow_down">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+          "</button></div>");
+      }
+    };
+    $('.fancybox-thumbs-outer').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight) / 2);
+    return slide;
+  }
 
-    if (thumbHeight > listHeight) return;
+  const fancyboxSync = () => {
+    const activeSlide = $('.fancybox-thumbs-active');
+    const slide = createThumbSlider();
+
+    $('.fancybox-thumbs-y .visible').removeClass('visible');
+    activeSlide.addClass('visible');
+
+    const currentIndex = activeSlide.index();
+    let step = 0;
 
 
+    if (currentIndex > (activeSlide.siblings().length-2)){
+      step = currentIndex - slide + 2;
+    } else {
+      step = currentIndex - slide + 1;
+    }
+    
+    if (currentIndex < slide - 2) {
+      for (let i = 0; i < slide - 1; i++) {
+        activeSlide.siblings().eq(i).addClass('visible');
+      }
+     } else {
+      for (let i = (currentIndex - slide + 2); i < (currentIndex + 1); i++) {
+        console.log(i);
+        activeSlide.siblings().eq(i).addClass('visible');
+      };
+    }
+    goto(step);
+};
+
+  const goto = (step) => {
+    const itemNav = $('.fancybox-thumbs-y ul');
+    const imgHeight = $('.fancybox-thumbs-y li').height();
+    $(itemNav).css('transform', `translateY(-${step * (imgHeight + 10)}px)`);
   };
+
+  $(document).on('click', '.fancybox-thumbs-y li', function () {
+    $.fancybox.getInstance().Thumbs.update();
+    fancyboxSync();
+    const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
+    const indexFirst = $(slideVisible[0]).index();
+    goto(indexFirst);
+  });
+
+  $(document).on('click', '.button-thumb_up button', function (){
+    const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
+    const indexFirst = $(slideVisible[0]).index();
+    const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+
+    if (indexFirst === 0) {
+      $('.button-thumb_up button').prop('disabled', 'disabled');
+    }
+
+    $(slideVisible[0]).prev().addClass('visible');
+    $(slideVisible[slideVisible.length - 1]).removeClass('visible');
+
+    const step = (indexFirst - 1);
+
+    goto(step);
+
+    $('.button-thumb_down button').prop('disabled', '');
+  })
+
+  $(document).on('click', '.button-thumb_down button', function () {
+    const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
+    const indexFirst = $(slideVisible[0]).index();
+    const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+    console.log('indexFirst', indexFirst);
+
+    if (indexLast > ($('.fancybox-thumbs-y li').length - 3)) {
+      $('.button-thumb_down button').prop('disabled', 'disabled');
+    };
+
+    $(slideVisible[0]).removeClass('visible');
+    $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
+
+    const step = (indexFirst + 1);
+
+    goto(step);
+
+    $('.button-thumb_up button').prop('disabled', '');
+  });
+
+    const checkButtons = () => {
+      $('.button-thumb_up button, .button-thumb_down button').prop('disabled', '');
+
+      const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
+      const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+      console.log('indexLast', indexLast);
+      console.log($('.fancybox-thumbs-y li').length - 1);
+
+      if ($('.visible').eq(0).index() === 0) {
+        $('.button-thumb_up button').prop('disabled', 'disabled');
+      };
+
+      if (indexLast === ($('.fancybox-thumbs-y li').length - 1)) {
+        $('.button-thumb_down button').prop('disabled', 'disabled');
+      };
+    };
 
   const fancyOpts = {
     animationEffect: 'fade',
     transitionEffect: false,
+    clickContent: false,
     buttons: [
       "close"
     ],
-    thumbs : {
-      autoStart : true,
-      axis      : 'y'
+    thumbs: {
+      autoStart: true,
+      axis: 'y',
+      parentEl: '.fancybox-thumbs-outer',
     },
     idleTime: false,
     btnTpl: {
-      close:
-      '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"/></svg>' +
-      "</button>",
-      arrowLeft:
-      '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
-      "</button>",
-      arrowRight:
-      '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
-      "</button>",
+      close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"/></svg>' +
+        "</button>",
+      arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+        "</button>",
+      arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+        "</button>",
     },
-    afterLoad: thumbSlider
-};
+    onThumbsShow: createThumbSlider,
+    onInit: function(instance) {
+      instance.$refs.container.append('<div class="fancybox-thumbs-outer"></div>');
+    },
+    afterLoad: fancyboxSync,
+    afterShow: checkButtons
+  };
 
   $('[data-fancybox="certificate"]').fancybox(fancyOpts);
   $('[data-fancybox="feedback"]').fancybox(fancyOpts);
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
 
+  $(window).resize(function() {
+    if ($(window).width() > 768) {
+      $.fancybox.getInstance().Thumbs.update();
+    }
+  });
 
+  if ($('.trancate-block__content').length > 0) {
+    const height = $('.trancate-block__content').outerHeight();
 
+    if (height > 45) {
+      $('.js-truncate').css('display', 'block');
+    }
+  }
 
+  $('.js-truncate').on('click', function (e) {
+    e.preventDefault();
+    $(this).siblings('.trancate-block__content').toggleClass('show');
+  });
 });

@@ -360,6 +360,16 @@ body.compensate-for-scrollbar {
   cursor: default;
   outline: none;
 }
+.fancybox-button--arrow_left {
+  transform: rotate(180deg);
+}
+.fancybox-button--arrow_up {
+  transform: rotate(-90deg);
+}
+
+.fancybox-button--arrow_down {
+  transform: rotate(90deg);
+}
 /* Fix IE11 */
 .fancybox-button div {
   height: 100%;
@@ -371,9 +381,6 @@ body.compensate-for-scrollbar {
   overflow: visible;
   position: relative;
   width: 100%;
-}
-.fancybox-button--arrow_left {
-  transform: rotate(180deg);
 }
 
 .fancybox-button svg path {
@@ -766,6 +773,15 @@ body.compensate-for-scrollbar {
   width: 100%;
 }
 /* Thumbs */
+.fancybox-thumbs-outer {
+  position: relative;
+  width: 160px;
+  max-height: 100%;
+
+  @include media-breakpoint-down(md) {
+    width: 110px;
+  }
+}
 .fancybox-thumbs {
   background: transparent;
   bottom: 0;
@@ -792,12 +808,12 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-thumbs-y {
-  max-height: 100%;
+  height: 100%;
   overflow: hidden;
   margin: auto;
 
-  @include media-breakpoint-down(lg) {
-      //max-height: 440px;
+  &.button-show {
+    height: calc(100% - 100px);
   }
 
   ul {
@@ -813,15 +829,31 @@ body.compensate-for-scrollbar {
     white-space: nowrap;
     width: 100%;
     overflow: auto;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.67,.01,.23,1);
   }
+}
+
+.button-thumb {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  text-align: center;
+
+    .fancybox-button {
+        height: 40px;
+    }
+}
+.button-thumb_up {
+  top: 0;
+}
+.button-thumb_down {
+  bottom: 0;
 }
 
 .fancybox-show-thumbs .fancybox-thumbs {
   display: block;
-}
-.fancybox-show-thumbs .fancybox-thumbs-y {
-  // display: flex;
-  // align-items: center;
 }
 
 .fancybox-show-thumbs .fancybox-inner {
@@ -832,10 +864,6 @@ body.compensate-for-scrollbar {
   @include media-breakpoint-down(sm) {
     left: 0;
   }
-}
-
-.fancybox-thumbs__list {
-
 }
 
 .fancybox-thumbs-x .fancybox-thumbs__list {
@@ -868,7 +896,6 @@ body.compensate-for-scrollbar {
   cursor: pointer;
   height: 128px ;
   max-height: calc(100% - 4px);
-  /* max-width: calc(50% - 4px); */
   outline: none;
   overflow: hidden;
   padding: 0;
@@ -907,7 +934,8 @@ body.compensate-for-scrollbar {
   z-index: 99991;
 }
 
-.fancybox-show-thumbs .fancybox-thumbs {
+.fancybox-show-thumbs .fancybox-thumbs,
+.button-thumb {
   @include media-breakpoint-down(sm) {
     display: none;
   }
