@@ -1,0 +1,30 @@
+.cross {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    pointer-events: none;
+    margin: auto;
+    right: 15px;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #fff;
+        width: 15px;
+        height: 3px;
+    }
+
+    &.closed:before {
+      transform: rotate(90deg);
+    }
+}

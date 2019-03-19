@@ -328,6 +328,23 @@ $(document).ready(function() {
   });
 
   //navbar
+  $('.js-dropdown').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.sub-catalog').removeClass('activate');
+      const cross = $(this).find('.cross');
+
+    if ($(this).hasClass('show')) {
+      $(this).removeClass('show');
+      cross.addClass('closed');
+    } else {
+      $('.js-dropdown').removeClass('show');
+      $('.cross').not(cross).addClass('closed');
+      $(this).addClass('show');
+      cross.removeClass('closed');
+    }
+});
+
   $('.js-sub-catalog[data-id]').on('mouseover', function(e) {
     e.stopPropagation();
     const $this = $(this);
@@ -336,6 +353,7 @@ $(document).ready(function() {
     const parentWidth = $this.parents('.navbar-nav').outerWidth();
     const catalogWidth = parentWidth - elWidth;
     $('.navbar__subcatalog').css('width', catalogWidth);
+
     if (id !== undefined && id > 0) {
       const $sub = $('#sub_' + id);
       if ($sub.length > 0) {
@@ -353,6 +371,8 @@ $(document).ready(function() {
     if ($('.sub-catalog').hasClass('activate')) {
       e.stopPropagation();
     }
+    $('.js-dropdown').removeClass('show');
+    $('.js-dropdown').find('.cross').addClass('closed');
   });
   $('.dropdown').on('show.bs.dropdown', function() {
     $('.dropdown-toggle').on('click', function(e) {
@@ -620,7 +640,7 @@ $(document).ready(function() {
     } else {
       step = currentIndex - slide + 1;
     }
-    
+
     if (currentIndex < slide - 2) {
       for (let i = 0; i < slide - 1; i++) {
         activeSlide.siblings().eq(i).addClass('visible');

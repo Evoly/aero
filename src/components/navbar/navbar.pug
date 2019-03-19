@@ -2,17 +2,27 @@ mixin navbar()
   nav.navbar.navbar-expand-lg&attributes(attributes)
     ul.navbar-nav
       +navbar-item-dropdown('#', 'кондиционирование', 'menu_1')
-        ul.dropdown-menu.navbar-dropdown.js-dropdown
-          +navbar-lvl-1('#')(data-id = '1').js-sub-catalog Настенные
-          +navbar-lvl-1('#')(data-id = '2').js-sub-catalog Мобильные
-          +navbar-lvl-1('#')(data-id = '3').js-sub-catalog Кассетные
-          +navbar-lvl-1('#')(data-id = '4').js-sub-catalog Канальные
-          +navbar-lvl-1('#')(data-id = '5').js-sub-catalog Мульти сплит
-          +navbar-lvl-1('#')(data-id = '6').js-sub-catalog VRF
-          +navbar-lvl-1('#')(data-id = '7').js-sub-catalog VRV
+        ul.dropdown-menu.navbar-dropdown
+          +navbar-lvl-2('#','Настенные').js-dropdown
+            ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
+              +navbar-lvl-1('#','submenu-1_1')(data-id = '1').js-sub-catalog
+              +navbar-lvl-1('#', 'submenu-1_2')(data-id = '2').js-sub-catalog
+              +navbar-lvl-1('#', 'submenu-1_3')(data-id = '3').js-sub-catalog
+          +navbar-lvl-2('#', 'Мобильные').js-dropdown
+            ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
+              +navbar-lvl-1('#', 'submenu-2_1')(data-id = '4').js-sub-catalog
+              +navbar-lvl-1('#', 'submenu-2_2')(data-id = '5').js-sub-catalog
+              +navbar-lvl-1('#', 'submenu-2_3')(data-id = '6').js-sub-catalog
+          +navbar-lvl-2('#', 'Кассетные').js-dropdown
+            ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
+              +navbar-lvl-1('#', 'submenu-3_1')(data-id = '7').js-sub-catalog
+          +navbar-lvl-1('#', 'Канальные')
+          +navbar-lvl-1('#', 'Мульти сплит')
+          +navbar-lvl-1('#', 'VRF')
+          +navbar-lvl-1('#', 'VRV')
       +navbar-item-dropdown('#', 'вентиляция', 'menu_2')
         ul.dropdown-menu.navbar-dropdown
-          +navbar-lvl-1('#') Пункт-1
+          +navbar-lvl-1('#', ' Пункт-1')
       +navbar-item('#', 'услуги','wheel')
       +navbar-item('#', 'оплата', 'menu_wallet')
       +navbar-item('#', 'доставка', 'menu_car')
@@ -34,7 +44,13 @@ mixin navbar-item-dropdown(href,content,iconName)
       span=content
     block
 
-mixin navbar-lvl-1(href)
+mixin navbar-lvl-2(href, link)
   li.navbar-dropdown__item&attributes(attributes)
-    a(href=`${href}`).navbar-dropdown__link
-      block
+    a(href=`${href}`).navbar-dropdown__link.navbar-dropdown__link_cross=link
+      +cross.closed
+    block
+
+mixin navbar-lvl-1(href, link)
+  li.navbar-dropdown__item&attributes(attributes)
+    a(href=`${href}`).navbar-dropdown__link=link
+    block

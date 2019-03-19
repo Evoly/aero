@@ -171,20 +171,12 @@
   line-height: 1.5;
   font-weight: 600;
 }
-
-
-
-
-
-
 @mixin text-small-bold {
   font-family: $font-family-base;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
 }
-
-
 @mixin text-xxs-normal {
   font-family: $font-family-base;
   font-size: 14px;
