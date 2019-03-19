@@ -611,12 +611,12 @@ img {
     max-height: calc(2.5*1.2 * .94rem);
     padding-bottom: 30px;
     overflow: hidden;
-    transition:max-height 0.6s ease-out;
+    transition:max-height .4s ease-in-out;
 
     &.show {
       height: auto;
-      max-height: 100px;
-      transition:max-height 0.6s ease-out;
+      max-height: 400px;
+      transition:max-height .4s ease-in-out;
 
       & + .trancate-block__btn {
         &:after {
@@ -633,6 +633,10 @@ img {
   &__item {
     display: inline-block;
     padding-right: 18px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__btn {
