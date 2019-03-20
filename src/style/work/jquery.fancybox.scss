@@ -469,8 +469,10 @@ body.compensate-for-scrollbar {
 
 .fancybox-button.fancybox-button--arrow_left,
 .fancybox-button.fancybox-button--arrow_right {
-  height: 100%;
+  height: calc(100% - 80px);
   top: 0;
+  bottom: 0;
+  margin: auto;
 }
 .fancybox-button--arrow_left {
   transform: rotate(180deg);
