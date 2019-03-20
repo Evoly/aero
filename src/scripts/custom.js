@@ -297,7 +297,6 @@ $(document).ready(function() {
       const el = $(this);
       const parentTop = $('.catalog-form').offset().top;
       const top = el.offset().top - parentTop - 5;
-      //console.log(top);
       $('.mypopover').css('top', top);
       $('.mypopover').addClass('show');
     }
@@ -605,7 +604,6 @@ $(document).ready(function() {
     //300 - отступы снизу и сверху , 10 -margin bottom
     const slide = Math.round((viewportHeight - 300) / (imgHeight + 10));
     let thumbHeight = slide * imgHeight + (slide - 1) * 10 + 100;
-    //console.log('thumbHeight', thumbHeight);
 
     if (thumbHeight > listHeight) {
       thumbHeight = listHeight;
@@ -647,7 +645,6 @@ $(document).ready(function() {
       }
      } else {
       for (let i = (currentIndex - slide + 2); i < (currentIndex + 1); i++) {
-        console.log(i);
         activeSlide.siblings().eq(i).addClass('visible');
       };
     }
@@ -691,7 +688,6 @@ $(document).ready(function() {
     const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
     const indexFirst = $(slideVisible[0]).index();
     const indexLast = $(slideVisible[slideVisible.length - 1]).index();
-    console.log('indexFirst', indexFirst);
 
     if (indexLast > ($('.fancybox-thumbs-y li').length - 3)) {
       $('.button-thumb_down button').prop('disabled', 'disabled');
@@ -712,8 +708,6 @@ $(document).ready(function() {
 
       const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
       const indexLast = $(slideVisible[slideVisible.length - 1]).index();
-      console.log('indexLast', indexLast);
-      console.log($('.fancybox-thumbs-y li').length - 1);
 
       if ($('.visible').eq(0).index() === 0) {
         $('.button-thumb_up button').prop('disabled', 'disabled');
@@ -759,6 +753,19 @@ $(document).ready(function() {
   $('[data-fancybox="certificate"]').fancybox(fancyOpts);
   $('[data-fancybox="feedback"]').fancybox(fancyOpts);
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
+
+// $(document).on('mouseover', '.fancybox-button-outer', function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+//     alert('mouse');
+//   })
+//   $(document).on('click', '.fancybox-button-outer', function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     alert('123');
+//     console.log($(this));
+//     $(this).children('fancybox-button').trigger('click');
+//   });
 
   $(window).resize(function() {
     if ($(window).width() > 768) {

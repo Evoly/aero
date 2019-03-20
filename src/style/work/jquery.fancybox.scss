@@ -95,6 +95,19 @@ body.compensate-for-scrollbar {
   }
 }
 
+.fancybox-infobar  {
+  position: fixed;
+  width: 160px;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    width: 110px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: auto;
+  }
+}
 .fancybox-show-nav .fancybox-navigation .fancybox-button[disabled] {
   opacity: 0.5;
 }
@@ -319,6 +332,7 @@ body.compensate-for-scrollbar {
   padding: 0;
 }
 /* Buttons */
+
 .fancybox-button {
   background: transparent;
   border: 0;
@@ -360,16 +374,7 @@ body.compensate-for-scrollbar {
   cursor: default;
   outline: none;
 }
-.fancybox-button--arrow_left {
-  transform: rotate(180deg);
-}
-.fancybox-button--arrow_up {
-  transform: rotate(-90deg);
-}
 
-.fancybox-button--arrow_down {
-  transform: rotate(90deg);
-}
 /* Fix IE11 */
 .fancybox-button div {
   height: 100%;
@@ -460,6 +465,22 @@ body.compensate-for-scrollbar {
   @include media-breakpoint-down(md) {
     display: none;
   }
+}
+
+.fancybox-button.fancybox-button--arrow_left,
+.fancybox-button.fancybox-button--arrow_right {
+  height: 100%;
+  top: 0;
+}
+.fancybox-button--arrow_left {
+  transform: rotate(180deg);
+}
+.fancybox-button--arrow_up {
+  transform: rotate(-90deg);
+}
+
+.fancybox-button--arrow_down {
+  transform: rotate(90deg);
 }
 
 .fancybox-navigation .fancybox-button div {
