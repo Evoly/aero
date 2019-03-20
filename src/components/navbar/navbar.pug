@@ -5,8 +5,8 @@ mixin navbar()
         ul.dropdown-menu.navbar-dropdown
           +navbar-lvl-2('#','Настенные').js-dropdown
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
-              +navbar-lvl-1('https://www.google.com/','submenu-1_1')(data-id = '1').js-sub-catalog
-              +navbar-lvl-1('catalog.html', 'submenu-1_2')(data-id = '2').js-sub-catalog
+              +navbar-lvl-1('#','submenu-1_1')(data-id = '1').js-sub-catalog
+              +navbar-lvl-1('#', 'submenu-1_2')(data-id = '2').js-sub-catalog
               +navbar-lvl-1('#', 'submenu-1_3')(data-id = '3').js-sub-catalog
           +navbar-lvl-2('#', 'Мобильные').js-dropdown
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
@@ -22,12 +22,8 @@ mixin navbar()
           +navbar-lvl-2('#', 'Мульти сплит').js-dropdown
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
               +navbar-lvl-1('#', 'submenu-5_1')(data-id = '9').js-sub-catalog
-          +navbar-lvl-2('#', 'VRF').js-dropdown
-            ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
-              +navbar-lvl-1('#', 'submenu-6_1')(data-id = '10').js-sub-catalog
-          +navbar-lvl-2('#', 'VRV').js-dropdown
-            ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
-              +navbar-lvl-1('#', 'submenu-7_1')(data-id = '11').js-sub-catalog
+          +navbar-lvl-1('#', 'VRF')
+          +navbar-lvl-1('#', 'VRV')
       +navbar-item-dropdown('#', 'вентиляция', 'menu_2')
         ul.dropdown-menu.navbar-dropdown
           +navbar-lvl-1('#', ' Пункт-1')
