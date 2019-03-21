@@ -598,6 +598,8 @@ $(document).ready(function() {
 
   const createThumbSlider = () => {
 
+    if ($('.fancybox-thumbs').length) {
+
     const viewportHeight = $('.fancybox-container').height();
     const imgHeight = $('.fancybox-thumbs-y li').height();
     const listHeight = $('.fancybox-thumbs-y ul').height();
@@ -621,6 +623,8 @@ $(document).ready(function() {
     };
     $('.fancybox-thumbs-outer').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight) / 2);
     return slide;
+  }
+
   }
 
   const fancyboxSync = () => {
