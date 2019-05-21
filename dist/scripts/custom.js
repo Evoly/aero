@@ -56,7 +56,7 @@ $(document).ready(function() {
     }
   };
   const owlOptions_1_sm = {
-    loop: true,
+    loop: false,
     margin: 10,
     nav: true,
     navText: ['<span class="icon slider-prev"></span><span class="icon slider-prev-disabled"></span>',

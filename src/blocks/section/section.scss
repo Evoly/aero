@@ -149,3 +149,14 @@
 
   }
 }
+.section_sm {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__header {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @include heading-4;
+  }
+}

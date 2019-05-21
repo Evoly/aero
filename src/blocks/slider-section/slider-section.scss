@@ -46,8 +46,12 @@
       }
 
       &.disabled:hover {
-        // background-color: #fff;
-        // border: 1px solid $color-another-blue;
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: .9;
+        transition: $ease-main;
       }
     }
 
@@ -93,5 +97,11 @@
     img {
       margin-bottom: 15px;
     }
+  }
+}
+
+.slider-section-sm {
+  .owl-nav {
+    top: 100%;
   }
 }

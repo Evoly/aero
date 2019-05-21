@@ -7,3 +7,10 @@ mixin slider-section(title, jsName)
           h2.section__header=title
           div(class=`owl-carousel ${js}`)
             block
+
+
+mixin slider-section-sm(jsName)
+  - var js=jsName
+  .slider-section-sm&attributes(attributes)
+    div(class=`owl-carousel ${js}`)
+      block
