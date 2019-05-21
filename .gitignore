@@ -1,8 +1,3 @@
-# Ignore everything
-*
-# But descend into directories
-!*/
-# Recursively allow files under subtree
-!/dist/**
-!/src/**
-!.gitignore
+node_modules
+other
+*.log

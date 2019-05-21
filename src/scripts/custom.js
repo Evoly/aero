@@ -55,6 +55,17 @@ $(document).ready(function() {
       }
     }
   };
+  const owlOptions_1_sm = {
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: ['<span class="icon slider-prev"></span><span class="icon slider-prev-disabled"></span>',
+      '<span class="icon slider-next"></span><span class="icon slider-next-disabled"></span>'
+    ],
+    dot: false,
+    items: 1
+  };
+
   const owlOptions_1 = {
     loop: true,
     margin: 10,
@@ -62,6 +73,7 @@ $(document).ready(function() {
     dot: true,
     items: 1
   };
+
   const owlOptions_product = {
     loop: false,
     margin: 10,
@@ -75,6 +87,7 @@ $(document).ready(function() {
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
   $('.js-card-slider').owlCarousel(owlOptions_product);
+  $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
 
   const startCarousel = (el, options) => el.owlCarousel(options);
   const stopCarousel = (el) => el.trigger('destroy.owl.carousel');
