@@ -1,0 +1,41 @@
+.project-list {
+  flex-direction: column;
+  padding: 28px 30px 28px 24px;
+  background-color: $color-athens-gray2;
+  margin-bottom: 15px;
+  margin-top: 5px;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+
+  &__header {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+    @include heading-4 ;
+  }
+
+  &__subheader {
+    color: $color-darkgrey;
+    text-transform: uppercase;
+    @include heading-6;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .icon-inline {
+    margin-right: 10px;
+  }
+}

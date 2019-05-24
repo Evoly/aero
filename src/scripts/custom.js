@@ -87,6 +87,7 @@ $(document).ready(function() {
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
   $('.js-card-slider').owlCarousel(owlOptions_product);
+
   $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
 
   const startCarousel = (el, options) => el.owlCarousel(options);
@@ -101,6 +102,7 @@ $(document).ready(function() {
     $(".js-card-slider").trigger('to.owl', index);
     return false;
   });
+
   const slides = 3;
   const step = 100;
   const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;

@@ -1,0 +1,40 @@
+mixin project-list()
+  .project-list&attributes(attributes).flex
+    h3.project-list__header Хочу так же
+    .project-list__item
+      p.project-list__subheader Тип:
+      p.project-list__text  Квартира
+    .project-list__item
+      p.project-list__subheader Название:
+      p.project-list__text  Дом ...
+    .project-list__item
+      p.project-list__subheader Задача:
+      p.project-list__text  Охладить
+    .project-list__item
+      p.project-list__subheader Бюджет
+      p.project-list__text  8 000 руб.
+    //a(href="#" data-toggle="modal" data-target="#buy").btn.btn-primary купить
+    //a(href='#' data-toggle="modal" data-target="#buy").btn.btn-dark купить в кредит
+
+    //.project-list__bottom
+      //+list-dots()
+        li.list-dots__item Бесплатный замер.
+        li.list-dots__item пункт.
+        li.list-dots__item Доставка за город – 35 руб/км.
+
+      //+list-dots('Оплата', 'wallet-grey')
+        li.list-dots__item Наличными
+        li.list-dots__item Безнал для юр. лиц
+        li.list-dots__item Счет для оплаты в банке для физ. лиц
+
+      //+list-dots('Установка', 'settings')
+        li.list-dots__item #[a(href='#') Установка] – Уточните у менеджера
+
+    //.div
+      span.icon-inline.slider-next-disabled
+      a(href="#" data-toggle="modal" data-target="#size").card__link.list-dots__link_dashed Бесплатный замер
+
+    +list-dots()
+      li.list-dots__item Бесплатный замер
+      li.list-dots__item Бесплатная доставка
+      li.list-dots__item Гарантия на выполненые работы 1 год

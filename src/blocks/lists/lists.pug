@@ -1,8 +1,12 @@
 mixin list-dots(title, iconName)
-  .list-dots
-    .list-dots__header
-      span(class=`icon ${iconName}`)
-      span=title
+  if title && iconName
+    .list-dots
+      .list-dots__header
+        span(class=`icon ${iconName}`)
+        span=title
+      ul.list-unstyled
+        block
+  else
     ul.list-unstyled
       block
 

@@ -1,0 +1,124 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Проект'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li.breadcrumb-item: a(href="#") Проекты
+            li(aria-current="page").breadcrumb-item.active Проект LS/LU-H07KKA2
+
+    section.container.section__projects
+      h1 Название проекта
+      +banner-timer('orange', 'icon-banner', 'timer').card__banner
+        .banner__header Акция!
+        .banner__text На всю продукцию Lessar скидка на монтаж 20%. Акция распространяется на бытовую серию и полупромышленное оборудование.  Не упустите выгоду!
+      .row
+        .col-lg-9.col-md-8.col-sm-12
+          .row
+            .card__col-right.visible-md
+              +nav-slider.js-vertical-slider
+                .nav-slider__viewport
+                  .nav-slider__items
+                    .nav-slider__item
+                      img(src='images/temp/slider-lg.png' alt='')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-2.png' alt='')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-3.png' alt='')
+                    .nav-slider__item
+                      img(src='images/temp/slider-sm-1.png' alt='')
+                    .nav-slider__item
+                      img(src='images/temp/test.jpg' alt='')
+                    .nav-slider__item
+                      img(src='images/temp/test-1.jpg' alt='')
+
+                .nav-slider__nav.nav-slider__next.js-prev
+                  span.icon.arrow-up.show
+                  span.icon-disabled.arrow-up-grey
+                .nav-slider__nav.nav-slider__prev.js-next
+                  span.icon.arrow-down.show
+                  span.icon-disabled.arrow-down-grey
+
+            .card__col-center
+              .card__slider.owl-carousel.js-card-slider
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/slider-lg.png"  data-caption="Caption #0"): img(src='images/temp/slider-lg.png' alt='')
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/slider-sm-2.png"  data-caption="Caption #1"): img(src='images/temp/slider-sm-2.png' alt='')
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/slider-sm-3.png"  data-caption="Caption #2"): img(src='images/temp/slider-sm-3.png' alt='')
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/slider-sm-1.png"  data-caption="Caption #3"): img(src='images/temp/slider-sm-1.png' alt='')
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/test.jpg"  data-caption="Caption #4"): img(src='images/temp/test.jpg' alt='')
+                .card__slider-item.flex
+                  a(data-fancybox="card-slider" href="images/temp/test-1.jpg"  data-caption="Caption #5"): img(src='images/temp/test-1.jpg' alt='')
+
+            .card__col-left
+              ul(role="tablist").nav.nav-tabs.nav-tabs.nav-tabs-sm
+                li.nav-item: a(class="nav-link nav-link-sm active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true") Описание
+                li.nav-item.nav-item_lg: a(class="nav-link nav-link-sm" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab" aria-controls="set" aria-selected="false")  Отзывы( #[span 2])
+
+              .tab-content.tabs-sm
+                .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="about-tab")#about
+                  p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
+                  p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
+                  p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
+                  //a(href="#description").card__link.js-toTabs Подробнее
+                .tab-pane.fade(role="tabpanel" aria-labelledby="feedback-tab")#feedback
+                  +sort-feedback
+                  +feedback
+                    .feedback__content
+                      +feedback__item
+                    +feedback__rating-block
+
+        .col-lg-3.col-md-4.col-sm-12
+          +project-list()
+
+      .row
+        .container
+          .section
+            h2.section__header Другие проекты
+            +slider-section-sm('js-slider-project')
+                a(href='#').slider__item-2
+                  img(src='images/main_3.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+                a(href='#').slider__item-2
+                  img(src='images/main_4.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+                a(href='#').slider__item-2
+                  img(src='images/main_5.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+                a(href='#').slider__item-2
+                  img(src='images/main_5.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+                a(href='#').slider__item-2
+                  img(src='images/main_5.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+                a(href='#').slider__item-2
+                  img(src='images/main_5.png' alt='')
+                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
+
+
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+  +footer
+
+  +modal-callMe
+  +modal-buy
+  +modal-size
+  +modal-addfeedback
+
+  //+slider-section('Другие проекты','js-slider-project').section_project
