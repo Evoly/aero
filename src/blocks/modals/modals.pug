@@ -46,6 +46,21 @@ mixin modal-callMe()
             .modal-footer
               button(type="submit" class="btn btn-primary").js-submit отправить
 
+  mixin modal-mount()
+    div(tabindex="-1" role="dialog" aria-labelledby="mount").modal.fade.modal-sm#mount
+      .modal-dialog
+        .modal-content
+          .modal__header
+            h5 Заказать монтаж
+          form(action="#" method="post").form
+            .modal-body
+              .form-group
+                input(type="text" name="name" class="form-control" placeholder="Ваше имя" data-type="text" required)
+              .form-group
+                input(type="text" name="tel" class="form-control" placeholder="Телефон" data-type="tel" required)
+            .modal-footer
+              button(type="submit" class="btn btn-primary").js-submit отправить
+
   mixin modal-addfeedback()
     div(tabindex="-1" role="dialog" aria-labelledby="addfeedback").modal.fade.modal-sm#addfeedback
       .modal-dialog

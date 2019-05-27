@@ -64,20 +64,18 @@ block content
             .card__col-left
               ul(role="tablist").nav.nav-tabs.nav-tabs.nav-tabs-sm
                 li.nav-item: a(class="nav-link nav-link-sm active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true") Описание
-                li.nav-item.nav-item_lg: a(class="nav-link nav-link-sm" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab" aria-controls="set" aria-selected="false")  Отзывы( #[span 2])
+                li.nav-item.nav-item_lg: a(class="nav-link nav-link-sm" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab" aria-controls="set" aria-selected="false")  Отзывы
 
               .tab-content.tabs-sm
                 .tab-pane.fade.show.active(role="tabpanel" aria-labelledby="about-tab")#about
                   p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
                   p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
                   p Охлаждение/обогрев, мощность 3,5 кВт, ионизатор, доп. фильтры, класс эффективности А, S до 35 м.кв.
-                  //a(href="#description").card__link.js-toTabs Подробнее
                 .tab-pane.fade(role="tabpanel" aria-labelledby="feedback-tab")#feedback
-                  +sort-feedback
-                  +feedback
-                    .feedback__content
-                      +feedback__item
-                    +feedback__rating-block
+                  .tab-pane__cert.flex
+                    a(href="images/temp/feedback_1.png" data-fancybox="feedback"): img(src='images/temp/feedback_1.png' alt='')
+                    a(href="images/temp/feedback_2.png" data-fancybox="feedback"): img(src='images/temp/feedback_2.png' alt='')
+                    //a(href="images/temp/cert_1.png" data-fancybox="feedback"): img(src='images/temp/cert_1.png' alt='')
 
         .col-lg-3.col-md-4.col-sm-12
           +project-list()
@@ -117,8 +115,5 @@ block content
   +footer
 
   +modal-callMe
-  +modal-buy
-  +modal-size
+  +modal-mount
   +modal-addfeedback
-
-  //+slider-section('Другие проекты','js-slider-project').section_project
