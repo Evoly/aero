@@ -45,7 +45,7 @@ $(document).ready(function() {
         nav: true,
         items: 2
       },
-      400: {
+      500: {
         items: 2,
         nav: false
       },
