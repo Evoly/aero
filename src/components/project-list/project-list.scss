@@ -11,8 +11,7 @@
 
   &__top {
     padding-bottom: 20px;
-    // border-bottom: 1px dashed #ccc;
-    // margin-bottom: 18px;
+    text-align: center;
   }
 
   &__item {
@@ -43,5 +42,9 @@
 
   .icon-inline {
     margin-right: 10px;
+  }
+
+  .list-dots__item {
+    font-weight: 500;
   }
 }

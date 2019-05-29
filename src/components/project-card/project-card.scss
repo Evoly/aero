@@ -1,0 +1,64 @@
+.project-card {
+  height: 450px;
+  overflow: hidden;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #b8c3d05e;
+
+  &:hover {
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.26);
+}
+
+  &__content {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+
+  &__text {
+    flex: 1;
+
+    &_gray {
+      color: $color-grey-thin;
+    }
+
+    &_right {
+      padding-left: 10px;
+    }
+  }
+
+  &__btn {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  &__img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 15px;
+    height: 150px;
+    min-height: 150px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__header {
+    display: block;
+    margin-bottom: 15px;
+  }
+}

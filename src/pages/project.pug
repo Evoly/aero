@@ -75,7 +75,7 @@ block content
                   .tab-pane__cert.flex
                     a(href="images/temp/feedback_1.png" data-fancybox="feedback"): img(src='images/temp/feedback_1.png' alt='')
                     a(href="images/temp/feedback_2.png" data-fancybox="feedback"): img(src='images/temp/feedback_2.png' alt='')
-                    //a(href="images/temp/cert_1.png" data-fancybox="feedback"): img(src='images/temp/cert_1.png' alt='')
+                    a(href="images/temp/feedback_2.png" data-fancybox="feedback"): img(src='images/temp/feedback_2.png' alt='')
 
         .col-lg-3.col-md-4.col-sm-12
           +project-list()
@@ -85,26 +85,13 @@ block content
           .section
             h2.section__header Другие проекты
             +slider-section-sm('js-slider-project')
-                a(href='#').slider__item-2
-                  img(src='images/main_3.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-                a(href='#').slider__item-2
-                  img(src='images/main_4.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-                a(href='#').slider__item-2
-                  img(src='images/main_5.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-                a(href='#').slider__item-2
-                  img(src='images/main_5.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-                a(href='#').slider__item-2
-                  img(src='images/main_5.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-                a(href='#').slider__item-2
-                  img(src='images/main_5.png' alt='')
-                  p.slider__title Компания Emerson Network Power. подразделение корпорации Emerson
-
-
+                +project-card('main_4')
+                +project-card('main_4')
+                +project-card('main_3')
+                +project-card('main_5')
+                +project-card('main_5')
+                +project-card('main_3')
+                +project-card('temp/catalog-2')
 
     .section__consult
       .section__consult_bg
