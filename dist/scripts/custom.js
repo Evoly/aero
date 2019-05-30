@@ -41,9 +41,9 @@ $(document).ready(function() {
         nav: true,
         items: 4
       },
-      979: {
+      768: {
         nav: true,
-        items: 2
+        items: 3
       },
       500: {
         items: 2,

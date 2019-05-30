@@ -2,7 +2,7 @@ mixin project-card(imageName)
   .project-card&attributes(attributes).flex
     a(href='#').project-card__img
       img(src=`images/${imageName}.png` alt='')
-    a(href='#').project-card__header Компания Emerson Network Power. подразделение корпорации Emerson
+    a(href='#').project-card__header Компания Emerson Network Power подразделение
 
     .project-card__item.flex
       .project-card__text.project-card__text_gray Тип объекта:
@@ -11,5 +11,5 @@ mixin project-card(imageName)
       .project-card__text.project-card__text_gray Площадь:
       .project-card__text.project-card__text_right 29 000м<sup>2</sup>
 
-    p Вентиляция, кондиционирование и водоснабжение оборонного завода Заслон
+    p.project-card__text_sm Вентиляция, кондиционирование и водоснабжение оборонного завода Заслон
     a(href='#').btn.btn-primary.project-card__btn Подробнее
