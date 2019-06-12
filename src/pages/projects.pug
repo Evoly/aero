@@ -1,0 +1,94 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Проекты'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li(aria-current="page").breadcrumb-item.active Проекты
+
+    section.container.section__catalog
+      .row.catalog__row
+        .col-sm-12.visible-sm
+          .catalog__header
+            h1 Наши выполненные проекты
+        .col-xl-3.col-lg-4.col-md-5.col-sm-12
+          .catalog-form__header ВЫБОР ПО ПАРАМЕТРАМ:
+          +project-form
+
+        .col-xl-9.col-lg-8.col-md-7.col-sm-12
+          .visible-md
+            .catalog__header
+              h1 Наши выполненные проекты
+
+          .row.projects
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
+              +project-card('temp/article-sm-1')
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
+              +project-card('temp/article-sm')
+            .col-xl-4.col-lg-6.col-md-6.col-sm-12
+              +project-card('main_5')
+            - for (var x = 1; x < 10; x++)
+              .col-xl-4.col-lg-6.col-md-6.col-sm-12
+                +project-card('main_3')
+
+          .col-sm-12.catalog__view-more
+            a(href='#').btn.btn-grey ПОКАЗАТЬ ЕЩЕ
+
+          //.row
+            .col-sm-12
+              .catalog-article
+                h2.section__subheader Настенные сплит-системы или настенные кондиционеры
+                .catalog-article__item
+                  p Сплит-система дословно переводится как «сдвоенная система» или иначе говоря, два связанных между собой блока кондиционера. Как правило, это внешний блок, расположенный снаружи помещения, отвечающий за основную работу системы и внутренний блок, посредствам которого, мы получаем прохладный, чистый воздух в помещении.
+                  p Настенные сплит-системы один из самых наиболее популярных видов кондиционеров. Они используются в квартирах, домах, офисах, магазинах, и прочих помещениях до 80-100 квадратных метров. Отличительной особенностью такой системы является несложный монтаж относительно полупромышленных и промышленных климатических систем,                 и возможность установки практически на любое место. Современные модели данного типа кондиционеров обладают разнообразным дизайном и с легкостью впишутся в любое помещение.
+                h2.section__subheader Инверторные и не инверторные сплит-системы
+                .catalog-article__item
+                  p Очень важным является деление данных кондиционеров на сплит-системы инверторного типа и сплит-системы не инверторного типа. Инвертор представляет собой плату управления кондиционером, которая позволяет контролировать мощность работы сплит-системы. Таким образом принципиальное отличие инверторного кондиционера от не инверторного кондиционера, заключается в том, что первый благодаря наличию данной платы, остудив комнату до нужной температуры не выключается сразу, а продолжает функционировать, но уже тратя на это гораздо меньшую энергию, что позволяет добиться экономии потребления электроэнергии и плавности охлаждения.
+                  p Плюсы такого инверторного кондиционера:
+                  ul.list-unstyled.catalog-article__list
+                    li.catalog-article__list-item Экономия электроэнергии и как следствие денежных средств
+                    li.catalog-article__list-item Плавность работы
+                    li.catalog-article__list-item Точное поддержание заданной температуры
+
+                  p Ниже Вы найдете все инверторные сплит-системы и не инверторные сплит-системы:
+                  ul.list-unstyled.catalog-article__list
+                    li.catalog-article__list-item Инверторные сплит-системы
+                    li.catalog-article__list-item Не инверторные сплит-системы
+                  h2.section__subheader Ассортимент кондиционеров
+                  .catalog-article__item
+                    p В нашем интернет-магазине представлено более 15 крупнейших производителей климатического оборудования как бюджетного сегмента, так и премиального. У нас вы можете купить кондиционеры Mitsubishi, Fujitsu, Daikin, Toshiba, Panasonic, Electrolux, LG, Ballu, Gree, Hitachi, Aero, QuattroClima, Lessar и многие другие известные бренды.
+                    p Ниже Вы найдете настенные сплит-системы для разных площадей:
+                    ul.list-unstyled.catalog-article__list
+                      li.catalog-article__list-item Настенные слит-системы для 15 м2
+                      li.catalog-article__list-item Настенные слит-системы для 20 м2
+                      li.catalog-article__list-item Настенные слит-системы для 30 м2
+                      li.catalog-article__list-item Настенные слит-системы для 40 м2
+                      li.catalog-article__list-item Настенные слит-системы для 50 м2
+
+                p.catalog-article__footer Мы всегда рады помочь Вам купить кондиционеры по низким ценам в Санкт-Петербурге или Москве, а так же доставить их в любой регион России.
+          //.row
+            .col-sm-12.trancate-block
+              h3 Вам может быть интересно:
+              .trancate-block__content
+                - for (var x = 1; x < 86; x++)
+                    a(href='#').trancate-block__item Carrier
+              .trancate-block__btn.js-truncate
+                a(href='#')
+
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+    +footer
+
+  +modal-callMe#callMe

@@ -74,6 +74,33 @@ mixin catalog-form()
       a(href="#").mypopover__item Показать
 
 
+mixin project-form()
+  form.catalog-form.project-form(action='/smth?_format=json')&attributes(attributes)
+    .catalog-form__item
+      .catalog-form__subheader Виды работ
+      .catalog-form__group
+        -var data = ['Вентиляция', 'Кондиционирование', 'Общестроительные работы', 'Отопление и водоснабжение', 'Электроснабжение']
+        -var data2 = ['0', '0', '1', '0', '0 ']
+          each val, index in data
+            +checkbox()=val
+              +num(data2[index])
+    .catalog-form__item
+      .catalog-form__subheader Тип объекта
+      .catalog-form__group
+        -var data = ['Бассейн', 'Загородный дом', 'Кафе/Ресторан', 'Квартира', 'Магазин ', 'Офис', 'Производство', 'Прочие', 'Склад']
+        -var data2 = ['1', '0', '1', '0', '0 ', '0', '0', '0', '0 ', '0', '0', '0']
+          each val, index in data
+            +checkbox('test')=val
+              +num(data2[index])
+
+    .catalog-form__button
+      a(href='#').btn.btn-primary.js-submit показать
+      a(href='#').btn.btn-grey.js-reset сбросить
+    .mypopover
+      span.mypopover__item Выбрано: #[span.num 74]
+      a(href="#").mypopover__item Показать
+
+
 mixin checkbox(name, value, checked, required, className)
   label(data-toggle="popover").checkbox&attributes(attributes)
     - var check = checked || '';
