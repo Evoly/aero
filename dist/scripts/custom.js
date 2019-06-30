@@ -793,3 +793,14 @@ $(document).ready(function() {
     $(this).siblings('.trancate-block__content').toggleClass('show');
   });
 });
+
+$('.js-truncateText').each(function () {
+  const self = $(this);
+
+  self.dotdotdot({
+    truncate: 'letter',
+    watch: 'window',
+    ellipsis: "\u2026 ",
+    height: self.css('max-height'),
+  });
+});
