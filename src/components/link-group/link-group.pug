@@ -1,0 +1,37 @@
+mixin link-group()
+    .link-group&attributes(attributes)
+      p.link-group__header Популярные категории:
+      .link-group__row.flex
+        .link-group__subheader Тип:
+        .link-group__items.flex
+          .owl-carousel.js-slider-linkType
+            -var data = ['Настенные', 'Кассетные', 'Канальные', 'Мобильные', 'Потолочные', 'Мульти']
+            each val in data
+              .link-group__item
+                a(href='#').link-group__link=val
+      .link-group__row.flex
+        .link-group__subheader Площадь:
+        .link-group__items
+          .owl-carousel.js-slider-linkSquare
+            -var data = ['20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100' , '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85']
+            each val in data
+              .link-group__item
+                a(href='#').link-group__link=val
+
+      .link-group__row.flex
+        .link-group__subheader Остальные:
+        .link-group__items.flex
+          .owl-carousel.js-slider-linkOther
+            -var data = ['Инверторные', 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню' , 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню']
+            each val in data
+              .link-group__item
+                a(href='#').link-group__link=val
+
+      .link-group__row.flex
+        .link-group__subheader Производитель:
+        .link-group__items.flex
+          .owl-carousel.js-slider-linkBrand
+            -var data = ['AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General']
+            each val in data
+              .link-group__item
+                a(href='#').link-group__link=val

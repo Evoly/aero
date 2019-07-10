@@ -1,0 +1,338 @@
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px 5px 26px 8px;
+  border: 1px solid $color-grey-light;
+  height: 680px;
+  margin-right: -1px;
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    z-index: 1;
+    border-color: $link-hover-color;
+
+    .product-card__price_new {
+      background-color: $link-hover-color;
+      &:before {
+        border-left-color: $link-hover-color;
+      }
+    }
+  }
+
+  &__top {
+    padding-right: 9px;
+    padding-left: 7px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @include text-medium;
+
+    .icon {
+      margin-right: 5px;
+      margin-top: -3px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 263px;
+    min-height: 263px;
+    margin-bottom: 35px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__header {
+    display: block;
+    padding-left: 9px;
+    padding-right: 13px;
+    margin-bottom: 20px;
+    color: $color-darkgrey;
+
+    &:hover {
+      color: $color-red-vermilion-1;
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    padding-left: 9px;
+    padding-right: 13px;
+    color: $color-grey-thin;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 10px;
+    @include text-sm;
+  }
+
+  &__country {
+    text-align: left;
+    margin-bottom: 8px;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    justify-content: space-between;
+    line-height: 1;
+    margin-bottom: 9px;
+
+    span {
+      position: relative;
+      padding-bottom: 2px;
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      border-bottom: 1px dotted $color-grey-thin;
+      z-index: 1;
+      bottom: 4px;
+      left: 0;
+    }
+  }
+
+  &__type {
+    color: $color-heather1;
+    margin-bottom: 10px;
+    padding-left: 9px;
+    @include text-sm;
+  }
+
+  &__rating {
+    flex-flow: row nowrap;
+  }
+
+  &__price {
+    margin-top: auto;
+
+    .col-6 {
+      align-self: center;
+    }
+
+    &_old {
+      display: block;
+      text-align: center;
+      text-decoration: line-through;
+      color: $color-grey-thin;
+      @include heading-5-thin;
+    }
+
+    &_new {
+      width: 115px;
+      height: 42px;
+      display: block;
+      text-align: center;
+      position: relative;
+      line-height: 42px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: $brand-primary;
+      color: $color-basic;
+      margin-right: 25px;
+      margin-left: auto;
+      border-radius: 3px;
+      @include media-breakpoint-only(md) {
+        width: auto;
+        margin-right: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      @include heading-5;
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: -14px;
+        width: 0;
+        height: 0;
+        border-top: 21px solid transparent;
+        border-bottom: 21px solid transparent;
+        border-left: 15px solid $brand-primary;
+      }
+    }
+  }
+
+  &__select {
+    padding-left: 12px;
+    padding-right: 13px;
+    @include text-sm;
+
+    .col:last-child {
+      border-left: 1px solid $color-heather;
+      text-align: right;
+    }
+    @include media-breakpoint-only(md) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.label {
+  &__container {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 50px;
+    right: 0;
+    text-align: right;
+  }
+  position: relative;
+  height: 26px;
+  padding: 6px 20px 7px 13px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: $color-perano;
+  z-index: 1;
+  @include text-xxs-bold;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: -9px;
+    border-left: 9px solid transparent;
+    z-index: 1;
+  }
+
+  &_orange {
+    background-color: $color-orange-dust;
+
+    &:after {
+      border-top: 13px solid $color-orange-dust;
+      border-bottom: 13px solid $color-orange-dust;
+      border-right: 13px solid $color-orange-dust;
+    }
+  }
+
+  &_green {
+    background-color: $color-green;
+
+    &:after {
+      border-top: 13px solid $color-green;
+      border-bottom: 13px solid $color-green;
+      border-right: 13px solid $color-green;
+    }
+  }
+
+  &_blue {
+    background-color: $color-curious-blue;
+
+    &:after {
+      border-top: 13px solid $color-curious-blue;
+      border-bottom: 13px solid $color-curious-blue;
+      border-right: 13px solid $color-curious-blue;
+    }
+  }
+}
+
+.catalog__product-card {
+  margin-bottom: 10px;
+
+  .col-xl-4:nth-child(3n) {
+    .product-card {
+      margin-right: 0;
+    }
+  }
+
+  .col-xl-4:nth-child(3n) {
+    .product-card {
+      margin-right: 0;
+    }
+  }
+
+  .col-xl-4:not(:first-child) {
+    .product-card {
+      @include media-breakpoint-down(sm) {
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .col-xl-4:nth-child(n+4) {
+    .product-card {
+      @include media-breakpoint-up(xl) {
+        margin-top: -1px;
+      }
+    }
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .col-xl-4:nth-child(n+3) {
+    .product-card {
+      @include media-breakpoint-between(md, lg) {
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .col-xl-4:last-child {
+    .product-card {
+      margin-right: -1px;
+    }
+  }
+}
+
+.select__product-card {
+  margin-bottom: 10px;
+
+  .col-xl-3:nth-child(4n) {
+    .product-card {
+      margin-right: 0;
+    }
+  }
+
+  .col-xl-3:nth-child(n+5) {
+    .product-card {
+      margin-top: -1px;
+    }
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .col-xl-3:not(:first-child) {
+    .product-card {
+      @include media-breakpoint-down(sm) {
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .col-xl-3:nth-child(n+3) {
+    .product-card {
+      @include media-breakpoint-only(md) {
+        margin-top: -1px;
+      }
+    }
+  }
+  //
+  // .col-xl-3:last-child {
+  //   .product-card {
+  //     margin-right: 0;
+  //   }
+  // }
+}

@@ -1,0 +1,24 @@
+mixin filter-panel()
+  .filter-panel.flex
+    .filter-panel__total
+      span Найдено:
+      span 2 393 товара
+    .filter-panel__dropdown
+      button.btn.btn__sort.dropdown-toggle(type="button" id="filterDropdown" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false")
+        span По популярности
+        span.sort__icon
+          span.sort__icon_up
+          span.sort__icon_down
+      .dropdown-menu(aria-labelledby="filterDropdown")
+         a(class="dropdown-item" href="#") По популярности
+         a(class="dropdown-item" href="#") Сначалa дешевые
+         a(class="dropdown-item" href="#") Сначалa дорогие
+
+    .filter-panel__select
+      span.sort__title Показывать по:
+      .sort__select
+        select(name="onPageView" class="selectpicker form-control")
+          option(value="12") 12
+          option(value="12") 12
+          option(value="18") 18
+      script $(function() {$('.selectpicker').selectpicker()});

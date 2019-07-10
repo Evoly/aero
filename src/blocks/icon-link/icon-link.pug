@@ -1,0 +1,6 @@
+mixin icon-link(iconName, iconNameHover)
+  a(href='#')&attributes(attributes).icon-link
+    span.icon-inline(class=`${iconName}`).icon-link__icon
+    if iconNameHover
+      span(class=`${iconNameHover}`).icon-link_hover
+    block

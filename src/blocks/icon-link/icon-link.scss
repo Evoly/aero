@@ -1,0 +1,23 @@
+.icon-link {
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &_hover {
+    display: none;
+  }
+
+  &:hover {
+    .heart {
+      display: none;
+    }
+
+    .heart_red {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+  transition: all $ease-main;
+}

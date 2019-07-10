@@ -1,0 +1,34 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Сравнение'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li(aria-current="page").breadcrumb-item.active Сравнение
+
+    section.section__compare.container
+      .row
+        .col-sm-12
+          h1 Сравнение
+
+
+
+
+
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+
+  +footer
+  +modal-callMe#callMe

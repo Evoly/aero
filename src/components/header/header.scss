@@ -194,6 +194,25 @@
     }
   }
 
+  .clock {
+    margin-right: 6px;
+  }
+
+  &__time {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__select {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .icon-link:first-child {
+    margin-right: 10px;
+  }
+
   &__nav-container {
     position: relative;
     margin: 0 auto;

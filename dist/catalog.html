@@ -25,9 +25,9 @@
                 <div class="col-xl-auto col-lg-6 col-sm-12"><a class="header__logo" href="index.html"><span class="header__logo_red">aero</span><span class="header__logo_blue">control</span>
                         <p class="header__logo-text">климатическое&nbsp;&nbsp;оборудование</p>
                     </a></div>
-                <div class="col-xl-auto col-lg-6 d-none d-lg-block">
-                    <div class="header__text_bg"><img src="images/full.png" /></div>
-                    <p class="header__text">Продажа и монтаж <br>климатического оборудования <br>с доставкой по РФ</p>
+                <div class="col-xl-auto col-lg-6 col-sm-12">
+                    <div class="header__time flex"><span class="icon-inline clock"></span><span>Пн — Пт: 10:00 — 18:00</span></div>
+                    <div class="header__select"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span><span>(23)</span></a><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span><span>(12)</span></a></div>
                 </div>
                 <div class="col-xl-auto col-lg-6 col-sm-12">
                     <form action="/search/" method="get">
@@ -1028,42 +1028,38 @@
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
                         <li class="breadcrumb-item"><a href="#">Каталог</a></li>
                         <li class="breadcrumb-item"><a href="#">Кондиционирование</a></li>
+                        <li class="breadcrumb-item"><a class="dropdown-toggle" href="#" role="button" id="breadcrumbDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Настенные кондиционеры</a>
+                            <div class="dropdown-menu" aria-labelledby="breadcrumbDropdown"><a class="dropdown-item" href="#">Мобильные кондиционеры</a><a class="dropdown-item" href="#">Настенные кондиционеры</a><a class="dropdown-item" href="#">Кассетные кондиционеры</a><a class="dropdown-item" href="#">Напольно-потолочные кондиционеры</a><a class="dropdown-item" href="#">Колонные кондиционеры</a><a class="dropdown-item" href="#">Оконные кондиционеры</a><a class="dropdown-item" href="#">Канальные кондиционеры</a><a class="dropdown-item" href="#">Аксессуары</a><a class="dropdown-item" href="#">Мульти сплит системы</a><a class="dropdown-item" href="#">Аренда кондиционеров</a><a class="dropdown-item" href="#">Компрессорно-конденсаторные блоки</a><a class="dropdown-item" href="#">VRF системы</a><a class="dropdown-item" href="#">Фанкойлы</a><a class="dropdown-item" href="#">Кондиционеры</a></div>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">Настенные сплит-системы</li>
                     </ol>
                 </nav>
             </div>
         </div>
         <section class="container section__catalog">
-            <div class="row catalog__row">
+            <div class="row catalog__row no-gutters">
                 <div class="col-sm-12 visible-sm">
                     <div class="catalog__header">
-                        <h1>Настенные сплит-системы</h1>
+                        <h1>Настенные кондиционеры 20 м² — 2 кВт</h1>
                     </div>
-                    <div class="link-group">
-                        <p class="link-group__header">Популярные категории:</p>
-                        <div class="link-group__items flex">
-                            <div class="link-group__item"><a href="#">Настенные</a></div>
-                            <div class="link-group__item"><a href="#">Кассетные</a></div>
-                            <div class="link-group__item"><a href="#">Канальные</a></div>
-                            <div class="link-group__item"><a href="#">Мобильные</a></div>
-                            <div class="link-group__item"><a href="#">Инверторные</a></div>
-                            <div class="link-group__item"><a href="#">В квартиру</a></div>
-                            <div class="link-group__item"><a href="#">В офис</a></div>
-                            <div class="link-group__item"><a href="#">Для дома</a></div>
-                            <div class="link-group__item"><a href="#">Бытовые</a></div>
-                            <div class="link-group__item"><a href="#">Полупромышленные</a></div>
-                            <div class="link-group__item"><a href="#">Только на охлаждение</a></div>
-                            <div class="link-group__item"><a href="#">Daikin</a></div>
-                            <div class="link-group__item"><a href="#">Gree Lessar</a></div>
-                            <div class="link-group__item"><a href="#">Hisense</a></div>
-                            <div class="link-group__item"><a href="#">Mitsubishi</a></div>
-                            <div class="link-group__item"><a href="#">Electric</a></div>
-                            <div class="link-group__item"><a href="#">На 15 м2</a></div>
-                        </div>
-                    </div>
+                    <!--.link-groupp.link-group__header Популярные категории:
+.link-group__row.flex
+  p.link-group__subheader Тип:
+  .link-group__items.flex
+    -var data = ['Настенные', 'Кассетные', 'Канальные', 'Мобильные', 'Потолочные', 'Мульти']
+    each val in data
+      .link-group__item
+        a(href='#')=val
+.link-group__row.flex
+  p.link-group__subheader Площадь:
+  .link-group__items.flex
+    -var data = ['20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100']
+    each val in data
+      .link-group__item
+        a(href='#')=val-->
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12">
-                    <div class="catalog-form__header">ВЫБОР ПО ПАРАМЕТРАМ:</div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                    <div class="catalog-form__header">фильтр</div>
                     <form class="catalog-form" action="/smth?_format=json">
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">цена</div>
@@ -1085,6 +1081,7 @@
                         </div>
                         <div class="catalog-form__item">
                             <div class="catalog-form__subheader">ПРОИЗВОДИТЕЛЬ</div>
+                            <div class="search catalog-form__search"><input class="search__input" value="" type="text" name=" " autocomplete="off" placeholder="Поиск по св-ву..." /><span class="icon lens"></span></div>
                             <div class="catalog-form__group"><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">AERO<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Ballu<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Chigo<span> (<span>1</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Daikin<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Fujitsu <span> (<span>0 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Electrolux<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">General<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Daikin<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Fujitsu <span> (<span>0 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Electrolux<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">General<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">AERO<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Ballu<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Chigo<span> (<span>1</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Daikin<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Fujitsu <span> (<span>0 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Electrolux<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">General<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Daikin<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Fujitsu <span> (<span>0 </span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">Electrolux<span> (<span>0</span>)</span></span></label><label class="checkbox" data-toggle="popover"><input class="input" name="" type="checkbox" /><span class="checkmark checkmark_box"></span><span class="checkbox__content">General<span> (<span>0</span>)</span></span></label></div>
                         </div>
                         <div class="catalog-form__item">
@@ -1112,63 +1109,215 @@
                         <div class="mypopover"><span class="mypopover__item">Выбрано: <span class="num">74</span></span><a class="mypopover__item" href="#">Показать</a></div>
                     </form>
                 </div>
-                <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
+                <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
                     <div class="visible-md">
                         <div class="catalog__header">
                             <h1>Настенные сплит-системы</h1>
                         </div>
                         <div class="link-group">
                             <p class="link-group__header">Популярные категории:</p>
-                            <div class="link-group__items flex">
-                                <div class="link-group__item"><a href="#">Настенные</a></div>
-                                <div class="link-group__item"><a href="#">Кассетные</a></div>
-                                <div class="link-group__item"><a href="#">Канальные</a></div>
-                                <div class="link-group__item"><a href="#">Мобильные</a></div>
-                                <div class="link-group__item"><a href="#">Инверторные</a></div>
-                                <div class="link-group__item"><a href="#">В квартиру</a></div>
-                                <div class="link-group__item"><a href="#">В офис</a></div>
-                                <div class="link-group__item"><a href="#">Для дома</a></div>
-                                <div class="link-group__item"><a href="#">Бытовые</a></div>
-                                <div class="link-group__item"><a href="#">Полупромышленные</a></div>
-                                <div class="link-group__item"><a href="#">Только на охлаждение</a></div>
-                                <div class="link-group__item"><a href="#">Daikin</a></div>
-                                <div class="link-group__item"><a href="#">Gree Lessar</a></div>
-                                <div class="link-group__item"><a href="#">Hisense</a></div>
-                                <div class="link-group__item"><a href="#">Mitsubishi</a></div>
-                                <div class="link-group__item"><a href="#">Electric</a></div>
-                                <div class="link-group__item"><a href="#">На 15 м2</a></div>
+                            <div class="link-group__row flex">
+                                <div class="link-group__subheader">Тип:</div>
+                                <div class="link-group__items flex">
+                                    <div class="owl-carousel js-slider-linkType">
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Настенные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Кассетные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Канальные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Мобильные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Потолочные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Мульти</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link-group__row flex">
+                                <div class="link-group__subheader">Площадь:</div>
+                                <div class="link-group__items">
+                                    <div class="owl-carousel js-slider-linkSquare">
+                                        <div class="link-group__item"><a class="link-group__link" href="#">20</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">25</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">30</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">35</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">40</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">45</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">50</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">55</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">60</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">65</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">70</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">75</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">80</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">85</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">90</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">95</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">100</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">25</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">30</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">35</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">40</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">45</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">50</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">55</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">60</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">65</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">70</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">75</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">80</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">85</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link-group__row flex">
+                                <div class="link-group__subheader">Остальные:</div>
+                                <div class="link-group__items flex">
+                                    <div class="owl-carousel js-slider-linkOther">
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Инверторные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Бытовые</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Современные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Декоративные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Маленькие</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">В спальню</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Бытовые</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Современные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Декоративные</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Маленькие</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">В спальню</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link-group__row flex">
+                                <div class="link-group__subheader">Производитель:</div>
+                                <div class="link-group__items flex">
+                                    <div class="owl-carousel js-slider-linkBrand">
+                                        <div class="link-group__item"><a class="link-group__link" href="#">AERO</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Ballu</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Chigo</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Daikin</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Fujitsu </a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Electrolux</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">General</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Daikin</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Fujitsu </a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Electrolux</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">General</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">AERO</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Ballu</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Chigo</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Daikin</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Fujitsu </a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Electrolux</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">General</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Daikin</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Fujitsu </a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">Electrolux</a></div>
+                                        <div class="link-group__item"><a class="link-group__link" href="#">General</a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="sort flex"><span class="sort__title">Сортировать:</span><button class="btn btn__sort"><span>По цене</span><span class="sort__icon"><span class="sort__icon_up"></span><span class="sort__icon_down active"></span></span></button><button class="btn btn__sort"><span>По популярности</span><span class="sort__icon"><span class="sort__icon_up"></span><span class="sort__icon_down"></span></span></button>
-                        <div class="sort__amount"><span class="sort__title">Показывать по:</span>
+                    <div class="filter-panel flex">
+                        <div class="filter-panel__total"><span>Найдено:</span><span>2 393 товара</span></div>
+                        <div class="filter-panel__dropdown"><button class="btn btn__sort dropdown-toggle" type="button" id="filterDropdown" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"><span>По популярности</span><span class="sort__icon"><span class="sort__icon_up"></span><span class="sort__icon_down"></span></span></button>
+                            <div class="dropdown-menu" aria-labelledby="filterDropdown"><a class="dropdown-item" href="#">По популярности</a><a class="dropdown-item" href="#">Сначалa дешевые</a><a class="dropdown-item" href="#">Сначалa дорогие</a></div>
+                        </div>
+                        <div class="filter-panel__select"><span class="sort__title">Показывать по:</span>
                             <div class="sort__select"><select class="selectpicker form-control" name="onPageView">
-                                    <option value="6">6</option>
+                                    <option value="12">12</option>
                                     <option value="12">12</option>
                                     <option value="18">18</option>
                                 </select></div>
                             <script>$(function() {$('.selectpicker').selectpicker()});</script>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row no-gutters catalog__product-card">
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog-3.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_old">12 400 &#8381</span><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
+                                <div class="label__container flex">
+                                    <div class="label label_green">акция</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog-2.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                <div class="product-card__content">
+                                    <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
+                                    <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
+                                    <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
+                                <div class="label__container flex">
+                                    <div class="label label_blue">скидка</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog-2.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                <div class="product-card__content">
+                                    <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
+                                    <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
+                                    <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                                 <div class="label__container flex">
                                     <div class="label label_green">акция</div>
                                     <div class="label label_blue">скидка</div>
@@ -1177,272 +1326,379 @@
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog-2.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog-1.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_old">12 400 &#8381</span><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
-                                <div class="label__container flex">
-                                    <div class="label label_blue">скидка</div>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog-1.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="product-card"><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a><a class="product-card__header" href="#">Сплит-система General Climate GC/GU-S09HRIN1</a>
-                                <div class="product-card__stars">
-                                    <div class="rating__stars">
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star-o"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                        <div class="rating__box"><span class="icon star"></span></div>
-                                    </div>
-                                </div>
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
                                 <div class="product-card__content">
                                     <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
                                     <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                    <div class="product-card__item flex"><span>Мощность охлаждения, кВт:</span><span>2.6</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
                                     <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    <div class="product-card__price flex"><span class="product-card__price_new">10 570 &#8381</span></div>
-                                </div><a class="btn btn-primary" href="#">Купить</a>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="product-card">
+                                <div class="product-card__top flex">
+                                    <div><span>Код:</span><span>1286</span></div>
+                                    <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                </div><a class="product-card__img" href="#"><img src="images/temp/catalog.png" alt="" /></a>
+                                <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                <div class="product-card__content">
+                                    <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
+                                    <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
+                                    <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
+                                    <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
+                                    <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
+                                </div>
+                                <div class="product-card__select">
+                                    <div class="row no-gutters">
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                        <div class="col"><a class="icon-link" href="#"><span class="icon-inline libra icon-link__icon"></span><span>Сравнение</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="row no-gutters">
+                                        <div class="col-6"></div>
+                                        <div class="col-6"><span class="product-card__price_new">10 570 &#8381</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 catalog__view-more"><a class="btn btn-grey" href="#">ПОКАЗАТЬ ЕЩЕ</a></div>
+                    <div class="row no-gutters">
+                        <div class="col-sm-12 catalog__view-more">
+                            <ul class="pagination">
+                                <li class="pagination__item pagination__start"><a class="pagination__link" href="#">В начало</a></li>
+                                <li class="pagination__item active"><a class="pagination__link" href="#">1</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">7</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">8</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">9</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">10</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">11</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
+                                <li class="pagination__item"><a class="pagination__link pagination__dots" href="#">№...</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#">125</a></li>
+                                <li class="pagination__item pagination__end"><a class="pagination__link" href="#"><span>Дальше</span><span class="icon-inline arrow-right"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="catalog-article">
-                                <h2 class="section__subheader">Настенные сплит-системы или настенные кондиционеры</h2>
+                                <h2 class="catalog-article__header">Настенные кондиционеры в Санкт-Петербурге</h2>
                                 <div class="catalog-article__item">
-                                    <p>Сплит-система дословно переводится как «сдвоенная система» или иначе говоря, два связанных между собой блока кондиционера. Как правило, это внешний блок, расположенный снаружи помещения, отвечающий за основную работу системы и внутренний блок, посредствам которого, мы получаем прохладный, чистый воздух в помещении.</p>
-                                    <p>Настенные сплит-системы один из самых наиболее популярных видов кондиционеров. Они используются в квартирах, домах, офисах, магазинах, и прочих помещениях до 80-100 квадратных метров. Отличительной особенностью такой системы является несложный монтаж относительно полупромышленных и промышленных климатических систем, и возможность установки практически на любое место. Современные модели данного типа кондиционеров обладают разнообразным дизайном и с легкостью впишутся в любое помещение.</p>
+                                    <p>Настенные кондиционеры для квартиры, так же, как и для офиса или любого другого помещения – необходимый атрибут, который позволит создать благоприятный микроклимат в помещении. Но купить кондиционер не так просто, как кажется. Перед покупкой встают вопросы: «где купить настенные кондиционеры, какие настенные кондиционеры лучше купить?» Первое, что нужно сделать, понять, какая у вас площадь помещения, так как кондиционер в стандартной ситуации подбирается по параметру 1 кв.м. = 1 кВт. В нашем магазине замер на адресе бесплатный. Все кондиционеры разные и имеют различные ценовые предложения, чтобы не путаться и не приобретать прибор, который вам не подойдет, достаточно позвонить нашим опытным консультантам, и они помогут вам. Вы сэкономите время, а так как у нас есть предложения кондиционеров со скидкой, вы сможете купить кондиционер недорого.</p>
                                 </div>
-                                <h2 class="section__subheader">Инверторные и не инверторные сплит-системы</h2>
+                                <h2 class="catalog-article__header">Где купить настенные кондиционеры?</h2>
                                 <div class="catalog-article__item">
-                                    <p>Очень важным является деление данных кондиционеров на сплит-системы инверторного типа и сплит-системы не инверторного типа. Инвертор представляет собой плату управления кондиционером, которая позволяет контролировать мощность работы сплит-системы. Таким образом принципиальное отличие инверторного кондиционера от не инверторного кондиционера, заключается в том, что первый благодаря наличию данной платы, остудив комнату до нужной температуры не выключается сразу, а продолжает функционировать, но уже тратя на это гораздо меньшую энергию, что позволяет добиться экономии потребления электроэнергии и плавности охлаждения.</p>
-                                    <p>Плюсы такого инверторного кондиционера:</p>
-                                    <ul class="list-unstyled catalog-article__list">
-                                        <li class="catalog-article__list-item">Экономия электроэнергии и как следствие денежных средств</li>
-                                        <li class="catalog-article__list-item">Плавность работы</li>
-                                        <li class="catalog-article__list-item">Точное поддержание заданной температуры</li>
-                                    </ul>
-                                    <p>Ниже Вы найдете все инверторные сплит-системы и не инверторные сплит-системы:</p>
-                                    <ul class="list-unstyled catalog-article__list">
-                                        <li class="catalog-article__list-item">Инверторные сплит-системы</li>
-                                        <li class="catalog-article__list-item">Не инверторные сплит-системы</li>
-                                    </ul>
-                                    <h2 class="section__subheader">Ассортимент кондиционеров</h2>
-                                    <div class="catalog-article__item">
-                                        <p>В нашем интернет-магазине представлено более 15 крупнейших производителей климатического оборудования как бюджетного сегмента, так и премиального. У нас вы можете купить кондиционеры Mitsubishi, Fujitsu, Daikin, Toshiba, Panasonic, Electrolux, LG, Ballu, Gree, Hitachi, Aero, QuattroClima, Lessar и многие другие известные бренды.</p>
-                                        <p>Ниже Вы найдете настенные сплит-системы для разных площадей:</p>
-                                        <ul class="list-unstyled catalog-article__list">
-                                            <li class="catalog-article__list-item">Настенные слит-системы для 15 м2</li>
-                                            <li class="catalog-article__list-item">Настенные слит-системы для 20 м2</li>
-                                            <li class="catalog-article__list-item">Настенные слит-системы для 30 м2</li>
-                                            <li class="catalog-article__list-item">Настенные слит-системы для 40 м2</li>
-                                            <li class="catalog-article__list-item">Настенные слит-системы для 50 м2</li>
-                                        </ul>
-                                    </div>
+                                    <p>Масштаб товарных позиций на настенные кондиционеры, представленных на рынке, не дает возможности разместить все в магазине. Отлично просматривается конкурентная политика в интернете. Поэтому рекомендуем купить настенные кондиционеры в Санкт-Петербурге в интернет-магазине. Вы получите скидку на кондиционеры настенные типа, и еще мы доставим вам его до адреса.</p>
                                 </div>
-                                <p class="catalog-article__footer">Мы всегда рады помочь Вам купить кондиционеры по низким ценам в Санкт-Петербурге или Москве, а так же доставить их в любой регион России.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-12 trancate-block">
-                            <h3>Вам может быть интересно:</h3>
+                            <h2 class="catalog-article__header">Вам может быть интересно:</h2>
                             <div class="trancate-block__content"><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a><a class="trancate-block__item" href="#">Carrier</a></div>
                             <div class="trancate-block__btn js-truncate"><a href="#"></a></div>
                         </div>

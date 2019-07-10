@@ -17,7 +17,6 @@
   display: flex;
 }
 
-
 body {
   color: $color-text;
   line-height: 1.2;
@@ -35,6 +34,7 @@ img {
 .icon-inline {
   display: inline-block;
 }
+
 .advantage {
   flex-flow: row nowrap;
   align-items: center;
@@ -99,55 +99,15 @@ img {
   }
 
   &__header {
+    padding-left: 24px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-grey-light;
     margin-bottom: 25px;
     margin-top: 15px;
   }
 
   &__view-more {
     text-align: center;
-  }
-}
-
-.link-group {
-  &__header {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: $color-darkgrey;
-    @include heading-6;
-  }
-
-  &__items {
-    flex-flow: row wrap;
-    margin-bottom: 6px;
-  }
-
-  &__item  {
-    color: $color-darkgrey;
-    a {
-    display: block;
-    position: relative;
-    padding: 10px 15px;
-    background-color: $color-athens-gray1;
-    border-left: 3px solid $color-jelly-bean;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-bottom: 8px;
-    color: $color-darkgrey;
-    @include text-sm;
-
-    &.active,
-    &:hover {
-      text-decoration: none;
-      background-color: $color-jelly-bean;
-      color: #fff;
-    }
-
-    }
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
   }
 }
 
@@ -167,6 +127,36 @@ img {
       color: $color-darkgrey;
     }
 
+    .breadcrumb-item {
+      position: relative;
+
+      .dropdown-menu {
+        width: auto;
+        border: 1px solid $color-grey-light;
+        padding: 15px 0;
+        box-shadow: 0 6px 6px 1px rgba(0,0,0,.1);
+      }
+    }
+
+    .dropdown-item {
+      color: $link-color;
+      line-height: initial;
+
+      &:not(:last-child) {
+        padding-bottom: 12px;
+      }
+      @include text-sm;
+
+      &:hover {
+        background-color: transparent;
+        color: $link-hover-color;
+      }
+    }
+
+    .dropdown-toggle:after {
+      border-top-color: #000;
+    }
+
     a {
       color: inherit;
     }
@@ -175,8 +165,6 @@ img {
 
 .article,
 .catalog-article {
-  padding-top: 20px;
-
   &__item {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -187,6 +175,22 @@ img {
     text-transform: uppercase;
     line-height: 24px;
     @include heading-6;
+  }
+}
+
+.article {
+  padding-top: 20px;
+}
+
+.catalog-article {
+  padding-top: 25px;
+
+  &__header {
+    @include heading-3-bold;
+  }
+
+  p {
+    line-height: 1.47;
   }
 }
 
@@ -317,7 +321,7 @@ img {
       width: 100%;
       border: 1px solid transparent;
 
-      &:hover  {
+      &:hover {
         border: 1px solid $link-hover-color;
         transition: $ease-main;
       }
@@ -405,14 +409,13 @@ img {
       margin-top: 5px;
       margin-bottom: 5px;
     }
+
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
     }
   }
-
-
 
   &__banner {
     margin-bottom: 40px;
@@ -585,6 +588,7 @@ img {
 .has-error {
   border: 1px solid $color-danger;
 }
+
 .navbar.fixed {
   position: fixed;
   max-width: 250px;
@@ -592,29 +596,32 @@ img {
 }
 
 .btn-fancybox {
-    position: absolute;
-    bottom: 0;
-    width: 35px;
-    height: 35px;
-    border-radius: 0;
-    margin: 0;
-    padding: 13px 14px 13px 14px;
-    background-color: $color-another-blue;;
-    z-index: 1000;
-    &:hover {
-        background-color: $color-logo-red;
-    }
-    &.button-next {
-        right:0;
-    }
-    &.button-prev {
-        right: 37px;
-    }
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  margin: 0;
+  padding: 13px 14px;
+  background-color: $color-another-blue;
+  z-index: 1000;
 
-    &.disabled {
-        background-color: $color-heather1;
-        cursor: default;
-    }
+  &:hover {
+    background-color: $color-logo-red;
+  }
+
+  &.button-next {
+    right: 0;
+  }
+
+  &.button-prev {
+    right: 37px;
+  }
+
+  &.disabled {
+    background-color: $color-heather1;
+    cursor: default;
+  }
 }
 
 .trancate-block {
@@ -622,12 +629,12 @@ img {
     max-height: calc(2.5*1.2 * .94rem);
     padding-bottom: 30px;
     overflow: hidden;
-    transition:max-height .4s ease-in-out;
+    transition: max-height 0.4s ease-in-out;
 
     &.show {
       height: auto;
       max-height: 400px;
-      transition:max-height .4s ease-in-out;
+      transition: max-height 0.4s ease-in-out;
 
       & + .trancate-block__btn {
         &:after {
@@ -684,7 +691,7 @@ img {
       @include text-sm;
 
       &:before {
-        content: 'Развернуть'
+        content: 'Развернуть';
       }
 
       &:hover {
@@ -702,5 +709,78 @@ img {
 .projects {
   .project-card {
     margin-bottom: 15px;
+  }
+}
+
+.select {
+  &__panel {
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #f8f9fb;
+    border-top: 1px solid $color-grey-light;
+    border-left: 1px solid $color-grey-light;
+    border-right: 1px solid $color-grey-light;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    margin-right: -1px;
+    @include text-sm;
+
+    @include media-breakpoint-down(sm) {
+        margin-right: 0;
+    }
+  }
+
+  &__panel-header {
+    padding-right: 10px;
+  }
+
+  &__dropdown {
+    position: relative;
+    min-width: 260px;
+    border: 1px solid $color-grey-light;
+    background-color: $color-basic;
+
+    .btn {
+      justify-content: space-between;
+      align-items: center;
+
+      & > span {
+        color: $color-darkgrey;
+      }
+    }
+    .dropdown-menu {
+      width: calc(100% + 2px);
+      padding-top: 15px;
+    }
+    .dropdown-item {
+      color: $link-color;
+      line-height: initial;
+      padding-left: 10px;
+      padding-bottom: 20px;
+
+      &:not(:last-child) {}
+      @include text-sm;
+
+      &:hover {
+        background-color: transparent;
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  &__amount {
+    color: $color-grey-thin;
+  }
+
+  &__btn {
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
   }
 }

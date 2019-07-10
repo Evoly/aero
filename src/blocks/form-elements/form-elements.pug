@@ -6,3 +6,9 @@ mixin checkbox(name, value, checked, required, className)
     span.checkmark.checkmark_box
     span.checkbox__content
       block
+
+
+mixin search()
+  .search&attributes(attributes)
+    input(value="" type="text" name=" " autocomplete="off" placeholder="Поиск по св-ву...").search__input
+    span.icon.lens

@@ -1,0 +1,55 @@
+mixin product-card_new(oldprice, imageName)
+  .product-card&attributes(attributes)
+    .product-card__top.flex
+      div
+        span Код:
+        span 1286
+      .product-card__rating.flex
+        span.icon.star-o
+        span 5.0
+    a(href='#').product-card__img
+      img(src=`images/temp/${imageName}.png` alt='')
+    .product-card__type Кондиционер
+    a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
+
+    .product-card__content
+      .product-card__country
+        img(src='images/china.png' alt='')
+        span Китай
+      .product-card__item.flex
+        span Производитель
+        span General Climate
+      .product-card__item.flex
+        span Площадь, м#[sup 2]
+        span 20
+      .product-card__item.flex
+        span Уровень шума, дБа:
+        span 30
+      .product-card__item.flex
+        span Инвертор:
+        span нет
+    .product-card__select
+      .row.no-gutters
+        .col
+          +icon-link('heart', 'heart_red')
+            span Избранное
+        .col
+          +icon-link('libra')
+            span Сравнение
+    .product-card__price
+      .row.no-gutters
+        if oldprice
+          .col-6
+            span.product-card__price_old 12 400 &#8381
+          .col-6
+            span.product-card__price_new 10 570 &#8381
+        else
+          .col-6
+          .col-6
+            span.product-card__price_new 10 570 &#8381
+    block
+
+mixin label(color)
+  -var _class = color
+    div(class="label label_" + _class)
+      block

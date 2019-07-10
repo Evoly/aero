@@ -83,10 +83,26 @@ $(document).ready(function() {
     onChange: syncSliders
   };
 
+  const owlOptions_randomWidth = {
+    margin:0,
+    loop:false,
+    autoWidth:true,
+    autoHeight: true,
+    items:4,
+    nav:true,
+    navText: ['<span class="icon arrow_left_dots"></span>',
+      '<span class="icon arrow_right_dots"></span>'
+    ],
+  };
+
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
   $('.js-card-slider').owlCarousel(owlOptions_product);
+  $('.js-slider-linkType').owlCarousel(owlOptions_randomWidth);
+  $('.js-slider-linkSquare').owlCarousel(owlOptions_randomWidth);
+  $('.js-slider-linkOther').owlCarousel(owlOptions_randomWidth);
+  $('.js-slider-linkBrand').owlCarousel(owlOptions_randomWidth);
 
   $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
 
