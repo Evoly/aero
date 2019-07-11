@@ -1,0 +1,14 @@
+mixin select-panel()
+  .select-panel&attributes(attributes)
+    .select-panel__header  Список товаров:
+    .select-panel__dropdown
+      button.btn.select-panel__btn.dropdown-toggle.flex(type="button" id="filterSelect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        span Все #[span.select-panel__amount  (#[span 8])]
+
+      .dropdown-menu(aria-labelledby="filterSelect")
+        a(class="dropdown-item" href="#") Кондиционеры
+          span &#32;(#[span 8])
+        a(class="dropdown-item" href="#") Настенные
+          span &#32;(#[span 8])
+        a(class="dropdown-item" href="#") Мобильные
+          span &#32;(#[span 12])

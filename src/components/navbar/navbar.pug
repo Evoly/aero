@@ -1,7 +1,7 @@
 mixin navbar()
   nav.navbar.navbar-expand-lg&attributes(attributes)
     ul.navbar-nav
-      +navbar-item-dropdown('#', 'кондиционирование', 'menu_1')
+      +navbar-item-dropdown('#', 'каталог товаров', 'menu_1-1')
         ul.dropdown-menu.navbar-dropdown
           +navbar-lvl-2('#','Настенные').js-dropdown
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
@@ -24,7 +24,7 @@ mixin navbar()
               +navbar-lvl-1('#', 'submenu-5_1')(data-id = '9').js-sub-catalog
           +navbar-lvl-1('#', 'VRF')
           +navbar-lvl-1('#', 'VRV')
-      +navbar-item-dropdown('#', 'вентиляция', 'menu_2')
+      +navbar-item-dropdown('#', 'проекты ', 'menu_2')
         ul.dropdown-menu.navbar-dropdown
           +navbar-lvl-1('#', ' Пункт-1')
       +navbar-item('#', 'услуги','wheel')

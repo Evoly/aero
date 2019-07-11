@@ -245,7 +245,7 @@
 
     .navbar {
       position: absolute;
-      top: 5px;
+      top: 8px;
       left: 0;
       @include media-breakpoint-down(md) {
         position: static;

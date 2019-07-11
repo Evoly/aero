@@ -19,19 +19,7 @@ block content
           h1 Избранные товары
       .row
         .col-12
-          .select__panel.flex
-            .select__panel-header  Список товаров:
-            .select__dropdown
-              button.btn.select__btn.dropdown-toggle.flex(type="button" id="filterSelect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                span Все #[span.select__amount  (#[span 8])]
-
-              .dropdown-menu(aria-labelledby="filterSelect")
-                a(class="dropdown-item" href="#") Кондиционеры
-                  span (#[span 8])
-                a(class="dropdown-item" href="#") Настенные
-                  span (#[span 8])
-                a(class="dropdown-item" href="#") Мобильные
-                  span (#[span 12])
+          +select-panel.flex
 
 
       .row.no-gutters.select__product-card

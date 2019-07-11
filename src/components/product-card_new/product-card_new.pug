@@ -1,4 +1,4 @@
-mixin product-card_new(oldprice, imageName)
+mixin product-card_new(oldprice, imageName, comparision)
   .product-card&attributes(attributes)
     .product-card__top.flex
       div
@@ -28,28 +28,47 @@ mixin product-card_new(oldprice, imageName)
       .product-card__item.flex
         span Инвертор:
         span нет
-    .product-card__select
-      .row.no-gutters
-        .col
-          +icon-link('heart', 'heart_red')
-            span Избранное
-        .col
-          +icon-link('libra')
-            span Сравнение
+
+    if comparision
+      +comparision
+    else
+      +catalog
     .product-card__price
       .row.no-gutters
         if oldprice
           .col-6
             span.product-card__price_old 12 400 &#8381
           .col-6
-            span.product-card__price_new 10 570 &#8381
+            a(href='#')
+              span.product-card__price_new 10 570 &#8381
         else
           .col-6
           .col-6
-            span.product-card__price_new 10 570 &#8381
+            a(href='#')
+              span.product-card__price_new 10 570 &#8381
     block
 
 mixin label(color)
   -var _class = color
     div(class="label label_" + _class)
       block
+
+mixin catalog
+  .product-card__select
+    .row.no-gutters
+      .col
+        +icon-link('heart', 'heart_red')
+          span Избранное
+      .col
+        +icon-link('libra', 'libra_red')
+          span Сравнение
+
+mixin comparision
+  .product-card__select
+    .row.no-gutters
+      .col
+        +icon-link('heart', 'heart_red')
+          span Избранное
+      .col
+        +icon-link('trash', 'trash_red')
+          span Удалить

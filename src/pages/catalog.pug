@@ -37,22 +37,6 @@ block content
         .col-sm-12.visible-sm
           .catalog__header
             h1 Настенные кондиционеры 20 м² — 2 кВт
-          //.link-group
-            p.link-group__header Популярные категории:
-            .link-group__row.flex
-              p.link-group__subheader Тип:
-              .link-group__items.flex
-                -var data = ['Настенные', 'Кассетные', 'Канальные', 'Мобильные', 'Потолочные', 'Мульти']
-                each val in data
-                  .link-group__item
-                    a(href='#')=val
-            .link-group__row.flex
-              p.link-group__subheader Площадь:
-              .link-group__items.flex
-                -var data = ['20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100']
-                each val in data
-                  .link-group__item
-                    a(href='#')=val
         .col-xl-3.col-lg-3.col-md-4.col-sm-12
           .catalog-form__header фильтр
           +catalog-form
@@ -61,7 +45,7 @@ block content
           .visible-md
             .catalog__header
               h1 Настенные сплит-системы
-            +link-group()
+          +link-group()
 
           +filter-panel
           .row.no-gutters.catalog__product-card

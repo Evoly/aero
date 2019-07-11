@@ -114,14 +114,21 @@ img {
 .breadcrumb {
   &__wrapper {
     @include media-breakpoint-up(md) {
-      padding-top: 45px;
+      padding-top: 65px;
     }
     @include media-breakpoint-up(xl) {
+      padding-top: 55px;
+    }
+    @include media-breakpoint-down(sm) {
       padding-top: 25px;
     }
     padding-left: 0;
     color: $color-grey-thin;
     @include text-sm;
+
+    .breadcrumb {
+      padding: 0;
+    }
 
     .breadcrumb-item.active {
       color: $color-darkgrey;
@@ -160,6 +167,7 @@ img {
     a {
       color: inherit;
     }
+    padding-bottom: 5px;
   }
 }
 
@@ -712,75 +720,10 @@ img {
   }
 }
 
-.select {
-  &__panel {
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #f8f9fb;
-    border-top: 1px solid $color-grey-light;
-    border-left: 1px solid $color-grey-light;
-    border-right: 1px solid $color-grey-light;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    padding-right: 7px;
-    margin-right: -1px;
-    @include text-sm;
+.container_overflow {
+  overflow: hidden;
+}
 
-    @include media-breakpoint-down(sm) {
-        margin-right: 0;
-    }
-  }
-
-  &__panel-header {
-    padding-right: 10px;
-  }
-
-  &__dropdown {
-    position: relative;
-    min-width: 260px;
-    border: 1px solid $color-grey-light;
-    background-color: $color-basic;
-
-    .btn {
-      justify-content: space-between;
-      align-items: center;
-
-      & > span {
-        color: $color-darkgrey;
-      }
-    }
-    .dropdown-menu {
-      width: calc(100% + 2px);
-      padding-top: 15px;
-    }
-    .dropdown-item {
-      color: $link-color;
-      line-height: initial;
-      padding-left: 10px;
-      padding-bottom: 20px;
-
-      &:not(:last-child) {}
-      @include text-sm;
-
-      &:hover {
-        background-color: transparent;
-        color: $link-hover-color;
-      }
-    }
-  }
-
-  &__amount {
-    color: $color-grey-thin;
-  }
-
-  &__btn {
-    width: 100%;
-    outline: none;
-    box-shadow: none;
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-  }
+.container-wide {
+  width: auto;
 }

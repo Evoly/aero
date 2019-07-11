@@ -1,5 +1,4 @@
 .icon-link {
-
   &__icon {
     margin-right: 5px;
   }
@@ -9,15 +8,14 @@
   }
 
   &:hover {
-    .heart {
+    .icon-link__icon {
       display: none;
     }
 
-    .heart_red {
+    .icon-link_hover {
       display: inline-block;
       margin-right: 5px;
     }
   }
-
   transition: all $ease-main;
 }

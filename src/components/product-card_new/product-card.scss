@@ -7,20 +7,10 @@
   border: 1px solid $color-grey-light;
   height: 680px;
   margin-right: -1px;
-  @include media-breakpoint-down(sm) {
-    margin-right: 0;
-  }
 
   &:hover {
     z-index: 1;
     border-color: $link-hover-color;
-
-    .product-card__price_new {
-      background-color: $link-hover-color;
-      &:before {
-        border-left-color: $link-hover-color;
-      }
-    }
   }
 
   &__top {
@@ -79,6 +69,7 @@
 
     img {
       margin-right: 8px;
+      width: auto !important;
     }
   }
 
@@ -165,6 +156,13 @@
         border-bottom: 21px solid transparent;
         border-left: 15px solid $brand-primary;
       }
+
+      &:hover {
+        background-color: $link-hover-color;
+        &:before {
+          border-left-color: $link-hover-color;
+        }
+      }
     }
   }
 
@@ -248,6 +246,10 @@
 .catalog__product-card {
   margin-bottom: 10px;
 
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+  }
+
   .col-xl-4:nth-child(3n) {
     .product-card {
       margin-right: 0;
@@ -297,6 +299,10 @@
 
 .select__product-card {
   margin-bottom: 10px;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+  }
 
   .col-xl-3:nth-child(4n) {
     .product-card {

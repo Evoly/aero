@@ -1,0 +1,67 @@
+mixin compare-table()
+  .compare-table&attributes(attributes)
+    .compare-table__row
+      .compare-table__name Обслуживаемая площадь:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 30м#[sup 2]
+          span.float-r MAX
+    .compare-table__row
+      .compare-table__name Программы и режимы:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix  охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения
+
+    .compare-table__row
+      .compare-table__name Макс. перепад высот:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 8 м
+          span.float-r MIN
+
+    .compare-table__row
+      .compare-table__name Макс. длина коммуникаций:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 20 м
+          span.float-r MAX
+
+    .compare-table__row
+      .compare-table__name Макс. количество внутренних блоков:
+      .compare-table__cell.clearfix
+        span -
+        span.float-r
+      - for (var x = 0; x < 4; x++)
+        .compare-table__cell.clearfix
+          span 1 шт
+          span.float-r
+
+    .compare-table__row
+      .compare-table__name Мин. поддерживаемая температура:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 17 С
+          span.float-r MIN
+
+    .compare-table__row.active
+      .compare-table__name Ширина:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 72.2 см
+
+    .compare-table__row
+      .compare-table__name Глубина:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 18.7 см
+
+    .compare-table__row
+      .compare-table__name Высота:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span 29 см
+
+    .compare-table__row
+      .compare-table__name Вид индикации:
+      - for (var x = 0; x < 5; x++)
+        .compare-table__cell.clearfix
+          span вывод на внутренний блок кондиционера, вывод на дисплей пульта

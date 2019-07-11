@@ -9,7 +9,8 @@ mixin pagination()
         a(href="#").pagination__link=x
 
     li.pagination__item
-      a(href="#").pagination__link.pagination__dots №...
+      form(action='/smth?_format=json')
+        input(value="" type="number" name=" " autocomplete="off" placeholder="№...").pagination__link
     li.pagination__item
       a(href="#").pagination__link 125
     li.pagination__item.pagination__end

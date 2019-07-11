@@ -83,11 +83,10 @@ $(document).ready(function() {
     onChange: syncSliders
   };
 
-  const owlOptions_randomWidth = {
+  const owlOptions_linkSlider = {
     margin:0,
     loop:false,
     autoWidth:true,
-    autoHeight: true,
     items:4,
     nav:true,
     navText: ['<span class="icon arrow_left_dots"></span>',
@@ -95,14 +94,28 @@ $(document).ready(function() {
     ],
   };
 
+  const owlOptions_compareSlider = {
+    margin:0,
+    loop:false,
+    autoWidth:true,
+    items:4,
+    nav:true,
+    navText: ['<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>',
+      '<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>'
+    ],
+    onInitialized : compareTable,
+    onResized : compareTable,
+  };
+
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
   $('.js-slider-feedback').owlCarousel(owlOptions_6);
   $('.js-card-slider').owlCarousel(owlOptions_product);
-  $('.js-slider-linkType').owlCarousel(owlOptions_randomWidth);
-  $('.js-slider-linkSquare').owlCarousel(owlOptions_randomWidth);
-  $('.js-slider-linkOther').owlCarousel(owlOptions_randomWidth);
-  $('.js-slider-linkBrand').owlCarousel(owlOptions_randomWidth);
+  $('.js-slider-linkType').owlCarousel(owlOptions_linkSlider);
+  $('.js-slider-linkSquare').owlCarousel(owlOptions_linkSlider);
+  $('.js-slider-linkOther').owlCarousel(owlOptions_linkSlider);
+  $('.js-slider-linkBrand').owlCarousel(owlOptions_linkSlider);
+  $('.js-slider-compare').owlCarousel(owlOptions_compareSlider);
 
   $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
 
@@ -820,3 +833,12 @@ $('.js-truncateText').each(function () {
     height: self.css('max-height'),
   });
 });
+
+// comparision table width cells
+
+function compareTable() {
+  const nameWidth = $('.js-nameWidth').outerWidth();
+  const cellWidth = $('.product-card').outerWidth() - 1;
+  $('.compare-table__name').css('width', nameWidth);
+  $('.compare-table__cell').css('width', cellWidth);
+};

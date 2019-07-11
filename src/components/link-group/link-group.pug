@@ -19,19 +19,19 @@ mixin link-group()
                 a(href='#').link-group__link=val
 
       .link-group__row.flex
-        .link-group__subheader Остальные:
+        .link-group__subheader Производитель:
         .link-group__items.flex
-          .owl-carousel.js-slider-linkOther
-            -var data = ['Инверторные', 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню' , 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню']
+          .owl-carousel.js-slider-linkBrand
+            -var data = ['AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General']
             each val in data
               .link-group__item
                 a(href='#').link-group__link=val
 
       .link-group__row.flex
-        .link-group__subheader Производитель:
+        .link-group__subheader Остальные:
         .link-group__items.flex
-          .owl-carousel.js-slider-linkBrand
-            -var data = ['AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'AERO', 'Ballu', 'Chigo', 'Daikin', 'Fujitsu ', 'Electrolux', 'General', 'Daikin', 'Fujitsu ', 'Electrolux', 'General']
+          .owl-carousel.js-slider-linkOther
+            -var data = ['Инверторные', 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню' , 'Бытовые', 'Современные', 'Декоративные', 'Маленькие', 'В спальню']
             each val in data
               .link-group__item
                 a(href='#').link-group__link=val
