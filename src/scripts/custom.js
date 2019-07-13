@@ -94,18 +94,6 @@ $(document).ready(function() {
     ],
   };
 
-  const owlOptions_compareSlider = {
-    margin:0,
-    loop:false,
-    autoWidth:true,
-    items:4,
-    nav:true,
-    navText: ['<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>',
-      '<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>'
-    ],
-    onInitialized : compareTable,
-    onResized : compareTable,
-  };
 
   $('.js-slider-cert').owlCarousel(owlOptions_6);
   $('.js-slider-project').owlCarousel(owlOptions_4);
@@ -115,7 +103,6 @@ $(document).ready(function() {
   $('.js-slider-linkSquare').owlCarousel(owlOptions_linkSlider);
   $('.js-slider-linkOther').owlCarousel(owlOptions_linkSlider);
   $('.js-slider-linkBrand').owlCarousel(owlOptions_linkSlider);
-  $('.js-slider-compare').owlCarousel(owlOptions_compareSlider);
 
   $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
 
@@ -833,12 +820,3 @@ $('.js-truncateText').each(function () {
     height: self.css('max-height'),
   });
 });
-
-// comparision table width cells
-
-function compareTable() {
-  const nameWidth = $('.js-nameWidth').outerWidth();
-  const cellWidth = $('.product-card').outerWidth() - 1;
-  $('.compare-table__name').css('width', nameWidth);
-  $('.compare-table__cell').css('width', cellWidth);
-};

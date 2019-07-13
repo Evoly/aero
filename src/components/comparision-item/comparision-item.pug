@@ -1,0 +1,29 @@
+mixin comparision-item()
+  .comparision-item&attributes(attributes)
+    +product-card_new('oldprice', 'catalog2', true)
+    .comparision-item__column
+      .comparision-item__cell.clearfix(data-row='0')
+        span 30м#[sup 2]
+        span.float-r.compare-table__text_light MAX
+      .comparision-item__cell.clearfix(data-row='1')
+        span охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, #[br] самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения
+      .comparision-item__cell.clearfix(data-row='2')
+        span 8 м
+        span.float-r.compare-table__text_light MIN
+      .comparision-item__cell.clearfix(data-row='3')
+        span 20 м
+        span.float-r.compare-table__text_light MAX
+      .comparision-item__cell.clearfix(data-row='4')
+        span -
+        span.float-r
+      .comparision-item__cell.clearfix(data-row='5')
+        span 17 С
+        span.float-r.compare-table__text_light MIN
+      .comparision-item__cell.clearfix(data-row='6')
+        span 72.2 см
+      .comparision-item__cell.clearfix(data-row='7')
+        span 18.7 см
+      .comparision-item__cell.clearfix(data-row='8')
+        span 29 см
+      .comparision-item__cell.clearfix(data-row='9')
+        span вывод на внутренний блок кондиционера, вывод на дисплей пульта

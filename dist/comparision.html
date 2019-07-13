@@ -1032,16 +1032,28 @@
             </div>
         </div>
         <section class="section__compare">
-            <div class="container container_overflow">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <h1>Сравнение</h1>
                     </div>
                 </div>
-                <div class="compare">
-                    <div class="row no-gutters myborder-bottom">
-                        <div class="col-3 col-md-2 js-nameWidth">
-                            <div class="compare__header active">Только отличия</div>
+                <div class="comparision">
+                    <div class="row no-gutters">
+                        <div class="col-3 col-md-2 border-right border-light"><button class="comparision__header active border-bottom border-light" type="button">Только отличия</button>
+                            <div class="comparision__header-wrapper"><button class="comparision__header border-bottom border-light" type="button">Все параметры</button></div>
+                            <div class="comparision__names">
+                                <div class="comparision__name flex" data-row="0">Обслуживаемая площадь:</div>
+                                <div class="comparision__name flex" data-row="1">Программы и режимы:</div>
+                                <div class="comparision__name flex" data-row="2">Макс. перепад высот:</div>
+                                <div class="comparision__name flex" data-row="3">Макс. длина коммуникаций:</div>
+                                <div class="comparision__name flex" data-row="4">Макс. количество внутренних блоков:</div>
+                                <div class="comparision__name flex" data-row="5">Мин. поддерживаемая температура:</div>
+                                <div class="comparision__name flex" data-row="6">Ширина:</div>
+                                <div class="comparision__name flex" data-row="7">Глубина:</div>
+                                <div class="comparision__name flex" data-row="8">Высота:</div>
+                                <div class="comparision__name flex" data-row="9">Вид индикации:</div>
+                            </div>
                         </div>
                         <div class="col-9 col-md-10">
                             <div class="select-panel flex">
@@ -1050,228 +1062,700 @@
                                     <div class="dropdown-menu" aria-labelledby="filterSelect"><a class="dropdown-item" href="#">Кондиционеры<span>&#32;(<span>8</span>)</span></a><a class="dropdown-item" href="#">Настенные<span>&#32;(<span>8</span>)</span></a><a class="dropdown-item" href="#">Мобильные<span>&#32;(<span>12</span>)</span></a></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-3 col-md-2">
-                            <div class="compare__header myborder-bottom">Все параметры</div>
-                        </div>
-                        <div class="col-9 col-md-10">
-                            <div class="owl-carousel gradient js-slider-compare">
-                                <div class="product-card">
-                                    <div class="product-card__top flex">
-                                        <div><span>Код:</span><span>1286</span></div>
-                                        <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
-                                    </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
-                                    <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
-                                    <div class="product-card__content">
-                                        <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
-                                        <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                        <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
-                                        <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
-                                        <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    </div>
-                                    <div class="product-card__select">
-                                        <div class="row no-gutters">
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                            <div class="owl-carousel js-slider-compare">
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-card__price">
-                                        <div class="row no-gutters">
-                                            <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
-                                            <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
-                                        </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
                                     </div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__top flex">
-                                        <div><span>Код:</span><span>1286</span></div>
-                                        <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
-                                    </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
-                                    <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
-                                    <div class="product-card__content">
-                                        <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
-                                        <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                        <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
-                                        <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
-                                        <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    </div>
-                                    <div class="product-card__select">
-                                        <div class="row no-gutters">
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-card__price">
-                                        <div class="row no-gutters">
-                                            <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
-                                            <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
-                                        </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
                                     </div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__top flex">
-                                        <div><span>Код:</span><span>1286</span></div>
-                                        <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
-                                    </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
-                                    <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
-                                    <div class="product-card__content">
-                                        <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
-                                        <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                        <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
-                                        <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
-                                        <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    </div>
-                                    <div class="product-card__select">
-                                        <div class="row no-gutters">
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-card__price">
-                                        <div class="row no-gutters">
-                                            <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
-                                            <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
-                                        </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
                                     </div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__top flex">
-                                        <div><span>Код:</span><span>1286</span></div>
-                                        <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
-                                    </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
-                                    <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
-                                    <div class="product-card__content">
-                                        <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
-                                        <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                        <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
-                                        <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
-                                        <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    </div>
-                                    <div class="product-card__select">
-                                        <div class="row no-gutters">
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-card__price">
-                                        <div class="row no-gutters">
-                                            <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
-                                            <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
-                                        </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
                                     </div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__top flex">
-                                        <div><span>Код:</span><span>1286</span></div>
-                                        <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
-                                    </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
-                                    <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
-                                    <div class="product-card__content">
-                                        <div class="product-card__country"><img src="images/china.png" alt="" /><span>Китай</span></div>
-                                        <div class="product-card__item flex"><span>Производитель</span><span>General Climate</span></div>
-                                        <div class="product-card__item flex"><span>Площадь, м<sup>2</sup></span><span>20</span></div>
-                                        <div class="product-card__item flex"><span>Уровень шума, дБа:</span><span>30</span></div>
-                                        <div class="product-card__item flex"><span>Инвертор:</span><span>нет</span></div>
-                                    </div>
-                                    <div class="product-card__select">
-                                        <div class="row no-gutters">
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
-                                            <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-card__price">
-                                        <div class="row no-gutters">
-                                            <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
-                                            <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
-                                        </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-wide">
-                        <div class="compare-table gradient">
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Обслуживаемая площадь:</div>
-                                <div class="compare-table__cell clearfix"><span>30м<sup>2</sup></span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>30м<sup>2</sup></span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>30м<sup>2</sup></span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>30м<sup>2</sup></span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>30м<sup>2</sup></span><span class="float-r">MAX</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Программы и режимы:</div>
-                                <div class="compare-table__cell clearfix"> охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</div>
-                                <div class="compare-table__cell clearfix"> охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</div>
-                                <div class="compare-table__cell clearfix"> охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</div>
-                                <div class="compare-table__cell clearfix"> охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</div>
-                                <div class="compare-table__cell clearfix"> охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Макс. перепад высот:</div>
-                                <div class="compare-table__cell clearfix"><span>8 м</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>8 м</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>8 м</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>8 м</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>8 м</span><span class="float-r">MIN</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Макс. длина коммуникаций:</div>
-                                <div class="compare-table__cell clearfix"><span>20 м</span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>20 м</span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>20 м</span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>20 м</span><span class="float-r">MAX</span></div>
-                                <div class="compare-table__cell clearfix"><span>20 м</span><span class="float-r">MAX</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Макс. количество внутренних блоков:</div>
-                                <div class="compare-table__cell clearfix"><span>-</span><span class="float-r"></span></div>
-                                <div class="compare-table__cell clearfix"><span>1 шт</span><span class="float-r"></span></div>
-                                <div class="compare-table__cell clearfix"><span>1 шт</span><span class="float-r"></span></div>
-                                <div class="compare-table__cell clearfix"><span>1 шт</span><span class="float-r"></span></div>
-                                <div class="compare-table__cell clearfix"><span>1 шт</span><span class="float-r"></span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Мин. поддерживаемая температура:</div>
-                                <div class="compare-table__cell clearfix"><span>17 С</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>17 С</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>17 С</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>17 С</span><span class="float-r">MIN</span></div>
-                                <div class="compare-table__cell clearfix"><span>17 С</span><span class="float-r">MIN</span></div>
-                            </div>
-                            <div class="compare-table__row active">
-                                <div class="compare-table__name">Ширина:</div>
-                                <div class="compare-table__cell clearfix"><span>72.2 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>72.2 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>72.2 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>72.2 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>72.2 см</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Глубина:</div>
-                                <div class="compare-table__cell clearfix"><span>18.7 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>18.7 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>18.7 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>18.7 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>18.7 см</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Высота:</div>
-                                <div class="compare-table__cell clearfix"><span>29 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>29 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>29 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>29 см</span></div>
-                                <div class="compare-table__cell clearfix"><span>29 см</span></div>
-                            </div>
-                            <div class="compare-table__row">
-                                <div class="compare-table__name">Вид индикации:</div>
-                                <div class="compare-table__cell clearfix"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
-                                <div class="compare-table__cell clearfix"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
-                                <div class="compare-table__cell clearfix"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
-                                <div class="compare-table__cell clearfix"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
-                                <div class="compare-table__cell clearfix"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
+                                <div class="comparision-item">
+                                    <div class="product-card">
+                                        <div class="product-card__top flex">
+                                            <div><span>Код:</span><span>1286</span></div>
+                                            <div class="product-card__rating flex"><span class="icon star-o"></span><span>5.0</span></div>
+                                        </div><a class="product-card__img" href="#"><img src="images/temp/catalog2.png" alt="" /></a>
+                                        <div class="product-card__type">Кондиционер</div><a class="product-card__header" href="#">Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1</a>
+                                        <div class="product-card__select">
+                                            <div class="row no-gutters">
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline heart icon-link__icon"></span><span class="heart_red icon-link_hover"></span><span>Избранное</span></a></div>
+                                                <div class="col"><a class="icon-link" href="#"><span class="icon-inline trash icon-link__icon"></span><span class="trash_red icon-link_hover"></span><span>Удалить</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__price">
+                                            <div class="row no-gutters">
+                                                <div class="col-6"><span class="product-card__price_old">12 400 &#8381</span></div>
+                                                <div class="col-6"><a href="#"><span class="product-card__price_new">10 570 &#8381</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comparision-item__column">
+                                        <div class="comparision-item__cell clearfix" data-row="0"><span>30м<sup>2</sup></span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="1"><span>охлаждение, обогрев, автоматический режим, режим вентиляции, режим осушения, режим сна, <br /> самодиагностика, интенсивный режим, режим самоочистки, режим энергосбережения</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="2"><span>8 м</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="3"><span>20 м</span><span class="float-r compare-table__text_light">MAX</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="4"><span>-</span><span class="float-r"></span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="5"><span>17 С</span><span class="float-r compare-table__text_light">MIN</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="6"><span>72.2 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="7"><span>18.7 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="8"><span>29 см</span></div>
+                                        <div class="comparision-item__cell clearfix" data-row="9"><span>вывод на внутренний блок кондиционера, вывод на дисплей пульта</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1366,6 +1850,7 @@
     <script src="scripts/libs/jquery.fancybox.min.js"></script>
     <script src="scripts/libs/dotdotdot.js"></script>
     <script src="scripts/custom.js"></script>
+    <script src="scripts/compare.js"></script>
 </body>
 
 </html>

@@ -155,15 +155,6 @@
   font-weight: 700;
 }
 
-
-
-
-
-
-
-
-
-
 @mixin text-small-semibold {
   font-family: $font-family-base;
   font-size: 16px;
@@ -175,16 +166,4 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
-}
-@mixin text-xxs-normal {
-  font-family: $font-family-base;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-@mixin text-xxs {
-  font-family: $font-family-base;
-  font-size: 10px;
-  font-weight: 600;
 }

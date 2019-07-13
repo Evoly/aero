@@ -5,7 +5,7 @@ mixin compare-table()
       - for (var x = 0; x < 5; x++)
         .compare-table__cell.clearfix
           span 30м#[sup 2]
-          span.float-r MAX
+          span.float-r.compare-table__text_gray MAX
     .compare-table__row
       .compare-table__name Программы и режимы:
       - for (var x = 0; x < 5; x++)
@@ -16,19 +16,19 @@ mixin compare-table()
       - for (var x = 0; x < 5; x++)
         .compare-table__cell.clearfix
           span 8 м
-          span.float-r MIN
+          span.float-r.compare-table__text_gray MIN
 
     .compare-table__row
       .compare-table__name Макс. длина коммуникаций:
       - for (var x = 0; x < 5; x++)
         .compare-table__cell.clearfix
           span 20 м
-          span.float-r MAX
+          span.float-r.compare-table__text_gray MAX
 
     .compare-table__row
       .compare-table__name Макс. количество внутренних блоков:
       .compare-table__cell.clearfix
-        span -
+        span
         span.float-r
       - for (var x = 0; x < 4; x++)
         .compare-table__cell.clearfix
@@ -40,7 +40,7 @@ mixin compare-table()
       - for (var x = 0; x < 5; x++)
         .compare-table__cell.clearfix
           span 17 С
-          span.float-r MIN
+          span.float-r.compare-table__text_gray MIN
 
     .compare-table__row.active
       .compare-table__name Ширина:

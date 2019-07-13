@@ -2,6 +2,8 @@
   border-radius: 0;
   align-items: flex-start;
 
+  @include text-sm;
+
   @include media-breakpoint-down(lg) {
     flex-flow: row wrap;
   }
@@ -19,7 +21,7 @@
   &__link {
     position: relative;
     display: block;
-    padding: 0 15px;
+    padding: 0 10px;
     min-width: 45px;
     height: 45px;
     text-align: center;
@@ -30,7 +32,8 @@
     transition: background-color $ease-main, border-color $ease-main, color $ease-main;
 
     .icon-inline {
-      margin-left: 5px;
+      margin-left: 7px;
+      margin-bottom: 1px;
     }
 
     &:hover {

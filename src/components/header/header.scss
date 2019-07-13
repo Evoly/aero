@@ -53,6 +53,7 @@
     text-transform: uppercase;
     letter-spacing: 0.45em;
     line-height: 2.8;
+    color: $color-text;
 
     @include text-xxs;
 
@@ -245,7 +246,7 @@
 
     .navbar {
       position: absolute;
-      top: 8px;
+      top: 5px;
       left: 0;
       @include media-breakpoint-down(md) {
         position: static;

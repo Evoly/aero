@@ -12,25 +12,8 @@ mixin product-card_new(oldprice, imageName, comparision)
     .product-card__type Кондиционер
     a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
 
-    .product-card__content
-      .product-card__country
-        img(src='images/china.png' alt='')
-        span Китай
-      .product-card__item.flex
-        span Производитель
-        span General Climate
-      .product-card__item.flex
-        span Площадь, м#[sup 2]
-        span 20
-      .product-card__item.flex
-        span Уровень шума, дБа:
-        span 30
-      .product-card__item.flex
-        span Инвертор:
-        span нет
-
     if comparision
-      +comparision
+      +comparision-block
     else
       +catalog
     .product-card__price
@@ -54,6 +37,22 @@ mixin label(color)
       block
 
 mixin catalog
+  .product-card__content
+    .product-card__country
+      img(src='images/china.png' alt='')
+      span Китай
+    .product-card__item.flex
+      span Производитель
+      span General Climate
+    .product-card__item.flex
+      span Площадь, м#[sup 2]
+      span 20
+    .product-card__item.flex
+      span Уровень шума, дБа:
+      span 30
+    .product-card__item.flex
+      span Инвертор:
+      span нет
   .product-card__select
     .row.no-gutters
       .col
@@ -63,7 +62,7 @@ mixin catalog
         +icon-link('libra', 'libra_red')
           span Сравнение
 
-mixin comparision
+mixin comparision-block
   .product-card__select
     .row.no-gutters
       .col

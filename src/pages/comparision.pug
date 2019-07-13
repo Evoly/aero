@@ -3,6 +3,7 @@ extends ../layouts/layout
 block head
   - var pageTitle = 'Сравнение'
 
+
 block content
   +header
   .page
@@ -14,12 +15,12 @@ block content
             li(aria-current="page").breadcrumb-item.active Сравнение
 
     section.section__compare
-      .container.container_overflow
+      .container
         .row
           .col-sm-12
             h1 Сравнение
 
-        +compare
+        +comparision()
 
 
 

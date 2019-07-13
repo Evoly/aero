@@ -1,0 +1,182 @@
+.comparision {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid $color-grey-light;
+
+  &__header-wrapper {
+    height: $cardHeight;
+  }
+
+  .border-right.border-light {
+    margin-right: -1px;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    text-align: left;
+    color: $link-color;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      box-shadow: none;
+    }
+    @include heading-6;
+
+    &.active {
+      color: $link-hover-color;
+    }
+
+    &:hover {
+      opacity: 0.7;
+      transition: $ease-main;
+    }
+  }
+
+  &__name {
+    min-height: 49px;
+    align-items: center;
+    padding: 18px 15px;
+    word-break: break-word;
+    border-top: 1px solid $color-grey-light;
+    color: $color-grey-thin;
+    @include text-sm;
+  }
+
+  .product-card {
+    height: $cardHeight;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .product-card__header {
+    margin-bottom: 38px;
+  }
+
+  .select-panel {
+    height: 100%;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &__header,
+  .select-panel {
+    height: 50px;
+    @include media-breakpoint-down(sm) {
+      height: 70px;
+    }
+  }
+
+  .owl-carousel {
+    margin-bottom: 0;
+
+    .owl-nav {
+      position: static;
+    }
+
+    .owl-next,
+    .owl-prev {
+      position: absolute;
+      height: 100%;
+      width: 80px;
+      top: 0;
+      bottom: 0;
+      border: none;
+      border-radius: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,0) , rgba(255,255,255,0));
+      transition: opacity 0.45s;
+      background-color: transparent;
+
+      .icon {
+        position: absolute;
+        top: 280px;
+        z-index: 3;
+      }
+      @include media-breakpoint-down(md) {
+        width: 65px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 45px;
+      }
+    }
+
+    .owl-prev {
+      left: 1px;
+
+      .icon {
+        transform: rotate(180deg);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 2px;
+        left: 0;
+        opacity: 0;
+        background-image: linear-gradient(to right, rgba(255,255,255,.9) , rgba(255,255,255,0.4));
+        z-index: -1;
+        transition: opacity 0.45s;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+    }
+
+    .owl-next {
+      right: 0;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 2px;
+        right: 0;
+        opacity: 0;
+        background-image: linear-gradient(to left, rgba(255,255,255,.9) , rgba(255,255,255,0.4));
+        z-index: -1;
+        transition: opacity 0.45s;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+    }
+
+    .owl-next,
+    .owl-prev {
+      &.disabled {
+        display: none;
+      }
+
+      &:hover {
+        .arrow-next-sm_red {
+          display: block;
+        }
+
+        .arrow-next-sm {
+          display: none;
+        }
+      }
+    }
+
+    .arrow-next-sm_red {
+      display: none;
+    }
+  }
+
+  [data-row].hover {
+    background-color: $color-athens-gray3;
+  }
+}

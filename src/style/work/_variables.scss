@@ -17,6 +17,11 @@ $nav-tabs-link-active-border-color: #b8c3d0;
 $nav-tabs-border-color: #b8c3d0;
 $nav-pills-link-active-bg: #ff4b10;
 
+$theme-colors: (
+  "primary": #2e7fb8,
+  "light": #b8c3d0
+);
+
 $modal-content-border-radius: 0;
 $dropdown-border-radius: 0;
 $dropdown-spacer: 0;
@@ -79,15 +84,22 @@ $color-grey: #b6c1ce;
 $color-grey-light: #b8c3d0;
 $color-athens-gray1: #eff1f5;
 $color-athens-gray2:#f0f1f6;
+$color-athens-gray3:#f8f9fb;
 $color-darkgrey: #444;
 $color-logo-dot: #c3cbd7;
 $color-heather: #b7c3cf;
 $color-heather1: #b7c1d2;
 $color-grey-thin: #999;
 $color-mystic: #e8ecf1;
+$color-silver: #c7c7c7;
 
 // TODO:
 $color-pagination-hover: #f8f8f9;
+
+//product-card size (comparision)
+
+$cardHeight: 560px;
+$cardWidth: 294px;
 
 // Transitions
 // ##########

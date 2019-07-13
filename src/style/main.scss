@@ -113,8 +113,10 @@ img {
 
 .breadcrumb {
   &__wrapper {
+    padding-bottom: 20px;
+
     @include media-breakpoint-up(md) {
-      padding-top: 65px;
+      padding-top: 45px;
     }
     @include media-breakpoint-up(xl) {
       padding-top: 55px;
@@ -128,6 +130,7 @@ img {
 
     .breadcrumb {
       padding: 0;
+      margin-bottom: 0;
     }
 
     .breadcrumb-item.active {
@@ -167,7 +170,6 @@ img {
     a {
       color: inherit;
     }
-    padding-bottom: 5px;
   }
 }
 
@@ -191,7 +193,7 @@ img {
 }
 
 .catalog-article {
-  padding-top: 25px;
+  padding-top: 15px;
 
   &__header {
     @include heading-3-bold;
@@ -718,12 +720,4 @@ img {
   .project-card {
     margin-bottom: 15px;
   }
-}
-
-.container_overflow {
-  overflow: hidden;
-}
-
-.container-wide {
-  width: auto;
 }
