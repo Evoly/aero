@@ -2,9 +2,17 @@
   overflow: hidden;
   position: relative;
   border: 1px solid $color-grey-light;
+  @include media-breakpoint-down(sm) {
+    border-left: 0;
+  }
 
   &__header-wrapper {
     height: $cardHeight;
+    border-right: 1px solid $color-grey-light;
+    margin-right: -1px;
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
   }
 
   .border-right.border-light {
@@ -20,6 +28,9 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
 
     &:focus,
     &:hover {
@@ -38,6 +49,20 @@
     }
   }
 
+  &__names {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+
   &__name {
     min-height: 49px;
     align-items: center;
@@ -52,10 +77,20 @@
     height: $cardHeight;
     border-bottom: none;
     border-top: none;
+    padding-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 15px;
+      margin-right: -1px;
+    }
   }
 
   .product-card__header {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  .icon-link_right {
+    text-align: center;
   }
 
   .select-panel {
@@ -63,6 +98,10 @@
     border-top: none;
     border-right: none;
     border-bottom: 1px solid $color-grey-light;
+    margin-right: -1px;
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
   }
 
   &__header,
@@ -178,5 +217,30 @@
 
   [data-row].hover {
     background-color: $color-athens-gray3;
+  }
+
+  .sm-order-1 {
+    @include media-breakpoint-down(sm) {
+      order: 1;
+    }
+  }
+
+  .sm-order-2 {
+    @include media-breakpoint-down(sm) {
+      order: 2;
+      border-left: 1px solid $color-grey-light;
+    }
+  }
+
+  .sm-order-3 {
+    @include media-breakpoint-down(sm) {
+      order: 3;
+    }
+  }
+
+  .sm-order-4 {
+    @include media-breakpoint-down(sm) {
+      order: 4;
+    }
   }
 }

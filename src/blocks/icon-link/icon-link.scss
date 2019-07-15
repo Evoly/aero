@@ -1,4 +1,7 @@
 .icon-link {
+  display: inline-flex;
+  flex-flow: row nowrap;
+
   &__icon {
     margin-right: 5px;
   }
@@ -16,6 +19,11 @@
       display: inline-block;
       margin-right: 5px;
     }
+  }
+
+  &_right {
+    border-left: 1px solid $color-heather;
+    text-align: right;
   }
   transition: all $ease-main;
 }

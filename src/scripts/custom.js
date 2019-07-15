@@ -790,11 +790,21 @@ $(document).ready(function() {
   $('[data-fancybox="feedback"]').fancybox(fancyOpts);
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
 
-  $(window).resize(function() {
-    if ($(window).width() > 768) {
-      $.fancybox.getInstance().Thumbs.update();
-    }
-  });
+  if ($('[data-fancybox]').length > 0) {
+    console.log($('[data-fancybox"]').length);
+    $(window).resize(function() {
+      if ($(window).width() > 768) {
+        $.fancybox.getInstance().Thumbs.update();
+      }
+    });
+  }
+
+
+  // $(window).resize(function() {
+  //   if ($(window).width() > 768) {
+  //     $.fancybox.getInstance().Thumbs.update();
+  //   }
+  // });
 
   if ($('.trancate-block__content').length > 0) {
     const height = $('.trancate-block__content').outerHeight();

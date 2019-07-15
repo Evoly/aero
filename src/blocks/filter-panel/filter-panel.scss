@@ -85,9 +85,10 @@
     border: 1px solid $color-grey-light;
     margin-left: -1px;
 
-    // @include media-breakpoint-up(lg) {
-    //   margin-left: auto;
-    // }
+    @include screen('xxs', max) {
+      margin-top: -1px;
+      width: 100%;
+    }
 
     .show > .btn-light.dropdown-toggle {
       background-color: transparent;

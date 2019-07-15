@@ -8,6 +8,12 @@
   height: 680px;
   margin-right: -1px;
 
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    padding-bottom: 15px;
+  }
+
+
   &:hover {
     z-index: 1;
     border-color: $link-hover-color;
@@ -126,6 +132,7 @@
 
     &_new {
       width: 115px;
+      max-width: 100%;
       height: 42px;
       display: block;
       text-align: center;
@@ -138,7 +145,7 @@
       margin-right: 25px;
       margin-left: auto;
       border-radius: 3px;
-      @include media-breakpoint-only(md) {
+      @include media-breakpoint-down(md) {
         width: auto;
         margin-right: 15px;
         padding-left: 5px;
@@ -166,16 +173,11 @@
     }
   }
 
-  &__select {
+  &__links {
     padding-left: 12px;
     padding-right: 13px;
     @include text-sm;
 
-    .col:last-child {
-      border-left: 1px solid $color-heather;
-      text-align: right;
-      padding-right: 25px;
-    }
     @include media-breakpoint-only(md) {
       margin-bottom: 10px;
     }
@@ -253,13 +255,9 @@
 
   .col-xl-4:nth-child(3n) {
     .product-card {
-      margin-right: 0;
-    }
-  }
-
-  .col-xl-4:nth-child(3n) {
-    .product-card {
-      margin-right: 0;
+      @include media-breakpoint-up(xl) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -267,6 +265,15 @@
     .product-card {
       @include media-breakpoint-down(sm) {
         margin-top: -1px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .col-xl-4:nth-child(even) {
+    .product-card {
+      @include media-breakpoint-between(md, lg) {
+        margin-right: 0;
       }
     }
   }
@@ -300,6 +307,7 @@
 
 .select__product-card {
   margin-bottom: 10px;
+
 
   @include media-breakpoint-down(sm) {
     margin-right: 0;

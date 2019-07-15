@@ -8,13 +8,12 @@
     padding-top: 10px;
     padding-bottom: 7px;
     padding-right: 7px;
-    margin-right: -1px;
     @include text-sm;
 
     @include media-breakpoint-down(sm) {
-        margin-right: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
-
 
   &__header {
     padding-right: 10px;
@@ -27,6 +26,11 @@
     border: 1px solid $color-grey-light;
     background-color: $color-basic;
 
+    @include media-breakpoint-down(sm) {
+      min-width: 200px;
+      margin-left: 10px;
+    }
+
     .btn {
       justify-content: space-between;
       align-items: center;
@@ -38,6 +42,7 @@
     .dropdown-menu {
       width: calc(100% + 2px);
       padding-top: 15px;
+      left: -1px !important;
     }
     .dropdown-item {
       color: $link-color;

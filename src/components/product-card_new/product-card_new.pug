@@ -1,4 +1,4 @@
-mixin product-card_new(oldprice, imageName, comparision)
+mixin product-card_new(oldprice, imageName, type)
   .product-card&attributes(attributes)
     .product-card__top.flex
       div
@@ -12,10 +12,18 @@ mixin product-card_new(oldprice, imageName, comparision)
     .product-card__type Кондиционер
     a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
 
-    if comparision
-      +comparision-block
+    if type=='comparision'
+      +link-block-comparision
+
+    else if type=='select'
+      +catalog
+      +link-block-select
+
     else
       +catalog
+      +link-block-catalog
+
+
     .product-card__price
       .row.no-gutters
         if oldprice
@@ -53,21 +61,33 @@ mixin catalog
     .product-card__item.flex
       span Инвертор:
       span нет
-  .product-card__select
+
+mixin link-block-comparision
+  .product-card__links
     .row.no-gutters
-      .col
+      .col-6
         +icon-link('heart', 'heart_red')
           span Избранное
-      .col
+      .col-6.icon-link_right
+        +icon-link('trash', 'trash_red')
+          span Удалить
+
+mixin link-block-catalog
+  .product-card__links
+    .row.no-gutters
+      .col-6
+        +icon-link('heart', 'heart_red')
+          span Избранное
+      .col-6.icon-link_right
         +icon-link('libra', 'libra_red')
           span Сравнение
 
-mixin comparision-block
-  .product-card__select
+mixin link-block-select
+  .product-card__links
     .row.no-gutters
-      .col
-        +icon-link('heart', 'heart_red')
-          span Избранное
-      .col
+      .col-6
         +icon-link('trash', 'trash_red')
           span Удалить
+      .col-6.icon-link_right
+        +icon-link('libra', 'libra_red')
+          span Сравнение

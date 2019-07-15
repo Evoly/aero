@@ -24,24 +24,24 @@ block content
 
       .row.no-gutters.select__product-card
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card_new('oldprice', 'catalog2')
+          +product-card_new('oldprice', 'catalog2', 'select')
             .label__container.flex
               +label('green') акция
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card_new('oldprice', 'catalog-2')
+          +product-card_new('oldprice', 'catalog-2', 'select')
             .label__container.flex
               +label('blue') скидка
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card_new('oldprice', 'catalog-2')
+          +product-card_new('oldprice', 'catalog-2', 'select')
             .label__container.flex
               +label('green') акция
               +label('blue') скидка
               +label('orange') акция + скидка
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card_new('', 'catalog-1')
+          +product-card_new('', 'catalog-1', 'select')
         - for (var x = 1; x < 2; x++)
           .col-xl-3.col-lg-4.col-md-6.col-sm-12
-            +product-card_new('', 'catalog')
+            +product-card_new('', 'catalog', 'select')
 
 
 

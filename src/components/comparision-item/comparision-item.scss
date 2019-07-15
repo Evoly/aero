@@ -1,12 +1,16 @@
 .comparision-item {
   position: relative;
-  width: $cardWidth;
 
-  @include text-sm;
+  width: 294px;
+
+  @include media-breakpoint-down(sm) {
+      width: 260px;
+  }
 
   &__column {
     border-left: 1px solid $color-grey-light;
     visibility: hidden;
+    @include text-sm;
   }
 
   &__cell {

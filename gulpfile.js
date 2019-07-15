@@ -89,7 +89,7 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', function() {
-  gulp.watch('src/style', gulp.series('sass'))
+  gulp.watch('src/', gulp.series('sass'))
   gulp.watch('src/resources/', gulp.series('resources'))
   gulp.watch('src/', gulp.series('html'))
   gulp.watch('src/scripts/', gulp.series('scripts'))

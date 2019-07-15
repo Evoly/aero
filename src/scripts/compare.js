@@ -15,6 +15,7 @@ $(document).ready(function() {
 
     $('.comparision [data-row="' + row + '"]').css('height', maxHeight);
     $('.comparision-item__column').addClass('visible');
+    $('.comparision__names').addClass('visible');
   };
 
   const SetHeight = () => {

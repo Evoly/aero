@@ -109,6 +109,14 @@ img {
   &__view-more {
     text-align: center;
   }
+
+  &__filter {
+
+    @include media-breakpoint-up(xl) {
+        margin-right: 1px;
+    }
+  }
+
 }
 
 .breadcrumb {
@@ -387,7 +395,7 @@ img {
       width: 100%;
       padding-right: 15px;
     }
-    // TODO:
+
     .list-triangle {
       li {
         margin-bottom: 9px;
