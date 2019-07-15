@@ -85,9 +85,11 @@
     border: 1px solid $color-grey-light;
     margin-left: -1px;
 
-    @include screen('xxs', max) {
+    @include screen('xs', max) {
       margin-top: -1px;
+      margin-left: 0;
       width: 100%;
+      text-align: center;
     }
 
     .show > .btn-light.dropdown-toggle {

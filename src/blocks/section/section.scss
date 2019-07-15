@@ -169,6 +169,12 @@
     h1 {
       margin-bottom: 25px;
     }
+
+    .select-panel {
+      @include media-breakpoint-between(md, lg) {
+        margin-right: -1px;
+      }
+    }
   }
 
   &__compare {
