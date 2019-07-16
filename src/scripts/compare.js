@@ -31,6 +31,7 @@ $(document).ready(function() {
     autoWidth: true,
     items: 4,
     nav: true,
+    navClass: [ 'owl-prev nav-fixed', 'owl-next nav-fixed' ],
     navText: ['<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>',
       '<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>'
     ],
@@ -51,7 +52,47 @@ $(document).ready(function() {
   });
 
   $('.comparision [data-row]').mouseleave(function() {
-      $('.comparision [data-row]').removeClass('hover');
+    $('.comparision [data-row]').removeClass('hover');
   });
+
+  //product card:hover
+
+  $('.comparision .product-card').mouseenter(function() {
+    const currentCard = $(this);
+    const nextCard = currentCard.closest('.owl-item').next()
+    nextCard.find('.product-card').addClass('hover');;
+  });
+
+  $('.comparision .product-card').mouseleave(function() {
+    $('.comparision .product-card').removeClass('hover');
+  });
+
+  if ($('.nav-fixed').length > 0) {
+    $('.nav-fixed').each(function() {
+
+      const top = $(this).offset().top;
+      const bottom = $(this).offset().top + $(this).outerHeight();
+      const iconPOsition = 280;
+
+      window.onscroll = function() {
+
+        var scrolled = window.scrollY;
+
+        var elHeight = $('.nav-fixed').outerHeight();
+
+        if (scrolled > top) {
+          const translate = (scrolled ) < (bottom - iconPOsition - 60) ? (scrolled - top) : (bottom - iconPOsition - top-100);
+          console.log('scrolled', scrolled);
+          console.log('bottom', bottom - iconPOsition - 100);
+
+          $('.nav-fixed').css('transform', 'translateY(' + translate + 'px)');
+
+        } else {
+          $('.nav-fixed').css('transform', '');
+
+        }
+      };
+    });
+  }
 
 });

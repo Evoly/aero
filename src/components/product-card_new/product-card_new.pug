@@ -9,34 +9,49 @@ mixin product-card_new(oldprice, imageName, type)
         span 5.0
     a(href='#').product-card__img
       img(src=`images/temp/${imageName}.png` alt='')
-    .product-card__type Кондиционер
-    a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
-
     if type=='comparision'
-      +link-block-comparision
-
-    else if type=='select'
-      +catalog
-      +link-block-select
-
+      .comparision__fixed
+        .product-card__type Кондиционер
+        a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
+        +link-block-comparision
+        .product-card__price
+          .row.no-gutters
+            if oldprice
+              .col-6
+                span.product-card__price_old 12 400 &#8381
+              .col-6
+                a(href='#')
+                  span.product-card__price_new 10 570 &#8381
+            else
+              .col-6
+              .col-6
+                a(href='#')
+                  span.product-card__price_new 10 570 &#8381
     else
-      +catalog
-      +link-block-catalog
+      .product-card__type Кондиционер
+      a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
 
+      if type=='select'
+        +catalog
+        +link-block-select
 
-    .product-card__price
-      .row.no-gutters
-        if oldprice
-          .col-6
-            span.product-card__price_old 12 400 &#8381
-          .col-6
-            a(href='#')
-              span.product-card__price_new 10 570 &#8381
-        else
-          .col-6
-          .col-6
-            a(href='#')
-              span.product-card__price_new 10 570 &#8381
+      else
+        +catalog
+        +link-block-catalog
+
+      .product-card__price
+        .row.no-gutters
+          if oldprice
+            .col-6
+              span.product-card__price_old 12 400 &#8381
+            .col-6
+              a(href='#')
+                span.product-card__price_new 10 570 &#8381
+          else
+            .col-6
+            .col-6
+              a(href='#')
+                span.product-card__price_new 10 570 &#8381
     block
 
 mixin label(color)
