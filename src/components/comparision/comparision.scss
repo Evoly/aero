@@ -10,11 +10,15 @@
     display: flex;
     flex-direction: column;
     border-right: 1px solid $color-grey-light;
-    margin-right: -1px;
+    // margin-right: -1px;
     @include media-breakpoint-down(sm) {
       flex-direction: row;
       flex-flow: row nowrap;
       border-right: none;
+    }
+
+    .sticky {
+      width: calc(100% - 1px);
     }
 
   }
@@ -79,6 +83,8 @@
   .product-card {
     height: $cardHeight;
     padding-bottom: 30px;
+    margin-right: 0;
+    margin-left: -1px;
     @include media-breakpoint-down(sm) {
       padding-bottom: 15px;
       margin-right: -1px;
@@ -109,6 +115,7 @@
     border-bottom: 1px solid $color-grey-light;
     margin-bottom: -1px;
     margin-right: -1px;
+    margin-left: -1px;
     @include media-breakpoint-down(sm) {
       margin-right: 0;
     }
