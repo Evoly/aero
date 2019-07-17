@@ -1,21 +1,13 @@
 mixin comparision()
   .comparision&attributes(attributes)
     .row.no-gutters
-      .col-6.col-md-2.sm-order-2
-        button(type="button").comparision__header.active.border-bottom.border-light Только отличия
-      .col-12.col-md-10.sm-order-1
-        +select-panel.flex
-      .col-6.col-md-2.sm-order-3
-        .comparision__header-wrapper
-          button(type="button").comparision__header.border-bottom.border-light Все параметры
+      .col-12.col-md-2.comparision__header-wrapper
+        .comparision__sticky
+          div
+            button(type="button").comparision__header.active Только отличия
+            button(type="button").comparision__header Все параметры
 
-      .col-12.col-md-10.sm-order-4
-        .comparision__slider
-          .owl-carousel.js-slider-compare
-            - for (var x = 1; x < 22; x++)
-              +comparision-item
-      .col-md-2
-        .comparision__names
+        .comparision__names.mt-auto
           .comparision__name.flex(data-row='0') Обслуживаемая площадь:
           .comparision__name.flex(data-row='1') Программы и режимы:
           .comparision__name.flex(data-row='2') Макс. перепад высот:
@@ -26,3 +18,10 @@ mixin comparision()
           .comparision__name.flex(data-row='7') Глубина:
           .comparision__name.flex(data-row='8') Высота:
           .comparision__name.flex(data-row='9') Вид индикации:
+
+      .col-12.col-md-10
+        +select-panel.flex
+        .comparision__slider
+          .owl-carousel.js-slider-compare
+            - for (var x = 1; x < 22; x++)
+              +comparision-item

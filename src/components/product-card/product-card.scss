@@ -176,11 +176,28 @@
   &__links {
     padding-left: 12px;
     padding-right: 13px;
+      margin-bottom: 15px;
     @include text-sm;
 
     @include media-breakpoint-only(md) {
       margin-bottom: 10px;
     }
+  }
+
+  //fixed part
+  &__sticky-wrapper {
+    flex: 1;
+    margin-bottom: -1px;
+    position: relative;
+    width: 293px;
+    left: -8px;
+    @include media-breakpoint-down(sm) {
+        width: 258px;
+    }
+  }
+
+  &__sticky-content {
+    padding-left: 8px;
   }
 }
 
@@ -245,6 +262,10 @@
     }
   }
 }
+
+
+
+//borders
 
 .catalog__product-card {
   margin-bottom: 10px;
