@@ -182,6 +182,10 @@
     @include media-breakpoint-only(md) {
       margin-bottom: 10px;
     }
+
+    .col-6 {
+      text-align: center;
+    }
   }
 
   //fixed part
