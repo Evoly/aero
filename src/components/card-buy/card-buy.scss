@@ -1,6 +1,6 @@
 .card-buy {
   flex-direction: column;
-  padding: 28px 30px 28px 24px;
+  padding: 28px 20px 28px 20px;
   background-color: $color-athens-gray2;
   margin-bottom: 30px;
 
@@ -8,20 +8,27 @@
     padding-bottom: 20px;
     border-bottom: 1px dashed #ccc;
     margin-bottom: 18px;
+
+    .card__link {
+      text-transform: uppercase;
+      text-align: center;
+    }
   }
 
-  &__price {
-    color: $color-darkgrey;
-    margin-bottom: 20px;
-    @include heading-2-bold;
+  &__link {
+    justify-content: flex-start;
+    margin-bottom: 10px;
   }
 
-  .btn {
-    margin-bottom: 14px;
-    margin-right: 20px;
-  }
+  .icon-link {
+    padding-right: 10px;
+    padding-left: 10px;
 
-  .icon-inline {
+  &:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+}
+  .slider-next-disabled {
     margin-right: 10px;
   }
 }

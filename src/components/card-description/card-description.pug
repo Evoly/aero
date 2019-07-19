@@ -1,17 +1,22 @@
 mixin card-description()
   .card-description&attributes(attributes).flex
     .card-description__col
-      .card-description__rating
-        +rating(5)
-        p.rating__text Отзывы
-          a(href="#feedback").rating__link.js-toTabs (#[span.rating__count 12])
       p.card-description__text
         span Производитель:
         a(href='').card-description__link Lessar
       p.card-description__text
         span Серия:
         a(href='').card-description__link Ururu Sarara
-      p.card-description__text Артикул: 13239
+      p.card-description__text
+        img(src='images/china.png' alt='').card-description__img
+        span Китай
+      p.card-description__text Площадь, м#[sup 2]
+      p.card-description__text Уровень шума, дБа
+      p.card-description__text Инвертор
+      p.card-description__text Инвертор
+      p.card-description__text Инвертор
+      p.card-description__text Инвертор
+      a(href="#spec").js-toTabs  Подробнее
 
 
     .card-description__col.flex

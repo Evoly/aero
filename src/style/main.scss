@@ -369,15 +369,15 @@ img {
 }
 
 .card {
-  &__col-right {
-    width: 11.44%;
-    padding-left: 15px;
-    padding-top: 10px;
-    min-width: 103px;
-  }
+  // &__col-right {
+  //   width: 11.44%;
+  //   padding-left: 15px;
+  //   padding-top: 10px;
+  //   min-width: 103px;
+  // }
 
   &__col-center {
-    width: 44.11%;
+    width: 55.55%;
     padding-left: 15px;
     padding-right: 15px;
     @include media-breakpoint-only(md) {
@@ -404,11 +404,19 @@ img {
     }
   }
 
+  &__slider-wrapper {
+    position: relative;
+  }
+
   &__slider {
     margin-bottom: 20px;
 
     .owl-item {
       padding-right: 1px;
+    }
+
+    &.owl-carousel .owl-item img  {
+      width: auto;
     }
   }
 
@@ -417,15 +425,15 @@ img {
     align-items: center;
     justify-content: center;
     border: 1px solid $color-heather;
-    margin: 5px;
 
     a {
       display: flex;
-      height: 355px;
+      height: inherit;
       align-items: center;
       justify-content: center;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      padding: 5px;
+      // margin-top: 5px;
+      // margin-bottom: 5px;
     }
 
     img {
@@ -441,6 +449,18 @@ img {
 
   &__link {
     @include text-sm;
+  }
+
+  &__price {
+    @include media-breakpoint-between(md, lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .price__item {
+      width: 100%;
+    }
   }
 }
 

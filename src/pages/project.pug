@@ -22,7 +22,7 @@ block content
       .row
         .col-lg-9.col-md-8.col-sm-12
           .row
-            .card__col-right.visible-md
+            //.card__col-right.visible-md
               +nav-slider.js-vertical-slider
                 .nav-slider__viewport
                   .nav-slider__items
@@ -60,6 +60,15 @@ block content
                   a(data-fancybox="card-slider" href="images/temp/test.jpg"  data-caption="Caption #4"): img(src='images/temp/test.jpg' alt='')
                 .card__slider-item.flex
                   a(data-fancybox="card-slider" href="images/temp/test-1.jpg"  data-caption="Caption #5"): img(src='images/temp/test-1.jpg' alt='')
+
+              .owl-nav-slider
+                .owl-carousel.js-nav-slider
+                  .owl-nav-slider__item: img(src='images/temp/slider-lg.png' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/slider-sm-2.png' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/slider-sm-3.png' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/slider-sm-1.png' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/test.jpg' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/test-1.jpg' alt='')
 
             .card__col-left
               ul(role="tablist").nav.nav-tabs.nav-tabs.nav-tabs-sm

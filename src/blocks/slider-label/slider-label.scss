@@ -1,0 +1,21 @@
+.slider-label {
+  position: absolute;
+
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+   @include text-medium;
+
+  &__item {
+    padding: 10px;
+  }
+
+  .star-o {
+    margin-right: 5px;
+    margin-top: -3px;
+  }
+}

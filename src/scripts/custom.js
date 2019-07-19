@@ -28,6 +28,33 @@ $(document).ready(function() {
       }
     }
   };
+  const owlOptions_5 = {
+    pagination: false,
+    nav: true,
+    navText: ['<span class="icon arrow-up"></span><span class="icon arrow-up-grey"></span>',
+      '<span class="icon arrow-up"></span><span class="icon arrow-up-grey"></span>'
+    ],
+    scrollPerPage: true,
+    margin: 10,
+    responsive: {
+      1200: {
+        nav: true,
+        items: 5
+      },
+      500: {
+        nav: true,
+        items: 4
+      },
+      300: {
+        items: 3,
+        nav: false
+      },
+      0: {
+        items: 2,
+        nav: false
+      }
+    }
+  };
   const owlOptions_4 = {
     pagination: false,
     nav: true,
@@ -55,6 +82,7 @@ $(document).ready(function() {
       }
     }
   };
+
   const owlOptions_1_sm = {
     loop: false,
     margin: 10,
@@ -80,7 +108,6 @@ $(document).ready(function() {
     nav: false,
     dot: true,
     items: 1,
-    onChange: syncSliders
   };
 
   const owlOptions_linkSlider = {
@@ -103,91 +130,101 @@ $(document).ready(function() {
   $('.js-slider-linkSquare').owlCarousel(owlOptions_linkSlider);
   $('.js-slider-linkOther').owlCarousel(owlOptions_linkSlider);
   $('.js-slider-linkBrand').owlCarousel(owlOptions_linkSlider);
+  $('.js-nav-slider').owlCarousel(owlOptions_5);
 
   $('.js-slider-project-sm').owlCarousel(owlOptions_1_sm);
+
+
 
   const startCarousel = (el, options) => el.owlCarousel(options);
   const stopCarousel = (el) => el.trigger('destroy.owl.carousel');
 
-  $(".js-vertical-slider .nav-slider__item").on('click', function() {
+  // $(".js-vertical-slider .nav-slider__item").on('click', function() {
+  //   const $this = $(this);
+  //   const index = $this.index();
+  //   const items = $(".js-vertical-slider .nav-slider__item");
+  //   items.removeClass('active');
+  //   $this.addClass('active');
+  //   $(".js-card-slider").trigger('to.owl', index);
+  //   return false;
+  // });
+
+  // const slides = 3;
+  // const step = 100;
+  // const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;
+  // const slide = $(".js-vertical-slider .nav-slider__item");
+  //
+  // for (let i = 0; i < slides; i++) {
+  //   $(slide[i]).addClass('visible');
+  // };
+
+  // if (slideTotall <= slides) {
+  //   $('.js-next .icon, .js-prev .icon').removeClass('show');
+  //   $('.js-next .icon-disabled, .js-prev .icon-disabled').addClass('show');
+  // } else {
+  //   $('.js-next .icon, .js-prev .icon-disabled').addClass('show');
+  //   $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
+  // }
+
+  // $('.js-next, .js-prev').on('click', function() {
+  //   const slideVisible = $('.js-vertical-slider .visible').toArray();
+  //   const indexFirst = $(slideVisible[0]).index();
+  //   const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+  //
+  //   if ($(this).hasClass('js-next')) {
+  //     if (indexLast < (slideTotall - 1)) {
+  //       $('.js-prev .icon').addClass('show');
+  //       $('.js-prev .icon-disabled').removeClass('show');
+  //
+  //       $(slideVisible[0]).removeClass('visible');
+  //       $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
+  //       $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst + 1)}px)`);
+  //     } else {
+  //       $('.js-next .icon').removeClass('show');
+  //       $('.js-next .icon-disabled').addClass('show');
+  //     }
+  //   }
+  //
+  //   if ($(this).hasClass('js-prev')) {
+  //     if (indexFirst > 0) {
+  //       $('.js-next .icon').addClass('show');
+  //       $('.js-next .icon-disabled').removeClass('show');
+  //
+  //       $(slideVisible[0]).prev().addClass('visible');
+  //       $(slideVisible[slideVisible.length - 1]).removeClass('visible');
+  //       $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst - 1)}px)`);
+  //     } else {
+  //       $('.js-prev .icon').removeClass('show');
+  //       $('.js-prev .icon-disabled').addClass('show');
+  //     }
+  //   }
+  //   return;
+  // });
+
+  // function syncSliders(event) {
+  //   event_name = event.property.name;
+  //   if (event_name == 'position') {
+  //     const currentIndex = event.item.index;
+  //     const nextIndex = event.property.value;
+  //
+  //     const items = $(".js-vertical-slider .nav-slider__item");
+  //     items.removeClass('active');
+  //     items.eq(nextIndex).addClass('active');
+  //
+  //     if (currentIndex < nextIndex) {
+  //       $('.js-next').trigger('click');
+  //     } else {
+  //       $('.js-prev').trigger('click');
+  //     }
+  //   }
+  // }
+
+  $(".js-nav-slider .owl-item").on('click', function() {
     const $this = $(this);
     const index = $this.index();
-    const items = $(".js-vertical-slider .nav-slider__item");
-    items.removeClass('active');
-    $this.addClass('active');
     $(".js-card-slider").trigger('to.owl', index);
     return false;
   });
-
-  const slides = 3;
-  const step = 100;
-  const slideTotall = $(".js-vertical-slider .nav-slider__items").children().length;
-  const slide = $(".js-vertical-slider .nav-slider__item");
-
-  for (let i = 0; i < slides; i++) {
-    $(slide[i]).addClass('visible');
-  };
-
-  if (slideTotall <= slides) {
-    $('.js-next .icon, .js-prev .icon').removeClass('show');
-    $('.js-next .icon-disabled, .js-prev .icon-disabled').addClass('show');
-  } else {
-    $('.js-next .icon, .js-prev .icon-disabled').addClass('show');
-    $('.js-next .icon-disabled, .js-prev .icon').removeClass('show');
-  }
-
-  $('.js-next, .js-prev').on('click', function() {
-    const slideVisible = $('.js-vertical-slider .visible').toArray();
-    const indexFirst = $(slideVisible[0]).index();
-    const indexLast = $(slideVisible[slideVisible.length - 1]).index();
-
-    if ($(this).hasClass('js-next')) {
-      if (indexLast < (slideTotall - 1)) {
-        $('.js-prev .icon').addClass('show');
-        $('.js-prev .icon-disabled').removeClass('show');
-
-        $(slideVisible[0]).removeClass('visible');
-        $(slideVisible[slideVisible.length - 1]).next().addClass('visible');
-        $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst + 1)}px)`);
-      } else {
-        $('.js-next .icon').removeClass('show');
-        $('.js-next .icon-disabled').addClass('show');
-      }
-    }
-
-    if ($(this).hasClass('js-prev')) {
-      if (indexFirst > 0) {
-        $('.js-next .icon').addClass('show');
-        $('.js-next .icon-disabled').removeClass('show');
-
-        $(slideVisible[0]).prev().addClass('visible');
-        $(slideVisible[slideVisible.length - 1]).removeClass('visible');
-        $('.js-vertical-slider .nav-slider__items').css('transform', `translateY(-${step * (indexFirst - 1)}px)`);
-      } else {
-        $('.js-prev .icon').removeClass('show');
-        $('.js-prev .icon-disabled').addClass('show');
-      }
-    }
-    return;
-  });
-
-  function syncSliders(event) {
-    event_name = event.property.name;
-    if (event_name == 'position') {
-      const currentIndex = event.item.index;
-      const nextIndex = event.property.value;
-
-      const items = $(".js-vertical-slider .nav-slider__item");
-      items.removeClass('active');
-      items.eq(nextIndex).addClass('active');
-
-      if (currentIndex < nextIndex) {
-        $('.js-next').trigger('click');
-      } else {
-        $('.js-prev').trigger('click');
-      }
-    }
-  }
 
   // main slider
 
@@ -790,8 +827,8 @@ $(document).ready(function() {
   $('[data-fancybox="feedback"]').fancybox(fancyOpts);
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
 
-  if ($('[data-fancybox]').length > 0) {
-    console.log($('[data-fancybox"]').length);
+  if ($('.fancybox-show-thumbs').length > 0) {
+    console.log($('[data-fancybox]').length);
     $(window).resize(function() {
       if ($(window).width() > 768) {
         $.fancybox.getInstance().Thumbs.update();

@@ -1053,48 +1053,67 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-12">
                     <div class="row">
-                        <div class="card__col-right visible-md">
-                            <div class="nav-slider js-vertical-slider">
-                                <div class="nav-slider__viewport">
-                                    <div class="nav-slider__items">
-                                        <div class="nav-slider__item"><img src="images/temp/slider-lg.png" alt=""></div>
-                                        <div class="nav-slider__item"><img src="images/temp/slider-sm-2.png" alt=""></div>
-                                        <div class="nav-slider__item"><img src="images/temp/slider-sm-3.png" alt=""></div>
-                                        <div class="nav-slider__item"><img src="images/temp/slider-sm-1.png" alt=""></div>
-                                        <div class="nav-slider__item"><img src="images/temp/test.jpg" alt=""></div>
-                                        <div class="nav-slider__item"><img src="images/temp/test-1.jpg" alt=""></div>
-                                    </div>
-                                </div>
-                                <div class="nav-slider__nav nav-slider__next js-prev"><span class="icon arrow-up show"></span><span class="icon-disabled arrow-up-grey"></span></div>
-                                <div class="nav-slider__nav nav-slider__prev js-next"><span class="icon arrow-down show"></span><span class="icon-disabled arrow-down-grey"></span></div>
-                            </div>
-                        </div>
+                        <!--.card__col-right.visible-md+nav-slider.js-vertical-slider
+  .nav-slider__viewport
+    .nav-slider__items
+      .nav-slider__item
+        img(src='images/temp/slider-lg.png' alt='')
+      .nav-slider__item
+        img(src='images/temp/slider-sm-2.png' alt='')
+      .nav-slider__item
+        img(src='images/temp/slider-sm-3.png' alt='')
+      .nav-slider__item
+        img(src='images/temp/slider-sm-1.png' alt='')
+      .nav-slider__item
+        img(src='images/temp/test.jpg' alt='')
+      .nav-slider__item
+        img(src='images/temp/test-1.jpg' alt='')
+
+  .nav-slider__nav.nav-slider__next.js-prev
+    span.icon.arrow-up.show
+    span.icon-disabled.arrow-up-grey
+  .nav-slider__nav.nav-slider__prev.js-next
+    span.icon.arrow-down.show
+    span.icon-disabled.arrow-down-grey
+-->
                         <div class="card__col-center">
-                            <div class="card__slider owl-carousel js-card-slider">
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-lg.png" data-caption="Caption #0"><img src="images/temp/slider-lg.png" alt=""></a></div>
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-2.png" data-caption="Caption #1"><img src="images/temp/slider-sm-2.png" alt=""></a></div>
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-3.png" data-caption="Caption #2"><img src="images/temp/slider-sm-3.png" alt=""></a></div>
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-1.png" data-caption="Caption #3"><img src="images/temp/slider-sm-1.png" alt=""></a></div>
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/test.jpg" data-caption="Caption #4"><img src="images/temp/test.jpg" alt=""></a></div>
-                                <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/test-1.jpg" data-caption="Caption #5"><img src="images/temp/test-1.jpg" alt=""></a></div>
+                            <div class="card__slider-wrapper">
+                                <div class="slider-label flex">
+                                    <div class="slider-label__item"><span>Код:</span><span>1286</span></div>
+                                    <div class="slider-label__item flex"><span class="icon star-o"></span><span>5.0</span><a class="rating__link js-toTabs" href="#feedback">(<span class="rating__count">12</span>)&#32;Отзывов</a></div>
+                                </div>
+                                <div class="card__slider owl-carousel js-card-slider">
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-lg.png" data-caption="Caption #0"><img src="images/temp/slider-lg.png" alt=""></a></div>
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-2.png" data-caption="Caption #1"><img src="images/temp/slider-sm-2.png" alt=""></a></div>
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-3.png" data-caption="Caption #2"><img src="images/temp/slider-sm-3.png" alt=""></a></div>
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/slider-sm-1.png" data-caption="Caption #3"><img src="images/temp/slider-sm-1.png" alt=""></a></div>
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/test.jpg" data-caption="Caption #4"><img src="images/temp/test.jpg" alt=""></a></div>
+                                    <div class="card__slider-item flex"><a data-fancybox="card-slider" href="images/temp/test-1.jpg" data-caption="Caption #5"><img src="images/temp/test-1.jpg" alt=""></a></div>
+                                </div>
+                            </div>
+                            <div class="owl-nav-slider">
+                                <div class="owl-carousel js-nav-slider">
+                                    <div class="owl-nav-slider__item"><img src="images/temp/slider-lg.png" alt=""></div>
+                                    <div class="owl-nav-slider__item"><img src="images/temp/slider-sm-2.png" alt=""></div>
+                                    <div class="owl-nav-slider__item"><img src="images/temp/slider-sm-3.png" alt=""></div>
+                                    <div class="owl-nav-slider__item"><img src="images/temp/slider-sm-1.png" alt=""></div>
+                                    <div class="owl-nav-slider__item"><img src="images/temp/test.jpg" alt=""></div>
+                                    <div class="owl-nav-slider__item"><img src="images/temp/test-1.jpg" alt=""></div>
+                                </div>
                             </div>
                         </div>
                         <div class="card__col-left">
                             <div class="card-description flex">
                                 <div class="card-description__col">
-                                    <div class="card-description__rating">
-                                        <div class="rating__stars">
-                                            <div class="rating__box"><span class="icon star-o"></span></div>
-                                            <div class="rating__box"><span class="icon star-o"></span></div>
-                                            <div class="rating__box"><span class="icon star-o"></span></div>
-                                            <div class="rating__box"><span class="icon star-o"></span></div>
-                                            <div class="rating__box"><span class="icon star-o"></span></div>
-                                        </div>
-                                        <p class="rating__text">Отзывы<a class="rating__link js-toTabs" href="#feedback">(<span class="rating__count">12</span>)</a></p>
-                                    </div>
                                     <p class="card-description__text"><span>Производитель:</span><a class="card-description__link" href="">Lessar</a></p>
                                     <p class="card-description__text"><span>Серия:</span><a class="card-description__link" href="">Ururu Sarara</a></p>
-                                    <p class="card-description__text">Артикул: 13239</p>
+                                    <p class="card-description__text"><img class="card-description__img" src="images/china.png" alt="" /><span>Китай</span></p>
+                                    <p class="card-description__text">Площадь, м<sup>2</sup></p>
+                                    <p class="card-description__text">Уровень шума, дБа</p>
+                                    <p class="card-description__text">Инвертор</p>
+                                    <p class="card-description__text">Инвертор</p>
+                                    <p class="card-description__text">Инвертор</p>
+                                    <p class="card-description__text">Инвертор</p><a class="js-toTabs" href="#spec"> Подробнее</a>
                                 </div>
                                 <div class="card-description__col flex">
                                     <div class="card-description__brand"><a href=""><img src="images/temp/brand.png" alt="" /></a></div>
@@ -1570,7 +1589,12 @@
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card-buy flex">
                         <div class="card-buy__top">
-                            <p class="card-buy__price">25 400 руб.</p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#buy">купить</a><a class="btn btn-dark" href="#" data-toggle="modal" data-target="#buy">купить в кредит</a>
+                            <div class="card-buy__link flex"><a class="icon-link" href="#"><span class="icon-inline shared icon-link__icon"></span><span class="shared_red icon-link_hover"></span></a><a class="icon-link" href="#"><span class="icon-inline libra-lg icon-link__icon"></span><span class="libra-lg_red icon-link_hover"></span></a><a class="icon-link" href="#"><span class="icon-inline heart-lg icon-link__icon"></span><span class="heart-lg_red icon-link_hover"></span></a><a class="icon-link" href="#"><span class="icon-inline printer icon-link__icon"></span><span class="printer_red icon-link_hover"></span></a></div>
+                            <div class="price flex card__price">
+                                <div class="price__item"><span class="price__old">12 400 &#8381</span></div>
+                                <div class="price__item"><a href="#"><span class="price__new">10 570 &#8381</span></a></div>
+                            </div>
+                            <div class="text-center"><span class="icon-inline slider-next-disabled"></span><a class="card__link list-dots__link_dashed" href="#" data-toggle="modal" data-target="#size">Промокод</a></div>
                         </div>
                         <div class="card-buy__bottom">
                             <div class="list-dots">

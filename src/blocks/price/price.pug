@@ -1,0 +1,13 @@
+mixin price(oldprice)
+  .price&attributes(attributes)
+    if oldprice
+      .price__item
+        span.price__old 12 400 &#8381
+      .price__item
+        a(href='#')
+          span.price__new 10 570 &#8381
+    else
+      .price__item
+      .price__item
+        a(href='#')
+          span.price__new 10 570 &#8381

@@ -1,10 +1,12 @@
 .card-description {
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   border-bottom: 1px dashed #ccc;
 
   &__col {
     flex-grow: 1;
+
+    @include text-sm;
 
     @include media-breakpoint-down(sm) {
       max-width: 50%;
@@ -19,7 +21,9 @@
   &__text {
     color: $color-grey-thin;
     margin-right: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+
+    //@include text-sm;
   }
 
   &__link {
@@ -29,6 +33,11 @@
       display: block;
       margin-left: 0;
     }
+  }
+
+  &__img {
+    margin-right: 8px;
+    width: auto!important;
   }
 
   &__rating {

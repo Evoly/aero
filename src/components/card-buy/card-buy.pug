@@ -1,9 +1,17 @@
 mixin card-buy()
   .card-buy&attributes(attributes).flex
     .card-buy__top
-      p.card-buy__price 25 400 руб.
-      a(href="#" data-toggle="modal" data-target="#buy").btn.btn-primary купить
-      a(href='#' data-toggle="modal" data-target="#buy").btn.btn-dark купить в кредит
+      .card-buy__link.flex
+        +icon-link('shared', 'shared_red')
+        +icon-link('libra-lg', 'libra-lg_red')
+        +icon-link('heart-lg', 'heart-lg_red')
+        +icon-link('printer', 'printer_red')
+      +price('oldprice').flex.card__price
+      .text-center
+        span.icon-inline.slider-next-disabled
+        a(href="#" data-toggle="modal" data-target="#size").card__link.list-dots__link_dashed Промокод
+
+
 
     .card-buy__bottom
       +list-dots('Доставка', 'shipping')
