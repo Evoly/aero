@@ -105,10 +105,11 @@
 .owl-nav-slider {
   margin-left: 30px;
   margin-right: 30px;
+  margin-bottom: 30px;
 
   &__item {
     position: relative;
-    max-width: 80px;
+    max-width: 70px;
     height: 70px;
     border: 1px solid $color-heather;
     margin-right: 1px;

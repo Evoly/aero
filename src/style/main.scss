@@ -369,31 +369,36 @@ img {
 }
 
 .card {
-  // &__col-right {
-  //   width: 11.44%;
-  //   padding-left: 15px;
-  //   padding-top: 10px;
-  //   min-width: 103px;
-  // }
+  &__subheader {
+    color:  $color-heather1;
+    margin-bottom: 10px;
+  }
 
   &__col-center {
-    width: 55.55%;
+    width: 53.25%;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 7px;
     @include media-breakpoint-only(md) {
-      width: calc(100% - 103px);
+      width: 100%;
     }
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
+
+    @include media-breakpoint-down(md) {
+      padding-right: 15px;
+    }
   }
 
   &__col-left {
-    width: 41.55%;
-    padding-left: 15px;
+    width: 46.75%;
+    padding-left: 8px;
+    padding-right: 8px;
+
     @include media-breakpoint-down(md) {
       width: 100%;
       padding-right: 15px;
+      padding-left: 15px;
     }
 
     .list-triangle {
@@ -416,15 +421,19 @@ img {
     }
 
     &.owl-carousel .owl-item img  {
-      width: auto;
+      //width: auto;
     }
   }
 
   &__slider-item {
-    height: 365px;
+    height: 440px;
     align-items: center;
     justify-content: center;
     border: 1px solid $color-heather;
+
+    @include media-breakpoint-down(xs) {
+      height: 350px;
+    }
 
     a {
       display: flex;
@@ -432,8 +441,6 @@ img {
       align-items: center;
       justify-content: center;
       padding: 5px;
-      // margin-top: 5px;
-      // margin-bottom: 5px;
     }
 
     img {

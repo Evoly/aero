@@ -50,24 +50,24 @@ block content
           +filter-panel.catalog__filter
           .row.no-gutters.catalog__product-card
             .col-xl-4.col-lg-6.col-md-6.col-sm-12
-              +product-card_new('oldprice', 'catalog2')
+              +product-card('oldprice', 'catalog2')
                 .label__container.flex
                   +label('green') акция
             .col-xl-4.col-lg-6.col-md-6.col-sm-12
-              +product-card_new('oldprice', 'catalog-2')
+              +product-card('oldprice', 'catalog-2')
                 .label__container.flex
                   +label('blue') скидка
             .col-xl-4.col-lg-6.col-md-6.col-sm-12
-              +product-card_new('oldprice', 'catalog-2')
+              +product-card('oldprice', 'catalog-2')
                 .label__container.flex
                   +label('green') акция
                   +label('blue') скидка
                   +label('orange') акция + скидка
             .col-xl-4.col-lg-6.col-md-6.col-sm-12
-              +product-card_new('', 'catalog-1')
+              +product-card('', 'catalog-1')
             - for (var x = 1; x < 9; x++)
               .col-xl-4.col-lg-6.col-md-6.col-sm-12
-                +product-card_new('', 'catalog')
+                +product-card('', 'catalog')
 
           .row.no-gutters
             .col-sm-12.catalog__view-more

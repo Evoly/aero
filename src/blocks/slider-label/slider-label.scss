@@ -1,5 +1,10 @@
 .slider-label {
   position: absolute;
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
 
   flex-flow: row nowrap;
   justify-content: space-between;

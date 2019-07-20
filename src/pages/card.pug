@@ -16,6 +16,7 @@ block content
             li(aria-current="page").breadcrumb-item.active Настенная сплит-система Lessar LS/LU-H07KKA2
 
     section.container.section__card
+      p.card__subheader Кондиционер
       h1 Настенная сплит-система Lessar LS/LU-H07KKA2
       +banner-timer('orange', 'icon-banner', 'timer').card__banner
         .banner__header Акция!
@@ -23,30 +24,6 @@ block content
       .row
         .col-lg-9.col-md-8.col-sm-12
           .row
-            //.card__col-right.visible-md
-              +nav-slider.js-vertical-slider
-                .nav-slider__viewport
-                  .nav-slider__items
-                    .nav-slider__item
-                      img(src='images/temp/slider-lg.png' alt='')
-                    .nav-slider__item
-                      img(src='images/temp/slider-sm-2.png' alt='')
-                    .nav-slider__item
-                      img(src='images/temp/slider-sm-3.png' alt='')
-                    .nav-slider__item
-                      img(src='images/temp/slider-sm-1.png' alt='')
-                    .nav-slider__item
-                      img(src='images/temp/test.jpg' alt='')
-                    .nav-slider__item
-                      img(src='images/temp/test-1.jpg' alt='')
-
-                .nav-slider__nav.nav-slider__next.js-prev
-                  span.icon.arrow-up.show
-                  span.icon-disabled.arrow-up-grey
-                .nav-slider__nav.nav-slider__prev.js-next
-                  span.icon.arrow-down.show
-                  span.icon-disabled.arrow-down-grey
-
             .card__col-center
               .card__slider-wrapper
                 +slider-label
@@ -64,6 +41,11 @@ block content
                     a(data-fancybox="card-slider" href="images/temp/test.jpg"  data-caption="Caption #4"): img(src='images/temp/test.jpg' alt='')
                   .card__slider-item.flex
                     a(data-fancybox="card-slider" href="images/temp/test-1.jpg"  data-caption="Caption #5"): img(src='images/temp/test-1.jpg' alt='')
+                  .card__slider-item.flex
+                    a(data-fancybox="card-slider" href="images/temp/test.jpg"  data-caption="Caption #4"): img(src='images/temp/test.jpg' alt='')
+                  .card__slider-item.flex
+                    a(data-fancybox="card-slider" href="images/temp/test-1.jpg"  data-caption="Caption #5"): img(src='images/temp/test-1.jpg' alt='')
+
 
               .owl-nav-slider
                 .owl-carousel.js-nav-slider
@@ -71,6 +53,8 @@ block content
                   .owl-nav-slider__item: img(src='images/temp/slider-sm-2.png' alt='')
                   .owl-nav-slider__item: img(src='images/temp/slider-sm-3.png' alt='')
                   .owl-nav-slider__item: img(src='images/temp/slider-sm-1.png' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/test.jpg' alt='')
+                  .owl-nav-slider__item: img(src='images/temp/test-1.jpg' alt='')
                   .owl-nav-slider__item: img(src='images/temp/test.jpg' alt='')
                   .owl-nav-slider__item: img(src='images/temp/test-1.jpg' alt='')
 

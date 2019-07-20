@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   //определяем высоту ячеек
-  var RowHeight = (row) => {
+  const RowHeight = (row) => {
     let maxHeight = 0;
 
     $('.comparision [data-row="' + row + '"]').each(function() {
@@ -18,14 +18,14 @@ $(document).ready(function() {
     $('.comparision__names').addClass('visible');
   };
 
-  var SetHeight = () => {
+  const SetHeight = () => {
     $('.comparision__name').each(function() {
       let el = $(this).data('row');
       RowHeight(el);
     });
   };
 
-  var owlOptions_compareSlider = {
+  const owlOptions_compareSlider = {
     margin: 0,
     loop: false,
     autoWidth: true,
@@ -47,7 +47,7 @@ $(document).ready(function() {
   //row:hover
 
   $('.comparision [data-row]').mouseenter(function() {
-    var rowNumber = $(this).data('row');
+    const rowNumber = $(this).data('row');
     $('.comparision [data-row]').filter('[data-row="' + rowNumber + '"]').addClass('hover');
   });
 
@@ -58,8 +58,8 @@ $(document).ready(function() {
   //product card:hover
 
   $('.comparision .product-card').mouseenter(function() {
-    var currentCard = $(this);
-    var nextCard = currentCard.closest('.owl-item').next()
+    const currentCard = $(this);
+    const nextCard = currentCard.closest('.owl-item').next()
     nextCard.find('.product-card').addClass('hover');;
   });
 
@@ -70,11 +70,11 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     $('.js-sticky').each(function() {
-      var scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var top = $(this).offset().top;
-      var bottom = $('.comparision').offset().top + $('.comparision').outerHeight();
-      var translate = (scrolled) < (bottom - 300) ? (scrolled - top) : (bottom - top - 300);
-      var border = $('.product-card__sticky-wrapper').offset().top
+      const scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      const top = $(this).offset().top;
+      const bottom = $('.comparision').offset().top + $('.comparision').outerHeight();
+      const translate = (scrolled) < (bottom - 300) ? (scrolled - top) : (bottom - top - 300);
+      const border = $('.product-card__sticky-wrapper').offset().top
 
       if (scrolled > top) {
         $(this).children().css('transform', 'translateY(' + translate + 'px)');
@@ -94,14 +94,14 @@ $(document).ready(function() {
 
   if ($('.nav-fixed').length > 0) {
     $('.nav-fixed').each(function() {
-      var top = $(this).offset().top;
-      var bottom = $(this).offset().top + $(this).outerHeight();
-      var iconPOsition = 280; // css
+      const top = $(this).offset().top;
+      const bottom = $(this).offset().top + $(this).outerHeight();
+      const iconPOsition = 280; // css
       window.onscroll = function() {
-        var scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        var elHeight = $('.nav-fixed').outerHeight();
+        const scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        const elHeight = $('.nav-fixed').outerHeight();
         if (scrolled > top) {
-          var translate = (scrolled) < (bottom - iconPOsition - 60) ? (scrolled - top) : (bottom - iconPOsition - top - 100);
+          const translate = (scrolled) < (bottom - iconPOsition - 60) ? (scrolled - top) : (bottom - iconPOsition - top - 100);
           $('.nav-fixed').css('transform', 'translateY(' + translate + 'px)');
         } else {
           $('.nav-fixed').css('transform', '');
