@@ -393,7 +393,7 @@ img {
   &__col-left {
     width: 46.75%;
     padding-left: 8px;
-    padding-right: 8px;
+    padding-right: 14px;
 
     @include media-breakpoint-down(md) {
       width: 100%;

@@ -2,10 +2,18 @@ mixin card-buy()
   .card-buy&attributes(attributes).flex
     .card-buy__top
       .card-buy__link.flex
-        +icon-link('shared', 'shared_red')
-        +icon-link('libra', 'libra_red')
-        +icon-link('heart', 'heart_red')
-        +icon-link('printer', 'printer_red')
+        +icon-link('shared-lg', 'shared-lg_red').js-slideDown
+        +icon-link('libra-lg', 'libra-lg_red')
+        +icon-link('heart-lg', 'heart-lg_red')
+        +icon-link('printer-lg', 'printer-lg_red')
+      .card-buy__social
+        +social
+          -var data = ['whatsapp', 'tw', 'fb', 'vk', 'ok', 'telegram ', 'mail']
+          -var data2 = ['Whatsapp' ,'Twitter', 'Facebook', 'ВКонтакте', 'Одноклассники', 'Telegram', 'Отправить на email']
+            each val, index in data
+              a(href='#' class=`social__link social__link_${val}`).flex
+                span.icon(class=val title=data2[index])
+
       +price('oldprice').flex.card__price
       .text-center
         span.icon-inline.slider-next-disabled

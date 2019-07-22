@@ -107,10 +107,14 @@
   margin-right: 30px;
   margin-bottom: 30px;
 
+  .owl-stage-outer {
+    margin-right: -1px;
+  }
+
   &__item {
     position: relative;
-    max-width: 70px;
-    height: 70px;
+    max-width: 58px;
+    height: 58px;
     border: 1px solid $color-heather;
     margin-right: 1px;
     transition: border-color .3s ease;

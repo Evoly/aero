@@ -87,6 +87,11 @@
     &.hover {
       border-left-color: transparent;
     }
+
+    @include media-breakpoint-between(md, lg) {
+      height: $cardHeight + 20;
+    }
+
   }
 
   .product-card__header {
@@ -248,6 +253,10 @@
     &_shadow {
       border-bottom: 1px solid $color-grey-light;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,.15);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      height: 220px;
     }
   }
 }

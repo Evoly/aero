@@ -1,0 +1,50 @@
+.social {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    transition: all $ease-main;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &_tw {
+      background-color: #70c7ff;
+    }
+
+    &_fb {
+      background-color: #5471c2;
+    }
+
+    &_vk {
+      background-color: #3c8bbc;
+    }
+
+    &_ok {
+      background-color: #ff8400;
+    }
+
+    &_mail {
+      background-color: #6347b8;
+    }
+
+    &_whatsapp {
+      background-color: #26d367;
+    }
+
+    &_telegram {
+      background-color: #6faeec;
+    }
+  }
+}

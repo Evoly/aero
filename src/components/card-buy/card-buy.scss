@@ -1,6 +1,6 @@
 .card-buy {
   flex-direction: column;
-  padding: 28px 20px 28px 20px;
+  padding: 28px 20px;
   background-color: $color-athens-gray2;
   margin-bottom: 30px;
 
@@ -16,9 +16,8 @@
   }
 
   &__link {
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 15px;
-
     @include media-breakpoint-down(sm) {
       justify-content: center;
       margin-bottom: 20px;
@@ -29,10 +28,15 @@
     padding-right: 10px;
     padding-left: 10px;
 
-  &:not(:last-child) {
-    border-right: 1px solid #ccc;
+    &:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
   }
-}
+
+  &__social {
+    display: none;
+  }
+
   .slider-next-disabled {
     margin-right: 10px;
   }

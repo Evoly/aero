@@ -43,10 +43,10 @@ $(document).ready(function() {
       },
       500: {
         nav: true,
-        items: 4
+        items: 5
       },
       300: {
-        items: 3,
+        items: 4,
         nav: false
       },
       0: {
@@ -112,11 +112,11 @@ $(document).ready(function() {
   };
 
   const owlOptions_linkSlider = {
-    margin:0,
-    loop:false,
-    autoWidth:true,
-    items:4,
-    nav:true,
+    margin: 0,
+    loop: false,
+    autoWidth: true,
+    items: 4,
+    nav: true,
     navText: ['<span class="icon arrow_left_dots"></span>',
       '<span class="icon arrow_right_dots"></span>'
     ],
@@ -147,8 +147,8 @@ $(document).ready(function() {
   });
 
   function SetVisible() {
-      $('.slider-label').addClass('visible');
-    };
+    $('.slider-label').addClass('visible');
+  };
 
   // main slider
 
@@ -323,8 +323,8 @@ $(document).ready(function() {
     e.preventDefault();
     e.stopPropagation();
     $('.sub-catalog').removeClass('activate');
-      const cross = $(this).find('.cross');
-      const el = $(this).parent('.js-dropdown');
+    const cross = $(this).find('.cross');
+    const el = $(this).parent('.js-dropdown');
 
     if (el.hasClass('show')) {
       el.removeClass('show');
@@ -335,7 +335,7 @@ $(document).ready(function() {
       el.addClass('show');
       cross.removeClass('closed');
     }
-});
+  });
 
   $('.js-sub-catalog[data-id]').on('mouseover', function(e) {
     e.stopPropagation();
@@ -592,30 +592,30 @@ $(document).ready(function() {
 
     if ($('.fancybox-thumbs').length) {
 
-    const viewportHeight = $('.fancybox-container').height();
-    const imgHeight = $('.fancybox-thumbs-y li').height();
-    const listHeight = $('.fancybox-thumbs-y ul').height();
+      const viewportHeight = $('.fancybox-container').height();
+      const imgHeight = $('.fancybox-thumbs-y li').height();
+      const listHeight = $('.fancybox-thumbs-y ul').height();
 
-    //300 - отступы снизу и сверху , 10 -margin bottom
-    const slide = Math.round((viewportHeight - 300) / (imgHeight + 10));
-    let thumbHeight = slide * imgHeight + (slide - 1) * 10 + 100;
+      //300 - отступы снизу и сверху , 10 -margin bottom
+      const slide = Math.round((viewportHeight - 300) / (imgHeight + 10));
+      let thumbHeight = slide * imgHeight + (slide - 1) * 10 + 100;
 
-    if (thumbHeight > listHeight) {
-      thumbHeight = listHeight;
-    } else {
-      if (!($(".button-thumb").length)) {
-        $('.fancybox-thumbs-y').addClass('button-show');
-        $('.fancybox-thumbs-outer').prepend('<div class="button-thumb button-thumb_up"><button class="fancybox-button fancybox-button--arrow_up">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
-          "</button></div>");
-        $('.fancybox-thumbs-outer').append('<div class="button-thumb button-thumb_down"><button class="fancybox-button fancybox-button--arrow_down">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
-          "</button></div>");
-      }
-    };
-    $('.fancybox-thumbs-outer').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight) / 2);
-    return slide;
-  }
+      if (thumbHeight > listHeight) {
+        thumbHeight = listHeight;
+      } else {
+        if (!($(".button-thumb").length)) {
+          $('.fancybox-thumbs-y').addClass('button-show');
+          $('.fancybox-thumbs-outer').prepend('<div class="button-thumb button-thumb_up"><button class="fancybox-button fancybox-button--arrow_up">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+            "</button></div>");
+          $('.fancybox-thumbs-outer').append('<div class="button-thumb button-thumb_down"><button class="fancybox-button fancybox-button--arrow_down">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.033 792.033"><path d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874     l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191     c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z"/></svg>' +
+            "</button></div>");
+        }
+      };
+      $('.fancybox-thumbs-outer').css('height', thumbHeight).css('margin-top', (viewportHeight - thumbHeight) / 2);
+      return slide;
+    }
 
   }
 
@@ -630,7 +630,7 @@ $(document).ready(function() {
     let step = 0;
 
 
-    if (currentIndex > (activeSlide.siblings().length-2)){
+    if (currentIndex > (activeSlide.siblings().length - 2)) {
       step = currentIndex - slide + 2;
     } else {
       step = currentIndex - slide + 1;
@@ -640,13 +640,13 @@ $(document).ready(function() {
       for (let i = 0; i < slide - 1; i++) {
         activeSlide.siblings().eq(i).addClass('visible');
       }
-     } else {
+    } else {
       for (let i = (currentIndex - slide + 2); i < (currentIndex + 1); i++) {
         activeSlide.siblings().eq(i).addClass('visible');
       };
     }
     goto(step);
-};
+  };
 
   const goto = (step) => {
     const itemNav = $('.fancybox-thumbs-y ul');
@@ -654,7 +654,7 @@ $(document).ready(function() {
     $(itemNav).css('transform', `translateY(-${step * (imgHeight + 10)}px)`);
   };
 
-  $(document).on('click', '.fancybox-thumbs-y li', function () {
+  $(document).on('click', '.fancybox-thumbs-y li', function() {
     $.fancybox.getInstance().Thumbs.update();
     fancyboxSync();
     const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
@@ -662,7 +662,7 @@ $(document).ready(function() {
     goto(indexFirst);
   });
 
-  $(document).on('click', '.button-thumb_up button', function (){
+  $(document).on('click', '.button-thumb_up button', function() {
     const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
     const indexFirst = $(slideVisible[0]).index();
     const indexLast = $(slideVisible[slideVisible.length - 1]).index();
@@ -681,7 +681,7 @@ $(document).ready(function() {
     $('.button-thumb_down button').prop('disabled', '');
   })
 
-  $(document).on('click', '.button-thumb_down button', function () {
+  $(document).on('click', '.button-thumb_down button', function() {
     const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
     const indexFirst = $(slideVisible[0]).index();
     const indexLast = $(slideVisible[slideVisible.length - 1]).index();
@@ -700,20 +700,20 @@ $(document).ready(function() {
     $('.button-thumb_up button').prop('disabled', '');
   });
 
-    const checkButtons = () => {
-      $('.button-thumb_up button, .button-thumb_down button').prop('disabled', '');
+  const checkButtons = () => {
+    $('.button-thumb_up button, .button-thumb_down button').prop('disabled', '');
 
-      const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
-      const indexLast = $(slideVisible[slideVisible.length - 1]).index();
+    const slideVisible = $('.fancybox-thumbs-y .visible').toArray();
+    const indexLast = $(slideVisible[slideVisible.length - 1]).index();
 
-      if ($('.visible').eq(0).index() === 0) {
-        $('.button-thumb_up button').prop('disabled', 'disabled');
-      };
-
-      if (indexLast === ($('.fancybox-thumbs-y li').length - 1)) {
-        $('.button-thumb_down button').prop('disabled', 'disabled');
-      };
+    if ($('.visible').eq(0).index() === 0) {
+      $('.button-thumb_up button').prop('disabled', 'disabled');
     };
+
+    if (indexLast === ($('.fancybox-thumbs-y li').length - 1)) {
+      $('.button-thumb_down button').prop('disabled', 'disabled');
+    };
+  };
 
   const fancyOpts = {
     animationEffect: 'fade',
@@ -752,20 +752,12 @@ $(document).ready(function() {
   $('[data-fancybox="card-slider"]').fancybox(fancyOpts);
 
   if ($('.fancybox-show-thumbs').length > 0) {
-    console.log($('[data-fancybox]').length);
     $(window).resize(function() {
       if ($(window).width() > 768) {
         $.fancybox.getInstance().Thumbs.update();
       }
     });
   }
-
-
-  // $(window).resize(function() {
-  //   if ($(window).width() > 768) {
-  //     $.fancybox.getInstance().Thumbs.update();
-  //   }
-  // });
 
   if ($('.trancate-block__content').length > 0) {
     const height = $('.trancate-block__content').outerHeight();
@@ -775,19 +767,35 @@ $(document).ready(function() {
     }
   }
 
-  $('.js-truncate').on('click', function (e) {
+  $('.js-truncate').on('click', function(e) {
     e.preventDefault();
     $(this).siblings('.trancate-block__content').toggleClass('show');
   });
-});
 
-$('.js-truncateText').each(function () {
-  const self = $(this);
+  $('.js-truncateText').each(function() {
+    const self = $(this);
 
-  self.dotdotdot({
-    truncate: 'letter',
-    watch: 'window',
-    ellipsis: "\u2026 ",
-    height: self.css('max-height'),
+    self.dotdotdot({
+      truncate: 'letter',
+      watch: 'window',
+      ellipsis: "\u2026 ",
+      height: self.css('max-height'),
+    });
   });
+
+  let isOpen = false;
+
+  $('.js-slideDown').mouseenter(function() {
+    $('.card-buy__social').slideDown( 'slow' );
+  });
+
+  $('.card-buy__top').mouseleave(function(e) {
+    $('.card-buy__social').slideUp();
+  });
+
+
+  $('.card-buy__social').mouseleave(function(e) {
+      $('.card-buy__social').slideUp();
+  });
+
 });
