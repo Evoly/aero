@@ -2,24 +2,20 @@
   flex-flow: row nowrap;
   align-items: center;
 
-
   &__item {
-    //flex: 1;
     margin-bottom: 10px;
+  }
 
-    a {
-     width: 100%;
-     display: flex;
-     justify-content: flex-end;
-     padding-right: 20px;
-
-     @include media-breakpoint-between(md, lg) {
-       justify-content: center;
-     }
-
-     @include media-breakpoint-down(xs) {
-       justify-content: center;
-     }
+  a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    @include media-breakpoint-between(md, lg) {
+      justify-content: center;
+    }
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
     }
   }
 
@@ -28,7 +24,6 @@
     text-align: center;
     text-decoration: line-through;
     color: $color-grey-thin;
-
     @include heading-5-thin;
   }
 
@@ -45,13 +40,14 @@
     background-color: $brand-primary;
     color: $color-basic;
     border-radius: 3px;
-
     @include media-breakpoint-between(md, lg) {
       flex: 1;
     }
-
     @include media-breakpoint-down(xs) {
       flex: 1;
+    }
+    @media print {
+      background-color: transparent;
     }
     @include heading-5;
 
@@ -64,10 +60,15 @@
       border-top: 21px solid transparent;
       border-bottom: 21px solid transparent;
       border-left: 15px solid $brand-primary;
+
+      @media print {
+        border: none;
+     }
     }
 
     &:hover {
       background-color: $link-hover-color;
+
       &:before {
         border-left-color: $link-hover-color;
       }

@@ -372,6 +372,10 @@ img {
   &__subheader {
     color:  $color-heather1;
     margin-bottom: 10px;
+
+    @media print {
+        text-align: center;
+   }
   }
 
   &__col-center {
@@ -464,6 +468,19 @@ img {
 
     .price__old {
       padding-right: 10px;
+    }
+
+    .price__item {
+      @media print {
+        display: inline-block;
+        text-align: center;
+     }
+
+     a {
+       @media print {
+         display: inline-block;
+      }
+     }
     }
 
   }
