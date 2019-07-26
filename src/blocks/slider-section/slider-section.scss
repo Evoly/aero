@@ -90,8 +90,12 @@
   }
 
   &__item-2 {
+    display: block;
     img {
+      display: block;
+      height: 230px;
       margin-bottom: 15px;
+      object-fit: contain;
     }
   }
 }

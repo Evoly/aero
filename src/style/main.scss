@@ -459,15 +459,13 @@ img {
   }
 
   &__price {
-    @include media-breakpoint-between(md, lg) {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .price__old {
+      padding-right: 10px;
     }
 
-    .price__item {
-      width: 100%;
-    }
   }
 }
 

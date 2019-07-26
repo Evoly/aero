@@ -12,6 +12,10 @@
     height: 700px;
   }
 
+  @include media-breakpoint-down(xs) {
+      height: 700px;
+  }
+
   @include media-breakpoint-down(sm) {
     margin-right: 0;
     padding-bottom: 15px;
@@ -121,6 +125,24 @@
 
   &__price {
     margin-top: auto;
+
+    .price{
+      @include media-breakpoint-between(md, lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .price__item {
+        width: 100%;
+      }
+    }
   }
 
   &__links {
