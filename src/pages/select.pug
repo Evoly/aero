@@ -24,24 +24,24 @@ block content
 
       .row.no-gutters.select__product-card
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card('oldprice', 'catalog2', 'select')
+          +product-card('oldprice', 'catalog2', 'Настенный кондиционер Kentatsu KSGB35HFAN1 Настенный кондиционер Kentatsu KSGB35HFAN1', 'Кондиционер и очень очень длинное название', 'select')
             .label__container.flex
               +label('green') акция
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card('oldprice', 'catalog-2', 'select')
+          +product-card('oldprice', 'catalog-2', false, false, 'select')
             .label__container.flex
               +label('blue') скидка
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card('oldprice', 'catalog-2', 'select')
+          +product-card('oldprice', 'catalog-2', false, false, 'select')
             .label__container.flex
               +label('green') акция
               +label('blue') скидка
               +label('orange') акция + скидка
         .col-xl-3.col-lg-4.col-md-6.col-sm-12
-          +product-card('', 'catalog-1', 'select')
+          +product-card('', 'catalog-1', false, false, 'select')
         - for (var x = 1; x < 2; x++)
           .col-xl-3.col-lg-4.col-md-6.col-sm-12
-            +product-card('', 'catalog', 'select')
+            +product-card('', 'catalog', false, false, 'select')
 
 
 

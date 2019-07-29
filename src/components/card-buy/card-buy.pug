@@ -11,8 +11,8 @@ mixin card-buy()
           -var data = ['whatsapp', 'tw', 'fb', 'vk', 'ok', 'telegram ', 'mail']
           -var data2 = ['Whatsapp' ,'Twitter', 'Facebook', 'ВКонтакте', 'Одноклассники', 'Telegram', 'Отправить на email']
             each val, index in data
-              a(href='#' class=`social__link social__link_${val}`).flex
-                span.icon(class=val title=data2[index])
+              a(href='#' class=`social__link social__link_${val}` title=data2[index]).flex
+                span.icon(class=val)
 
       +price('oldprice').flex.card__price
       .card-buy__promo

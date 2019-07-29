@@ -1,4 +1,5 @@
-mixin product-card(oldprice, imageName, type)
+mixin product-card(oldprice, imageName, header, productType, type)
+
   .product-card&attributes(attributes)
     .product-card__top.flex
       div
@@ -13,14 +14,16 @@ mixin product-card(oldprice, imageName, type)
       .product-card__sticky-wrapper
         .comparision__sticky.js-sticky
           .product-card__sticky-content
-            .product-card__type Кондиционер
-            a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
+            .js-truncateText.product-card__truncate
+              .product-card__type #{productType || 'Кондиционер'}
+              a(href='#').product-card__header #{header || 'Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1'}
             +link-block-comparision
             .product-card__price
               +price(oldprice).flex
     else
-      .product-card__type Кондиционер
-      a(href='#').product-card__header Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1
+      .js-truncateText.product-card__truncate
+        .product-card__type #{productType || 'Кондиционер'}
+        a(href='#').product-card__header #{header || 'Настенный кондиционер Kentatsu KSGB35HFAN1/KSRB35HFAN1'}
 
       if type=='select'
         +catalog

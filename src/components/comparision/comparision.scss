@@ -16,7 +16,6 @@
     .sticky {
       width: calc(100% - 1px);
     }
-
   }
 
   &__header {
@@ -80,6 +79,7 @@
     padding-bottom: 30px;
     margin-right: 0;
     margin-left: -1px;
+    overflow: visible;
     @include media-breakpoint-down(sm) {
       padding-bottom: 15px;
     }
@@ -87,20 +87,13 @@
     &.hover {
       border-left-color: transparent;
     }
-
     @include media-breakpoint-between(md, lg) {
       height: $cardHeight + 20;
     }
-
   }
 
-  .product-card__header {
-    margin-bottom: 30px;
-    line-height: 1.5;
-
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 10px;
-    }
+  .product-card__links {
+    margin-top: 30px;
   }
 
   .icon-link_right {
@@ -254,7 +247,6 @@
       border-bottom: 1px solid $color-grey-light;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,.15);
     }
-
     @include media-breakpoint-between(md, lg) {
       height: 220px;
     }

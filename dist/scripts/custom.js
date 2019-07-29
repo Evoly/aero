@@ -779,11 +779,9 @@ $(document).ready(function() {
       truncate: 'letter',
       watch: 'window',
       ellipsis: "\u2026 ",
-      height: self.css('max-height'),
+      height: null,
     });
   });
-
-  let isOpen = false;
 
   $('.js-slideDown').mouseenter(function() {
     $('.card-buy__social').slideDown( 'slow' );

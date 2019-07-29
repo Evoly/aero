@@ -1,5 +1,6 @@
 .product-card {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -54,11 +55,19 @@
     }
   }
 
-  &__header {
-    display: block;
+  &__truncate {
+    // max-height: 16.8/14*4em;
+    // height: 16.8/14*4em;
+    height: 72px;
+    max-height: 72px;
+    overflow: hidden;
+    margin: 0;
     padding-left: 9px;
     padding-right: 13px;
-    margin-bottom: 20px;
+  }
+
+  &__header {
+    display: block;
     color: $color-darkgrey;
 
     &:hover {
@@ -114,8 +123,12 @@
 
   &__type {
     color: $color-heather1;
-    margin-bottom: 10px;
-    padding-left: 9px;
+    line-height: 1.388;
+    //padding-bottom: 10px;
+    // padding-left: 9px;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
     @include text-sm;
   }
 
