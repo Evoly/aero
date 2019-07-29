@@ -52,14 +52,13 @@
 
     img {
       object-fit: contain;
+      max-height: 100%;
     }
   }
 
   &__truncate {
-    // max-height: 16.8/14*4em;
-    // height: 16.8/14*4em;
-    height: 72px;
-    max-height: 72px;
+    max-height: 16.8/14*4em;
+    height: 16.8/14*4em;
     overflow: hidden;
     margin: 0;
     padding-left: 9px;

@@ -1,0 +1,57 @@
+extends ../layouts/layout
+
+block head
+  - var pageTitle = 'Контакты'
+
+block content
+  +header
+  .page
+    .section_gray-1
+      .container
+        nav(aria-label="breadcrumb").breadcrumb__wrapper
+          ol.breadcrumb
+            li.breadcrumb-item: a(href="#") Главная
+            li(aria-current="page").breadcrumb-item.active Контакты
+
+    section.section__contacts.container.contacts
+      h1 Контакты
+      .row.contacts__download
+        .col-6
+          p Санкт-Петербург
+          p ул. Ропшинская, д.1/32, лит.А, пом. 8
+        .col-6
+          .contacts__download-link
+            a(href='#') #[span.icon-inline.pdf] Реквизиты ООО “Аэроконтроль”
+          .contacts__download-link
+            a(href='#') #[span.icon-inline.pdf] Реквизиты ИП Захаров А.С
+
+      .row.contacts__items
+        .col-md-4.col-sm-12.contacts__item.flex
+          .contacts__icon
+            img(src='images/clock.png' alt='')
+          div
+            span.contacts__text-sm Часы работы
+            span.contacts__text Пн — Пт: 10:00 — 19:00
+        .col-md-4.col-sm-12.contacts__item.flex
+          .contacts__icon
+            img(src='images/phone.png' alt='')
+          div
+            span.contacts__text-sm Звонки из Москвы и области
+            span.contacts__text 8 (812) 245-66-29
+        .col-md-4.col-sm-12.contacts__item.flex
+          .contacts__icon
+            img(src='images/mail.png' alt='')
+          div
+            span.contacts__text-sm E-mail
+            a.contacts__text(href="mailto:info@aero-control.ru") info@aero-control.ru
+
+
+    .section__consult
+      .section__consult_bg
+      .container
+        .consult__wrapper
+          +consult.consult_grey
+
+
+  +footer
+  +modal-callMe#callMe

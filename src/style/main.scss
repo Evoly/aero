@@ -771,3 +771,65 @@ img {
     margin-bottom: 15px;
   }
 }
+
+//contacts
+.contacts  {
+  &__download {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__icon {
+
+  }
+
+  &__download-link {
+    max-width: 260px;
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
+
+  &__items {
+    padding-top: 20px;
+  }
+
+  &__icon {
+    max-width: 45px;
+    margin-right: 10px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    align-items: center;
+
+    &:not(:last-child) {
+      @include media-breakpoint-up(md) {
+        border-right: 1px solid #ccc;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+  }
+
+  &__text-sm {
+    display: block;
+    color: $color-grey-thin;
+    margin-bottom: 5px;
+
+    @include text-sm
+  }
+}
+
+
+// alex
+.spec__inner{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;-ms-flex-positive:1;flex-grow:1;padding:7px;color:#444}
+.card-buy__bottom .list-dots__item{margin-bottom:8px;}
+.card__banner{margin-bottom:15px}
+.section__card h1{margin-bottom:7px}
+.card__subheader{color:#b7c1d2;margin-bottom:5px}
+.activeText{color: #ff4b10;}.trash.icon-link__icon.active{background-position: -234px -171px;}.heart.icon-link__icon.active{background-position: -251px -205px;}.libra.icon-link__icon.active{background-position: -227px -141px;}
