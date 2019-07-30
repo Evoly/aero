@@ -29,12 +29,23 @@ $(document).ready(function() {
     margin: 0,
     loop: false,
     autoWidth: true,
-    items: 4,
+    items: 3,
     nav: true,
     navClass: ['owl-prev nav-fixed', 'owl-next nav-fixed'],
     navText: ['<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>',
       '<span class="icon arrow-next-sm"></span><span class="icon arrow-next-sm_red"></span>'
     ],
+    responsive: {
+      1200: {
+        items: 3
+      },
+      1100: {
+        items: 2
+      },
+      0: {
+        items: 2,
+      }
+    },
     onInitialized: SetHeight,
   };
 

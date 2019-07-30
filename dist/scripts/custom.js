@@ -795,5 +795,4 @@ $(document).ready(function() {
   $('.card-buy__social').mouseleave(function(e) {
       $('.card-buy__social').slideUp();
   });
-
 });

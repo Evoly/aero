@@ -2,7 +2,7 @@ mixin navbar()
   nav.navbar.navbar-expand-lg&attributes(attributes)
     ul.navbar-nav
       +navbar-item-dropdown('#', 'каталог товаров', 'menu_1-1')
-        ul.dropdown-menu.navbar-dropdown
+        ul.dropdown-menu.navbar-dropdown#zindex
           +navbar-lvl-2('#','Настенные').js-dropdown
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
               +navbar-lvl-1('#','submenu-1_1')(data-id = '1').js-sub-catalog
@@ -23,7 +23,7 @@ mixin navbar()
             ul.navbar-dropdown.dropdown-menu.navbar-dropdown-sub
               +navbar-lvl-1('#', 'submenu-5_1')(data-id = '9').js-sub-catalog
           +navbar-lvl-1('#', 'VRF')
-          +navbar-lvl-1('#', 'VRV')
+          +navbar-lvl-1('#', 'VRV')#zindexLi
       +navbar-item-dropdown('#', 'проекты ', 'menu_2')
         ul.dropdown-menu.navbar-dropdown
           +navbar-lvl-1('#', ' Пункт-1')

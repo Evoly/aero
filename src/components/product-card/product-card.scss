@@ -68,6 +68,7 @@
   &__header {
     display: block;
     color: $color-darkgrey;
+    line-height: 1;
 
     &:hover {
       color: $color-red-vermilion-1;
@@ -122,12 +123,7 @@
 
   &__type {
     color: $color-heather1;
-    line-height: 1.388;
-    //padding-bottom: 10px;
-    // padding-left: 9px;
-    // text-overflow: ellipsis;
-    // white-space: nowrap;
-    // overflow: hidden;
+    line-height: 1;
     @include text-sm;
   }
 
