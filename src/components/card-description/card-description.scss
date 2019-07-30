@@ -13,17 +13,10 @@
     }
   }
 
-  &__brand {
-    margin: auto;
-    padding-top: 20px;
-  }
-
   &__text {
     color: $color-grey-thin;
     margin-right: 5px;
     margin-bottom: 5px;
-
-    //@include text-sm;
   }
 
   &__link {
