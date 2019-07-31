@@ -1,0 +1,71 @@
+.icon-block {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: $color-dark-blue;;
+  z-index: 100;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  &__link {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      border-bottom:1px solid $color-fiord;
+    }
+
+    &:hover {
+      .icon-block__icon {
+        display: none;
+      }
+
+      .icon-block__icon_hover {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+  }
+
+  &__icons {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+
+    &_hover {
+      display: none;
+    }
+  }
+
+  &__amount {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    background-color: $color-logo-red;
+    line-height: 21px;
+    color: #fff;
+    text-align: center;
+
+    @include text-xxs
+  }
+
+}
