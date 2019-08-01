@@ -3,7 +3,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  background-color: $color-dark-blue;;
+  background-color: $color-dark-blue;
   z-index: 100;
 
   @include media-breakpoint-down(md) {
@@ -43,10 +43,10 @@
     height: 30px;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
   }
 
   &__icon {
-
     &_hover {
       display: none;
     }
@@ -60,12 +60,18 @@
     right: -10px;
     top: -10px;
     border-radius: 50%;
-    background-color: $color-logo-red;
+    background-color: $color-fiord;
     line-height: 21px;
     color: #fff;
     text-align: center;
 
     @include text-xxs
+
+    &.active {
+      background-color: $color-logo-red;
+    }
   }
+
+
 
 }

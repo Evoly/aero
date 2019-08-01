@@ -795,4 +795,31 @@ $(document).ready(function() {
   $('.card-buy__social').mouseleave(function(e) {
       $('.card-buy__social').slideUp();
   });
+
+  $('.btn-up').on("click", function(event) {
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 1500);
+  });
+  if($('.btn-up').length) {
+    $(window).scroll(function() {
+      const el = document.scrollingElement || document.documentElement;
+
+      var scrolled = el.scrollTop;
+      var footer = $('footer').offset().top;
+
+      if (scrolled < 20) {
+        $('.btn-up').removeClass('visible');
+      } else {
+        $('.btn-up').addClass('visible');
+      }
+
+      if ($('.btn-up').offset().top + $('.btn-up').height() >=
+        footer)
+        $('.btn-up').removeClass('fixed');
+      if ($(document).scrollTop() + window.innerHeight < footer)
+        $('.btn-up').addClass('fixed');
+    });
+  }
 });

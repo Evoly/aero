@@ -76,7 +76,7 @@
 
   .product-card {
     height: $cardHeight;
-    padding-bottom: 30px;
+    //padding-bottom: 30px;
     margin-right: 0;
     margin-left: -1px;
     overflow: visible;
@@ -87,7 +87,7 @@
     &.hover {
       border-left-color: transparent;
     }
-    @include media-breakpoint-between(md, lg) {
+    @include media-breakpoint-down(lg) {
       height: $cardHeight + 20;
     }
   }
@@ -247,7 +247,7 @@
       border-bottom: 1px solid $color-grey-light;
       box-shadow: 0 1px 1px 0 rgba(0,0,0,.15);
     }
-    @include media-breakpoint-between(md, lg) {
+    @include media-breakpoint-down(lg) {
       height: 220px;
     }
   }
