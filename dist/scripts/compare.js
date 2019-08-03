@@ -25,6 +25,19 @@ $(document).ready(function() {
     });
   };
 
+  const Truncate = () => {
+    $('.owl-item .js-truncateText').each(function() {
+      const self = $(this);
+
+      self.dotdotdot({
+        truncate: 'letter',
+        watch: 'window',
+        ellipsis: "\u2026 ",
+        height: null,
+      });
+    });
+  }
+
   const owlOptions_compareSlider = {
     margin: 0,
     loop: false,
@@ -46,8 +59,12 @@ $(document).ready(function() {
         items: 2,
       }
     },
-    onInitialized: SetHeight,
   };
+
+  $('.js-slider-compare').on('initialized.owl.carousel', function(event) {
+    SetHeight();
+    Truncate();
+  });
 
   $('.js-slider-compare').owlCarousel(owlOptions_compareSlider);
 
@@ -71,7 +88,7 @@ $(document).ready(function() {
   $('.comparision .product-card').mouseenter(function() {
     const currentCard = $(this);
     const nextCard = currentCard.closest('.owl-item').next()
-    nextCard.find('.product-card').addClass('hover');;
+    nextCard.find('.product-card').addClass('hover');
   });
 
   $('.comparision .product-card').mouseleave(function() {

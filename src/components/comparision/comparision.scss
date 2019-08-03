@@ -6,7 +6,7 @@
   &__header-wrapper {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid $color-grey-light;
+
     @include media-breakpoint-down(sm) {
       flex-direction: row;
       flex-flow: row nowrap;
@@ -14,7 +14,12 @@
     }
 
     .sticky {
-      width: calc(100% - 1px);
+      width: 100%;
+    }
+
+    .comparision__sticky {
+      border-right: 1px solid $color-grey-light;
+      margin-right: -1px;
     }
   }
 
@@ -70,15 +75,16 @@
     padding: 18px 15px;
     word-break: break-word;
     border-top: 1px solid $color-grey-light;
+    border-right: 1px solid $color-grey-light;
+    border-left: 1px solid $color-grey-light;
+    margin-right: -1px;
     color: $color-grey-thin;
     @include text-sm;
   }
 
   .product-card {
     height: $cardHeight;
-    //padding-bottom: 30px;
-    margin-right: 0;
-    margin-left: -1px;
+    margin-right: -1px;
     overflow: visible;
     @include media-breakpoint-down(sm) {
       padding-bottom: 15px;
@@ -107,7 +113,6 @@
     border-bottom: 1px solid $color-grey-light;
     margin-bottom: -1px;
     margin-right: -1px;
-    margin-left: -1px;
     @include media-breakpoint-down(sm) {
       margin-right: 0;
     }
@@ -240,7 +245,7 @@
     margin-bottom: -1px;
     padding-bottom: 15px;
     padding-top: 10px;
-    z-index: 5;
+    z-index: 1;
     will-change: transform;
 
     &_shadow {
